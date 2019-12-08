@@ -1,0 +1,698 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.26. pythonids.dist.aix &mdash; platformids  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8.27. pythonids.dist.blackarch" href="blackarch.html" />
+    <link rel="prev" title="8.25. platformids.net.pfsense" href="../net/pfsense.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.36
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Shortcuts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">PlatformIDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_part_cockpit.html">apidoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_part_apiref_scaled.html">apiref</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index_part_abstract.html">1. Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_part_platform_support.html">2. Platform Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_part_blueprint.html">3. Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rtplatformids_cli.html">4. Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../os_categorization.html">5. OS Categorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../distributions.html">6. Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_part_documents.html">7. Documents</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_modules.html">8. Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platformids.html">8.1. platformids.__init__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platformids.platforms.html">8.2. platformids.platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/alpinelinux.html">8.3. platformids.dist.alpinelinux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/archlinux.html">8.4. platformids.dist.archlinux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/centos.html">8.5. platformids.dist.centos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/cygwin.html">8.6. platformids.dist.cygwin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/darwin.html">8.7. platformids.dist.darwin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/debian.html">8.8. platformids.dist.debian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/fedora.html">8.9. platformids.dist.fedora</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/freebsd.html">8.10. platformids.dist.freebsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/gentoo.html">8.11. platformids.dist.gentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/hpux.html">8.12. platformids.dist.hpux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/netbsd.html">8.13. platformids.dist.netbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/openbsd.html">8.14. platformids.dist.openbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/opensuse.html">8.15. platformids.dist.opensuse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/oraclelinux.html">8.16. platformids.dist.oraclelinux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/posix.html">8.17. platformids.dist.posix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/rhel.html">8.18. platformids.dist.rhel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/sles.html">8.19. platformids.dist.sles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/solaris.html">8.20. platformids.dist.solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/ubuntu.html">8.21. platformids.dist.ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/windows.html">8.22. platformids.dist.windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../net/kali.html">8.23. platformids.net.kali</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../net/openwrt.html">8.24. platformids.net.openwrt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../net/pfsense.html">8.25. platformids.net.pfsense</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8.26. pythonids.dist.aix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">8.26.1. Description</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#release-history">8.26.1.1. Release History</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#available-compilers">8.26.1.2. Available Compilers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#available-python-releases">8.26.1.3. Available Python Releases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#howto-get-it">8.26.1.4. HowTo Get It</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#howto-install-it">8.26.1.5. HowTo Install It</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-platformids.custom.aix">8.26.2. Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data">8.26.3. Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#rte-aix">8.26.3.1. RTE_AIX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rte2num">8.26.3.2. rte2num</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#num2rte">8.26.3.3. num2rte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#num2pretty">8.26.3.4. num2pretty</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#source">8.26.4. Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#download">8.26.5. Download</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="blackarch.html">8.27. pythonids.dist.blackarch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dragonbsd.html">8.28. platformids.custom.dragonbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ghostbsd.html">8.29. platformids.custom.ghostbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linuxmint.html">8.30. platformids.custom.linuxmint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="minix.html">8.31. platformids.custom.minix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="minix2.html">8.32. platformids.custom.minix2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nomadbsd.html">8.33. platformids.custom.nomadbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parrot.html">8.34. platformids.custom.parrot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pentoo.html">8.35. platformids.custom.pentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reactos.html">8.36. platformids.custom.reactos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="slackware.html">8.37. platformids.custom.slackware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trueos.html">8.38. platformids.custom.trueos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../embed/armbian.html">8.39. platformids.embed.armbian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../embed/circuitpython.html">8.40. platformids.embed.circuitpython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../embed/micropython.html">8.41. platformids.embed.micropython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../embed/raspbian.html">8.42. platformids.embed.raspbian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/nt/windows_kernel32_dll.html">8.43. windows_kernel32_dll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/nt/windows_products.html">8.44. windows_products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/nt/windows_subprocess_reg_exe.html">8.45. windows_subprocess_reg_exe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jy/dist/nt/Advapi32GetCurrentVersion.html">8.46. Advapi32GetCurrentVersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jy/dist/nt/Kernel32GetProductInfo.html">8.47. Kernel32GetProductInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jy/dist/nt/ReadCurrentVersionWinPrefs.html">8.48. ReadCurrentVersionWinPrefs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index_part_indices.html">9. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_part_resources.html">10. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">11. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">12. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_part_license.html">13. Licenses</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../howto/index.html">Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">platformids</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index_modules.html">8. Modules</a> &raquo;</li>
+        
+      <li>8.26. pythonids.dist.aix</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/custom/aix.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pythonids-dist-aix">
+<span id="docaixx86"></span><span id="custom-module-aix"></span><h1>8.26. pythonids.dist.aix<a class="headerlink" href="#pythonids-dist-aix" title="Permalink to this headline">¶</a></h1>
+<p>Module AIX [<a class="reference internal" href="../os_categorization.html#enumaix"><span class="std std-ref">doc</span></a>].</p>
+<div class="section" id="description">
+<h2>8.26.1. Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>The <em>AIX</em> OS release for the <em>x86</em> <a class="reference internal" href="../references.html#aix13ps2" id="id1"><span>[AIX13PS2]</span></a> platform is a bit outdated, but for basic experiences and eductaion purposes
+of future <em>AIX</em> admins perfectly OK.
+This in particular as it is easily installable within a virtual machine, e.g. <em>VirtualBox</em> on almost any host-platform.</p>
+<div class="section" id="release-history">
+<h3>8.26.1.1. Release History<a class="headerlink" href="#release-history" title="Permalink to this headline">¶</a></h3>
+<p>The origianl product data of AIX <a class="reference internal" href="../references.html#aix" id="id2"><span>[AIX]</span></a> is for the <em>x86</em> <a class="reference internal" href="../references.html#aix13ps2" id="id3"><span>[AIX13PS2]</span></a> platform - still usable, e.g. within <em>VirtualBox</em>:</p>
+<pre class="literal-block"><strong>IBM Sales Manual (US) - Document 5765-160</strong>
+   5765-160 IBM AIX PS/2 OPERATING SYSTEM V1.3
+
+<strong>IBM U.S. Product Life Cycle Dates</strong>
+
+   <strong>Program                                  Marketing   Service      Replaced</strong>
+   <strong>Number   VRM     Announced   Available   Withdrawn   Discontinued    By</strong>
+   5765-160 1.03.0  1992/09/21  1992/10/02  1995/03/10      -            -</pre>
+<p>with the components:</p>
+<pre class="literal-block"><strong>Program Number</strong>
+
+   5765-160 53G0218 AIX PS/2 Operating System Version 1.3 (Diskette)
+   5765-160 53G0219 AIX PS/2 Operating System Version 1.3 (Tape)
+   5765-161 52G9954 AIX PS/2 Operating System Version 1.3 (Diskette)
+   5765-161 52G9965 AIX PS/2 Operating System Version 1.3 (Tape)
+   5765-162 52G9945 AIX PS/2 Application Development Toolkit Version 1.3
+   5765-163 52G9946 AIX PS/2 Text Formatting System Version 1.3
+   5765-164 52G9947 AIX PS/2 DOS Merge Version 1.3
+   5765-165 52G9953 AIX PS/2 INmail/INed/INnet/INftp Version 1.3
+   5765-166 52G9948 AIX PS/2 Network File System Version 1.3
+   5765-167 52G9949 AIX PS/2 Transmission Control Protocol/Internet Protocol Version 1.3
+   5765-168 52G9950 AIX PS/2 X.25 Version 1.3
+   5765-169 52G9952 AIX PS/2 X-Windows Version 1.3
+   5765-170 52G9951 AIXwindows Environment for PS/2 Version 1.3
+   5765-171 52G9955 AIX PS/2 X-Windows Version 1.3</pre>
+<p>The extract from the original product sheet (C)IBM Corp.:</p>
+<pre class="literal-block"><strong>Abstract</strong>
+
+   (For IBM US, No Longer Available as of March 10, 1995)
+
+   IBM reaffirms its commitment to open systems by announcing Advanced Interactive Executive (AIX)* PS/2*
+   Version 1.3, its entry level member of the AIX family.
+
+   AIX PS/2 Operating System Version 1.3 and its associated Licensed Program Products (LPPs) provide full
+   hardware support and exploitation for all models of IBM PS/2 system units based on the 32-bit INTEL** 386sx-16MHz
+    up through the INTEL 486DX2-66MHz, utilizing both IBM Microchannel or IBM AT-Bus architectures. AIX PS/2
+    Operating System Version 1.3 will offer support for selected OEM hardware configurations, certifying them on a per bid basis.
+
+   Support is offered for numerous new options, adapters, hardfiles and displays listed in the Growth Enablement Section.
+
+   Support is also provided for the IBM GEARBOX* Model 800 486 Industrial Computer.
+
+   Performance tuning in AIX PS/2 Operating System Version 1.3 offers increased throughput for input/output.
+
+   The windowing and Graphical User Interface (GUI) areas have been improved with the X Window System V11 R5** and OSF/Motif 1.1.3**
+
+   AIX PS/2 Operating System Version 1.3 provides interoperability with other versions of AIX, UNIX* and other IBM and non-IBM
+   Operating Systems through AIX PS/2 Transmission Control Protocol/Internet Protocol Version 1.3 and AIX PS/2 Network File
+   System Version 1.3.
+
+   Also provided are enhanced installation, backup and update procedures aptly named the EZ-UTILITIES which are targeted
+   specifically for IBM Business Partners, and large installations to simplify operating system installation and maintenance.
+   Refer to the Systems Management Section for more details on the EZ-UTILITIES.
+
+   AIX PS/2 Operating System Version 1.3 and AIX PS/2 Operating System Extensions Version 1.3 are again offered on
+   Internal Tape Backup Unit (ITBU) mini-cartridge tape, to ease installation.
+
+   AIX PS/2 Operating System Version 1.3 provides full POSIX IEEE 1003.1-1988 standard compliance as specified in
+   Section 2.1.2.2 of the IEEE standard.
+
+   The programs announced today replace Version 1.2.1 of the AIX PS/2 Operating System and Version 1.2.1 of the
+   Extensions and selected Related Licensed Program Products. Upgrades from AIX PS/2 Operating System Version 1.2.1,
+   Version 1.2, Version 1.1 and Related Licensed Program Products Version 1.2.1, Version 1.2, Version 1.1 are offered
+   to encourage migration.
+
+   NOTE: Transparent Computing Facility (TCF) is NOT supported in AIX PS/2 Operating System Version 1.3
+
+   NOTE: Usability Services Version 1.1.1 is NOT supported in AIX PS/2 Operating System Version 1.3
+
+<strong>Product Positioning</strong>
+
+   AIX PS/2 Operating System Version 1.3 offers an entry level UNIX product targeted for the price-
+   performance conscious INTEL processor based system market. The enhanced functions and quality
+   improvements make AIX PS/2 Operating System Version 1.3 very competitive in the UNIX-on-INTEL market.
+
+<strong>Highlights</strong>
+
+    Provides full PS/2 Hardware exploitation for 386, 486 and SLC processors
+
+    Offers limited support for selected IBM compatible systems
+
+    Improves windowing and Graphical User Interface capabilities through X Windows V11R5 and Motif 1.1.3
+
+    Provides DOS 5.0 support under DOS Merge
+
+    Improves performance
+
+    Connects easily to IBM and non-IBM networks
+
+    Simplifies installation and system management
+
+    Adds Korn Shell support
+
+<strong>Business Solutions</strong>
+
+   Performance tuning in AIX PS/2 Operating System Version 1.3 offers increased throughput for Input/Output (I/O)
+   in both raw and block mode, in addition to kernel performance enhancements and smaller size requirements
+   available through the availability of serviceable shared libraries usage in applications written to utilize
+   them. Enhancements have also been made to the pager and swapper areas of memory management that have
+   resulted in performance increases.
+
+   Improvements in the windowing and Graphical User Interface (GUI) areas are highlighted with the introduction
+   of the X Windowing System V11 R5 from MIT available in AIX PS/2 X-Windows Version 1.3 and AIXwindows Environment
+   for PS/2 Version 1.3 and OSF's Motif 1.1.3 available in AIXwindows Environment for PS/2 Version 1.3 along with
+   AIXwindows Desktop. Support for the IBM Xstation 120 and Xstation 130 is provided in the AIX PS/2 X-Windows
+   Version 1.3ST. Support for XGA-2 provides non-interlaced, high resolution graphics on those displays that support it.
+
+   AIX PS/2 Operating System Version 1.3 provides interoperability with other versions of AIX, UNIX, and other
+   IBM and non-IBM operating systems, through the use of AIX PS/2 Transmission Control Protocol/Internet Protocol
+   Version 1.3 and AIX PS/2 Network File System Version 1.3 over Ethernet or Token Ring. NFS allows remote file
+   system mounting and files can be copied and data shared between systems engaged in these connections. The use
+   of AIX PS/2 X-Windows Version 1.3 or AIXwindows Environment for PS/2 Version 1.3 allows clients to be opened
+   and run on all participating machines.
+
+   The Korn Shell is newly offered and supported in AIX PS/2 Operating System Version 1.3, in addition to
+   the 'C' and Bourne Shells already offered.
+
+<strong>Systems Management</strong>
+
+   AIX PS/2 Operating System Version 1.3 provides a set of six primary tools called EZ-UTILITIES, used to assist
+   in the system management and distribution of AIX PS/2 Operating System Version 1.3. An enhanced installation
+   procedure decreases the time spent installing and reduces the possibility of installation error.
+   The following utilities are provided:
+
+       ezbackup
+       ezcustom
+       ezinstall
+       ezmkverify &amp; ezverify
+       ezfilter
+       ezupdate
+
+   Ezbackup, ezcustom, ezinstall, and ezmkverify/ezverify are used when building distribution
+   media (boot diskette, installation diskette and backup media) perform routine system and/or
+   user data backups and produce new distribution media when a system configuration change is made.
+   Ezfilter and ezupdate are used to update existing AIX configurations.
+
+   The EZ-UTILITIES package is designed to aid in the propagation of a master system to a target machine.
+   The use of these utilities assumes that the master system is fully installed and configured, then
+   cloned or minimally tailored. The purpose of the EZ-UTILITIES is to make this cloning process easier.
+
+   In addition, the EZ-UTILITIES package is designed as an aid in updating target machines as new
+   versions/PTFs of AIX are made available. Special utilities are provided to allow individual elements
+   of PTFs to be selected and repackaged into customized media, which is then used when updating target machines.
+
+   The EZ-UTILITIES support both the ITBU and 6157 family of tape devices
+
+
+<strong>Investment Protection</strong>
+
+   AIX PS/2 Operating System Version 1.3 offers binary compatibility in applications from AIX PS/2
+   Operating System Version 1.2.1 and AIX PS/2 Operating System Version 1.2. POSIX IEEE 1003.1-1988
+   conformance may require applications from AIX PS/2 Operating System Version 1.1 to be recompiled or modified.
+
+   The following AIX PS/2 Operating System Version 1.1.1 programs will execute on AIX PS/2
+   Operating System Version 1.3:
+
+
+       AIX PS/2 VS C Language Version 1.1.1
+
+       AIX PS/2 VS FORTRAN Version 1.1.1
+
+       AIX PS/2 VS Pascal Version 1.1.1
+
+       AIX PS/2 Workstation Host Interface Program Version 1.1.1
+
+       AIX PS/2 Extended C Language Version 1.2.1
+
+   NOTE: Transparent Computing Facility (TCF) is NOT supported in AIX PS/2 Operating System Version 1.3.
+
+
+<strong>Trademarks</strong>
+
+   (R), (TM), * Trademark or registered trademark of International Business Machines Corporation.
+
+   ** Company, product, or service name may be a trademark or service mark of others.
+
+   Windows is a trademark of Microsoft Corporation.
+
+   UNIX is a registered trademark in the United States and other countries licensed exclusively through X/Open Company Limited.</pre>
+</div>
+<div class="section" id="available-compilers">
+<h3>8.26.1.2. Available Compilers<a class="headerlink" href="#available-compilers" title="Permalink to this headline">¶</a></h3>
+<p>With the available compilers, not the latest releases of course - released about 1993:</p>
+<blockquote>
+<div><div class="shortcuttab">
+<div class="nonbreakheadtab">
+<div class="autocoltab"><table class="docutils align-default">
+<colgroup>
+<col style="width: 74%" />
+<col style="width: 10%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>compiler</p></th>
+<th class="head"><p>status</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AIX PS/2 VS C Language Version 1.1.1</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>AIX PS/2 VS FORTRAN Version 1.1.1</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AIX PS/2 VS Pascal Version 1.1.1</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>AIX PS/2 Workstation Host Interface Program Version 1.1.1</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AIX PS/2 Extended C Language Version 1.2.1</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></div></blockquote>
+</div>
+<div class="section" id="available-python-releases">
+<h3>8.26.1.3. Available Python Releases<a class="headerlink" href="#available-python-releases" title="Permalink to this headline">¶</a></h3>
+<p>Let’s see… - probably coming soon <a class="reference internal" href="../_images/smiling-face-with-sunglasses-32x32.png"><img alt=":-)" src="../_images/smiling-face-with-sunglasses-32x32.png" style="width: 16px;" /></a>.</p>
+</div>
+<div class="section" id="howto-get-it">
+<h3>8.26.1.4. HowTo Get It<a class="headerlink" href="#howto-get-it" title="Permalink to this headline">¶</a></h3>
+<p>Use a search engine <a class="reference internal" href="../_images/smiling-face-with-sunglasses-32x32.png"><img alt=":-)" src="../_images/smiling-face-with-sunglasses-32x32.png" style="width: 16px;" /></a>.</p>
+</div>
+<div class="section" id="howto-install-it">
+<h3>8.26.1.5. HowTo Install It<a class="headerlink" href="#howto-install-it" title="Permalink to this headline">¶</a></h3>
+<p>There are some pitfalls for the setup within a <em>VirtualBox</em>, the workarounds will be posted soon.</p>
+<p>The basic installation and operations works fine, while the network stack requires some outdated NICs,
+which are currently not available for <em>VirtualBox</em>.
+Other platforms may provide a supported type, in particular with a supported original card.</p>
+<p>The compiler collection is not latest, and missing <em>Python</em> by default - it is the year of 1993 <a class="reference internal" href="../_images/smiling-face-with-sunglasses-32x32.png"><img alt=":-)" src="../_images/smiling-face-with-sunglasses-32x32.png" style="width: 16px;" /></a>.</p>
+</div>
+</div>
+<div class="section" id="module-platformids.custom.aix">
+<span id="module"></span><h2>8.26.2. Module<a class="headerlink" href="#module-platformids.custom.aix" title="Permalink to this headline">¶</a></h2>
+<p>AIX releases - current for internal study only based on an outdated system on the x86 platform.</p>
+<p>Uses standard numbering scheme, thus requires new enum definitions only.</p>
+</div>
+<div class="section" id="data">
+<h2>8.26.3. Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="rte-aix">
+<h3>8.26.3.1. RTE_AIX<a class="headerlink" href="#rte-aix" title="Permalink to this headline">¶</a></h3>
+<p>Registration of the <em>dist</em> value:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RTE_AIX</span>        <span class="o">=</span> <span class="n">RTE_UNIX</span>   <span class="o">+</span> <span class="n">custom_dist</span><span class="o">.</span><span class="n">add_enum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rte2num">
+<h3>8.26.3.2. rte2num<a class="headerlink" href="#rte2num" title="Permalink to this headline">¶</a></h3>
+<p>Mapping of the rte string and numeric representation to the numeric value.</p>
+</div>
+<div class="section" id="num2rte">
+<h3>8.26.3.3. num2rte<a class="headerlink" href="#num2rte" title="Permalink to this headline">¶</a></h3>
+<p>Mapping of the rte numeric representation to the string value.</p>
+</div>
+<div class="section" id="num2pretty">
+<h3>8.26.3.4. num2pretty<a class="headerlink" href="#num2pretty" title="Permalink to this headline">¶</a></h3>
+<p>Mapping of the rte numeric representation to the pretty string value.</p>
+</div>
+</div>
+<div class="section" id="source">
+<h2>8.26.4. Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;AIX releases - current for internal study only based on an outdated system on the x86 platform.</span>
+
+<span class="sd">Uses standard numbering scheme, thus requires new enum definitions only. </span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
+
+<span class="kn">from</span> <span class="nn">platformids</span> <span class="kn">import</span> <span class="n">rte2num</span><span class="p">,</span> <span class="n">num2rte</span><span class="p">,</span> <span class="n">num2pretty</span><span class="p">,</span> <span class="n">custom_dist</span><span class="p">,</span> \
+    <span class="n">RTE_UNIX</span>
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;Arno-Can Uestuensoez&#39;</span>
+<span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;Artistic-License-2.0 + Forced-Fairplay-Constraints&quot;</span>
+<span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright (C) 2010-2018 Arno-Can Uestuensoez&quot;</span> \
+                <span class="s2">&quot; @Ingenieurbuero Arno-Can Uestuensoez&quot;</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="s1">&#39;0.0.1&#39;</span>
+<span class="n">__uuid__</span> <span class="o">=</span> <span class="s2">&quot;7add5ded-c39b-4b6e-8c87-1b3a1c150ee9&quot;</span>
+
+
+<span class="n">RTE_AIX</span>       <span class="o">=</span>  <span class="n">RTE_UNIX</span>      <span class="o">+</span> <span class="n">custom_dist</span><span class="o">.</span><span class="n">add_enum</span><span class="p">()</span>   <span class="c1">#: UNIX/Solaris, as Posix system [POSIX]_.</span>
+
+<span class="n">RTE_AIX13PS2</span>  <span class="o">=</span>  <span class="n">RTE_AIX</span>       <span class="o">+</span> <span class="mh">0x00000460</span>  <span class="c1">#: AIX-1.3 / PS/2 </span>
+    
+    
+<span class="c1">#: mapping of the rte string and numeric representation to the numeric value</span>
+<span class="n">rte2num</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;aix&#39;</span><span class="p">:</span> <span class="n">RTE_AIX</span><span class="p">,</span>
+        <span class="s1">&#39;aix13&#39;</span><span class="p">:</span> <span class="n">RTE_AIX13PS2</span><span class="p">,</span>
+        <span class="n">RTE_AIX</span><span class="p">:</span> <span class="n">RTE_AIX</span><span class="p">,</span>
+        <span class="n">RTE_AIX13PS2</span><span class="p">:</span> <span class="n">RTE_AIX13PS2</span><span class="p">,</span>
+   <span class="p">}</span>
+<span class="p">)</span>
+
+
+<span class="c1">#: mapping of the rte numeric representation to the string value</span>
+<span class="n">num2rte</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="n">RTE_AIX</span><span class="p">:</span> <span class="s1">&#39;aix&#39;</span><span class="p">,</span>
+        <span class="n">RTE_AIX13PS2</span><span class="p">:</span> <span class="s1">&#39;aix13&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="c1">#: mapping of the rte numeric representation to the pretty string value</span>
+<span class="n">num2pretty</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="n">RTE_AIX</span><span class="p">:</span> <span class="s1">&#39;AIX&#39;</span><span class="p">,</span>
+        <span class="n">RTE_AIX13PS2</span><span class="p">:</span> <span class="s1">&#39;AIX-1.3 PS/2&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="download">
+<h2>8.26.5. Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="../_static/custom/aix.py">aix.py</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="blackarch.html" class="btn btn-neutral float-right" title="8.27. pythonids.dist.blackarch" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../net/pfsense.html" class="btn btn-neutral float-left" title="8.25. platformids.net.pfsense" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+      <span class="lastupdated">
+        Last updated on Dec 08, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

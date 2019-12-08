@@ -1,0 +1,653 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.48. jy.dist.nt.ReadCurrentVersionWinPrefs(.java) &mdash; platformids  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="9. Indices and tables" href="../../../index_part_indices.html" />
+    <link rel="prev" title="8.47. jy.dist.nt.Kernel32GetProductInfo(.java)" href="Kernel32GetProductInfo.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.36
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Shortcuts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">PlatformIDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_cockpit.html">apidoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_apiref_scaled.html">apiref</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_abstract.html">1. Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_platform_support.html">2. Platform Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_blueprint.html">3. Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rtplatformids_cli.html">4. Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../os_categorization.html">5. OS Categorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../distributions.html">6. Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_documents.html">7. Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_modules.html">8. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_indices.html">9. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_resources.html">10. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">11. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">12. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_license.html">13. Licenses</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../howto/index.html">Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/index.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">platformids</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index_modules.html">8. Modules</a> &raquo;</li>
+        
+      <li>8.48. jy.dist.nt.ReadCurrentVersionWinPrefs(.java)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/jy/dist/nt/ReadCurrentVersionWinPrefs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jy-dist-nt-readcurrentversionwinprefs-java">
+<span id="distntreadcurrentversion"></span><h1>8.48. jy.dist.nt.ReadCurrentVersionWinPrefs(.java)<a class="headerlink" href="#jy-dist-nt-readcurrentversionwinprefs-java" title="Permalink to this headline">¶</a></h1>
+<p>Module for the registry access of the <em>Jython</em> implementation on <em>WindowsNT</em>  [<a class="reference internal" href="../../../python_implementations.html#pythonjythonimplementation"><span class="std std-ref">Jython</span></a>].</p>
+<div class="section" id="source">
+<h2>8.48.1. Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> * Read registry by using the interface *java.util.prefs.WindowsPreferences*.</span>
+<span class="cm"> * </span>
+<span class="cm"> * see Stackoverflow.com - Read/write to Windows registry using Java - [SOVFLJAVAREG]_</span>
+<span class="cm"> *    https://stackoverflow.com/questions/62289/read-write-to-windows-registry-using-java</span>
+<span class="cm"> *</span>
+<span class="cm"> * REMARK: </span>
+<span class="cm"> *    in case of the warning:</span>
+<span class="cm"> *</span>
+<span class="cm"> *       WARNING: Could not open/create prefs root node Software\JavaSoft\Prefs at root 0x80000002. Windows RegCreateKeyEx(...) returned error code 5.</span>
+<span class="cm"> *</span>
+<span class="cm"> *    create the key manually:</span>
+<span class="cm"> *</span>
+<span class="cm"> *        HKEY_LOCAL_MACHINE\Software\JavaSoft\Prefs</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+
+<span class="kn">package</span> <span class="nn">platformids.dist.nt</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.lang.reflect.InvocationTargetException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.reflect.Method</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.logging.Level</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.logging.Logger</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.prefs.Preferences</span><span class="o">;</span>
+
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ReadCurrentVersionWinPrefs</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">HKEY_CURRENT_USER</span> <span class="o">=</span> <span class="mh">0x80000001</span><span class="o">,</span> <span class="n">HKEY_LOCAL_MACHINE</span> <span class="o">=</span> <span class="mh">0x80000002</span><span class="o">,</span> <span class="n">REG_SUCCESS</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span>
+			<span class="n">REG_NOTFOUND</span> <span class="o">=</span> <span class="mi">2</span><span class="o">,</span> <span class="n">REG_ACCESSDENIED</span> <span class="o">=</span> <span class="mi">5</span><span class="o">,</span> <span class="n">KEY_ALL_ACCESS</span> <span class="o">=</span> <span class="mh">0xf003f</span><span class="o">,</span> <span class="n">KEY_READ</span> <span class="o">=</span> <span class="mh">0x20019</span><span class="o">;</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Preferences</span> <span class="n">userRoot</span> <span class="o">=</span> <span class="n">Preferences</span><span class="o">.</span><span class="na">userRoot</span><span class="o">(),</span> <span class="n">systemRoot</span> <span class="o">=</span> <span class="n">Preferences</span><span class="o">.</span><span class="na">systemRoot</span><span class="o">();</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Class</span><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">Preferences</span><span class="o">&gt;</span> <span class="n">userClass</span> <span class="o">=</span> <span class="n">userRoot</span><span class="o">.</span><span class="na">getClass</span><span class="o">();</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="n">Method</span> <span class="n">regOpenKey</span><span class="o">,</span> <span class="n">regCloseKey</span><span class="o">,</span> <span class="n">regQueryValueEx</span><span class="o">,</span> <span class="n">regEnumValue</span><span class="o">,</span> <span class="n">regQueryInfoKey</span><span class="o">,</span> <span class="n">regEnumKeyEx</span><span class="o">;</span>
+
+	<span class="kd">static</span> <span class="o">{</span>
+		<span class="cm">/*</span>
+<span class="cm">		 * define imports from WindowsPreferences</span>
+<span class="cm">		 */</span>
+		<span class="k">try</span> <span class="o">{</span>
+			<span class="o">(</span><span class="n">regOpenKey</span> <span class="o">=</span> <span class="n">userClass</span><span class="o">.</span><span class="na">getDeclaredMethod</span><span class="o">(</span><span class="s">&quot;WindowsRegOpenKey&quot;</span><span class="o">,</span>
+					<span class="k">new</span> <span class="n">Class</span><span class="o">[]</span> <span class="o">{</span> <span class="kt">int</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="kt">byte</span><span class="o">[].</span><span class="na">class</span><span class="o">,</span> <span class="kt">int</span><span class="o">.</span><span class="na">class</span> <span class="o">})).</span><span class="na">setAccessible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+			<span class="o">(</span><span class="n">regCloseKey</span> <span class="o">=</span> <span class="n">userClass</span><span class="o">.</span><span class="na">getDeclaredMethod</span><span class="o">(</span><span class="s">&quot;WindowsRegCloseKey&quot;</span><span class="o">,</span> <span class="k">new</span> <span class="n">Class</span><span class="o">[]</span> <span class="o">{</span> <span class="kt">int</span><span class="o">.</span><span class="na">class</span> <span class="o">}))</span>
+					<span class="o">.</span><span class="na">setAccessible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+			<span class="o">(</span><span class="n">regQueryValueEx</span> <span class="o">=</span> <span class="n">userClass</span><span class="o">.</span><span class="na">getDeclaredMethod</span><span class="o">(</span><span class="s">&quot;WindowsRegQueryValueEx&quot;</span><span class="o">,</span>
+					<span class="k">new</span> <span class="n">Class</span><span class="o">[]</span> <span class="o">{</span> <span class="kt">int</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="kt">byte</span><span class="o">[].</span><span class="na">class</span> <span class="o">})).</span><span class="na">setAccessible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+			<span class="o">(</span><span class="n">regEnumValue</span> <span class="o">=</span> <span class="n">userClass</span><span class="o">.</span><span class="na">getDeclaredMethod</span><span class="o">(</span><span class="s">&quot;WindowsRegEnumValue&quot;</span><span class="o">,</span>
+					<span class="k">new</span> <span class="n">Class</span><span class="o">[]</span> <span class="o">{</span> <span class="kt">int</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="kt">int</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="kt">int</span><span class="o">.</span><span class="na">class</span> <span class="o">})).</span><span class="na">setAccessible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+			<span class="o">(</span><span class="n">regQueryInfoKey</span> <span class="o">=</span> <span class="n">userClass</span><span class="o">.</span><span class="na">getDeclaredMethod</span><span class="o">(</span><span class="s">&quot;WindowsRegQueryInfoKey1&quot;</span><span class="o">,</span> <span class="k">new</span> <span class="n">Class</span><span class="o">[]</span> <span class="o">{</span> <span class="kt">int</span><span class="o">.</span><span class="na">class</span> <span class="o">}))</span>
+					<span class="o">.</span><span class="na">setAccessible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+			<span class="o">(</span><span class="n">regEnumKeyEx</span> <span class="o">=</span> <span class="n">userClass</span><span class="o">.</span><span class="na">getDeclaredMethod</span><span class="o">(</span><span class="s">&quot;WindowsRegEnumKeyEx&quot;</span><span class="o">,</span>
+					<span class="k">new</span> <span class="n">Class</span><span class="o">[]</span> <span class="o">{</span> <span class="kt">int</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="kt">int</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="kt">int</span><span class="o">.</span><span class="na">class</span> <span class="o">})).</span><span class="na">setAccessible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">NoSuchMethodException</span> <span class="o">|</span> <span class="n">SecurityException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+			<span class="n">Logger</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="n">ReadCurrentVersionWinPrefs</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getName</span><span class="o">()).</span><span class="na">log</span><span class="o">(</span><span class="n">Level</span><span class="o">.</span><span class="na">SEVERE</span><span class="o">,</span> <span class="kc">null</span><span class="o">,</span> <span class="n">ex</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+	<span class="cm">/**</span>
+<span class="cm">	 * Read a value from key and value name</span>
+<span class="cm">	 *</span>
+<span class="cm">	 * @param hkey</span>
+<span class="cm">	 *            HKEY_CURRENT_USER/HKEY_LOCAL_MACHINE</span>
+<span class="cm">	 * @param key</span>
+<span class="cm">	 * @param valueName</span>
+<span class="cm">	 * @return the value</span>
+<span class="cm">	 * @throws IllegalArgumentException</span>
+<span class="cm">	 * @throws IllegalAccessException</span>
+<span class="cm">	 * @throws InvocationTargetException</span>
+<span class="cm">	 */</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">readString</span><span class="o">(</span><span class="kt">int</span> <span class="n">hkey</span><span class="o">,</span> <span class="n">String</span> <span class="n">key</span><span class="o">,</span> <span class="n">String</span> <span class="n">valueName</span><span class="o">)</span>
+			<span class="kd">throws</span> <span class="n">IllegalArgumentException</span><span class="o">,</span> <span class="n">IllegalAccessException</span><span class="o">,</span> <span class="n">InvocationTargetException</span> <span class="o">{</span>
+
+		<span class="k">switch</span> <span class="o">(</span><span class="n">hkey</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">case</span> <span class="n">HKEY_LOCAL_MACHINE</span><span class="o">:</span>
+			<span class="k">return</span> <span class="n">readString</span><span class="o">(</span><span class="n">systemRoot</span><span class="o">,</span> <span class="n">hkey</span><span class="o">,</span> <span class="n">key</span><span class="o">,</span> <span class="n">valueName</span><span class="o">);</span>
+		<span class="k">case</span> <span class="n">HKEY_CURRENT_USER</span><span class="o">:</span>
+			<span class="k">return</span> <span class="n">readString</span><span class="o">(</span><span class="n">userRoot</span><span class="o">,</span> <span class="n">hkey</span><span class="o">,</span> <span class="n">key</span><span class="o">,</span> <span class="n">valueName</span><span class="o">);</span>
+		<span class="k">default</span><span class="o">:</span>
+			<span class="k">throw</span> <span class="k">new</span> <span class="n">IllegalArgumentException</span><span class="o">(</span><span class="s">&quot;hkey=&quot;</span> <span class="o">+</span> <span class="n">hkey</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+	<span class="cm">/**</span>
+<span class="cm">	 * Read value(s) and value name(s) form given key</span>
+<span class="cm">	 *</span>
+<span class="cm">	 * @param hkey</span>
+<span class="cm">	 *            HKEY_CURRENT_USER/HKEY_LOCAL_MACHINE</span>
+<span class="cm">	 * @param key</span>
+<span class="cm">	 * @return the value name(s) plus the value(s)</span>
+<span class="cm">	 * @throws IllegalArgumentException</span>
+<span class="cm">	 * @throws IllegalAccessException</span>
+<span class="cm">	 * @throws InvocationTargetException</span>
+<span class="cm">	 */</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="nf">readStringValues</span><span class="o">(</span><span class="kt">int</span> <span class="n">hkey</span><span class="o">,</span> <span class="n">String</span> <span class="n">key</span><span class="o">)</span>
+			<span class="kd">throws</span> <span class="n">IllegalArgumentException</span><span class="o">,</span> <span class="n">IllegalAccessException</span><span class="o">,</span> <span class="n">InvocationTargetException</span> <span class="o">{</span>
+
+		<span class="k">switch</span> <span class="o">(</span><span class="n">hkey</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">case</span> <span class="n">HKEY_LOCAL_MACHINE</span><span class="o">:</span>
+			<span class="k">return</span> <span class="n">readStringValues</span><span class="o">(</span><span class="n">systemRoot</span><span class="o">,</span> <span class="n">hkey</span><span class="o">,</span> <span class="n">key</span><span class="o">);</span>
+		<span class="k">case</span> <span class="n">HKEY_CURRENT_USER</span><span class="o">:</span>
+			<span class="k">return</span> <span class="n">readStringValues</span><span class="o">(</span><span class="n">userRoot</span><span class="o">,</span> <span class="n">hkey</span><span class="o">,</span> <span class="n">key</span><span class="o">);</span>
+		<span class="k">default</span><span class="o">:</span>
+			<span class="k">throw</span> <span class="k">new</span> <span class="n">IllegalArgumentException</span><span class="o">(</span><span class="s">&quot;hkey=&quot;</span> <span class="o">+</span> <span class="n">hkey</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+	<span class="cm">/**</span>
+<span class="cm">	 * Read the value name(s) from a given key</span>
+<span class="cm">	 *</span>
+<span class="cm">	 * @param hkey</span>
+<span class="cm">	 *            HKEY_CURRENT_USER/HKEY_LOCAL_MACHINE</span>
+<span class="cm">	 * @param key</span>
+<span class="cm">	 * @return the value name(s)</span>
+<span class="cm">	 * @throws IllegalArgumentException</span>
+<span class="cm">	 * @throws IllegalAccessException</span>
+<span class="cm">	 * @throws InvocationTargetException</span>
+<span class="cm">	 */</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">readStringSubKeys</span><span class="o">(</span><span class="kt">int</span> <span class="n">hkey</span><span class="o">,</span> <span class="n">String</span> <span class="n">key</span><span class="o">)</span>
+			<span class="kd">throws</span> <span class="n">IllegalArgumentException</span><span class="o">,</span> <span class="n">IllegalAccessException</span><span class="o">,</span> <span class="n">InvocationTargetException</span> <span class="o">{</span>
+
+		<span class="k">switch</span> <span class="o">(</span><span class="n">hkey</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">case</span> <span class="n">HKEY_LOCAL_MACHINE</span><span class="o">:</span>
+			<span class="k">return</span> <span class="n">readStringSubKeys</span><span class="o">(</span><span class="n">systemRoot</span><span class="o">,</span> <span class="n">hkey</span><span class="o">,</span> <span class="n">key</span><span class="o">);</span>
+		<span class="k">default</span><span class="o">:</span>
+			<span class="k">throw</span> <span class="k">new</span> <span class="n">IllegalArgumentException</span><span class="o">(</span><span class="s">&quot;hkey=&quot;</span> <span class="o">+</span> <span class="n">hkey</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+	<span class="kd">private</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">readString</span><span class="o">(</span><span class="n">Preferences</span> <span class="n">root</span><span class="o">,</span> <span class="kt">int</span> <span class="n">hkey</span><span class="o">,</span> <span class="n">String</span> <span class="n">key</span><span class="o">,</span> <span class="n">String</span> <span class="n">value</span><span class="o">)</span>
+			<span class="kd">throws</span> <span class="n">IllegalArgumentException</span><span class="o">,</span> <span class="n">IllegalAccessException</span><span class="o">,</span> <span class="n">InvocationTargetException</span> <span class="o">{</span>
+
+		<span class="kt">int</span><span class="o">[]</span> <span class="n">handles</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">[])</span> <span class="n">regOpenKey</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="k">new</span> <span class="n">Object</span><span class="o">[]</span> <span class="o">{</span> <span class="n">hkey</span><span class="o">,</span> <span class="n">toCstr</span><span class="o">(</span><span class="n">key</span><span class="o">),</span> <span class="n">KEY_READ</span> <span class="o">});</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">handles</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">!=</span> <span class="n">REG_SUCCESS</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="kt">byte</span><span class="o">[]</span> <span class="n">valb</span> <span class="o">=</span> <span class="o">(</span><span class="kt">byte</span><span class="o">[])</span> <span class="n">regQueryValueEx</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="k">new</span> <span class="n">Object</span><span class="o">[]</span> <span class="o">{</span> <span class="n">handles</span><span class="o">[</span><span class="mi">0</span><span class="o">],</span> <span class="n">toCstr</span><span class="o">(</span><span class="n">value</span><span class="o">)</span> <span class="o">});</span>
+		<span class="n">regCloseKey</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="k">new</span> <span class="n">Object</span><span class="o">[]</span> <span class="o">{</span> <span class="n">handles</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">});</span>
+		<span class="k">return</span> <span class="o">(</span><span class="n">valb</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">?</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="n">valb</span><span class="o">).</span><span class="na">trim</span><span class="o">()</span> <span class="o">:</span> <span class="kc">null</span><span class="o">);</span>
+	<span class="o">}</span>
+
+	<span class="kd">private</span> <span class="kd">static</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="nf">readStringValues</span><span class="o">(</span><span class="n">Preferences</span> <span class="n">root</span><span class="o">,</span> <span class="kt">int</span> <span class="n">hkey</span><span class="o">,</span> <span class="n">String</span> <span class="n">key</span><span class="o">)</span>
+			<span class="kd">throws</span> <span class="n">IllegalArgumentException</span><span class="o">,</span> <span class="n">IllegalAccessException</span><span class="o">,</span> <span class="n">InvocationTargetException</span> <span class="o">{</span>
+
+		<span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
+		<span class="kt">int</span><span class="o">[]</span> <span class="n">handles</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">[])</span> <span class="n">regOpenKey</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="k">new</span> <span class="n">Object</span><span class="o">[]</span> <span class="o">{</span> <span class="n">hkey</span><span class="o">,</span> <span class="n">toCstr</span><span class="o">(</span><span class="n">key</span><span class="o">),</span> <span class="n">KEY_READ</span> <span class="o">});</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">handles</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">!=</span> <span class="n">REG_SUCCESS</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="kt">int</span><span class="o">[]</span> <span class="n">info</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">[])</span> <span class="n">regQueryInfoKey</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="k">new</span> <span class="n">Object</span><span class="o">[]</span> <span class="o">{</span> <span class="n">handles</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">});</span>
+
+		<span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">info</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span> <span class="c1">// Count</span>
+		<span class="kt">int</span> <span class="n">maxlen</span> <span class="o">=</span> <span class="n">info</span><span class="o">[</span><span class="mi">3</span><span class="o">];</span> <span class="c1">// Max value length</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="n">count</span><span class="o">;</span> <span class="n">index</span><span class="o">++)</span> <span class="o">{</span>
+
+			<span class="kt">byte</span><span class="o">[]</span> <span class="n">name</span> <span class="o">=</span> <span class="o">(</span><span class="kt">byte</span><span class="o">[])</span> <span class="n">regEnumValue</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="k">new</span> <span class="n">Object</span><span class="o">[]</span> <span class="o">{</span> <span class="n">handles</span><span class="o">[</span><span class="mi">0</span><span class="o">],</span> <span class="n">index</span><span class="o">,</span> <span class="n">maxlen</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">});</span>
+
+			<span class="k">if</span> <span class="o">(</span><span class="n">name</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+				<span class="n">String</span> <span class="n">value</span> <span class="o">=</span> <span class="n">readString</span><span class="o">(</span><span class="n">hkey</span><span class="o">,</span> <span class="n">key</span><span class="o">,</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="n">name</span><span class="o">));</span>
+
+				<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;index = &quot;</span> <span class="o">+</span> <span class="n">index</span> <span class="o">+</span> <span class="s">&quot; name = &quot;</span> <span class="o">+</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="n">name</span><span class="o">)</span> <span class="o">+</span> <span class="s">&quot; value = &quot;</span> <span class="o">+</span> <span class="n">value</span><span class="o">);</span>
+
+				<span class="n">results</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="n">name</span><span class="o">).</span><span class="na">trim</span><span class="o">(),</span> <span class="n">value</span><span class="o">);</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+		<span class="n">regCloseKey</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="k">new</span> <span class="n">Object</span><span class="o">[]</span> <span class="o">{</span> <span class="n">handles</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">});</span>
+		<span class="k">return</span> <span class="n">results</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="kd">private</span> <span class="kd">static</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">readStringSubKeys</span><span class="o">(</span><span class="n">Preferences</span> <span class="n">root</span><span class="o">,</span> <span class="kt">int</span> <span class="n">hkey</span><span class="o">,</span> <span class="n">String</span> <span class="n">key</span><span class="o">)</span>
+			<span class="kd">throws</span> <span class="n">IllegalArgumentException</span><span class="o">,</span> <span class="n">IllegalAccessException</span><span class="o">,</span> <span class="n">InvocationTargetException</span> <span class="o">{</span>
+
+		<span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+		<span class="kt">int</span><span class="o">[]</span> <span class="n">handles</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">[])</span> <span class="n">regOpenKey</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="k">new</span> <span class="n">Object</span><span class="o">[]</span> <span class="o">{</span> <span class="n">hkey</span><span class="o">,</span> <span class="n">toCstr</span><span class="o">(</span><span class="n">key</span><span class="o">),</span> <span class="n">KEY_READ</span> <span class="o">});</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">handles</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">!=</span> <span class="n">REG_SUCCESS</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="kt">int</span><span class="o">[]</span> <span class="n">info</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">[])</span> <span class="n">regQueryInfoKey</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="k">new</span> <span class="n">Object</span><span class="o">[]</span> <span class="o">{</span> <span class="n">handles</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">});</span>
+
+		<span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">info</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span><span class="c1">// Count</span>
+		<span class="kt">int</span> <span class="n">maxlen</span> <span class="o">=</span> <span class="n">info</span><span class="o">[</span><span class="mi">3</span><span class="o">];</span> <span class="c1">// Max value length</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="n">count</span><span class="o">;</span> <span class="n">index</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="kt">byte</span><span class="o">[]</span> <span class="n">name</span> <span class="o">=</span> <span class="o">(</span><span class="kt">byte</span><span class="o">[])</span> <span class="n">regEnumKeyEx</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="k">new</span> <span class="n">Object</span><span class="o">[]</span> <span class="o">{</span> <span class="n">handles</span><span class="o">[</span><span class="mi">0</span><span class="o">],</span> <span class="n">index</span><span class="o">,</span> <span class="n">maxlen</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">});</span>
+			<span class="n">results</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="n">name</span><span class="o">).</span><span class="na">trim</span><span class="o">());</span>
+		<span class="o">}</span>
+		<span class="n">regCloseKey</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="k">new</span> <span class="n">Object</span><span class="o">[]</span> <span class="o">{</span> <span class="n">handles</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">});</span>
+		<span class="k">return</span> <span class="n">results</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kt">byte</span><span class="o">[]</span> <span class="nf">toCstr</span><span class="o">(</span><span class="n">String</span> <span class="n">str</span><span class="o">)</span> <span class="o">{</span>
+
+		<span class="kt">byte</span><span class="o">[]</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="n">str</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">+</span> <span class="mi">1</span><span class="o">];</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">str</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">result</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span><span class="kt">byte</span><span class="o">)</span> <span class="n">str</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+		<span class="o">}</span>
+		<span class="n">result</span><span class="o">[</span><span class="n">str</span><span class="o">.</span><span class="na">length</span><span class="o">()]</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="download">
+<h2>8.48.2. Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="../../../_static/jy/dist//nt/ReadCurrentVersionWinPrefs.java">ReadCurrentVersionWinPrefs.py</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../../index_part_indices.html" class="btn btn-neutral float-right" title="9. Indices and tables" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Kernel32GetProductInfo.html" class="btn btn-neutral float-left" title="8.47. jy.dist.nt.Kernel32GetProductInfo(.java)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+      <span class="lastupdated">
+        Last updated on Dec 08, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

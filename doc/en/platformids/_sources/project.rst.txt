@@ -1,0 +1,20 @@
+**Product Data**
+
+* MISSION=Enumeration of operating systems and their releases.
+
+* AUTHOR=Arno-Can Uestuensoez
+
+* PROJECT=platformids
+
+* COPYRIGHT=(C)2019 Arno-Can Uestuensoez
+
+* LICENSE=Artistic-License-2.0 + Forced-Fairplay-Constraints
+
+* VERSION=0.1.36
+
+* RELEASE=0.1.36
+
+* STATUS=Unknown
+
+* BUILDDATE=2019.12.08-03:27
+

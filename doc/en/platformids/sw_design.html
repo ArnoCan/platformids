@@ -1,0 +1,1471 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The SW-Design of platformids &mdash; platformids  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.36
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Shortcuts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">PlatformIDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_cockpit.html">apidoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_apiref_scaled.html">apiref</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index_part_abstract.html">1. Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_platform_support.html">2. Platform Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_blueprint.html">3. Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rtplatformids_cli.html">4. Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="os_categorization.html">5. OS Categorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distributions.html">6. Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_documents.html">7. Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_modules.html">8. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_indices.html">9. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_resources.html">10. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">11. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">12. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_license.html">13. Licenses</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="howto/index.html">Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">platformids</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>The SW-Design of <em>platformids</em></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/sw_design.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="the-sw-design-of-platformids">
+<h1>The SW-Design of <em>platformids</em><a class="headerlink" href="#the-sw-design-of-platformids" title="Permalink to this headline">¶</a></h1>
+<p>The package <em>platformids</em> provides basic identifiers for the development
+of shared code on multiple platforms.
+The specific emphasis is hereby the best performance for repetitive applicability.</p>
+<p>The provided identifiers of <em>platformids</em> comprise OS and Distribution, for the
+Python release and distribution see <em>pythonids</em> <a class="reference internal" href="references.html#pythonids" id="id1"><span>[pythonids]</span></a>.
+These provide the common canonical information of the underlying OS and it’s specific distribution.
+Therefore the data has to be adapted frrm various sources in order to detect the actual current underlying runtime environment.
+When the classic semantics is required, the standard systems libraries of the various implementations are your friends <a class="reference internal" href="_images/smiling-face-with-sunglasses-32x321.png"><img alt=":-)" src="_images/smiling-face-with-sunglasses-32x321.png" style="width: 16px;" /></a>.</p>
+<div class="section" id="identifier-layouts">
+<h2>Identifier Layouts<a class="headerlink" href="#identifier-layouts" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="os-and-distribution">
+<h3>OS and Distribution<a class="headerlink" href="#os-and-distribution" title="Permalink to this headline">¶</a></h3>
+<p>The layout for the identifier of the OS and the distribution are combined within one integer value of 32bits.
+The value consists of a combined hierarchical bit mask.</p>
+<p><a class="reference internal" href="_images/bitarray-rte.png"><img alt="bitarrayrte" src="_images/bitarray-rte.png" style="width: 450px;" /></a>
+<a class="reference external" href="_static/bitarray-rte.png"><img alt="zoom" src="_images/zoom1.png" style="width: 16px;" /></a></p>
+<p>The semantics of the sections of bits are defined within their context.
+The current defintion of the bits for the <em>category</em>, <em>set</em> and <em>subset</em> represent single bits
+of flags.
+These are the most common accessed parts, which could be evaluated by a single logical <em>AND</em> operation.</p>
+<p>The bits of the <em>member</em> section are designed as numbers of combined bits representing specific
+releases of products.</p>
+<p>For details refer to <a class="reference external" href="os_categorization.html#">OS and Distribution Categorization</a>.</p>
+</div>
+</div>
+<div class="section" id="modular-id-support">
+<h2>Modular ID Support<a class="headerlink" href="#modular-id-support" title="Permalink to this headline">¶</a></h2>
+<p>The supported IDs are packaged into multiple modules to be loaded as required.</p>
+<ul class="simple">
+<li><p>The standard IDs for the <em>categories</em>, <em>sets</em> and <em>subsets</em> are contained in:</p>
+<ul>
+<li><p>platformids.__init__</p></li>
+</ul>
+</li>
+<li><p>The extended IDs for the <em>categories</em>, <em>sets</em> and <em>subsets</em> are contained in:</p>
+<ul>
+<li><p>platformids.dist.__init__</p></li>
+</ul>
+</li>
+<li><p>The <em>member</em> extended IDs for specific distributions are contained in the specific modules.
+The provided releases comprise future releases too, e.g. the names of the releases for the next
+debian distributions:</p>
+<ul>
+<li><p>platformids.dist.archlinux</p></li>
+<li><p>platformids.dist.centos</p></li>
+<li><p>platformids.dist.cygwin</p></li>
+<li><p>platformids.dist.darwin</p></li>
+<li><p>platformids.dist.debian</p></li>
+<li><p>platformids.dist.fedora</p></li>
+<li><p>platformids.dist.freebsd</p></li>
+<li><p>platformids.dist.netbsd</p></li>
+<li><p>platformids.dist.openbsd</p></li>
+<li><p>platformids.dist.opensuse</p></li>
+<li><p>platformids.dist.rhel</p></li>
+<li><p>platformids.dist.rhel</p></li>
+<li><p>platformids.dist.solaris</p></li>
+<li><p>platformids.dist.ubuntu</p></li>
+<li><p>platformids.dist.windows</p></li>
+<li><p>platformids.embed.raspbian</p></li>
+<li><p>platformids.net.kali</p></li>
+<li><p>platformids.net.openwrt</p></li>
+<li><p>platformids.net.pfsense</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="python-runtime-data-interfaces">
+<h2>Python Runtime Data Interfaces<a class="headerlink" href="#python-runtime-data-interfaces" title="Permalink to this headline">¶</a></h2>
+<p>The <em>platfomrids</em> supports almost all relevant OS platforms with the majority of distributions.
+The support includes also various Python implementations.
+Although the basic syntax of the python implementations are common, the syntax variants differ slightly,
+but the standard libraries more.
+For example the applied 32bit bitmasks are treated byt the <em>CPython</em> implementation as an interger <em>int</em>, while
+the <em>Jython</em> implementation defines it as a <em>long</em>, which has to be considered in case of reflective coding.
+Another major difference for the <em>platformids</em> is the difference in semantics for some information related
+to the platform.
+While the <em>CPython</em> and others treat e.g. the <em>os.name</em> as actually an OS related category, the <em>Jython</em>
+implementation encapsulates the actual OS and defines the <em>os.mane</em> as the name of it’s own execution
+environment <em>java</em>.</p>
+<div class="section" id="python-variants">
+<h3>Python Variants<a class="headerlink" href="#python-variants" title="Permalink to this headline">¶</a></h3>
+<p>The automatic scan supports the following Python distributions - the list will be completed soon.</p>
+<div class="featuretab">
+<div class="nonbreakheadtab">
+<div class="autocoltab"><table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 40%" />
+<col style="width: 18%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>dist</p></th>
+<th class="head"><p>distrel</p></th>
+<th class="head"><p>syntaxtype</p></th>
+<th class="head"><p>reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CPython</p></td>
+<td><p>CPython-2.7, CPython-3.x</p></td>
+<td><p>2, 3</p></td>
+<td><p><a class="reference internal" href="references.html#cpython" id="id2"><span>[CPython]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>iPython</p></td>
+<td><p>iPython-2.7, iPython3.x</p></td>
+<td><p>2, 3</p></td>
+<td><p><a class="reference internal" href="references.html#ipython" id="id3"><span>[IPython]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>IronPython</p></td>
+<td><p>IronPython-2.7</p></td>
+<td><p>2</p></td>
+<td><p><a class="reference internal" href="references.html#ironpython" id="id4"><span>[IronPython]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Jython</p></td>
+<td><p>Jython-2.7</p></td>
+<td><p>2</p></td>
+<td><p><a class="reference internal" href="references.html#jython" id="id5"><span>[Jython]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>PyPy</p></td>
+<td><p>PyPy-5.x</p></td>
+<td><p>2, 3</p></td>
+<td><p><a class="reference internal" href="references.html#pypy" id="id6"><span>[PyPy]</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></div>
+<div class="section" id="platform-attributes">
+<h3>Platform Attributes<a class="headerlink" href="#platform-attributes" title="Permalink to this headline">¶</a></h3>
+<p>The platform attributes used to assemble the result data are stored as internal processing cache and
+as part of the external interface.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">platform_python_branch</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">python_branch</span>
+<span class="n">platform_python_build</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">python_build</span>
+<span class="n">platform_python_compiler</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">python_compiler</span>
+<span class="n">platform_python_implementation</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">python_implementation</span>
+<span class="n">platform_python_revision</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">python_revision</span>
+<span class="n">platform_python_version</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">python_version</span>
+<span class="n">platform_python_version_tuple</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">python_version_tuple</span>
+
+<span class="n">sys_version_info</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span>
+<span class="n">sys_executable</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span>
+<span class="n">sys_api_version</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">api_version</span>
+<span class="n">sys_byteorder</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">byteorder</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="attribute-data-sources">
+<h3>Attribute Data Sources<a class="headerlink" href="#attribute-data-sources" title="Permalink to this headline">¶</a></h3>
+<p>The data used for the <em>scan</em> by the class <em>pythonids.pythonparameters.PythonDist</em> on the various runtime frames
+varies in some cases slightly, in some cases it is redundant and has to be accompplished by additional attributes.</p>
+<div class="featuretab">
+<div class="nonbreakheadtab">
+<div class="autocoltab"><table class="docutils align-default">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 16%" />
+<col style="width: 11%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>data</p></th>
+<th class="head"><p>cpython</p></th>
+<th class="head"><p>ipython</p></th>
+<th class="head"><p>ironpython</p></th>
+<th class="head"><p>jython</p></th>
+<th class="head"><p>pypy</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>sys.version</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-odd"><td><p>sys.version_info</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-even"><td><p>sys.implementation</p></td>
+<td><p>–</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>–</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-odd"><td><p>sys.executable</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-even"><td><p>sys.api_version</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-odd"><td><p>sys.byteorder</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-even"><td><p>platform.system</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-odd"><td><p>platform.System</p></td>
+<td><p>–</p></td>
+<td><p>–</p></td>
+<td><p>–</p></td>
+<td><p>X</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-even"><td><p>platform.dist</p></td>
+<td><p>X</p></td>
+<td><p>x</p></td>
+<td></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-odd"><td><p>platform.python_branch</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-even"><td><p>platform.python_build</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-odd"><td><p>platform.python_compiler</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-even"><td><p>platform.python_implementation</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-odd"><td><p>platform.python_revision</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-even"><td><p>platform.python_version</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+</tr>
+<tr class="row-odd"><td><p>platform.python_version_tuple</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+<td><p>X</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div><div class="section" id="cpython-pypy-ipython">
+<h4>CPython, PyPy, IPython<a class="headerlink" href="#cpython-pypy-ipython" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="platform-dist">
+<h5>platform.dist<a class="headerlink" href="#platform-dist" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><div class="featuretab">
+<div class="nonbreakheadtab">
+<div class="autocoltab"><table class="docutils align-default">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 18%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>OS</p></th>
+<th class="head"><p>platform.dist</p></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"><p>remark</p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p>dist-name</p></th>
+<th class="head"><p>dist-release</p></th>
+<th class="head"><p>release-name</p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>Archlinux</p></td>
+<td><p>‘arch’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>CentOS7 - 7.6</p></td>
+<td><p>centos</p></td>
+<td><p>7.6.1810</p></td>
+<td><p>Core</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>CentOS7-AltArch - 7.6</p></td>
+<td><p>centos</p></td>
+<td><p>7.6.1810</p></td>
+<td><p>AltArch</p></td>
+<td><p>RaspberryPI</p></td>
+</tr>
+<tr class="row-even"><td><p>Cygwin</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Debian-9 - 9.6</p></td>
+<td><p>debian</p></td>
+<td><p>9.7</p></td>
+<td><p>‘’</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Fedora27</p></td>
+<td><p>fedora</p></td>
+<td><p>27</p></td>
+<td><p>Twenty Seven</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Fedora28</p></td>
+<td><p>fedora</p></td>
+<td><p>28</p></td>
+<td><p>Twenty Eight</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Fedora29</p></td>
+<td><p>fedora</p></td>
+<td><p>29</p></td>
+<td><p>Twenty Nine</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>FreeBSD - 11.2</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>KaliLinux</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Minix3</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>OpenBSD - 6.3</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>OpenSuSE15</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>OpenWRT</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>RHEL-7</p></td>
+<td><p>redhat</p></td>
+<td><p>7.5</p></td>
+<td><p>Maipo</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>RHEL-8</p></td>
+<td><p>redhat</p></td>
+<td><p>8.0</p></td>
+<td><p>Ootpa</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Raspbian (Debian-9)</p></td>
+<td><p>debian</p></td>
+<td><p>9.6</p></td>
+<td><p>‘’</p></td>
+<td><p>RaspberryPI</p></td>
+</tr>
+<tr class="row-even"><td><p>Snowleopard - 10.6.8</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Solaris10 - 10</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Solaris11 - 11.3</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Ubuntu-16.04</p></td>
+<td><p>Ubuntu</p></td>
+<td><p>16.04</p></td>
+<td><p>xenial</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Ubuntu-18.04</p></td>
+<td><p>Ubuntu</p></td>
+<td><p>18.04</p></td>
+<td><p>bionic</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Ubuntu-18.10</p></td>
+<td><p>Ubuntu</p></td>
+<td><p>18.10</p></td>
+<td><p>cosmic</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Windows10Home</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Windows10Professional</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Windows10IoT-Core</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Windows2008r2</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Windows2012r2</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Windows2016</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Windows2019S</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Windows2019SE</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></div></blockquote>
+</div>
+</div>
+<div class="section" id="ironpython">
+<h4>IronPython<a class="headerlink" href="#ironpython" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id7">
+<h5>platform.dist<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><div class="featuretab">
+<div class="nonbreakheadtab">
+<div class="autocoltab"><table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 23%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>OS</p></th>
+<th class="head"><p>platform.dist</p></th>
+<th class="head"></th>
+<th class="head"></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p>dist-name</p></th>
+<th class="head"><p>dist-release</p></th>
+<th class="head"><p>release-name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>Windows10Home</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Windows10Professional</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+</tr>
+<tr class="row-odd"><td><p>Windows2008r2</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Windows2012r2</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Windows2016</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Windows2019SE</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></div></blockquote>
+</div>
+<div class="section" id="platform-uname">
+<h5>platform.uname<a class="headerlink" href="#platform-uname" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><div class="featuretab">
+<div class="nonbreakheadtab">
+<div class="autocoltab"><table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 11%" />
+<col style="width: 8%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 5%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>OS</p></th>
+<th class="head"><p>platform.dist</p></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"></th>
+<th class="head"><p>node</p></th>
+<th class="head"><p>release-name</p></th>
+<th class="head"><p>dist-release</p></th>
+<th class="head"><p>arch</p></th>
+<th class="head"><p>CPU</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>ReactOS</p></td>
+<td><p>cli</p></td>
+<td><p>REACTOS49</p></td>
+<td><p>2003Server</p></td>
+<td><p>5.2.3790</p></td>
+<td><p>x86</p></td>
+<td><p>x86 Family 6 Model 12 Stepping 3, G</p></td>
+</tr>
+<tr class="row-even"><td><p>Windows10Home</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Windows10Professional</p></td>
+<td></td>
+<td><p>w10p</p></td>
+<td><p>10</p></td>
+<td><p>10.0.17763</p></td>
+<td><p>AMD64</p></td>
+<td><p>Intel64 Family 6 Model 60 Stepping 3, GenuineIntel</p></td>
+</tr>
+<tr class="row-even"><td><p>Windows2008r2</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Windows2012r2</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Windows2016</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Windows2019SE</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></div></blockquote>
+</div>
+<div class="section" id="platform-win32-ver">
+<h5>platform.win32_ver<a class="headerlink" href="#platform-win32-ver" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><div class="featuretab">
+<div class="nonbreakheadtab">
+<div class="autocoltab"><table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 17%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>OS</p></th>
+<th class="head"><p>platform.dist</p></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p>dist-name</p></th>
+<th class="head"><p>dist-release</p></th>
+<th class="head"><p>release-name</p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>ReactOS</p></td>
+<td><p>2003Server</p></td>
+<td><p>5.2.3790</p></td>
+<td><p>‘’</p></td>
+<td><p>‘Uniprocessor Checked’</p></td>
+</tr>
+<tr class="row-even"><td><p>Windows10Home</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Windows10Professional</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Windows2008r2</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Windows2012r2</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Windows2016</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Windows2019SE</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></div></blockquote>
+</div>
+</div>
+<div class="section" id="jython">
+<h4>Jython<a class="headerlink" href="#jython" title="Permalink to this headline">¶</a></h4>
+<p>The <em>Python</em> variant <em>Jython</em> is a <em>Java</em> based implementation.
+Even though the base syntax is compatible, some libraries are significantly different,
+which are e.g. for the ‘os.name’, and ‘os.version’ no consistent on each platform.</p>
+<div class="section" id="id8">
+<h5>platform.dist<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><div class="featuretab">
+<div class="nonbreakheadtab">
+<div class="autocoltab"><table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 23%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>OS</p></th>
+<th class="head"><p>platform.dist</p></th>
+<th class="head"></th>
+<th class="head"></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p>dist-name</p></th>
+<th class="head"><p>dist-release</p></th>
+<th class="head"><p>release-name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>Archlinux</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+</tr>
+<tr class="row-even"><td><p>CentOS7 - 7.6</p></td>
+<td><p>centos</p></td>
+<td><p>7.6.1810</p></td>
+<td><p>Core</p></td>
+</tr>
+<tr class="row-odd"><td><p>Debian-9 - 9.6</p></td>
+<td><p>debian</p></td>
+<td><p>9.7</p></td>
+<td><p>‘’</p></td>
+</tr>
+<tr class="row-even"><td><p>Fedora27</p></td>
+<td><p>fedora</p></td>
+<td><p>27</p></td>
+<td><p>Twenty Seven</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fedora28</p></td>
+<td><p>fedora</p></td>
+<td><p>28</p></td>
+<td><p>Twenty Eight</p></td>
+</tr>
+<tr class="row-even"><td><p>Fedora29</p></td>
+<td><p>fedora</p></td>
+<td><p>29</p></td>
+<td><p>Twenty Nine</p></td>
+</tr>
+<tr class="row-odd"><td><p>FreeBSD - 11.2</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+</tr>
+<tr class="row-even"><td><p>OpenBSD - 6.3</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>OpenSuSE15</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>RHEL-7</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>RHEL-8</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Raspbian (Debian-9)</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Snowleopard - 10.6.8</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+</tr>
+<tr class="row-even"><td><p>Solaris10 - 10</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Solaris11 - 11.3</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+</tr>
+<tr class="row-even"><td><p>Ubuntu-16.04</p></td>
+<td><p>debian</p></td>
+<td><p>stretch/sid</p></td>
+<td><p>‘’</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ubuntu-18.04</p></td>
+<td><p>debian</p></td>
+<td><p>buster/sid</p></td>
+<td><p>‘’</p></td>
+</tr>
+<tr class="row-even"><td><p>Ubuntu-18.10</p></td>
+<td><p>debian</p></td>
+<td><p>buster/sid</p></td>
+<td><p>‘’</p></td>
+</tr>
+<tr class="row-odd"><td><p>Windows10Home</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Windows10Professional</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+<td><p>‘’</p></td>
+</tr>
+<tr class="row-odd"><td><p>Windows2008r2</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Windows2012r2</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Windows2016</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Windows2019SE</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></div></blockquote>
+</div>
+<div class="section" id="platform-system">
+<h5>platform.System<a class="headerlink" href="#platform-system" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><div class="featuretab">
+<div class="nonbreakheadtab">
+<div class="autocoltab"><table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 7%" />
+<col style="width: 13%" />
+<col style="width: 20%" />
+<col style="width: 26%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" rowspan="2"><p>OS</p></th>
+<th class="head" rowspan="2"><p>Jython</p></th>
+<th class="head" rowspan="2"><p>Java</p></th>
+<th class="head" colspan="3"><p>Properties</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>os.name</p></th>
+<th class="head"><p>os.version</p></th>
+<th class="head"><p>sun.os.patch.level</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>CentOS7 - 7.6</p></td>
+<td><p>2.7.0</p></td>
+<td><p>1.8.0_191</p></td>
+<td><p>Linux</p></td>
+<td><p>3.10.0-957.1.3.el7.x86_64</p></td>
+<td><p>unknown</p></td>
+</tr>
+<tr class="row-even"><td><p>Debian-9 - 9.6</p></td>
+<td><p>2.5.3</p></td>
+<td><p>1.8.0_181</p></td>
+<td><p>Linux</p></td>
+<td><p>4.9.0-7-amd64</p></td>
+<td><p>unknown</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fedora27</p></td>
+<td><p>2.7.1</p></td>
+<td><p>1.8.0_191</p></td>
+<td><p>Linux</p></td>
+<td><p>4.18.19-100.fc27.x86_64</p></td>
+<td><p>unknown</p></td>
+</tr>
+<tr class="row-even"><td><p>Fedora28</p></td>
+<td><p>2.7.1</p></td>
+<td><p>1.8.0_191</p></td>
+<td><p>Linux</p></td>
+<td><p>4.19.16-200.fc28.x86_64</p></td>
+<td><p>unknown</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fedora29</p></td>
+<td><p>2.7.1</p></td>
+<td><p>1.8.0_191</p></td>
+<td><p>Linux</p></td>
+<td><p>4.20.3-200.fc29.x86_64</p></td>
+<td><p>unknown</p></td>
+</tr>
+<tr class="row-even"><td><p>FreeBSD - 11.2</p></td>
+<td><p>2.7.0</p></td>
+<td><p>1.8.0_192</p></td>
+<td><p>FreeBSD</p></td>
+<td><p>11.2-RELEASE</p></td>
+<td><p>unknown</p></td>
+</tr>
+<tr class="row-odd"><td><p>OpenBSD - 6.3</p></td>
+<td><p>2.7.0</p></td>
+<td><p>1.8.0_144</p></td>
+<td><p>OpenBSD</p></td>
+<td><p>6.3</p></td>
+<td><p>unknown</p></td>
+</tr>
+<tr class="row-even"><td><p>OpenSuSE15</p></td>
+<td><p>2.7.0</p></td>
+<td><p>10.0.1</p></td>
+<td><p>Linux</p></td>
+<td><p>4.12.14-lp150.11-default</p></td>
+<td><p>unknown</p></td>
+</tr>
+<tr class="row-odd"><td><p>RHEL-7</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>RHEL-8</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Raspbian (Debian-9)</p></td>
+<td><p>2.5.3</p></td>
+<td><p>1.8.0_181</p></td>
+<td><p>Linux</p></td>
+<td><p>4.14.50-v7+</p></td>
+<td><p>unknown</p></td>
+</tr>
+<tr class="row-even"><td><p>Snowleopard - 10.6.8</p></td>
+<td><p>2.7.0</p></td>
+<td><p>1.8.0_91</p></td>
+<td><p>Mac OS X</p></td>
+<td><p>10.6.8</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Solaris10 - 10</p></td>
+<td><p>2.7.0</p></td>
+<td></td>
+<td><p>SunOS</p></td>
+<td><p>5.10</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Solaris11 - 11.3</p></td>
+<td><p>2.7.0</p></td>
+<td><p>1.8.0_60</p></td>
+<td><p>SunOS</p></td>
+<td><p>5.11</p></td>
+<td><p>unknown</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ubuntu-16.04</p></td>
+<td><p>2.7.0</p></td>
+<td><p>java9-internal</p></td>
+<td><p>Linux</p></td>
+<td><p>4.15.0-43-generic</p></td>
+<td><p>unknown</p></td>
+</tr>
+<tr class="row-even"><td><p>Ubuntu-18.04</p></td>
+<td><p>2.7.1</p></td>
+<td><p>10.0.2</p></td>
+<td><p>Linux</p></td>
+<td><p>4.15.0-43-generic</p></td>
+<td><p>unknown</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ubuntu-18.10</p></td>
+<td><p>2.7.1</p></td>
+<td><p>11.0.1</p></td>
+<td><p>Linux</p></td>
+<td><p>4.18.0-13-generic</p></td>
+<td><p>unknown</p></td>
+</tr>
+<tr class="row-even"><td><p>Windows10Home</p></td>
+<td><p>2.7.0</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Windows10Professional</p></td>
+<td><p>2.7.0</p></td>
+<td><p>1.8.0_181</p></td>
+<td><p>Windows 10</p></td>
+<td><p>10.0</p></td>
+<td><p>‘’</p></td>
+</tr>
+<tr class="row-even"><td><p>Windows2008r2</p></td>
+<td><p>2.7.0</p></td>
+<td><p>1.8.0_131</p></td>
+<td><p>Windows Server 2008 R2</p></td>
+<td><p>6.1</p></td>
+<td><p>‘’</p></td>
+</tr>
+<tr class="row-odd"><td><p>Windows2012r2</p></td>
+<td><p>2.7.0</p></td>
+<td><p>1.8.0_131</p></td>
+<td><p>Windows Server 2012 R2</p></td>
+<td><p>6.3</p></td>
+<td><p>‘’</p></td>
+</tr>
+<tr class="row-even"><td><p>Windows2016</p></td>
+<td><p>2.7.0</p></td>
+<td><p>1.8.0_131</p></td>
+<td><p>Windows Server 2016</p></td>
+<td><p>10.0</p></td>
+<td><p>‘’</p></td>
+</tr>
+<tr class="row-odd"><td><p>Windows2019SE</p></td>
+<td><p>2.7.0</p></td>
+<td><p>1.8.0_131</p></td>
+<td><p>Windows Server 2016</p></td>
+<td><p>10.0</p></td>
+<td><p>‘’</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></div></blockquote>
+</div>
+</div>
+<div class="section" id="id9">
+<h4>IronPython<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<p>ffs.</p>
+</div>
+<div class="section" id="sysctl">
+<h4>sysctl<a class="headerlink" href="#sysctl" title="Permalink to this headline">¶</a></h4>
+<p>The following data is collected by the <em>syscall</em> interface when required.
+The data is cached, thus normally required to be called once only.</p>
+<blockquote>
+<div><div class="featuretab">
+<div class="nonbreakheadtab">
+<div class="autocoltab"><table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 18%" />
+<col style="width: 34%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>OS</p></th>
+<th class="head"><p>kern(el).ostype</p></th>
+<th class="head"><p>kern(el).osrelease</p></th>
+<th class="head"><p>kern(el).osrevision</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CentOS7 - 7.6</p></td>
+<td><p>Linux</p></td>
+<td><p>3.10.0-957.1.3.el7.x86_64</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-odd"><td><p>Debian-9 - 9.6</p></td>
+<td><p>Linux</p></td>
+<td><p>4.9.0-7-amd64</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-even"><td><p>Fedora27</p></td>
+<td><p>Linux</p></td>
+<td><p>4.18.19-100.fc27.x86_64</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fedora28</p></td>
+<td><p>Linux</p></td>
+<td><p>4.19.16-200.fc28.x86_64</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-even"><td><p>Fedora29</p></td>
+<td><p>Linux</p></td>
+<td><p>4.20.3-200.fc29.x86_64</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-odd"><td><p>FreeBSD - 11.2</p></td>
+<td><p>FreeBSD</p></td>
+<td><p>11.2-RELEASE</p></td>
+<td><p>199506</p></td>
+</tr>
+<tr class="row-even"><td><p>OpenBSD - 6.3</p></td>
+<td><p>OpenBSD</p></td>
+<td><p>6.3</p></td>
+<td><p>201805</p></td>
+</tr>
+<tr class="row-odd"><td><p>OpenSUSE15</p></td>
+<td><p>Linux</p></td>
+<td><p>4.12.14-lp150.11-default</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-even"><td><p>RHEL-7</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>RHEL-8</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Raspbian (Debian-9)</p></td>
+<td><p>Linux</p></td>
+<td><p>4.14.50-v7+</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-odd"><td><p>Snowleopard - 10.6.8</p></td>
+<td><p>Darwin</p></td>
+<td><p>10.8.0</p></td>
+<td><p>199506</p></td>
+</tr>
+<tr class="row-even"><td><p>Solaris11 - 11.3</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Ubuntu-16.04</p></td>
+<td><p>Linux</p></td>
+<td><p>4.15.0-43-generic</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-even"><td><p>Ubuntu-18.04</p></td>
+<td><p>Linux</p></td>
+<td><p>4.15.0-43-generic</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ubuntu-18.10</p></td>
+<td><p>Linux</p></td>
+<td><p>4.18.0-13-generic</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-even"><td><p>Windows10Home</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Windows10Professional</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Windows2008r2</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Windows2012r2</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Windows2016</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Windows2019SE</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></div></blockquote>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+      <span class="lastupdated">
+        Last updated on Dec 08, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

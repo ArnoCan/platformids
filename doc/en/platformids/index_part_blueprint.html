@@ -1,0 +1,414 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Blueprint &mdash; platformids  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. rtplatformids - Command line interface" href="rtplatformids_cli.html" />
+    <link rel="prev" title="2. Platform Support" href="index_part_platform_support.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.36
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Shortcuts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">PlatformIDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_cockpit.html">apidoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_apiref_scaled.html">apiref</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index_part_abstract.html">1. Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_platform_support.html">2. Platform Support</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Blueprint</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bitmask-enumeration-for-performance">3.1. Bitmask Enumeration for Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#os-and-distro-categories">3.2. OS and Distro Categories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-types">3.3. Custom Types</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rtplatformids_cli.html">4. Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="os_categorization.html">5. OS Categorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distributions.html">6. Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_documents.html">7. Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_modules.html">8. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_indices.html">9. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_resources.html">10. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">11. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">12. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_license.html">13. Licenses</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="howto/index.html">Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">platformids</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>3. Blueprint</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index_part_blueprint.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="blueprint">
+<h1>3. Blueprint<a class="headerlink" href="#blueprint" title="Permalink to this headline">¶</a></h1>
+<p id="reference-architecture">The modern landscapes of information infrastructures are commonly designed
+and organized as stacks of runtime environments and provided as all-inclusive services
+for the execution of application processes based on common frameworks.
+The technical architecture of the stacks consists of
+the building blocks for the physical and virtual machines, operating systems,
+and the middleware and execution frameworks of the runtime processes.
+This frequently requires the design of slim and relocable services,
+frequently requiring adaptation and mediation components for specific platforms.</p>
+<p>The <em>platformids</em> provides hereby the automated technical detection and the enumeration
+based on ‘<a class="reference external" href="python_bitmasks.html#">Hirarchical Bit Masks for Numeric Vectors</a>’,
+which are applied as <a class="reference internal" href="os_categorization.html#bitmasksosdist"><span class="std std-ref">Bit Masks for OS and Distro Releases</span></a>.</p>
+<div class="figure align-center" id="id9" style="width: 450px">
+<span id="figure-architecture"></span><a class="reference external image-reference" href="_static/systems-ids-sublayers.png"><img alt="_images/systems-ids-sublayers.png" src="_images/systems-ids-sublayers.png" /></a>
+<p class="caption"><span class="caption-text">Figure: Service Sub-Layers <a class="reference external" href="_static/systems-ids-sublayers.png"><img alt="zoom" src="_images/zoom1.png" style="width: 16px;" /></a> <a class="reference internal" href="#reference-details"><span class="std std-ref">more…</span></a></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>The  provided the <a class="reference external" href="os_categorization.html#">OS and Distribution layer</a> by the <em>platformids</em>
+provides pre-defined values for the most common standard OS and distributions.
+<em>Arbitrary custom identifiers are planned to be available soon.</em></p>
+<p>The provided hierarchical bitmask representation supports hereby for fast comparison access which outperforms the
+common fractured and diverse formats by reducing the access time for single and in particular for repetitive access.
+The <em>platformids</em> reduces comparison operations on pure OS names, but in particular combined OS and distribution
+information including release versions to a remaining little percentage to operations on single integer values.</p>
+<p>The support includes in particular the build time information about the underlying build systems as well as the
+target systems.
+Thus supporting the information required for various deployment versioning schemes such as fixed and rolling release schedules,
+the automation of version schemes for Continous Integration(CI) and Continous Delpoyment(CD).
+The definition of custom identifiers and labels as well as mapped-representation, e.g. in case of release names.
+The target environments are primarily Data-Center and Cloud deployments,
+but also Embedded and IoT deployments based on Linux and BSD distributions with native and cross-builds.</p>
+<p>The package ‘<em>platformids</em>’ is part of the set of packages of enumerations for efficient and fast operations of
+code variants for software and infrastructure stacks.
+For tested standard OS and distributions see help on <a class="reference external" href="install.html">installation</a> / <a class="reference internal" href="install.html#tested-os-python"><span class="std std-ref">Tested OS and Python Implementations</span></a>.
+For other stack layers refer to <a class="reference internal" href="references.html#machineids" id="id1"><span>[machineids]</span></a>, <a class="reference internal" href="references.html#pythonids" id="id2"><span>[pythonids]</span></a>, <a class="reference internal" href="references.html#resourceids" id="id3"><span>[resourceids]</span></a>, and <a class="reference internal" href="references.html#extensionids" id="id4"><span>[extensionids]</span></a>.</p>
+<div class="section" id="bitmask-enumeration-for-performance">
+<h2>3.1. Bitmask Enumeration for Performance<a class="headerlink" href="#bitmask-enumeration-for-performance" title="Permalink to this headline">¶</a></h2>
+<p>The ‘<em>platformids</em>’ package provides in particular the
+<a class="reference internal" href="python_bitmasks.html#bitmasksfornumericvectors"><span class="std std-ref">hierarchical enumeration</span></a>
+of runtime data source and target platform IDs, which supports for simplified compatibility and dynamic code
+adaptation.
+The
+<a class="reference internal" href="os_categorization.html#bitmasksosdist"><span class="std std-ref">platfom runtime system</span></a>
+is therefore logically split into
+<a class="reference internal" href="os_categorization.html#bitmaskslayout"><span class="std std-ref">categories, sets, and members of specific operating system types and distributions</span></a>.
+The <em>platformids</em> <em>hexversion</em> requires a 32bit bit array, which is an <em>int</em> or on some platforms a <em>long</em>,
+e.g. in case of <em>Jython</em>.</p>
+<p>The numeric values technically provide the comparison based on one single integer value instead of the
+common fragmented arrays and strings.
+This replaces for example the partial comparison by <em>string-slices</em> and <em>startswith</em> with an integer
+operation, reducing the pure partial comparison processing time to about 35%, thus for a complete OS and
+distribution release draftly calculated</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">version_info</span> <span class="o">+</span> <span class="n">platform</span><span class="o">.</span><span class="n">uname</span><span class="p">()</span>  <span class="c1"># e.g. POSIX, with additional processing for uname</span>
+
+<span class="o">-</span><span class="mi">65</span><span class="o">%</span>        <span class="mi">3</span> <span class="o">*</span> <span class="o">-</span><span class="mi">65</span><span class="o">%</span>           <span class="n">N</span> <span class="o">*</span> <span class="o">-</span><span class="mi">65</span><span class="o">%</span>       <span class="c1"># reduction of each part</span>
+</pre></div>
+</div>
+<p>to about a little percentage.
+Even less compared to the repetitive comparison with array members.</p>
+<p>The contained command line interface <a class="reference external" href="rtplatformids_cli.html#">rtplatformids</a> provides interactive and
+batch mode access to the canonical release information and the data provided by the standard Python library,
+enabling simplified platform dependent batch processing, continous integration and deployment.</p>
+<p id="reference-details">The following figure depicts a subset of the current supported platform variants.</p>
+<div class="figure align-center" id="id10" style="width: 100%">
+<span id="figure-supported-platforms"></span><a class="reference external image-reference" href="_static/platformids-blueprint.png"><img alt="_images/platformids-blueprint.png" src="_images/platformids-blueprint.png" /></a>
+<p class="caption"><span class="caption-text">Figure: “The Big Picture” of Supported Platforms <a class="reference external" href="_static/platformids-blueprint.png"><img alt="zoom" src="_images/zoom1.png" style="width: 16px;" /></a> <a class="reference internal" href="install.html#tested-os-python"><span class="std std-ref">more…</span></a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p>The provided platforms comprise hereby a wide spectrum of version numbering schemes and associeated
+lifetime cycles with various build and update philosophies.
+The <em>platformids</em> integrates them all into a common numbering identifier based on hierarchical bitarrays.</p>
+<p>Examples of the versioning and numbering scheme variants e.g. for the <em>distrel</em> are more diverse
+than a single number only.
+These represent for some of the <em>dist</em> actually various subvariants in a flat numbering scheme.
+For example the product variants of the Windows releases are supported frequently as 20 and more
+packaged products, or the variants of the <em>Ubuntu</em> and <em>Fedora</em> releases,
+which are currently up to about 10.
+In case of Solaris these differ for the <em>Solaris10</em> and <em>Solaris11</em> <em>distrel</em>, and could span
+a larger number due to the long-time of life-cycles.
+Other distributions switched their versioning scheme from classic milestone based waterfall numbering schems
+to ‘<em>versionless</em>’ continuous deployment schemes.</p>
+<p>The bit array for the platform ids is designed as a 32bit array due to the number of possible
+items, e.g. about 1000 Linux distributions <a class="reference internal" href="references.html#linuxpopular" id="id5"><span>[LinuxPopular]</span></a>, <a class="reference internal" href="references.html#linuxdist" id="id6"><span>[LinuxDist]</span></a> and <a class="reference internal" href="references.html#linuxdistcomp" id="id7"><span>[LinuxDistComp]</span></a>.
+This provides enough space for the future extension and custom enumeration ranges.
+The specific numbering scheme is hereby embedded logical into a hierarchical tree structure
+of version numbering schemes.
+Thus multiple independent distribution specific sub-schemes could be applied to the context specific sub-bitfields.</p>
+<p>See <a class="reference internal" href="platformids.html#platformids"><span class="std std-ref">Bit-Mask Definitions</span></a>.</p>
+</div>
+<div class="section" id="os-and-distro-categories">
+<h2>3.2. OS and Distro Categories<a class="headerlink" href="#os-and-distro-categories" title="Permalink to this headline">¶</a></h2>
+<p>The current runtime environment for the OS and distribution is represented by the global
+variable <strong>RTE</strong> and a set of predefined or custom enumerations.</p>
+<ul>
+<li><p><strong>platformids.RTE</strong></p>
+<p>The granular combined bit-mask-flag of the OS and distro
+[<a class="reference external" href="platformids.html#pyvxyz">RTE</a>] by default:</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">RTE</span> <span class="p">:</span><span class="o">=</span> <span class="mi">0</span><span class="n">bwwwwxxxxxxyyyyyyyyyyzzzzzzzzzzzz</span>
+
+<span class="n">wwww</span><span class="p">:</span>               <span class="mi">4</span> <span class="n">bits</span> <span class="k">as</span> <span class="n">bit</span> <span class="n">mask</span>
+<span class="n">xxxxxx</span><span class="p">:</span>             <span class="mi">6</span> <span class="n">bits</span> <span class="k">as</span> <span class="n">bit</span> <span class="n">mask</span>
+<span class="n">yyyyyyyyyy</span><span class="p">:</span>        <span class="mi">10</span> <span class="n">bits</span> <span class="k">as</span> <span class="n">bit</span> <span class="n">mask</span>
+<span class="n">zzzzzzzzzzzz</span><span class="p">:</span>      <span class="mi">12</span> <span class="n">bits</span> <span class="k">as</span> <span class="n">bit</span> <span class="n">mask</span> <span class="ow">or</span> <span class="n">integer</span>
+</pre></div>
+</td></tr></table></div>
+<p>The bitmask structure supports optional resizing of subfields for special cases of extended ranges of version numbering ranges.</p>
+<p>For details see also <a class="reference external" href="os_categorization.html#">OS Categorization</a>.</p>
+</li>
+<li><p><strong>platformids.platforms.PlatformParameters</strong></p>
+<p>The class <em>PlatformParameters</em> provides a scanner for the parameters of the current
+runtime platform.</p>
+</li>
+</ul>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># collect all</span>
+<span class="n">platformparams</span> <span class="o">=</span> <span class="n">PlatformParameters</span><span class="p">()</span>
+<span class="n">platformparams</span><span class="o">.</span><span class="n">scan</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">platformparams</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<ul>
+<li><p><strong>rtplatformids</strong></p>
+<p>The command line interface <em>rtplatformids</em> provides the access from the command line
+and batch scripts with vaious output formats of the platform data. Including <em>JSON</em>,
+<em>bash variables</em> and <em>bash array</em>.</p>
+</li>
+</ul>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">rtplatformparams</span>
+</pre></div>
+</td></tr></table></div>
+<p>See also <a class="reference external" href="os_categorization.html#">OS Categorization</a>.</p>
+</div>
+<div class="section" id="custom-types">
+<h2>3.3. Custom Types<a class="headerlink" href="#custom-types" title="Permalink to this headline">¶</a></h2>
+<p>The <em>platformids</em> supports the definition of custom types.
+This is required e.g. in the case of <em>Linux</em> due to more than 1000 public available distributions, and
+even more private customized variants, in particular in the field of embedded and IoT.
+Thus the range of a 32bit bitmask value does not provide the static enumeration of all distributions.
+Therefore custom enums are supported dynamically by an easy-to-use interface.</p>
+<p>All to be done is the dynamic allocation and resevration of the next enum value for the current context.
+The current context is e.g. the <em>ostype</em> with the reservation API</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">platformids</span><span class="o">.</span><span class="n">custom_ostype</span><span class="o">.</span><span class="n">add_enum</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>or the <em>dist</em> with the reservation API</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">platformids</span><span class="o">.</span><span class="n">custom_dist</span><span class="o">.</span><span class="n">add_enum</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>These could be simply used to acquire and reserve the next free value, which is valid for the whole lifetime
+of the current process such as the following example for <em>Minix</em>.
+The layers <em>category</em>, <em>ostype</em>. and <em>dist</em> are defined by shared values,
+the relase versions are defined by algorithms.
+Either the dominant <a class="reference internal" href="os_categorization.html#version-threenumberdefault"><span class="std std-ref">default</span></a> algorithm, or by a few specific variants
+such as <a class="reference internal" href="os_categorization.html#enumwinnt"><span class="std std-ref">windows-nt</span></a>.
+For the most rolling OpenSource distributions by <a class="reference internal" href="os_categorization.html#version-threenumberdate"><span class="std std-ref">3num-date</span></a>.</p>
+<pre class="literal-block">RTE_MINIX         = RTE_POSIX   + custom_ostype.add_enum()     #: Minix as ostype
+
+RTE_MINIX3        = RTE_MINIX   + custom_dist.add_enum()       #: Minix3 as dist
+
+RTE_MINIX321      = RTE_MINIX3  + 0x00000641                                #: Minix-3.2.1 as distrel / release version (<a class="reference internal" href="os_categorization.html#version-threenumberdefault"><span class="std std-ref">default</span></a>)
+RTE_MINIX330      = RTE_MINIX3  + 0x00000660                                #: Minix-3.3.0 as distrel / release version (<a class="reference internal" href="os_categorization.html#version-threenumberdefault"><span class="std std-ref">default</span></a>)</pre>
+<p>Due to it’s dynamic and volatile numbering scheme, which is valid for the lifetime of a process only,
+these cannot be used persistent, thus have to be supported via variables.</p>
+<p>See also <a class="reference internal" href="os_categorization.html#custom-numbering-schemes"><span class="std std-ref">Custom Numbering Schemes</span></a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="rtplatformids_cli.html" class="btn btn-neutral float-right" title="4. rtplatformids - Command line interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index_part_platform_support.html" class="btn btn-neutral float-left" title="2. Platform Support" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+      <span class="lastupdated">
+        Last updated on Dec 08, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,1212 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.2. platformids.platforms &mdash; platformids  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="8.3. platformids.dist.alpinelinux" href="dist/alpinelinux.html" />
+    <link rel="prev" title="8.1. platformids.__init__" href="platformids.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.36
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Shortcuts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">PlatformIDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_cockpit.html">apidoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_apiref_scaled.html">apiref</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index_part_abstract.html">1. Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_platform_support.html">2. Platform Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_blueprint.html">3. Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rtplatformids_cli.html">4. Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="os_categorization.html">5. OS Categorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distributions.html">6. Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_documents.html">7. Documents</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index_modules.html">8. Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="platformids.html">8.1. platformids.__init__</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8.2. platformids.platforms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module">8.2.1. Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#platformparameters">8.2.2. PlatformParameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">8.2.2.1. Attributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#init">8.2.2.2. __init__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#and">8.2.2.3. __and__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eq">8.2.2.4. __eq__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#getitem">8.2.2.5. __getitem__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iand">8.2.2.6. __iand__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#int">8.2.2.7. __int__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ior">8.2.2.8. __ior__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iter">8.2.2.9. __iter__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#len">8.2.2.10. __len__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ne">8.2.2.11. __ne__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#or">8.2.2.12. __or__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rand">8.2.2.13. __rand__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#repr">8.2.2.14. __repr__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ror">8.2.2.15. __ror__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setitem">8.2.2.16. __setitem__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#str">8.2.2.17. __str__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-hexversion">8.2.2.18. get_hexversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-oshexversion">8.2.2.19. get_oshexversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-json">8.2.2.20. get_json</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#items">8.2.2.21. items</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#keys">8.2.2.22. keys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pretty-format">8.2.2.23. pretty_format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scan">8.2.2.24. scan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#values">8.2.2.25. values</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#exceptions">8.2.3. Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dist/alpinelinux.html">8.3. platformids.dist.alpinelinux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/archlinux.html">8.4. platformids.dist.archlinux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/centos.html">8.5. platformids.dist.centos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/cygwin.html">8.6. platformids.dist.cygwin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/darwin.html">8.7. platformids.dist.darwin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/debian.html">8.8. platformids.dist.debian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/fedora.html">8.9. platformids.dist.fedora</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/freebsd.html">8.10. platformids.dist.freebsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/gentoo.html">8.11. platformids.dist.gentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/hpux.html">8.12. platformids.dist.hpux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/netbsd.html">8.13. platformids.dist.netbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/openbsd.html">8.14. platformids.dist.openbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/opensuse.html">8.15. platformids.dist.opensuse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/oraclelinux.html">8.16. platformids.dist.oraclelinux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/posix.html">8.17. platformids.dist.posix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/rhel.html">8.18. platformids.dist.rhel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/sles.html">8.19. platformids.dist.sles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/solaris.html">8.20. platformids.dist.solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/ubuntu.html">8.21. platformids.dist.ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/windows.html">8.22. platformids.dist.windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="net/kali.html">8.23. platformids.net.kali</a></li>
+<li class="toctree-l2"><a class="reference internal" href="net/openwrt.html">8.24. platformids.net.openwrt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="net/pfsense.html">8.25. platformids.net.pfsense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/aix.html">8.26. pythonids.dist.aix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/blackarch.html">8.27. pythonids.dist.blackarch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/dragonbsd.html">8.28. platformids.custom.dragonbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/ghostbsd.html">8.29. platformids.custom.ghostbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/linuxmint.html">8.30. platformids.custom.linuxmint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/minix.html">8.31. platformids.custom.minix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/minix2.html">8.32. platformids.custom.minix2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/nomadbsd.html">8.33. platformids.custom.nomadbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/parrot.html">8.34. platformids.custom.parrot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/pentoo.html">8.35. platformids.custom.pentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/reactos.html">8.36. platformids.custom.reactos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/slackware.html">8.37. platformids.custom.slackware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/trueos.html">8.38. platformids.custom.trueos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="embed/armbian.html">8.39. platformids.embed.armbian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="embed/circuitpython.html">8.40. platformids.embed.circuitpython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="embed/micropython.html">8.41. platformids.embed.micropython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="embed/raspbian.html">8.42. platformids.embed.raspbian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/nt/windows_kernel32_dll.html">8.43. windows_kernel32_dll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/nt/windows_products.html">8.44. windows_products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/nt/windows_subprocess_reg_exe.html">8.45. windows_subprocess_reg_exe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jy/dist/nt/Advapi32GetCurrentVersion.html">8.46. Advapi32GetCurrentVersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jy/dist/nt/Kernel32GetProductInfo.html">8.47. Kernel32GetProductInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jy/dist/nt/ReadCurrentVersionWinPrefs.html">8.48. ReadCurrentVersionWinPrefs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_indices.html">9. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_resources.html">10. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">11. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">12. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_license.html">13. Licenses</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="howto/index.html">Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">platformids</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index_modules.html">8. Modules</a> &raquo;</li>
+        
+      <li>8.2. platformids.platforms</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/platformids.platforms.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="shortcuttab"><div class="section" id="platformids-platforms">
+<h1>8.2. platformids.platforms<a class="headerlink" href="#platformids-platforms" title="Permalink to this headline">¶</a></h1>
+<p>The <em>platforms</em> module provides the identifiers for the runtime platform as defined by
+the OS and distribution.
+The values are either scanned from the current platform by:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">platformids.platforms</span> <span class="kn">import</span> <span class="n">PlatformParameters</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">PlatformParameters</span><span class="p">()</span>  <span class="c1"># creates an empty object</span>
+<span class="n">x</span><span class="o">.</span><span class="n">scan</span><span class="p">()</span>                  <span class="c1"># scans the platform</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>             <span class="c1"># prints display-format, see also &#39;repr&#39;</span>
+</pre></div>
+</td></tr></table></div>
+</div></blockquote>
+<p>For predefined and tested platforms on <em>amd64</em> and <em>arm64/32</em> refer to the <a class="reference internal" href="os_categorization.html#os-supported"><span class="std std-ref">table of standard OS</span></a>.</p>
+<p>For example:</p>
+<ul>
+<li><p>Fedora27:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">category</span>         <span class="o">=</span> <span class="n">posix</span> <span class="o">-</span> <span class="n">RTE_POSIX</span>
+<span class="n">ostype</span>           <span class="o">=</span> <span class="n">linux</span> <span class="o">-</span> <span class="n">RTE_LINUX</span>
+<span class="n">dist</span>             <span class="o">=</span> <span class="n">fedora</span> <span class="o">-</span> <span class="n">RTE_FEDORA</span>
+<span class="n">distrel</span>          <span class="o">=</span> <span class="n">fedora27</span> <span class="o">-</span> <span class="n">RTE_FEDORA27</span>
+<span class="n">dist</span><span class="o">-</span><span class="n">rel</span><span class="o">-</span><span class="n">name</span>    <span class="o">=</span> <span class="n">Twenty</span> <span class="n">Seven</span>
+<span class="n">dist</span><span class="o">-</span><span class="n">vers</span>        <span class="o">=</span> <span class="p">[</span><span class="mi">27</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">os</span><span class="o">-</span><span class="n">vers</span>          <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+<span class="n">hexversion</span>       <span class="o">=</span>
+<span class="n">os</span><span class="o">-</span><span class="n">hexversion</span>    <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>OS-X-10.6.8 - SnowLeopard:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">category</span>         <span class="o">=</span> <span class="n">posix</span> <span class="o">-</span> <span class="n">RTE_POSIX</span>
+<span class="n">ostype</span>           <span class="o">=</span> <span class="n">darwin</span> <span class="o">-</span> <span class="n">RTE_DARWIN</span>
+<span class="n">dist</span>             <span class="o">=</span> <span class="n">osx</span> <span class="o">-</span> <span class="n">RTE_OSX</span>
+<span class="n">distrel</span>          <span class="o">=</span> <span class="n">osx</span><span class="o">-</span><span class="mf">10.6</span><span class="o">.</span><span class="mi">8</span> <span class="o">-</span> <span class="n">RTE_OSX1068</span>
+<span class="n">dist</span><span class="o">-</span><span class="n">rel</span><span class="o">-</span><span class="n">name</span>    <span class="o">=</span> <span class="n">todo</span><span class="o">-</span><span class="n">distrelname</span>
+<span class="n">dist</span><span class="o">-</span><span class="n">vers</span>        <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">os</span><span class="o">-</span><span class="n">vers</span>          <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">hexversion</span>       <span class="o">=</span>
+<span class="n">os</span><span class="o">-</span><span class="n">hexversion</span>    <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>CentOS7 - aarch64:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">category</span>         <span class="o">=</span> <span class="n">posix</span> <span class="o">-</span> <span class="n">RTE_POSIX</span>
+<span class="n">ostype</span>           <span class="o">=</span> <span class="n">linux</span> <span class="o">-</span> <span class="n">RTE_LINUX</span>
+<span class="n">dist</span>             <span class="o">=</span> <span class="n">centos</span> <span class="o">-</span> <span class="n">RTE_CENTOS</span>
+<span class="n">distrel</span>          <span class="o">=</span> <span class="n">centos</span><span class="o">-</span><span class="mf">7.5</span><span class="o">.</span><span class="mi">1804</span>  <span class="o">-</span> <span class="n">RTE_CENTOS75</span>
+<span class="n">dist</span><span class="o">-</span><span class="n">rel</span><span class="o">-</span><span class="n">name</span>    <span class="o">=</span> <span class="n">Core</span>
+<span class="n">dist</span><span class="o">-</span><span class="n">vers</span>        <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1804</span><span class="p">]</span>
+<span class="n">os</span><span class="o">-</span><span class="n">vers</span>          <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">52</span><span class="p">]</span>
+<span class="n">hexversion</span>       <span class="o">=</span>
+<span class="n">os</span><span class="o">-</span><span class="n">hexversion</span>    <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Armbian - armhfx:</p>
+<blockquote>
+<div><p>Or in case of <em>Armbian</em> derived from <em>debian</em> the release names are coupled, while
+the release numbering is independent:</p>
+<blockquote>
+<div><pre class="literal-block">category         = <a class="reference external" href="platformids.html#bit-mask-definitions">posix - RTE_POSIX</a>
+ostype           = <a class="reference external" href="platformids.html#bit-mask-definitions">linux - RTE_LINUX</a>
+dist             = <a class="reference external" href="platformids.html#bit-mask-definitions">armbian - RTE_ARMBIAN</a>
+distrel          = <a class="reference external" href="embed/armbian.html#">armbian-5.50.0 - RTE_ARMBIAN5500</a>
+dist-rel-name    = <a class="reference external" href="embed/armbian.html#">Armbian-stretch</a>
+dist-vers        = [5, 50, 0]
+os-vers          = [4, 14, 52]
+hexversion       =
+os-hexversion    = 0</pre>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><p>Windows7 Ultimate:</p>
+<blockquote>
+<div><p>The windows release provides the additional windows specific parameters
+<em>ServicePack</em>, <em>ProductType</em>, and <em>SuiteMask</em>.</p>
+<blockquote>
+<div><pre class="literal-block">category         = windows - RTE_WINDOWS
+ostype           = nt - RTE_NT
+dist             = winws
+distrel          = nt-6.1.7601
+dist-rel-name    = Windows7U
+dist-vers        = [6, 1, 7601]
+os-vers          = [7, 0, 0]
+hexversion       = RTE_FEDORA27
+os-hexversion    = 0
+wServicePack     = [1, 0]        # see <a class="reference internal" href="references.html#getversionex" id="id1"><span>[GetVersionEx]</span></a>
+wProductType     = 1             # see <a class="reference internal" href="references.html#getversionex" id="id2"><span>[GetVersionEx]</span></a>
+wSuiteMask       = 256           # see <a class="reference internal" href="references.html#getversionex" id="id3"><span>[GetVersionEx]</span></a></pre>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ul>
+<div class="section" id="module">
+<h2>8.2.1. Module<a class="headerlink" href="#module" title="Permalink to this headline">¶</a></h2>
+<p>The doc-strings of the document are spared in order to support in any case a slim memory-print
+and fast load time.</p>
+<span class="target" id="module-platformids.platforms"></span><p>The module ‘platforms’ provides the class for the representation of platform parameters.
+This includes the scan of the current platform and the calculation of arbitrary hexadecimal
+labels for the fast processing of repetitive comparisons.</p>
+<p>The supported implementations are: CPython, IPython, IronPython, Jython, and PyPy.</p>
+</div>
+<div class="section" id="platformparameters">
+<h2>8.2.2. PlatformParameters<a class="headerlink" href="#platformparameters" title="Permalink to this headline">¶</a></h2>
+<p>The class provides the representation of the current and/or a user provided platform.
+The automatic scan of the current runtime environment has to be triggered explicitly
+by the method <a class="reference external" href="#scan">platformids.PlatformParameters.scan()</a>.
+The call replaces all attribute values of the current instance by the detected values.</p>
+<dl class="class">
+<dt id="platformids.platforms.PlatformParameters">
+<em class="property">class </em><code class="sig-prename descclassname">platformids.platforms.</code><code class="sig-name descname">PlatformParameters</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<div class="section" id="attributes">
+<h3>8.2.2.1. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<p>The following public attributes are provided for the
+<a class="reference internal" href="os_categorization.html#ostypeanddistcategories"><span class="std std-ref">hierachical platform categorization</span></a>:</p>
+<span id="index-0"></span><ul id="attr-category">
+<li><p><strong>category</strong></p>
+<blockquote>
+<div><p>The type of operating system.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">category</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">class</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">os</span><span class="o">&gt;</span>
+
+<span class="n">class</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">os</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+     <span class="n">wpemu</span>            <span class="c1"># RTE_WPEMU</span>
+   <span class="o">|</span> <span class="n">posix</span>            <span class="c1"># RTE_POSIX</span>
+   <span class="o">|</span> <span class="n">pwemu</span>            <span class="c1"># RTE_PWEMU</span>
+   <span class="o">|</span> <span class="n">windows</span>          <span class="c1"># RTE_WIN</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ul>
+<span id="index-1"></span><ul id="attr-ostype">
+<li><p><strong>ostype</strong></p>
+<blockquote>
+<div><p>The family of operating systems.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ostype</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="nb">type</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">os</span><span class="o">&gt;</span>
+
+<span class="nb">type</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">os</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+     <span class="n">bsd</span>              <span class="c1"># RTE_BSD</span>
+   <span class="o">|</span> <span class="n">cygwinnt</span>         <span class="c1"># RTE_CYGWINNT</span>
+   <span class="o">|</span> <span class="n">darwin</span>           <span class="c1"># RTE_DARWIN</span>
+   <span class="o">|</span> <span class="n">linux</span>            <span class="c1"># RTE_LINUX</span>
+   <span class="o">|</span> <span class="n">nt</span>               <span class="c1"># RTE_NT</span>
+   <span class="o">|</span> <span class="n">unix</span>             <span class="c1"># RTE_UNIX</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ul>
+<span id="index-2"></span><ul id="attr-dist">
+<li><p><strong>dist</strong></p>
+<blockquote>
+<div><p>The packaged distributions of operating systems.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dist</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">distribution</span><span class="o">&gt;</span>
+
+<span class="n">name</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">distribution</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+     <span class="n">centos</span>           <span class="c1"># RTE_CENTOS</span>
+   <span class="o">|</span> <span class="n">debian</span>           <span class="c1"># RTE_DEBIAN</span>
+   <span class="o">|</span> <span class="n">fedora</span>           <span class="c1"># RTE_FEDORA</span>
+   <span class="o">|</span> <span class="n">nt63</span>             <span class="c1"># RTE_NT63</span>
+   <span class="o">|</span> <span class="n">nt100</span>            <span class="c1"># RTE_NT100</span>
+   <span class="o">|</span> <span class="n">openbsd</span>          <span class="c1"># RTE_OPENBSD</span>
+   <span class="o">|</span> <span class="n">osx</span>              <span class="c1"># RTE_OSX</span>
+   <span class="o">|</span> <span class="n">rhel</span>             <span class="c1"># RTE_RHEL</span>
+   <span class="o">|</span> <span class="n">suse</span>             <span class="c1"># RTE_SUSE</span>
+   <span class="c1"># and others</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ul>
+<span id="index-3"></span><ul id="attr-distrel">
+<li><p><strong>distrel</strong></p>
+<blockquote>
+<div><p>A specific release of a packaged operating system.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">distrel</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+     <span class="n">centos76</span>       <span class="c1"># CentOS-7.6 or CentOS-7.6-1804</span>
+   <span class="o">|</span> <span class="n">debian96</span>       <span class="c1"># Debian-9.6</span>
+   <span class="o">|</span> <span class="n">fedora27</span>       <span class="c1"># Fedora27</span>
+   <span class="o">|</span> <span class="n">openbsd63</span>      <span class="c1"># OpenBSD-6.3</span>
+   <span class="o">|</span> <span class="n">rhel76</span>         <span class="c1"># RHEL-7.6</span>
+   <span class="o">|</span> <span class="n">rhel8</span>          <span class="c1"># RHEL-8 / 8.0</span>
+   <span class="o">|</span> <span class="n">snowleopard</span>    <span class="c1"># OS-X-10.6.8 / OS-X-10.6.0</span>
+   <span class="o">|</span> <span class="n">windows10p</span>     <span class="c1"># Windows 10 Professional</span>
+   <span class="o">|</span> <span class="n">windows2012r2</span>  <span class="c1"># Windows Server 2010R2</span>
+   <span class="o">|</span> <span class="n">windows2016s</span>   <span class="c1"># Windows Server 2016</span>
+   <span class="o">|</span> <span class="n">windows2019se</span>  <span class="c1"># Windows Server 2019 Essentials</span>
+   <span class="o">|</span> <span class="n">windows7u</span>      <span class="c1"># Windows 7 Ultimate</span>
+   <span class="c1"># and others</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ul>
+<span id="index-4"></span><ul id="attr-distrel-hexversion">
+<li><p><strong>distrel_hexversion</strong></p>
+<blockquote>
+<div><p>The numeric bitmask of the release version representing all previous
+attributes within one 32-bit integer. See
+<a class="reference internal" href="os_categorization.html#bitmasksosdist"><span class="std std-ref">bitmasks</span></a>:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">distrel</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+     <span class="n">RTE_RHEL73</span>     <span class="c1"># RHEL 7.3</span>
+   <span class="o">|</span> <span class="n">RTE_RHEL8</span>      <span class="c1"># RHEL 8.0</span>
+   <span class="o">|</span> <span class="n">RTE_FEDORA27</span>   <span class="c1"># Fedora27</span>
+   <span class="o">|</span> <span class="n">RTE_DEBIAN96</span>   <span class="c1"># Debian-9.6</span>
+   <span class="o">|</span> <span class="n">RTE_W10P</span>       <span class="c1"># Windows 10 Professional</span>
+   <span class="o">|</span> <span class="n">RTE_W2016</span>      <span class="c1"># Windows Server 2016</span>
+   <span class="o">|</span> <span class="n">RTE_OSX1068</span>    <span class="c1"># OS-X Snowleopard</span>
+   <span class="c1"># and others</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ul>
+<span id="index-5"></span><ul id="attr-distrel-version">
+<li><p><strong>distrel_version</strong></p>
+<blockquote>
+<div><p>3-valued integer version of the distribution</p>
+</div></blockquote>
+</li>
+</ul>
+<span id="index-6"></span><ul id="attr-os-version">
+<li><p><strong>os_version</strong></p>
+<blockquote>
+<div><p>3-valued integer version of the OS kernel</p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="init">
+<h3>8.2.2.2. __init__<a class="headerlink" href="#init" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.__init__">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an empty object.
+No automatic call of <em>PlatformParameters.scan()</em>.
+The instance could be either initialized by the provided
+parameters, or remains empty - which is zero <em>0</em>.</p>
+<p>Each call of <em>PlatformParameters.scan()</em> replaces the previous
+values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – <dl>
+<dt>Optional positional parameters in the following order.</dt><dd><p>The corresponding keyword-arguments dominate.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">:</span><span class="o">=</span> <span class="n">category</span>
+<span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">:</span><span class="o">=</span> <span class="n">ostype</span>
+<span class="n">args</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">:</span><span class="o">=</span> <span class="n">dist</span>
+<span class="n">args</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="p">:</span><span class="o">=</span> <span class="n">distrel</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>kargs</strong> – <blockquote>
+<div><dl>
+<dt>category:</dt><dd><p>The <em>category</em> for initialization.</p>
+<p>default := 0</p>
+</dd>
+<dt>ostype:</dt><dd><p>The <em>ostype</em> for initialization.</p>
+<p>default := 0</p>
+</dd>
+<dt>dist:</dt><dd><p>The <em>dist</em> for initialization.</p>
+<p>default := 0</p>
+</dd>
+<dt>distrel:</dt><dd><p>The <em>distrel</em> for initialization.</p>
+<p>default := 0</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>Initial instance, optionally initialized by the provided
+parameters.</p>
+</dd>
+<dt>Raises:</dt><dd><p>pass-through</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="and">
+<h3>8.2.2.3. __and__<a class="headerlink" href="#and" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.__and__">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__and__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__and__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__and__" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <em>&amp;</em> operator for the resulting <em>hexversion</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">-</span><span class="n">bitmask</span> <span class="o">&amp;</span> <span class="n">other</span><span class="o">-</span><span class="n">bitmask</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> – <p>The bitmask for operations.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">other</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nb">int</span><span class="o">-</span><span class="mi">32</span><span class="n">bit</span><span class="o">-</span><span class="n">mask</span><span class="o">&gt;</span>                   <span class="c1"># compare with hexversion</span>
+  <span class="o">|</span> <span class="o">&lt;</span><span class="n">dictionary</span><span class="o">&gt;</span><span class="p">)</span>                      <span class="c1"># compare keys only</span>
+  <span class="o">|</span> <span class="o">&lt;</span><span class="nb">tuple</span><span class="o">&gt;</span><span class="p">)</span>                           <span class="c1"># compare key-index only</span>
+  <span class="o">|</span> <span class="o">&lt;</span><span class="n">instance</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">PlatformParameters</span><span class="o">&gt;</span>   <span class="c1"># compare both hexversions</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The resulting bitmask as numeric value.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>pass-through</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="eq">
+<h3>8.2.2.4. __eq__<a class="headerlink" href="#eq" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.__eq__">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__eq__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__eq__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Supports standard comparison with the types
+<em>PlatformParameters</em>, and <em>dict</em>. In case of
+a dict the attributes are used as keys literally.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> – <p>The instannce to be compared. The comparison is provided as:</p>
+<ul>
+<li><p>literal contents of objects:</p>
+<p>literally for objects <em>PlatformParameters</em>, or partially
+for <em>dict</em>.</p>
+</li>
+<li><p>partial hierarchical matches</p>
+<p>The partial comparison is based on the keys provided by
+the dictionary argument. Only attributes with a corresponding
+key are compared.</p>
+<p>The following items are handled specially:</p>
+<blockquote>
+<div><dl>
+<dt>distrel_version, osrel_version:</dt><dd><blockquote>
+<div><p>The present values are compared only, e.g.
+the following is considered as <em>True</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">distrel_version</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">other</span><span class="o">.</span><span class="n">distrel_version</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,]</span>
+
+<span class="n">TRUE</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_version</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">distrel_version</span>
+</pre></div>
+</div>
+<p>While still:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">distrel_version</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">other</span><span class="o">.</span><span class="n">distrel_version</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+
+<span class="n">FALSE</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_version</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">distrel_version</span>
+</pre></div>
+</div>
+</div></blockquote>
+<dl>
+<dt>distrel:</dt><dd><p>Valuesa are compared by <em>startswith()</em> e.g.
+the following is considered as <em>True</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">distrel</span>  <span class="o">=</span> <span class="s1">&#39;fedora-27.0.0&#39;</span>
+<span class="n">other</span><span class="o">.</span><span class="n">distrel</span> <span class="o">=</span> <span class="s1">&#39;fedora-27.0&#39;</span>
+
+<span class="n">TRUE</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">distrel</span>
+</pre></div>
+</div>
+<p>While still:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">distrel</span>  <span class="o">=</span> <span class="s1">&#39;fedora-27.0.0&#39;</span>
+<span class="n">other</span><span class="o">.</span><span class="n">distrel</span> <span class="o">=</span> <span class="s1">&#39;fedora-27.0.1&#39;</span>
+
+<span class="n">FALSE</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">distrel</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+<li><p>integer bit masks</p>
+<p>Special treatment of integers is provided:</p>
+<ul>
+<li><p><em>category</em>:</p>
+<p>When a valid <em>category</em>, <em>self.category</em> is compared only.</p>
+</li>
+<li><p><em>ostype</em>:</p>
+<p>When a valid <em>ostype</em>, <em>self.ostype</em> is compared only.</p>
+</li>
+<li><p><em>dist</em> and/or <em>distrel</em>:</p>
+<p>The value is compared to the same maximal extend.</p>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>relevant parts are equal - see args.
+False: else</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>True</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>KeyError</strong> – </p></li>
+<li><p><strong>AttributeError</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="getitem">
+<h3>8.2.2.5. __getitem__<a class="headerlink" href="#getitem" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.__getitem__">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__getitem__</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__getitem__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the value of an attribute.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="iand">
+<h3>8.2.2.6. __iand__<a class="headerlink" href="#iand" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.__iand__">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__iand__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__iand__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__iand__" title="Permalink to this definition">¶</a></dt>
+<dd><p>The in-place <em>&amp;</em> operator for the resulting <em>hexversion</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">-</span><span class="n">bitmask</span> <span class="o">&amp;=</span> <span class="n">other</span><span class="o">-</span><span class="n">bitmask</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> – <p>The bitmask for operations.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">other</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">-</span><span class="mi">32</span><span class="n">bit</span><span class="o">-</span><span class="n">mask</span><span class="o">&gt;</span> <span class="o">|</span> <span class="o">&lt;</span><span class="n">instance</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">PlatformParameters</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The resulting bitmask as numeric value.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>pass-through</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="int">
+<h3>8.2.2.7. __int__<a class="headerlink" href="#int" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.__int__">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__int__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__int__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__int__" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cast operator into the botmask:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">-</span><span class="n">bitmask</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>none</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The resulting bitmask of self as numeric value.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>pass-through</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="ior">
+<h3>8.2.2.8. __ior__<a class="headerlink" href="#ior" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.__ior__">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__ior__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__ior__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__ior__" title="Permalink to this definition">¶</a></dt>
+<dd><p>The in-place <em>|</em> operator for the resulting <em>hexversion</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">-</span><span class="n">bitmask</span> <span class="o">|=</span> <span class="n">other</span><span class="o">-</span><span class="n">bitmask</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> – <p>The bitmask for operations.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">other</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">-</span><span class="mi">32</span><span class="n">bit</span><span class="o">-</span><span class="n">mask</span><span class="o">&gt;</span> <span class="o">|</span> <span class="o">&lt;</span><span class="n">instance</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">PlatformParameters</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The resulting bitmask as numeric value.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>pass-through</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="iter">
+<h3>8.2.2.9. __iter__<a class="headerlink" href="#iter" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.__iter__">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__iter__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__iter__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__iter__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterates the non-private attribute names.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="len">
+<h3>8.2.2.10. __len__<a class="headerlink" href="#len" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.__len__">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__len__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__len__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__len__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Counts and returns the number of non-private attributes - not starting with underscore.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ne">
+<h3>8.2.2.11. __ne__<a class="headerlink" href="#ne" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.__ne__">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__ne__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__ne__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__ne__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return self!=value.</p>
+<p>See <em>__eq__</em>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="or">
+<h3>8.2.2.12. __or__<a class="headerlink" href="#or" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.__or__">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__or__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__or__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__or__" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <em>|</em> operator for the resulting <em>hexversion</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">-</span><span class="n">bitmask</span> <span class="o">|</span> <span class="n">other</span><span class="o">-</span><span class="n">bitmask</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> – <p>The bitmask for operations.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">other</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">-</span><span class="mi">32</span><span class="n">bit</span><span class="o">-</span><span class="n">mask</span><span class="o">&gt;</span> <span class="o">|</span> <span class="o">&lt;</span><span class="n">instance</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">PlatformParameters</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The resulting bitmask as numeric value.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>pass-through</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="rand">
+<h3>8.2.2.13. __rand__<a class="headerlink" href="#rand" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.__rand__">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__rand__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__rand__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__rand__" title="Permalink to this definition">¶</a></dt>
+<dd><p>The r-side <em>&amp;</em> operator for the resulting <em>hexversion</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">other</span><span class="o">-</span><span class="n">bitmask</span> <span class="o">&amp;</span> <span class="bp">self</span><span class="o">-</span><span class="n">bitmask</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> – <p>The bitmask for operations.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">other</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">-</span><span class="mi">32</span><span class="n">bit</span><span class="o">-</span><span class="n">mask</span><span class="o">&gt;</span> <span class="o">|</span> <span class="o">&lt;</span><span class="n">instance</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">PlatformParameters</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The resulting bitmask as numeric value.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>pass-through</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="repr">
+<h3>8.2.2.14. __repr__<a class="headerlink" href="#repr" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.__repr__">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__repr__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ror">
+<h3>8.2.2.15. __ror__<a class="headerlink" href="#ror" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.__ror__">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__ror__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__ror__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__ror__" title="Permalink to this definition">¶</a></dt>
+<dd><p>The right-side <em>|</em> operator for the resulting <em>hexversion</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">other</span><span class="o">-</span><span class="n">bitmask</span> <span class="o">|</span> <span class="bp">self</span><span class="o">-</span><span class="n">bitmask</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> – <p>The bitmask for operations.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">other</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">-</span><span class="mi">32</span><span class="n">bit</span><span class="o">-</span><span class="n">mask</span><span class="o">&gt;</span> <span class="o">|</span> <span class="o">&lt;</span><span class="n">instance</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">PlatformParameters</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The resulting bitmask as numeric value.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>pass-through</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="setitem">
+<h3>8.2.2.16. __setitem__<a class="headerlink" href="#setitem" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.__setitem__">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__setitem__</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">val</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__setitem__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__setitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Standard set.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="str">
+<h3>8.2.2.17. __str__<a class="headerlink" href="#str" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.__str__">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</div>
+<div class="section" id="get-hexversion">
+<h3>8.2.2.18. get_hexversion<a class="headerlink" href="#get-hexversion" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.get_hexversion">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">get_hexversion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.get_hexversion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.get_hexversion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the hexversion of calculated platform from current
+parameters. The conversion is based on the table
+<em>platformids.platformids.rte2num</em>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="get-oshexversion">
+<h3>8.2.2.19. get_oshexversion<a class="headerlink" href="#get-oshexversion" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.get_oshexversion">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">get_oshexversion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.get_oshexversion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.get_oshexversion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the oshexversion calculated from current parameters.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="get-json">
+<h3>8.2.2.20. get_json<a class="headerlink" href="#get-json" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.get_json">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">get_json</code><span class="sig-paren">(</span><em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.get_json"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.get_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dictionary of attributes prepared to be processed
+as JSON data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kargs</strong> – <dl class="simple">
+<dt>select:</dt><dd><p>List of attributes to be returned.</p>
+</dd>
+</dl>
+<p>default: all non-private</p>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dictionary of key-value-pairs.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>pass-through</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="items">
+<h3>8.2.2.21. items<a class="headerlink" href="#items" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.items">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">items</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.items"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the non-private attributes as key-value-pairs.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="keys">
+<h3>8.2.2.22. keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.keys">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the non-private attribute names.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="pretty-format">
+<h3>8.2.2.23. pretty_format<a class="headerlink" href="#pretty-format" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.pretty_format">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">pretty_format</code><span class="sig-paren">(</span><em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.pretty_format"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.pretty_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Formats and returns a string of attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kargs</strong> – <dl>
+<dt>quiet:</dt><dd><p>Supress standard display contents.</p>
+<p>default := False</p>
+</dd>
+<dt>terse:</dt><dd><p>Format for postprocessing.</p>
+<p>default := False</p>
+</dd>
+<dt>type:</dt><dd><p>Defines the type for the output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+     <span class="n">bashvars</span>
+   <span class="o">|</span> <span class="n">json</span>
+   <span class="o">|</span> <span class="n">raw</span>
+   <span class="o">|</span> <span class="nb">repr</span>
+   <span class="o">|</span> <span class="nb">str</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>default := str</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Formatted string of attributes.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>TypeError</strong> – </p></li>
+<li><p><strong>pass-through</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="scan">
+<h3>8.2.2.24. scan<a class="headerlink" href="#scan" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.scan">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">scan</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.scan"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.scan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scans local platform for attributes specifying the underlying
+OS platform including the distribution. The provided data is
+consistent across all supported <em>Python</em> implementations
+including <em>Jython</em>.
+Internally calls <em>platformids.platformids.fetch_platform_distribution()</em>.</p>
+<ul class="simple">
+<li><p>distrel_version</p></li>
+<li><p>distrel_id</p></li>
+<li><p>dist</p></li>
+<li><p>distrel</p></li>
+<li><p>ostype</p></li>
+<li><p>osrel_id</p></li>
+<li><p>osrel_version</p></li>
+<li><p>distrel_hexversion</p></li>
+</ul>
+<p>Sets the member attributes:</p>
+<ul>
+<li><dl>
+<dt><em>distrel_version</em>:</dt><dd><p>Three-value segments of ditribution version
+as numeric tuple.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">distrel_version</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span><span class="o">&lt;</span><span class="c1">#major&gt;, &lt;#minor&gt;, &lt;#micro&gt;)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><em>distrel_id</em></dt><dd><p>String identifier of the complete distribution.
+This varies in dependency of the distribution.
+The state reflects commonly the distribution release, and when available the update/upgrade releases.
+Which varies and is for some rolling distributions currently not available.</p>
+<p>For example:</p>
+<blockquote>
+<div><pre class="literal-block">'Ubuntu1904'     - <a class="reference internal" href="os_categorization.html#enumubuntu"><span class="std std-ref">Ubuntu-19.04</span></a>
+'arch20190401'   - <a class="reference internal" href="os_categorization.html#enumarchlin"><span class="std std-ref">ArchLinux-2019.04.01</span></a>
+'armbian550'     - <a class="reference internal" href="os_categorization.html#enumarmbian"><span class="std std-ref">Armbian-5.50</span></a>
+'centos76'       - <a class="reference internal" href="os_categorization.html#enumcentos"><span class="std std-ref">CentOS-7.6.1810</span></a>
+'cygwin268'      - <a class="reference internal" href="os_categorization.html#enumcygwin"><span class="std std-ref">Cygwin-2.6.8</span></a>
+'fedora29'       - <a class="reference internal" href="os_categorization.html#enumfedora"><span class="std std-ref">Fedora29</span></a>
+'kali20191'      - <a class="reference internal" href="os_categorization.html#secnetkalilinux"><span class="std std-ref">KaliLinux-2019.1</span></a>
+'nt1001809'      - <a class="reference internal" href="os_categorization.html#enumwinnt"><span class="std std-ref">NT-10.0.1809</span></a>
+'osx1068'        - <a class="reference internal" href="os_categorization.html#enumosx"><span class="std std-ref">OSX-10.6.8</span></a></pre>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><em>dist</em>:</dt><dd><p>String identifier of the distributions ‘<em>dist</em>’ value.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><em>distrel</em>:</dt><dd><p>The human readable distribution release:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">distrel</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">dist</span><span class="o">&gt;-&lt;</span><span class="n">major</span><span class="o">&gt;.&lt;</span><span class="n">minor</span><span class="o">&gt;.&lt;</span><span class="n">micro</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><em>ostype</em>:</dt><dd><p>The string identifier of the ‘<em>ostype</em>’.
+For example:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;nt&#39;</span><span class="p">,</span> <span class="s1">&#39;linux&#39;</span><span class="p">,</span> <span class="o">...</span>
+</pre></div>
+</div>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><em>osrel_id</em>:</dt><dd><p>Same as ‘<em>ostype</em>’.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><em>osrel_version</em>:</dt><dd><p>The numeric tuple of the os release:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">os_version</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span><span class="o">&lt;</span><span class="c1">#major&gt;, &lt;#minor&gt;, &lt;#micro&gt;)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><em>distrel_hexversion</em></dt><dd><p>The calculated hexadcimal identifier ot the distribution.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+</div>
+<div class="section" id="values">
+<h3>8.2.2.25. values<a class="headerlink" href="#values" title="Permalink to this headline">¶</a></h3>
+<dl class="method">
+<dt id="platformids.platforms.PlatformParameters.values">
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">values</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.values"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the values of non-private attributes.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="exceptions">
+<h2>8.2.3. Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="platformids.platforms.PlatformParametersError">
+<em class="property">exception </em><code class="sig-prename descclassname">platformids.platforms.</code><code class="sig-name descname">PlatformParametersError</code><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParametersError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParametersError" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="dist/alpinelinux.html" class="btn btn-neutral float-right" title="8.3. platformids.dist.alpinelinux" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="platformids.html" class="btn btn-neutral float-left" title="8.1. platformids.__init__" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+      <span class="lastupdated">
+        Last updated on Dec 08, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

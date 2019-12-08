@@ -1,0 +1,867 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>platformids.dist.windows &mdash; platformids  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.36
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Shortcuts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">PlatformIDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_cockpit.html">apidoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_apiref_scaled.html">apiref</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_abstract.html">1. Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_platform_support.html">2. Platform Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_blueprint.html">3. Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rtplatformids_cli.html">4. Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../os_categorization.html">5. OS Categorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../distributions.html">6. Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_documents.html">7. Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_modules.html">8. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_indices.html">9. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_resources.html">10. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">11. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">12. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_license.html">13. Licenses</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../howto/index.html">Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/index.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">platformids</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>platformids.dist.windows</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for platformids.dist.windows</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;MS-Windows releases for the *WindowsNT* family based on the registry information.</span>
+<span class="sd">This includes the IoT products, e.g. *Windows-NT-10.0-IoT-core* on the *RaspberryPi*.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">print_function</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="kn">from</span> <span class="nn">platformids</span> <span class="k">import</span> <span class="n">_debug</span><span class="p">,</span> <span class="n">_verbose</span>
+<span class="kn">from</span> <span class="nn">platformids</span> <span class="k">import</span> <span class="n">RTE_NT</span><span class="p">,</span> <span class="n">RTE_WIN</span><span class="p">,</span> <span class="n">RTE_WINDOWS</span><span class="p">,</span> \
+    <span class="n">rte2num</span><span class="p">,</span> <span class="n">num2rte</span><span class="p">,</span> <span class="n">num2pretty</span><span class="p">,</span> \
+    <span class="n">decode_version_str_to_segments</span><span class="p">,</span> \
+    <span class="n">PlatformIDsError</span><span class="p">,</span> <span class="n">PlatformIDsFileCheck</span>
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;Arno-Can Uestuensoez&#39;</span>
+<span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;Artistic-License-2.0 + Forced-Fairplay-Constraints&quot;</span>
+<span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright (C) 2010-2018 Arno-Can Uestuensoez&quot;</span> \
+                <span class="s2">&quot; @Ingenieurbuero Arno-Can Uestuensoez&quot;</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="s1">&#39;0.1.29&#39;</span>
+<span class="n">__uuid__</span> <span class="o">=</span> <span class="s2">&quot;7add5ded-c39b-4b6e-8c87-1b3a1c150ee9&quot;</span>
+
+<span class="n">__docformat__</span> <span class="o">=</span> <span class="s2">&quot;restructuredtext en&quot;</span>
+
+<span class="k">if</span> <span class="n">__debug__</span><span class="p">:</span>
+
+    <span class="c1"># this is for unittests only</span>
+    <span class="k">class</span> <span class="nc">PlatformIDsUnittestTriggered</span><span class="p">(</span><span class="n">PlatformIDsError</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<span class="c1">#</span>
+<span class="c1"># The handled versions are of the &quot;nt&#39; technology, historic pre-versions and others</span>
+<span class="c1"># are not supported.</span>
+<span class="c1">#</span>
+<span class="c1"># set: win32</span>
+<span class="c1"># currently no sub-categories, some are contained in</span>
+<span class="c1"># the &#39;set: generic&#39;: drives, shares</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1"># RTE_DOS = RTE_WIN32 + 1  #: MS-DOS - frozen</span>
+
+<span class="c1">#</span>
+<span class="c1"># dist - the base versions of major and minor numbers</span>
+<span class="c1">#</span>
+<span class="n">RTE_NT35</span> <span class="o">=</span> <span class="n">RTE_NT</span> <span class="o">+</span> <span class="mh">0x001d0000</span>  <span class="c1"># : Windows NT-3.5</span>
+<span class="n">RTE_NT40</span> <span class="o">=</span> <span class="n">RTE_NT</span> <span class="o">+</span> <span class="mh">0x00200000</span>  <span class="c1"># : Windows NT-4.0</span>
+<span class="n">RTE_NT50</span> <span class="o">=</span> <span class="n">RTE_NT</span> <span class="o">+</span> <span class="mh">0x00280000</span>  <span class="c1"># : Windows NT-5.0 - W2000</span>
+<span class="n">RTE_NT51</span> <span class="o">=</span> <span class="n">RTE_NT</span> <span class="o">+</span> <span class="mh">0x00290000</span>  <span class="c1"># : Windows NT-5.1 - WXP - 32bit</span>
+<span class="n">RTE_NT52</span> <span class="o">=</span> <span class="n">RTE_NT</span> <span class="o">+</span> <span class="mh">0x002a0000</span>  <span class="c1"># : Windows NT-5.2 - W2003 / 2003 / 2003R2</span>
+<span class="n">RTE_NT60</span> <span class="o">=</span> <span class="n">RTE_NT</span> <span class="o">+</span> <span class="mh">0x00300000</span>  <span class="c1"># : Windows NT-6.0 - vista / 2008</span>
+<span class="n">RTE_NT61</span> <span class="o">=</span> <span class="n">RTE_NT</span> <span class="o">+</span> <span class="mh">0x00310000</span>  <span class="c1"># : Windows NT-6.1 - win7 / 2008R2</span>
+<span class="n">RTE_NT62</span> <span class="o">=</span> <span class="n">RTE_NT</span> <span class="o">+</span> <span class="mh">0x00320000</span>  <span class="c1"># : Windows NT-6.2 - win8 / 2012</span>
+<span class="n">RTE_NT63</span> <span class="o">=</span> <span class="n">RTE_NT</span> <span class="o">+</span> <span class="mh">0x00330000</span>  <span class="c1"># : Windows NT-6.3 - win8.1 / 2012R2</span>
+<span class="n">RTE_NT100</span> <span class="o">=</span> <span class="n">RTE_NT</span> <span class="o">+</span> <span class="mh">0x00500000</span>  <span class="c1"># : Windows NT-10.0 - win10 / 2016</span>
+
+<span class="c1">#</span>
+<span class="c1"># distrel - some predefined constant values of the complete versions</span>
+<span class="c1">#</span>
+<span class="c1"># the values could be easily calculated dynamically by</span>
+<span class="c1">#  old-scheme: adding the build number</span>
+<span class="c1">#  new-scheme: adding the date based product version</span>
+<span class="c1">#</span>
+<span class="c1"># frozen history</span>
+<span class="c1">#</span>
+<span class="n">RTE_WINNT35</span> <span class="o">=</span> <span class="n">RTE_NT35</span> <span class="o">+</span> <span class="mi">807</span>  <span class="c1"># : WindowsNT-4.0 Workstation - 32bit</span>
+<span class="n">RTE_WINNT40</span> <span class="o">=</span> <span class="n">RTE_NT40</span> <span class="o">+</span> <span class="mi">1381</span>  <span class="c1"># : WindowsNT-4.0 Workstation - 32bit</span>
+<span class="n">RTE_WIN2000</span> <span class="o">=</span> <span class="n">RTE_NT50</span> <span class="o">+</span> <span class="mi">2195</span>  <span class="c1"># : Windows2000</span>
+
+<span class="n">RTE_WINXP</span> <span class="o">=</span> <span class="n">RTE_NT51</span> <span class="o">+</span> <span class="mi">2600</span>  <span class="c1"># : WindowsXP - 32bit</span>
+
+<span class="n">RTE_WINXP64</span> <span class="o">=</span> <span class="n">RTE_NT52</span> <span class="o">+</span> <span class="mi">3790</span>  <span class="c1"># : WindowsXP - 64bit</span>
+<span class="n">RTE_WIN2003</span> <span class="o">=</span> <span class="n">RTE_NT52</span> <span class="o">+</span> <span class="mi">3790</span>  <span class="c1"># : Windows2003</span>
+<span class="n">RTE_WIN2003R2</span> <span class="o">=</span> <span class="n">RTE_NT52</span> <span class="o">+</span> <span class="mi">3790</span>  <span class="c1"># : Windows2003R2 - exception: same build as 2003</span>
+
+<span class="n">RTE_WIN2008</span> <span class="o">=</span> <span class="n">RTE_NT60</span> <span class="o">+</span> <span class="mi">6001</span>  <span class="c1"># : Windows2008 RTM</span>
+<span class="n">RTE_WIN2008SP2</span> <span class="o">=</span> <span class="n">RTE_NT60</span> <span class="o">+</span> <span class="mi">6002</span>  <span class="c1"># : Windows2008 SP1</span>
+
+<span class="n">RTE_WIN7</span> <span class="o">=</span> <span class="n">RTE_NT61</span> <span class="o">+</span> <span class="mi">7600</span>  <span class="c1"># : Windows7</span>
+<span class="n">RTE_WIN2008R2</span> <span class="o">=</span> <span class="n">RTE_NT61</span> <span class="o">+</span> <span class="mi">7600</span>  <span class="c1"># : Windows2008R2</span>
+
+<span class="n">RTE_WIN7SP1</span> <span class="o">=</span> <span class="n">RTE_NT61</span> <span class="o">+</span> <span class="mi">7601</span>  <span class="c1"># : Windows7 SP1</span>
+<span class="n">RTE_WIN2008R2SP1</span> <span class="o">=</span> <span class="n">RTE_NT61</span> <span class="o">+</span> <span class="mi">7601</span>  <span class="c1"># : Windows2008R2 SP1</span>
+
+<span class="n">RTE_WIN8</span> <span class="o">=</span> <span class="n">RTE_NT62</span> <span class="o">+</span> <span class="mi">9200</span>  <span class="c1"># : Windows8</span>
+<span class="n">RTE_WIN2012</span> <span class="o">=</span> <span class="n">RTE_NT62</span> <span class="o">+</span> <span class="mi">9200</span>  <span class="c1"># : Windows2012</span>
+
+<span class="n">RTE_WIN81</span> <span class="o">=</span> <span class="n">RTE_NT63</span> <span class="o">+</span> <span class="mi">9600</span>  <span class="c1"># : Windows81</span>
+<span class="n">RTE_WIN2012R2</span> <span class="o">=</span> <span class="n">RTE_NT63</span> <span class="o">+</span> <span class="mi">9600</span>  <span class="c1"># : Windows2012R2</span>
+
+<span class="c1">#</span>
+<span class="c1"># for generic NT-10.0 releases</span>
+<span class="c1"># simply add the numeric version to the base value RTE_NT100</span>
+<span class="c1">#</span>
+<span class="c1"># RTE_WINNT100_1703 =  RTE_NT100   + 1703           #: NT-10.0 - 2017.03</span>
+<span class="c1"># RTE_WINNT100_1803 =  RTE_NT100   + 1803           #: NT-10.0 - 2018.03</span>
+<span class="c1"># RTE_WINNT100_1809 =  RTE_NT100   + 1809           #: NT-10.0 - 2018.09</span>
+
+<span class="c1"># : mapping of the rte string and numeric representation to the numeric value</span>
+<span class="n">rte2num</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;7 Server&#39;</span><span class="p">:</span> <span class="n">RTE_WIN2008R2</span><span class="p">,</span>
+        <span class="s1">&#39;7&#39;</span><span class="p">:</span> <span class="n">RTE_WIN7</span><span class="p">,</span>
+        <span class="s1">&#39;8 Server&#39;</span><span class="p">:</span> <span class="n">RTE_WIN2012</span><span class="p">,</span>
+        <span class="s1">&#39;8&#39;</span><span class="p">:</span> <span class="n">RTE_WIN8</span><span class="p">,</span>
+        <span class="s1">&#39;Blackcomb&#39;</span><span class="p">:</span> <span class="n">RTE_WIN7</span><span class="p">,</span>
+        <span class="s1">&#39;Blue Server&#39;</span><span class="p">:</span> <span class="n">RTE_WIN2012R2</span><span class="p">,</span>
+        <span class="s1">&#39;Blue&#39;</span><span class="p">:</span> <span class="n">RTE_WIN81</span><span class="p">,</span>
+        <span class="s1">&#39;Longhorn Server&#39;</span> <span class="p">:</span> <span class="n">RTE_NT61</span> <span class="o">+</span> <span class="mi">6002</span><span class="p">,</span>  <span class="c1"># W2008 SP2</span>
+        <span class="s1">&#39;Threshold 1&#39;</span><span class="p">:</span> <span class="n">RTE_NT100</span> <span class="o">+</span> <span class="mi">1507</span><span class="p">,</span>
+        <span class="s1">&#39;Threshold 2&#39;</span><span class="p">:</span> <span class="n">RTE_NT100</span> <span class="o">+</span> <span class="mi">1511</span><span class="p">,</span>
+        <span class="s1">&#39;Redstone 1&#39;</span><span class="p">:</span> <span class="n">RTE_NT100</span> <span class="o">+</span> <span class="mi">1607</span><span class="p">,</span>
+        <span class="s1">&#39;Redstone 2&#39;</span><span class="p">:</span> <span class="n">RTE_NT100</span> <span class="o">+</span> <span class="mi">1703</span><span class="p">,</span>
+        <span class="s1">&#39;Redstone 3&#39;</span><span class="p">:</span> <span class="n">RTE_NT100</span> <span class="o">+</span> <span class="mi">1709</span><span class="p">,</span>
+        <span class="s1">&#39;Redstone 4&#39;</span><span class="p">:</span> <span class="n">RTE_NT100</span> <span class="o">+</span> <span class="mi">1803</span><span class="p">,</span>
+        <span class="s1">&#39;Redstone 5&#39;</span><span class="p">:</span> <span class="n">RTE_NT100</span> <span class="o">+</span> <span class="mi">1809</span><span class="p">,</span>
+        <span class="s1">&#39;Vienna&#39;</span><span class="p">:</span> <span class="n">RTE_WIN7</span><span class="p">,</span>
+        <span class="s1">&#39;winxp&#39;</span><span class="p">:</span> <span class="n">RTE_WINXP</span><span class="p">,</span>
+        <span class="s1">&#39;win2000&#39;</span><span class="p">:</span> <span class="n">RTE_WIN2000</span><span class="p">,</span>
+        <span class="s1">&#39;winnt40&#39;</span><span class="p">:</span> <span class="n">RTE_WINNT40</span><span class="p">,</span>
+        <span class="s1">&#39;win10&#39;</span><span class="p">:</span> <span class="n">RTE_NT100</span><span class="p">,</span>
+        <span class="s1">&#39;win7&#39;</span><span class="p">:</span> <span class="n">RTE_WIN7</span><span class="p">,</span>
+        <span class="s1">&#39;win8&#39;</span><span class="p">:</span> <span class="n">RTE_WIN8</span><span class="p">,</span>
+        <span class="s1">&#39;win81&#39;</span><span class="p">:</span> <span class="n">RTE_WIN81</span><span class="p">,</span>
+        <span class="s1">&#39;win2008&#39;</span><span class="p">:</span> <span class="n">RTE_WIN2008</span><span class="p">,</span>
+        <span class="s1">&#39;win2008r2&#39;</span><span class="p">:</span> <span class="n">RTE_WIN2008R2</span><span class="p">,</span>
+        <span class="s1">&#39;win2012&#39;</span><span class="p">:</span> <span class="n">RTE_WIN2012</span><span class="p">,</span>
+        <span class="s1">&#39;win2012r2&#39;</span><span class="p">:</span> <span class="n">RTE_WIN2012R2</span><span class="p">,</span>
+        <span class="s1">&#39;win2016&#39;</span><span class="p">:</span> <span class="n">RTE_NT100</span><span class="p">,</span>
+        <span class="s1">&#39;win2019&#39;</span><span class="p">:</span> <span class="n">RTE_NT100</span><span class="p">,</span>
+        <span class="s1">&#39;win2019se&#39;</span><span class="p">:</span> <span class="n">RTE_NT100</span><span class="p">,</span>
+        <span class="n">RTE_WIN2000</span><span class="p">:</span> <span class="n">RTE_WIN2000</span><span class="p">,</span>
+        <span class="n">RTE_WIN2008</span><span class="p">:</span> <span class="n">RTE_WIN2008</span><span class="p">,</span>
+        <span class="n">RTE_WIN2008R2</span><span class="p">:</span> <span class="n">RTE_WIN2008R2</span><span class="p">,</span>
+        <span class="n">RTE_WIN2012</span><span class="p">:</span> <span class="n">RTE_WIN2012</span><span class="p">,</span>
+        <span class="n">RTE_WIN2012R2</span><span class="p">:</span> <span class="n">RTE_WIN2012R2</span><span class="p">,</span>
+        <span class="n">RTE_WIN7</span><span class="p">:</span> <span class="n">RTE_WIN7</span><span class="p">,</span>
+        <span class="n">RTE_WIN81</span><span class="p">:</span> <span class="n">RTE_WIN81</span><span class="p">,</span>
+        <span class="n">RTE_WIN8</span><span class="p">:</span> <span class="n">RTE_WIN8</span><span class="p">,</span>
+        <span class="n">RTE_WINNT40</span><span class="p">:</span> <span class="n">RTE_WINNT40</span><span class="p">,</span>
+        <span class="n">RTE_WINXP</span><span class="p">:</span> <span class="n">RTE_WINXP</span><span class="p">,</span>
+
+        <span class="s1">&#39;nt40&#39;</span><span class="p">:</span> <span class="n">RTE_NT40</span><span class="p">,</span>
+
+        <span class="s1">&#39;nt50&#39;</span><span class="p">:</span> <span class="n">RTE_NT50</span><span class="p">,</span>
+        <span class="s1">&#39;nt51&#39;</span><span class="p">:</span> <span class="n">RTE_NT51</span><span class="p">,</span>
+        <span class="s1">&#39;nt52&#39;</span><span class="p">:</span> <span class="n">RTE_NT52</span><span class="p">,</span>
+
+        <span class="s1">&#39;nt60&#39;</span><span class="p">:</span> <span class="n">RTE_NT60</span><span class="p">,</span>
+        <span class="s1">&#39;nt61&#39;</span><span class="p">:</span> <span class="n">RTE_NT61</span><span class="p">,</span>
+        <span class="s1">&#39;nt62&#39;</span><span class="p">:</span> <span class="n">RTE_NT62</span><span class="p">,</span>
+        <span class="s1">&#39;nt63&#39;</span><span class="p">:</span> <span class="n">RTE_NT63</span><span class="p">,</span>
+        <span class="s1">&#39;nt100&#39;</span><span class="p">:</span> <span class="n">RTE_NT100</span><span class="p">,</span>
+
+        <span class="n">RTE_NT40</span><span class="p">:</span> <span class="n">RTE_NT40</span><span class="p">,</span>
+
+        <span class="n">RTE_NT50</span><span class="p">:</span> <span class="n">RTE_NT50</span><span class="p">,</span>
+        <span class="n">RTE_NT51</span><span class="p">:</span> <span class="n">RTE_NT51</span><span class="p">,</span>
+        <span class="n">RTE_NT52</span><span class="p">:</span> <span class="n">RTE_NT52</span><span class="p">,</span>
+
+        <span class="n">RTE_NT60</span><span class="p">:</span> <span class="n">RTE_NT60</span><span class="p">,</span>
+        <span class="n">RTE_NT61</span><span class="p">:</span> <span class="n">RTE_NT61</span><span class="p">,</span>
+        <span class="n">RTE_NT62</span><span class="p">:</span> <span class="n">RTE_NT62</span><span class="p">,</span>
+        <span class="n">RTE_NT63</span><span class="p">:</span> <span class="n">RTE_NT63</span><span class="p">,</span>
+        <span class="n">RTE_NT100</span><span class="p">:</span> <span class="n">RTE_NT100</span><span class="p">,</span>
+
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="c1"># : mapping of the rte numeric representation to the string value</span>
+<span class="n">num2rte</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+<span class="c1">#         RTE_WINNT40: &#39;winnt40&#39;,</span>
+<span class="c1">#         RTE_WIN2000: &#39;win2000&#39;,</span>
+<span class="c1">#         RTE_WINXP: &#39;winxp&#39;,</span>
+<span class="c1">#         RTE_WIN7: &#39;win7&#39;,</span>
+<span class="c1">#         RTE_WIN81: &#39;win81&#39;,</span>
+<span class="c1">#         RTE_WIN8: &#39;win8&#39;,</span>
+<span class="c1">#         RTE_WIN2008: &#39;win2008&#39;,</span>
+<span class="c1">#         RTE_WIN2008R2: &#39;win2008r2&#39;,  # the release is actually a different NT</span>
+<span class="c1">#         RTE_WIN2012: &#39;win2012&#39;,</span>
+<span class="c1">#         RTE_WIN2012R2: &#39;win2012r2&#39;,</span>
+
+        <span class="n">RTE_WINNT40</span><span class="p">:</span> <span class="s1">&#39;nt401381&#39;</span><span class="p">,</span>
+        <span class="n">RTE_WIN2000</span><span class="p">:</span> <span class="s1">&#39;nt502195&#39;</span><span class="p">,</span>
+        <span class="n">RTE_WINXP</span><span class="p">:</span> <span class="s1">&#39;nt512600&#39;</span><span class="p">,</span>
+        <span class="n">RTE_WIN7</span><span class="p">:</span> <span class="s1">&#39;nt617601&#39;</span><span class="p">,</span>
+        <span class="n">RTE_WIN81</span><span class="p">:</span> <span class="s1">&#39;nt639600&#39;</span><span class="p">,</span>
+        <span class="n">RTE_WIN8</span><span class="p">:</span> <span class="s1">&#39;nt629200&#39;</span><span class="p">,</span>
+        <span class="n">RTE_WIN2008</span><span class="p">:</span> <span class="s1">&#39;nt606002&#39;</span><span class="p">,</span>
+        <span class="n">RTE_WIN2008R2</span><span class="p">:</span> <span class="s1">&#39;nt617601&#39;</span><span class="p">,</span>  <span class="c1"># the release is actually a different NT</span>
+        <span class="n">RTE_WIN2012</span><span class="p">:</span> <span class="s1">&#39;nt629200&#39;</span><span class="p">,</span>
+        <span class="n">RTE_WIN2012R2</span><span class="p">:</span> <span class="s1">&#39;nt639600&#39;</span><span class="p">,</span>
+
+        <span class="n">RTE_NT40</span><span class="p">:</span> <span class="s1">&#39;nt40&#39;</span><span class="p">,</span>
+        <span class="n">RTE_NT50</span><span class="p">:</span> <span class="s1">&#39;nt50&#39;</span><span class="p">,</span>
+        <span class="n">RTE_NT51</span><span class="p">:</span> <span class="s1">&#39;nt51&#39;</span><span class="p">,</span>
+        <span class="n">RTE_NT52</span><span class="p">:</span> <span class="s1">&#39;nt52&#39;</span><span class="p">,</span>
+        <span class="n">RTE_NT60</span><span class="p">:</span> <span class="s1">&#39;nt60&#39;</span><span class="p">,</span>
+        <span class="n">RTE_NT61</span><span class="p">:</span> <span class="s1">&#39;nt61&#39;</span><span class="p">,</span>
+        <span class="n">RTE_NT62</span><span class="p">:</span> <span class="s1">&#39;nt62&#39;</span><span class="p">,</span>
+        <span class="n">RTE_NT63</span><span class="p">:</span> <span class="s1">&#39;nt63&#39;</span><span class="p">,</span>
+        <span class="n">RTE_NT100</span><span class="p">:</span> <span class="s1">&#39;nt100&#39;</span><span class="p">,</span>
+
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="c1"># : mapping of the rte numeric representation to the pretty string value</span>
+<span class="n">num2pretty</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="n">RTE_WIN</span><span class="p">:</span> <span class="s1">&#39;Windows&#39;</span><span class="p">,</span>
+        <span class="n">RTE_WINDOWS</span><span class="p">:</span> <span class="s1">&#39;Windows&#39;</span><span class="p">,</span>
+
+        <span class="n">RTE_WIN2000</span><span class="p">:</span> <span class="s1">&#39;Windows 2000&#39;</span><span class="p">,</span>
+        <span class="n">RTE_WIN2008</span><span class="p">:</span> <span class="s1">&#39;Windows Server 2008&#39;</span><span class="p">,</span>
+        <span class="n">RTE_WIN2008R2</span><span class="p">:</span> <span class="s1">&#39;Windows Server 2008R2&#39;</span><span class="p">,</span>
+        <span class="n">RTE_WIN2012</span><span class="p">:</span> <span class="s1">&#39;Windows Server 2012&#39;</span><span class="p">,</span>
+        <span class="n">RTE_WIN2012R2</span><span class="p">:</span> <span class="s1">&#39;Windows Server 2012R2&#39;</span><span class="p">,</span>
+        <span class="n">RTE_WIN7</span><span class="p">:</span> <span class="s1">&#39;Windows 7&#39;</span><span class="p">,</span>
+        <span class="n">RTE_WIN81</span><span class="p">:</span> <span class="s1">&#39;Windows 8.1&#39;</span><span class="p">,</span>
+        <span class="n">RTE_WIN8</span><span class="p">:</span> <span class="s1">&#39;Windows 8&#39;</span><span class="p">,</span>
+        <span class="n">RTE_WINNT40</span><span class="p">:</span> <span class="s1">&#39;WindowsNT-4.0&#39;</span><span class="p">,</span>
+        <span class="n">RTE_WINXP</span><span class="p">:</span> <span class="s1">&#39;Windows XP&#39;</span><span class="p">,</span>
+
+        <span class="n">RTE_NT40</span><span class="p">:</span> <span class="s1">&#39;NT-4.0&#39;</span><span class="p">,</span>
+
+        <span class="n">RTE_NT50</span><span class="p">:</span> <span class="s1">&#39;NT-5.0&#39;</span><span class="p">,</span>
+        <span class="n">RTE_NT51</span><span class="p">:</span> <span class="s1">&#39;NT-5.1&#39;</span><span class="p">,</span>
+        <span class="n">RTE_NT52</span><span class="p">:</span> <span class="s1">&#39;NT-5.2&#39;</span><span class="p">,</span>
+
+        <span class="n">RTE_NT60</span><span class="p">:</span> <span class="s1">&#39;NT-6.0&#39;</span><span class="p">,</span>
+        <span class="n">RTE_NT61</span><span class="p">:</span> <span class="s1">&#39;NT-6.1&#39;</span><span class="p">,</span>
+        <span class="n">RTE_NT62</span><span class="p">:</span> <span class="s1">&#39;NT-6.2&#39;</span><span class="p">,</span>
+        <span class="n">RTE_NT63</span><span class="p">:</span> <span class="s1">&#39;NT-6.3&#39;</span><span class="p">,</span>
+        <span class="n">RTE_NT100</span><span class="p">:</span> <span class="s1">&#39;NT-10.0&#39;</span><span class="p">,</span>
+
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="n">versions</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">RTE_WINNT40</span><span class="p">:</span> <span class="s1">&#39;4.0.1381&#39;</span><span class="p">,</span>
+    <span class="n">RTE_WIN2000</span><span class="p">:</span> <span class="s1">&#39;5.0.2195&#39;</span><span class="p">,</span>
+    <span class="n">RTE_WINXP</span><span class="p">:</span> <span class="s1">&#39;5.1.2600&#39;</span><span class="p">,</span>
+    <span class="n">RTE_WIN7</span><span class="p">:</span> <span class="s1">&#39;6.1.7601&#39;</span><span class="p">,</span>
+    <span class="n">RTE_WIN81</span><span class="p">:</span> <span class="s1">&#39;6.3.9600&#39;</span><span class="p">,</span>
+    <span class="n">RTE_WIN8</span><span class="p">:</span> <span class="s1">&#39;6.2.9200&#39;</span><span class="p">,</span>
+
+    <span class="n">RTE_WIN2008</span><span class="p">:</span> <span class="s1">&#39;6.0.6002&#39;</span><span class="p">,</span>
+    <span class="n">RTE_WIN2008R2</span><span class="p">:</span> <span class="s1">&#39;6.1.7601&#39;</span><span class="p">,</span>
+    <span class="n">RTE_WIN2012</span><span class="p">:</span> <span class="s1">&#39;6.2.9200&#39;</span><span class="p">,</span>
+    <span class="n">RTE_WIN2012R2</span><span class="p">:</span> <span class="s1">&#39;6.3.9600&#39;</span><span class="p">,</span>
+
+    <span class="n">RTE_NT40</span><span class="p">:</span> <span class="s1">&#39;4.0&#39;</span><span class="p">,</span>
+
+    <span class="n">RTE_NT50</span><span class="p">:</span> <span class="s1">&#39;5.0&#39;</span><span class="p">,</span>
+    <span class="n">RTE_NT51</span><span class="p">:</span> <span class="s1">&#39;5.1&#39;</span><span class="p">,</span>
+    <span class="n">RTE_NT52</span><span class="p">:</span> <span class="s1">&#39;5.2&#39;</span><span class="p">,</span>
+
+    <span class="n">RTE_NT60</span><span class="p">:</span> <span class="s1">&#39;6.0&#39;</span><span class="p">,</span>
+    <span class="n">RTE_NT61</span><span class="p">:</span> <span class="s1">&#39;6.1&#39;</span><span class="p">,</span>
+    <span class="n">RTE_NT62</span><span class="p">:</span> <span class="s1">&#39;6.2&#39;</span><span class="p">,</span>
+    <span class="n">RTE_NT63</span><span class="p">:</span> <span class="s1">&#39;6.3&#39;</span><span class="p">,</span>
+    <span class="n">RTE_NT100</span><span class="p">:</span> <span class="s1">&#39;10.0&#39;</span><span class="p">,</span>
+
+<span class="p">}</span>
+
+<span class="c1">#</span>
+<span class="c1"># Microsoft: OSVERSIONINFOEXA.wProductType</span>
+<span class="c1">#</span>
+<span class="n">VER_NT_GENERIC</span> <span class="o">=</span> <span class="mh">0x0000000</span>  <span class="c1"># : non standard enum</span>
+
+<span class="n">VER_NT_WORKSTATION</span> <span class="o">=</span> <span class="mh">0x0000001</span>  <span class="c1"># : see wProductType</span>
+<span class="n">VER_NT_DOMAIN_CONTROLLER</span> <span class="o">=</span> <span class="mh">0x0000002</span>  <span class="c1"># : see wProductType</span>
+<span class="n">VER_NT_SERVER</span> <span class="o">=</span> <span class="mh">0x0000003</span>  <span class="c1"># : see wProductType</span>
+
+<span class="n">VER_NT_IOT</span> <span class="o">=</span> <span class="mh">0x0000004</span>  <span class="c1"># : non standard enum</span>
+
+
+<div class="viewcode-block" id="WinVersion"><a class="viewcode-back" href="../../../dist/windows.html#platformids.dist.windows.WinVersion">[docs]</a><span class="k">class</span> <span class="nc">WinVersion</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+<div class="viewcode-block" id="WinVersion.__init__"><a class="viewcode-back" href="../../../dist/windows.html#platformids.dist.windows.WinVersion.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">ntmajor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ntminor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">release</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">build</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">editionid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">installationtype</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sourcepath</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">productname</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">productcategory</span> <span class="o">=</span> <span class="n">VER_NT_GENERIC</span>  <span class="c1"># 0x0000000  #: non standard enum</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ubr</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">raw</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fetch_current_version_raw</span><span class="p">()</span>
+
+        <span class="k">pass</span>  <span class="c1"># 4debugging</span></div>
+
+<div class="viewcode-block" id="WinVersion.fetch_current_version_raw"><a class="viewcode-back" href="../../../dist/windows.html#platformids.dist.windows.WinVersion.fetch_current_version_raw">[docs]</a>    <span class="k">def</span>  <span class="nf">fetch_current_version_raw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+
+        <span class="n">use_nt_native</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;usetest&#39;</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>  <span class="c1"># : for unittests only</span>
+        
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;java&#39;</span><span class="p">:</span>
+            <span class="c1"># it is Jython - use Java for access to native system data</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">__debug__</span><span class="p">:</span>
+                    <span class="c1"># this is for unittests only</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">use_nt_native</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="n">PlatformIDsUnittestTriggered</span><span class="p">(</span><span class="s1">&#39;use_nt_native_1(</span><span class="si">%d</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">use_nt_native</span><span class="p">)</span> <span class="p">)</span>
+
+                <span class="c1">#</span>
+                <span class="c1"># 1. try JNA</span>
+                <span class="k">if</span> <span class="n">_verbose</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;VERB:platformids:scan:try:JNA:jy.platformids.dist.nt.Kernel32GetProductInfo&quot;</span><span class="p">)</span>
+                <span class="kn">from</span> <span class="nn">jy.platformids.dist.nt</span> <span class="k">import</span> <span class="n">Kernel32GetProductInfo</span>  <span class="c1"># @UnresolvedImport</span>
+
+                <span class="k">if</span> <span class="n">_verbose</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;VERB:platformids:scan:try:JNA:jy.platformids.dist.nt.Advapi32GetCurrentVersion&quot;</span><span class="p">)</span>
+                <span class="kn">from</span> <span class="nn">jy.platformids.dist.nt</span> <span class="k">import</span> <span class="n">Advapi32GetCurrentVersion</span>  <span class="c1"># @UnresolvedImport</span>
+
+                <span class="k">if</span> <span class="n">_verbose</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;VERB:platformids:scan:JNA:LOADED&quot;</span><span class="p">)</span>
+
+                <span class="n">currentversion</span> <span class="o">=</span> <span class="n">Advapi32GetCurrentVersion</span><span class="p">()</span><span class="o">.</span><span class="n">getCurrentVersionValues</span><span class="p">()</span>
+                <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">currentversion</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">_debug</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;VERB:platformids:scan:JNA:failed with:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">__debug__</span><span class="p">:</span>
+                        <span class="c1"># this is for unittests only</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">use_nt_native</span> <span class="o">&amp;</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                            <span class="k">raise</span> <span class="n">PlatformIDsUnittestTriggered</span><span class="p">(</span><span class="s1">&#39;use_nt_native_2(</span><span class="si">%d</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">use_nt_native</span><span class="p">)</span> <span class="p">)</span>
+
+                    <span class="c1">#</span>
+                    <span class="c1"># 2. try java.util.WindowsPreferences...</span>
+                    <span class="c1">#</span>
+                    <span class="k">if</span> <span class="n">_verbose</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;VERB:platformids:scan:try:WindowsPreferences:jy.platformids.dist.nt.ReadCurrentVersionWinPrefs&quot;</span><span class="p">)</span>
+                    <span class="kn">from</span> <span class="nn">jy.platformids.dist.nt</span> <span class="k">import</span> <span class="n">ReadCurrentVersionWinPrefs</span>  <span class="c1"># @UnresolvedImport</span>
+
+                    <span class="k">if</span> <span class="n">_verbose</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;VERB:platformids:scan:WindowsPreferences:LOADED&quot;</span><span class="p">)</span>
+
+                    <span class="n">currentversion</span> <span class="o">=</span> <span class="n">ReadCurrentVersionWinPrefs</span><span class="p">()</span>
+                    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">currentversion</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+
+                <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">_debug</span><span class="p">:</span>
+                        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;VERB:platformids:scan:WindowsPreferences:failed with:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+
+                    <span class="c1">#</span>
+                    <span class="c1"># 4. try JNI next... coming soon</span>
+                    <span class="c1">#</span>
+                    
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">__debug__</span><span class="p">:</span>
+                            <span class="c1"># this is for unittests only</span>
+                            <span class="k">if</span> <span class="p">(</span><span class="n">use_nt_native</span> <span class="o">&amp;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                                <span class="k">raise</span> <span class="n">PlatformIDsUnittestTriggered</span><span class="p">(</span><span class="s1">&#39;use_nt_native_8(</span><span class="si">%d</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">use_nt_native</span><span class="p">)</span> <span class="p">)</span>
+
+                        <span class="c1">#</span>
+                        <span class="c1"># 8. try REG.EXE next...</span>
+                        <span class="c1">#</span>
+                        <span class="k">if</span> <span class="n">_verbose</span><span class="p">:</span>
+                            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;VERB:platformids:scan:try:platformids.dist.nt.RegistryByExe&quot;</span><span class="p">)</span>
+                        <span class="kn">from</span> <span class="nn">platformids.dist.nt.windows_subprocess_reg_exe</span> <span class="k">import</span> <span class="n">RegistryByExe</span>  <span class="c1"># @UnresolvedImport</span>
+                        <span class="k">if</span> <span class="n">_verbose</span><span class="p">:</span>
+                            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;VERB:platformids:scan:RegistryByExe:LOADED&quot;</span><span class="p">)</span>
+
+                        <span class="n">currentversion</span> <span class="o">=</span> <span class="n">RegistryByExe</span><span class="p">()</span><span class="o">.</span><span class="n">read_CurrentVersion</span><span class="p">()</span>
+                        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">currentversion</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">__debug__</span><span class="p">:</span>
+                            <span class="c1"># this is for unittests only</span>
+                            <span class="k">if</span> <span class="p">(</span><span class="n">use_nt_native</span> <span class="o">&amp;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                                <span class="k">raise</span> <span class="n">PlatformIDsUnittestTriggered</span><span class="p">(</span><span class="s1">&#39;use_nt_native_16(</span><span class="si">%d</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">use_nt_native</span><span class="p">)</span> <span class="p">)</span>
+
+                        <span class="c1">#</span>
+                        <span class="c1"># 16. try min-info</span>
+                        <span class="c1">#</span>
+                        <span class="kn">import</span> <span class="nn">platform</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;ProductName&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">System</span><span class="o">.</span><span class="n">getProperty</span><span class="p">(</span><span class="s1">&#39;os.name&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>  <span class="c1"># @UndefinedVariable  # seems 2.0+</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;CurrentMajorVersionNumber&#39;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;CurrentMajorVersionNumber&#39;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;CurrentMajorVersionNumber&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">decode_version_str_to_segments</span><span class="p">(</span>
+                            <span class="n">platform</span><span class="o">.</span><span class="n">System</span><span class="o">.</span><span class="n">getProperty</span><span class="p">(</span><span class="s1">&#39;os.version&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>  <span class="c1"># @UndefinedVariable</span>
+
+        <span class="k">elif</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;posix&#39;</span><span class="p">:</span>
+            <span class="c1"># for document generation by introspection on posix platform</span>
+            <span class="c1"># avoids exception with generator error for sphinx-apidoc</span>
+            <span class="k">pass</span>
+
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="c1">#</span>
+            <span class="c1"># read registry</span>
+            <span class="c1">#</span>
+
+            <span class="c1"># use standard libs _winreg / winreg</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="kn">import</span> <span class="nn">winreg</span>  <span class="c1"># @UnresolvedImport @UnusedImport</span>
+                <span class="n">validxError</span> <span class="o">=</span> <span class="ne">WindowsError</span>  <span class="c1"># @UndefinedVariable</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="kn">import</span> <span class="nn">_winreg</span> <span class="k">as</span> <span class="nn">winreg</span>  <span class="c1"># @UnresolvedImport @Reimport</span>
+                <span class="n">validxError</span> <span class="o">=</span> <span class="ne">OSError</span>
+
+            <span class="n">hklm</span> <span class="o">=</span> <span class="n">winreg</span><span class="o">.</span><span class="n">ConnectRegistry</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">winreg</span><span class="o">.</span><span class="n">HKEY_LOCAL_MACHINE</span><span class="p">)</span>  <span class="c1"># @UndefinedVariable  - win32 only</span>
+
+            <span class="c1"># rnumerate CurrentVersion attribute values</span>
+            <span class="n">curvers_key</span> <span class="o">=</span> <span class="n">winreg</span><span class="o">.</span><span class="n">OpenKey</span><span class="p">(</span><span class="n">hklm</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;SOFTWARE\Microsoft\Windows NT\CurrentVersion&quot;</span><span class="p">)</span>  <span class="c1"># @UndefinedVariable  - win32 only</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1024</span><span class="p">):</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">n</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">winreg</span><span class="o">.</span><span class="n">EnumValue</span><span class="p">(</span><span class="n">curvers_key</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>  <span class="c1"># @UndefinedVariable  - win32 only @UnusedVariable</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+                <span class="k">except</span> <span class="n">validxError</span><span class="p">:</span>
+                    <span class="k">break</span>
+
+            <span class="n">winreg</span><span class="o">.</span><span class="n">CloseKey</span><span class="p">(</span><span class="n">curvers_key</span><span class="p">)</span>  <span class="c1"># @UndefinedVariable  - win32 only</span>
+
+            <span class="c1">#</span>
+            <span class="c1"># fetch product category</span>
+            <span class="c1">#</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="c1">#</span>
+                <span class="c1"># use API</span>
+                <span class="c1">#</span>
+
+                <span class="c1"># post winxp supports simple access to product type</span>
+                <span class="kn">from</span> <span class="nn">platformids.dist.nt.windows_kernel32dll</span> <span class="k">import</span> <span class="n">get_win32_OSProductInfo</span><span class="p">,</span> <span class="n">get_win32_OSVersionInfoExa</span>
+                <span class="kn">from</span> <span class="nn">platformids.dist.nt.windows_products</span> <span class="k">import</span> <span class="n">prod_ext</span><span class="p">,</span> <span class="n">prod_type_categories</span>
+
+                <span class="n">osver</span> <span class="o">=</span> <span class="n">get_win32_OSVersionInfoExa</span><span class="p">()</span>
+                <span class="n">pinfo</span> <span class="o">=</span> <span class="n">get_win32_OSProductInfo</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">productcategory</span> <span class="o">=</span> <span class="n">pinfo</span><span class="o">.</span><span class="n">pdwReturnedProductType</span>
+
+                <span class="c1"># TODO: check it</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;InstallationType&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;IoT&#39;</span><span class="p">):</span>
+                    <span class="c1"># superposes others if defined as IoT</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">productcategory</span> <span class="o">=</span> <span class="n">VER_NT_IOT</span>
+
+            <span class="k">except</span><span class="p">:</span>
+                <span class="c1">#</span>
+                <span class="c1"># estimate by data - default is GENERIC</span>
+                <span class="c1">#</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;InstallationType&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;Client&#39;</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">productcategory</span> <span class="o">=</span> <span class="n">VER_NT_WORKSTATION</span>
+
+                    <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;InstallationType&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;Server&#39;</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">productcategory</span> <span class="o">=</span> <span class="n">VER_NT_SERVER</span>
+
+                    <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;InstallationType&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;IoT&#39;</span><span class="p">):</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">productcategory</span> <span class="o">=</span> <span class="n">VER_NT_IOT</span>
+
+                    <span class="k">elif</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*omain.*&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;InstallationType&#39;</span><span class="p">],</span> <span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">MULTILINE</span><span class="p">):</span>  <span class="c1"># @UndefinedVariable</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">productcategory</span> <span class="o">=</span> <span class="n">VER_NT_DOMAIN_CONTROLLER</span>
+
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="c1"># matches for almost all systems, which in nowadays</span>
+                        <span class="c1"># could be used in multiple roles - without variation</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">productcategory</span> <span class="o">=</span> <span class="n">VER_NT_GENERIC</span>
+
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">productcategory</span> <span class="o">=</span> <span class="n">VER_NT_GENERIC</span>  <span class="c1"># should already be from init</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;productcategory&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">productcategory</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span></div>
+
+<div class="viewcode-block" id="WinVersion.readout_versioninfo_ext"><a class="viewcode-back" href="../../../dist/windows.html#platformids.dist.windows.WinVersion.readout_versioninfo_ext">[docs]</a>    <span class="k">def</span> <span class="nf">readout_versioninfo_ext</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="c1">#</span>
+        <span class="c1"># Major-Minor-Version</span>
+        <span class="c1">#</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># &gt;= Win10</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ntmajor</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;CurrentMajorVersionNumber&#39;</span><span class="p">])</span>  <span class="c1"># REG_SZ    17763</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ntminor</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;CurrentMinorVersionNumber&#39;</span><span class="p">])</span>  <span class="c1"># REG_DWORD    0xa</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">release</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;ReleaseId&#39;</span><span class="p">])</span>  <span class="c1"># REG_SZ    1511</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">build</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;CurrentBuildNumber&#39;</span><span class="p">]</span>  <span class="c1"># REG_DWORD    0x0</span>
+
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="c1"># &lt; Win10</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ntmajor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ntminor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;CurrentVersion&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>  <span class="c1"># REG_SZ    6.3</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ntmajor</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ntmajor</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ntminor</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ntminor</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="c1"># ooops...</span>
+                <span class="k">pass</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">release</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">build</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;CurrentBuildNumber&#39;</span><span class="p">])</span>  <span class="c1"># REG_DWORD    0x0</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="c1"># WinXP &lt; x &lt; Win10</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">sp</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^[^0-9]*&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;CSDVersion&#39;</span><span class="p">])</span>  <span class="c1"># REG_SZ</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">sp</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sp</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ubr</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;UBR&#39;</span><span class="p">])</span>  <span class="c1"># REG_DWORD    0x6b</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">editionid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;EditionID&#39;</span><span class="p">]</span>  <span class="c1"># REG_SZ    IoTUAP</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">editionid</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">installationtype</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;InstallationType&#39;</span><span class="p">]</span>  <span class="c1"># REG_SZ    IoTUAP</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">installationtype</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="c1">#</span>
+                <span class="c1"># a weak criteria as the last resort,</span>
+                <span class="c1"># the installation source path with some encoding</span>
+                <span class="c1"># into the path name, e.g.:</span>
+                <span class="c1">#</span>
+                <span class="c1">#   D:\GERMAN\WIN2000\SERVER\I386</span>
+                <span class="c1">#   D:\GERMAN\WINXP\PRO\I386</span>
+                <span class="c1">#</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">sourcepath</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;SourcePath&#39;</span><span class="p">]</span>  <span class="c1"># REG_SZ D:\GERMAN\WINXP\PRO\I386</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">sourcepath</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sourcepath</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">sourcepath</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">productname</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">[</span><span class="s1">&#39;ProductName&#39;</span><span class="p">]</span>  <span class="c1"># REG_SZ    IoTUAP</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+        <span class="n">ret</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;ntmajor&quot;</span><span class="p">:</span>          <span class="bp">self</span><span class="o">.</span><span class="n">ntmajor</span><span class="p">,</span>
+            <span class="s2">&quot;ntminor&quot;</span><span class="p">:</span>          <span class="bp">self</span><span class="o">.</span><span class="n">ntminor</span><span class="p">,</span>
+            <span class="s2">&quot;release&quot;</span><span class="p">:</span>          <span class="bp">self</span><span class="o">.</span><span class="n">release</span><span class="p">,</span>
+
+            <span class="s2">&quot;build&quot;</span><span class="p">:</span>            <span class="bp">self</span><span class="o">.</span><span class="n">build</span><span class="p">,</span>
+
+            <span class="s2">&quot;productcategory&quot;</span><span class="p">:</span>  <span class="bp">self</span><span class="o">.</span><span class="n">productcategory</span><span class="p">,</span>
+
+            <span class="s2">&quot;InstallationType&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">installationtype</span><span class="p">,</span>
+            <span class="s2">&quot;ProductName&quot;</span><span class="p">:</span>      <span class="bp">self</span><span class="o">.</span><span class="n">productname</span><span class="p">,</span>
+            <span class="s2">&quot;EditionID&quot;</span><span class="p">:</span>        <span class="bp">self</span><span class="o">.</span><span class="n">editionid</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sp</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">ret</span><span class="p">[</span><span class="s2">&quot;sp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sp</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ubr</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">ret</span><span class="p">[</span><span class="s2">&quot;ubr&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ubr</span>
+
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+    <span class="k">def</span> <span class="nf">readout_distribution</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">readout_versioninfo_ext</span><span class="p">()</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="s1">&#39;nt</span><span class="si">%d%d%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ntmajor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ntminor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">release</span><span class="p">),</span>
+            <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">.</span><span class="si">%d</span><span class="s1">.</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ntmajor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ntminor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">release</span><span class="p">),</span>
+            <span class="s1">&#39;NT-</span><span class="si">%d</span><span class="s1">.</span><span class="si">%d</span><span class="s1">.</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ntmajor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ntminor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">release</span><span class="p">),</span>
+            <span class="s1">&#39;NT&#39;</span><span class="p">,</span>
+             <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ntmajor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ntminor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">release</span><span class="p">),</span>
+             <span class="s1">&#39;nt&#39;</span>
+        <span class="p">]</span>
+
+<div class="viewcode-block" id="WinVersion.__str__"><a class="viewcode-back" href="../../../dist/windows.html#platformids.dist.windows.WinVersion.__str__">[docs]</a>    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;ntmajor          = </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ntmajor</span><span class="p">))</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;ntminor          = </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ntminor</span><span class="p">))</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;release          = </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">release</span><span class="p">))</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;build            = </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">build</span><span class="p">))</span>
+
+            <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;productcategory  = </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">productcategory</span><span class="p">))</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;sp               = </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sp</span><span class="p">))</span>
+            <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;ubr              = </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ubr</span><span class="p">))</span>
+
+            <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;InstallationType = </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">installationtype</span><span class="p">))</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;EditionID        = </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">editionid</span><span class="p">))</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;ProductName      = </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">productname</span><span class="p">))</span>
+
+            <span class="k">return</span> <span class="n">res</span>
+        <span class="k">except</span><span class="p">:</span>
+
+            <span class="k">return</span></div>
+
+<div class="viewcode-block" id="WinVersion.__repr__"><a class="viewcode-back" href="../../../dist/windows.html#platformids.dist.windows.WinVersion.__repr__">[docs]</a>    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="s2">&quot;{&quot;</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;ntmajor: </span><span class="si">%s</span><span class="s2">, &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ntmajor</span><span class="p">))</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;ntminor: </span><span class="si">%s</span><span class="s2">, &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ntminor</span><span class="p">))</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;release: </span><span class="si">%s</span><span class="s2">, &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">release</span><span class="p">))</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;build: </span><span class="si">%s</span><span class="s2">, &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">build</span><span class="p">))</span>
+
+            <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;productcategory: </span><span class="si">%s</span><span class="s2">, &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">productcategory</span><span class="p">))</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;sp: </span><span class="si">%s</span><span class="s2">, &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sp</span><span class="p">))</span>
+            <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;ubr: </span><span class="si">%s</span><span class="s2">, &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ubr</span><span class="p">))</span>
+
+            <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;InstallationType: </span><span class="si">%s</span><span class="s2">, &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">installationtype</span><span class="p">))</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;EditionID: </span><span class="si">%s</span><span class="s2">, &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">editionid</span><span class="p">))</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;ProductName: </span><span class="si">%s</span><span class="s2">, &quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">productname</span><span class="p">))</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;}&quot;</span>
+
+            <span class="k">return</span> <span class="n">res</span>
+
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">return</span></div></div>
+
+<span class="n">dist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;NT&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">WINVERSION</span> <span class="o">=</span> <span class="n">WinVersion</span><span class="p">()</span>
+    <span class="n">WINVERSION</span><span class="o">.</span><span class="n">fetch_current_version_raw</span><span class="p">()</span>
+    <span class="n">dist</span> <span class="o">=</span> <span class="n">WINVERSION</span><span class="o">.</span><span class="n">readout_distribution</span><span class="p">()</span>
+
+<span class="k">except</span> <span class="n">PlatformIDsFileCheck</span><span class="p">:</span>
+    <span class="c1"># not on MS-Windows platform, so scan will fail</span>
+    <span class="k">pass</span>    
+
+
+<span class="k">if</span> <span class="n">dist</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;nt&#39;</span><span class="p">:</span>
+    <span class="c1"># does not actually match MS-Windows</span>
+    <span class="n">dist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;nt&#39;</span><span class="p">,</span> <span class="s1">&#39;0.0.0&#39;</span><span class="p">,</span> <span class="s1">&#39;NT-0.0.0&#39;</span><span class="p">,</span> <span class="s1">&#39;NT&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,),</span> <span class="s1">&#39;nt&#39;</span><span class="p">]</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">winv</span> <span class="o">=</span> <span class="n">WinVersion</span><span class="p">()</span>
+    <span class="n">vinfo</span> <span class="o">=</span> <span class="n">winv</span><span class="o">.</span><span class="n">readout_versioninfo_ext</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">vinfo</span><span class="p">)</span>
+
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+      <span class="lastupdated">
+        Last updated on Dec 08, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

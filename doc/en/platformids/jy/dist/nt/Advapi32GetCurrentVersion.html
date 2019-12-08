@@ -1,0 +1,393 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.46. jy.dist.nt.Advapi32GetCurrentVersion(.java) &mdash; platformids  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="8.47. jy.dist.nt.Kernel32GetProductInfo(.java)" href="Kernel32GetProductInfo.html" />
+    <link rel="prev" title="8.45. dist.nt.windows_subprocess_reg_exe" href="../../../dist/nt/windows_subprocess_reg_exe.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.36
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Shortcuts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">PlatformIDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_cockpit.html">apidoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_apiref_scaled.html">apiref</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_abstract.html">1. Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_platform_support.html">2. Platform Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_blueprint.html">3. Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rtplatformids_cli.html">4. Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../os_categorization.html">5. OS Categorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../distributions.html">6. Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_documents.html">7. Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_modules.html">8. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_indices.html">9. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_resources.html">10. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">11. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">12. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_license.html">13. Licenses</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../howto/index.html">Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/index.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">platformids</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index_modules.html">8. Modules</a> &raquo;</li>
+        
+      <li>8.46. jy.dist.nt.Advapi32GetCurrentVersion(.java)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/jy/dist/nt/Advapi32GetCurrentVersion.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jy-dist-nt-advapi32getcurrentversion-java">
+<span id="jna-advapi32getcurrentversion"></span><h1>8.46. jy.dist.nt.Advapi32GetCurrentVersion(.java)<a class="headerlink" href="#jy-dist-nt-advapi32getcurrentversion-java" title="Permalink to this headline">¶</a></h1>
+<p>Module for the registry access of the <em>Jython</em> implementation on <em>WindowsNT</em>  [<a class="reference internal" href="../../../python_implementations.html#pythonjythonimplementation"><span class="std std-ref">Jython</span></a>].</p>
+<div class="section" id="source">
+<h2>8.46.1. Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> *</span>
+<span class="cm"> * Requires in classpath:</span>
+<span class="cm"> *</span>
+<span class="cm"> *  jna.jar</span>
+<span class="cm"> *  jna-platform.jar</span>
+<span class="cm"> *  win32-x86-64.jar / win32-x86.jar </span>
+<span class="cm"> *</span>
+<span class="cm"> * see: https://github.com/java-native-access/jna/tree/master/dist</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+
+<span class="kn">package</span> <span class="nn">platformids.dist.nt</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.TreeMap</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.sun.jna.platform.win32.Advapi32</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.sun.jna.platform.win32.WinReg.HKEY</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.sun.jna.platform.win32.WinReg.HKEYByReference</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.sun.jna.platform.win32.WinNT</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.sun.jna.platform.win32.W32Errors</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.sun.jna.platform.win32.Win32Exception</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.sun.jna.platform.win32.Advapi32Util</span><span class="o">;</span>
+
+<span class="kn">import static</span> <span class="nn">com.sun.jna.platform.win32.WinReg.HKEY_LOCAL_MACHINE</span><span class="o">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @author Arno-Can Uestuensoez &lt;acue_sf2 @ sourceforge.net&gt;</span>
+<span class="cm"> * @version 0.1.1</span>
+<span class="cm"> * @since 0.1.30</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Advapi32GetCurrentVersion</span> <span class="o">{</span>
+
+	<span class="cm">/**</span>
+<span class="cm">	 * Get attribute names and values of registry key.</span>
+<span class="cm">	 *</span>
+<span class="cm">	 * @param root</span>
+<span class="cm">	 *            Root key.</span>
+<span class="cm">	 * @param keyPath</span>
+<span class="cm">	 *            Path to a registry key.</span>
+<span class="cm">	 * @return TreMap&lt;String, Object&gt; of registry name value pairs.</span>
+<span class="cm">	 */</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="nf">registryGetValues</span><span class="o">(</span><span class="n">HKEY</span> <span class="n">root</span><span class="o">,</span> <span class="n">String</span> <span class="n">keyPath</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">HKEYByReference</span> <span class="n">phkKey</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HKEYByReference</span><span class="o">();</span>
+		<span class="kt">int</span> <span class="n">rc</span> <span class="o">=</span> <span class="n">Advapi32</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">.</span><span class="na">RegOpenKeyEx</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="n">keyPath</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">WinNT</span><span class="o">.</span><span class="na">KEY_READ</span><span class="o">,</span> <span class="n">phkKey</span><span class="o">);</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">rc</span> <span class="o">!=</span> <span class="n">W32Errors</span><span class="o">.</span><span class="na">ERROR_SUCCESS</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">throw</span> <span class="k">new</span> <span class="n">Win32Exception</span><span class="o">(</span><span class="n">rc</span><span class="o">);</span>
+		<span class="o">}</span>
+		<span class="k">try</span> <span class="o">{</span>
+			<span class="n">vals</span> <span class="o">=</span><span class="n">Advapi32Util</span><span class="o">.</span><span class="na">registryGetValues</span><span class="o">(</span><span class="n">phkKey</span><span class="o">.</span><span class="na">getValue</span><span class="o">());</span>
+		<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+			<span class="n">rc</span> <span class="o">=</span> <span class="n">Advapi32</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">.</span><span class="na">RegCloseKey</span><span class="o">(</span><span class="n">phkKey</span><span class="o">.</span><span class="na">getValue</span><span class="o">());</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">rc</span> <span class="o">!=</span> <span class="n">W32Errors</span><span class="o">.</span><span class="na">ERROR_SUCCESS</span><span class="o">)</span> <span class="o">{</span>
+				<span class="k">throw</span> <span class="k">new</span> <span class="n">Win32Exception</span><span class="o">(</span><span class="n">rc</span><span class="o">);</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+		<span class="k">return</span> <span class="n">vals</span><span class="o">;</span>
+
+	<span class="o">}</span>
+
+	<span class="cm">/**</span>
+<span class="cm">	 * Get key-value pairs of the registry key&#39;s attributes:</span>
+<span class="cm">	 *</span>
+<span class="cm">	 * &quot;HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion&quot;</span>
+<span class="cm">	 *</span>
+<span class="cm">	 * @return Map of of registry names and values for CurrentVersion.</span>
+<span class="cm">	 */</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="nf">getCurrentVersionValues</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">registryGetValues</span><span class="o">(</span><span class="n">HKEY_LOCAL_MACHINE</span><span class="o">,</span> <span class="s">&quot;SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion&quot;</span><span class="o">);</span>
+	<span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="download">
+<h2>8.46.2. Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="../../../_static/jy/dist//nt/Advapi32GetCurrentVersion.java">Advapi32GetCurrentVersion.py</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Kernel32GetProductInfo.html" class="btn btn-neutral float-right" title="8.47. jy.dist.nt.Kernel32GetProductInfo(.java)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../../dist/nt/windows_subprocess_reg_exe.html" class="btn btn-neutral float-left" title="8.45. dist.nt.windows_subprocess_reg_exe" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+      <span class="lastupdated">
+        Last updated on Dec 08, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

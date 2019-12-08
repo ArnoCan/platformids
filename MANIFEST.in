@@ -9,4 +9,4 @@ include callDocSphinx.sh
 include licenses-amendments.txt
 include setup.cfg
 include setup.py
-include dosrc/pyplatformids-64x64.png
+include dosrc/platformids-64x64.png

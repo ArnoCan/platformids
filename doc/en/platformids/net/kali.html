@@ -1,0 +1,551 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.23. platformids.net.kali &mdash; platformids  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8.24. platformids.net.openwrt" href="openwrt.html" />
+    <link rel="prev" title="8.22. platformids.dist.windows" href="../dist/windows.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.36
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Shortcuts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">PlatformIDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_part_cockpit.html">apidoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_part_apiref_scaled.html">apiref</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index_part_abstract.html">1. Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_part_platform_support.html">2. Platform Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_part_blueprint.html">3. Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rtplatformids_cli.html">4. Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../os_categorization.html">5. OS Categorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../distributions.html">6. Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_part_documents.html">7. Documents</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index_modules.html">8. Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../platformids.html">8.1. platformids.__init__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platformids.platforms.html">8.2. platformids.platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/alpinelinux.html">8.3. platformids.dist.alpinelinux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/archlinux.html">8.4. platformids.dist.archlinux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/centos.html">8.5. platformids.dist.centos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/cygwin.html">8.6. platformids.dist.cygwin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/darwin.html">8.7. platformids.dist.darwin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/debian.html">8.8. platformids.dist.debian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/fedora.html">8.9. platformids.dist.fedora</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/freebsd.html">8.10. platformids.dist.freebsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/gentoo.html">8.11. platformids.dist.gentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/hpux.html">8.12. platformids.dist.hpux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/netbsd.html">8.13. platformids.dist.netbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/openbsd.html">8.14. platformids.dist.openbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/opensuse.html">8.15. platformids.dist.opensuse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/oraclelinux.html">8.16. platformids.dist.oraclelinux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/posix.html">8.17. platformids.dist.posix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/rhel.html">8.18. platformids.dist.rhel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/sles.html">8.19. platformids.dist.sles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/solaris.html">8.20. platformids.dist.solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/ubuntu.html">8.21. platformids.dist.ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/windows.html">8.22. platformids.dist.windows</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8.23. platformids.net.kali</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">8.23.1. Description</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#rolling-version-identifier">8.23.1.1. Rolling Version Identifier</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#source">8.23.2. Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#download">8.23.3. Download</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openwrt.html">8.24. platformids.net.openwrt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pfsense.html">8.25. platformids.net.pfsense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom/aix.html">8.26. pythonids.dist.aix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom/blackarch.html">8.27. pythonids.dist.blackarch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom/dragonbsd.html">8.28. platformids.custom.dragonbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom/ghostbsd.html">8.29. platformids.custom.ghostbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom/linuxmint.html">8.30. platformids.custom.linuxmint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom/minix.html">8.31. platformids.custom.minix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom/minix2.html">8.32. platformids.custom.minix2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom/nomadbsd.html">8.33. platformids.custom.nomadbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom/parrot.html">8.34. platformids.custom.parrot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom/pentoo.html">8.35. platformids.custom.pentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom/reactos.html">8.36. platformids.custom.reactos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom/slackware.html">8.37. platformids.custom.slackware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom/trueos.html">8.38. platformids.custom.trueos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../embed/armbian.html">8.39. platformids.embed.armbian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../embed/circuitpython.html">8.40. platformids.embed.circuitpython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../embed/micropython.html">8.41. platformids.embed.micropython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../embed/raspbian.html">8.42. platformids.embed.raspbian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/nt/windows_kernel32_dll.html">8.43. windows_kernel32_dll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/nt/windows_products.html">8.44. windows_products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dist/nt/windows_subprocess_reg_exe.html">8.45. windows_subprocess_reg_exe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jy/dist/nt/Advapi32GetCurrentVersion.html">8.46. Advapi32GetCurrentVersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jy/dist/nt/Kernel32GetProductInfo.html">8.47. Kernel32GetProductInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jy/dist/nt/ReadCurrentVersionWinPrefs.html">8.48. ReadCurrentVersionWinPrefs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index_part_indices.html">9. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_part_resources.html">10. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">11. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">12. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index_part_license.html">13. Licenses</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../howto/index.html">Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">platformids</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index_modules.html">8. Modules</a> &raquo;</li>
+        
+      <li>8.23. platformids.net.kali</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/net/kali.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="platformids-net-kali">
+<span id="net-module-kali"></span><h1>8.23. platformids.net.kali<a class="headerlink" href="#platformids-net-kali" title="Permalink to this headline">¶</a></h1>
+<p>Module Kali Linux [<a class="reference internal" href="../os_categorization.html#secnetkalilinux"><span class="std std-ref">doc</span></a>].</p>
+<div class="section" id="description">
+<h2>8.23.1. Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="rolling-version-identifier">
+<h3>8.23.1.1. Rolling Version Identifier<a class="headerlink" href="#rolling-version-identifier" title="Permalink to this headline">¶</a></h3>
+<p><em>KaliLinux</em> is one of the few distros which maintain a correct version identifier within
+<em>/etc/os-release</em>, thus anything works fine.
+The tested version scheme is the latest from 2018/2019 on, thusfor the older
+simply assuming these may work too.</p>
+</div>
+</div>
+<div class="section" id="source">
+<h2>8.23.2. Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;Kali Linux releases.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
+
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="kn">from</span> <span class="nn">pythonids</span> <span class="kn">import</span> <span class="n">PYV35Plus</span>
+<span class="kn">from</span> <span class="nn">platformids</span> <span class="kn">import</span> <span class="n">RTE_KALI</span><span class="p">,</span> <span class="n">rte2num</span><span class="p">,</span> <span class="n">num2rte</span><span class="p">,</span> <span class="n">num2pretty</span><span class="p">,</span> <span class="n">decode_version_str_to_segments</span><span class="p">,</span> \
+    <span class="n">DSKORG_ID</span><span class="p">,</span> <span class="n">DSKORG_VERSION</span><span class="p">,</span> <span class="n">PlatformIDsFileCheck</span>
+
+
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;Arno-Can Uestuensoez&#39;</span>
+<span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;Artistic-License-2.0 + Forced-Fairplay-Constraints&quot;</span>
+<span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright (C) 2010-2018 Arno-Can Uestuensoez&quot;</span> \
+                <span class="s2">&quot; @Ingenieurbuero Arno-Can Uestuensoez&quot;</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="s1">&#39;0.1.29&#39;</span>
+<span class="n">__uuid__</span> <span class="o">=</span> <span class="s2">&quot;7add5ded-c39b-4b6e-8c87-1b3a1c150ee9&quot;</span>
+
+
+<span class="c1">#</span>
+<span class="c1"># Releases:</span>
+<span class="c1">#</span>
+<span class="c1">#   Rolling Releases - weekly build with week of the year:</span>
+<span class="c1">#</span>
+<span class="c1">#     Kali 2019-W11 – 11th March, 2019 – The First weekly release</span>
+<span class="c1"># </span>
+<span class="c1">#   Rolling Releases with arbitrary increments:</span>
+<span class="c1">#</span>
+<span class="c1">#     Kali 2019.1 – 18th February, 2019 – The First 2019 Kali Rolling release. Kernel 4.19.13, GNOME 3.30.2</span>
+<span class="c1"># </span>
+<span class="c1">#     Kali 2018.4 – 29th October, 2018 – The Fourth 2018 Kali Rolling release. Kernel 4.18.0, GNOME 3.30.1</span>
+<span class="c1">#     Kali 2018.3 – 27th August, 2018 – The Third 2018 Kali Rolling release. Kernel 4.17.0, GNOME 3.28.2</span>
+<span class="c1">#     Kali 2018.2 – 30th April, 2018 – The Second 2018 Kali Rolling release. Kernel 4.15.0, GNOME 3.28.0</span>
+<span class="c1">#     Kali 2018.1 – 6th February, 2018 – The first 2018 Kali Rolling release. Kernel 4.14.12, GNOME 3.26.2</span>
+<span class="c1">#     Kali 2017.3 – 21st November, 2017 – The third 2017 Kali Rolling release. Kernel 4.13, GNOME 3.26</span>
+<span class="c1">#     Kali 2017.2 – 20th September, 2017 – The second 2017 Kali Rolling release. Kernel 4.12, GNOME 3.25.</span>
+<span class="c1">#     Kali 2017.1 – 25th April, 2017 – The first 2017 Kali Rolling release. Kernel 4.9, GNOME 3.22.</span>
+<span class="c1">#     Kali 2016.2 – 31st August, 2016 – The second Kali Rolling release. Kernel 4.6, GNOME 3.20.2.</span>
+<span class="c1">#     Kali 2016.1 – 21st January, 2016 – The first Kali Rolling release. Kernel 4.3, GNOME 3.18.</span>
+<span class="c1">#</span>
+<span class="c1">#   Two-number version releases:</span>
+<span class="c1">#</span>
+<span class="c1">#     Kali 2.0 – 11th August, 2015 – Major release, “safi”, now a rolling distribution, major UI changes.</span>
+<span class="c1">#</span>
+<span class="c1">#   Three-number version releases:</span>
+<span class="c1">#</span>
+<span class="c1">#     Kali 1.1.0a – 13th March, 2015 – No fanfare release fixing kernel ABI inconsistencies in the installers.</span>
+<span class="c1">#     Kali 1.1.0 – 9th Febuary, 2015 – First dot release in 2 years. New kernel, new tools and updates.</span>
+<span class="c1">#     Kali 1.0.9a – 6th October, 2014 – Security BugFix release covering shellshock and Debian apt vulnerabilities.</span>
+<span class="c1">#     Kali 1.0.9 – 25th August, 2014 – BugFix release including installer and a set of tool updates and package fixes.</span>
+<span class="c1">#     Kali 1.0.8 – 22nd July, 2014 – EFI Support for our “full” ISOs and a set of tool updates and package fixes.</span>
+<span class="c1">#     Kali 1.0.7 – 27th May, 2014 – Kernel 3.14, tool updates, package fixes, Kali Live Encrypted USB Persistence.</span>
+<span class="c1">#     Kali 1.0.6 – 9th January, 2014 – Kernel 3.12, cryptsetup nuke option, Amazon AMI, ARM build scripts.</span>
+<span class="c1">#     Kali 1.0.5 – 5th September, 2013 – BugFix rollup. LVM Encrypted installs, Software Defined Radio (SDR) tools.</span>
+<span class="c1">#     Kali 1.0.4 – 25th July, 2013 – BugFix rollup. Penetration testing tool additions and updates.</span>
+<span class="c1">#     Kali 1.0.3 – 26th April, 2013 – BugFix rollup. New accessibility features. Added live Desktop installer.</span>
+<span class="c1">#     Kali 1.0.2 – 27th March, 2013 – Minor BugFix release and update roll-up.</span>
+<span class="c1">#     Kali 1.0.1 – 14th March, 2013 – Minor BugFix release (USB Keyboard).</span>
+<span class="c1">#     Kali 1.0.0 – 13th March, 2013 – Initial release, “moto”.</span>
+<span class="c1">#</span>
+
+
+
+<span class="n">RTE_KALI201911</span>   <span class="o">=</span> <span class="n">RTE_KALI</span>     <span class="o">+</span> <span class="mh">0x00006181</span>  <span class="c1">#: KaliLinux-2019-W11 =&gt; KaliLinux-2019.03.11 </span>
+
+    
+<span class="c1">#: mapping of the rte string and numeric representation to the numeric value</span>
+<span class="n">rte2num</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;kali201911&#39;</span><span class="p">:</span>    <span class="n">RTE_KALI201911</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+
+<span class="c1">#: mapping of the rte numeric representation to the string value</span>
+<span class="n">num2rte</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="n">RTE_KALI201911</span><span class="p">:</span> <span class="s1">&#39;kali201911&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="c1">#: mapping of the rte numeric representation to the string value</span>
+<span class="n">num2pretty</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="n">RTE_KALI201911</span><span class="p">:</span> <span class="s1">&#39;KaliLinux-2019.03.11&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+
+<span class="n">dist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;KaliLinux-&#39;</span><span class="p">,</span> <span class="s1">&#39;KaliLinux&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>  <span class="c1"># defaults</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/etc/os-release&quot;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">l</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;ID=&#39;</span><span class="p">):</span>
+                <span class="n">dist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="n">DSKORG_ID</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\1&#39;</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
+    
+            <span class="k">elif</span> <span class="n">l</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;VERSION=&#39;</span><span class="p">):</span>  <span class="c1"># priority though more widespread</span>
+                <span class="n">dist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">DSKORG_VERSION</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\1&#39;</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
+                <span class="n">dist</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+=</span> <span class="n">dist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">dist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^0-9]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">dist</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            
+    <span class="n">dist</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">decode_version_str_to_segments</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+
+<span class="k">except</span> <span class="n">PlatformIDsFileCheck</span><span class="p">:</span>
+    <span class="c1"># not on KaliLinux platform, so scan will fail</span>
+    <span class="k">pass</span>    
+
+<span class="k">if</span> <span class="n">dist</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;kali&#39;</span><span class="p">:</span>
+    <span class="c1"># does not catually match KaliLinux</span>
+    <span class="n">dist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;kali&#39;</span><span class="p">,</span> <span class="s1">&#39;0.0.0&#39;</span><span class="p">,</span> <span class="s1">&#39;KaliLinux-0.0.0&#39;</span><span class="p">,</span> <span class="s1">&#39;KaliLinux&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,),</span> <span class="s1">&#39;kali&#39;</span><span class="p">]</span>
+
+
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="download">
+<h2>8.23.3. Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="../_static/net/kali.py">kali.py</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="openwrt.html" class="btn btn-neutral float-right" title="8.24. platformids.net.openwrt" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../dist/windows.html" class="btn btn-neutral float-left" title="8.22. platformids.dist.windows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+      <span class="lastupdated">
+        Last updated on Dec 08, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

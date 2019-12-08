@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.47. jy.dist.nt.Kernel32GetProductInfo(.java) &mdash; platformids  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="8.48. jy.dist.nt.ReadCurrentVersionWinPrefs(.java)" href="ReadCurrentVersionWinPrefs.html" />
+    <link rel="prev" title="8.46. jy.dist.nt.Advapi32GetCurrentVersion(.java)" href="Advapi32GetCurrentVersion.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.36
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Shortcuts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">PlatformIDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_cockpit.html">apidoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_apiref_scaled.html">apiref</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_abstract.html">1. Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_platform_support.html">2. Platform Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_blueprint.html">3. Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rtplatformids_cli.html">4. Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../os_categorization.html">5. OS Categorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../distributions.html">6. Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_documents.html">7. Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_modules.html">8. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_indices.html">9. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_resources.html">10. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">11. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">12. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_license.html">13. Licenses</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../howto/index.html">Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/index.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">platformids</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index_modules.html">8. Modules</a> &raquo;</li>
+        
+      <li>8.47. jy.dist.nt.Kernel32GetProductInfo(.java)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/jy/dist/nt/Kernel32GetProductInfo.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jy-dist-nt-kernel32getproductinfo-java">
+<span id="jna-advapi32getproductinfo"></span><h1>8.47. jy.dist.nt.Kernel32GetProductInfo(.java)<a class="headerlink" href="#jy-dist-nt-kernel32getproductinfo-java" title="Permalink to this headline">¶</a></h1>
+<p>Module for the registry access of the <em>Jython</em> implementation on <em>WindowsNT</em>  [<a class="reference internal" href="../../../python_implementations.html#pythonjythonimplementation"><span class="std std-ref">Jython</span></a>].</p>
+<div class="section" id="source">
+<h2>8.47.1. Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> *</span>
+<span class="cm"> * Requires in classpath:</span>
+<span class="cm"> *</span>
+<span class="cm"> *  jna.jar</span>
+<span class="cm"> *  jna-platform.jar</span>
+<span class="cm"> *  win32-x86-64.jar / win32-x86.jar</span>
+<span class="cm"> *</span>
+<span class="cm"> * see: https://github.com/java-native-access/jna/tree/master/dist</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+
+<span class="kn">package</span> <span class="nn">platformids.dist.nt</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.sun.jna.Native</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.sun.jna.platform.win32.WinNT</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.sun.jna.ptr.IntByReference</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
+<span class="c1">//import java.util.HashMap;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @author Arno-Can Uestuensoez &lt;acue_sf2 @ sourceforge.net&gt;</span>
+<span class="cm"> * @version 0.1.1</span>
+<span class="cm"> * @since 0.1.30</span>
+<span class="cm"> *</span>
+<span class="cm"> *</span>
+<span class="cm"> *        Read product information of the WindowsNT family by JNA. Requires the</span>
+<span class="cm"> *        structure *OSVERSIONINFOEXA*, thus the interface *GetVersionExA* which</span>
+<span class="cm"> *        is not available by *com.sun.jna.platform.win32.Kernel32*, thus uses</span>
+<span class="cm"> *        direct calls of *Kernel32*.</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Kernel32GetProductInfo</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Kernel32</span> <span class="kd">extends</span> <span class="n">com</span><span class="o">.</span><span class="na">sun</span><span class="o">.</span><span class="na">jna</span><span class="o">.</span><span class="na">platform</span><span class="o">.</span><span class="na">win32</span><span class="o">.</span><span class="na">Kernel32</span> <span class="o">{</span>
+		<span class="n">Kernel32</span> <span class="n">INSTANCE</span> <span class="o">=</span> <span class="o">(</span><span class="n">Kernel32</span><span class="o">)</span> <span class="n">Native</span><span class="o">.</span><span class="na">loadLibrary</span><span class="o">(</span><span class="s">&quot;kernel32&quot;</span><span class="o">,</span> <span class="n">Kernel32</span><span class="o">.</span><span class="na">class</span><span class="o">,</span>
+				<span class="n">com</span><span class="o">.</span><span class="na">sun</span><span class="o">.</span><span class="na">jna</span><span class="o">.</span><span class="na">win32</span><span class="o">.</span><span class="na">W32APIOptions</span><span class="o">.</span><span class="na">DEFAULT_OPTIONS</span><span class="o">);</span>
+
+		<span class="kt">boolean</span> <span class="nf">GetProductInfo</span><span class="o">(</span><span class="kt">int</span> <span class="n">dwOSMajorVersion</span><span class="o">,</span> <span class="kt">int</span> <span class="n">dwOSMinorVersion</span><span class="o">,</span> <span class="kt">int</span> <span class="n">dwSpMajorVersion</span><span class="o">,</span> <span class="kt">int</span> <span class="n">dwSpMinorVersion</span><span class="o">,</span>
+				<span class="n">IntByReference</span> <span class="n">pdwReturnedProductType</span><span class="o">);</span>
+
+		<span class="kt">boolean</span> <span class="nf">GetVersionEx</span><span class="o">(</span><span class="n">WinNT</span><span class="o">.</span><span class="na">OSVERSIONINFOEX</span> <span class="n">lpVersionInfo</span><span class="o">);</span>
+
+	<span class="o">}</span>
+
+	<span class="cm">/**</span>
+<span class="cm">	 * Get product type, return by ref pointer.</span>
+<span class="cm">	 *</span>
+<span class="cm">	 * @param major</span>
+<span class="cm">	 *            Major OS version.</span>
+<span class="cm">	 * @param minor</span>
+<span class="cm">	 *            Minor OS version.</span>
+<span class="cm">	 * @param smajor</span>
+<span class="cm">	 *            Major SP version.</span>
+<span class="cm">	 * @param sminor</span>
+<span class="cm">	 *            Minor SP version.</span>
+<span class="cm">	 * @param typeLst</span>
+<span class="cm">	 *            Value by reference for the product type, Jython requires a</span>
+<span class="cm">	 *            List.</span>
+<span class="cm">	 * @return boolean</span>
+<span class="cm">	 */</span>
+	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">GetProductInfo</span><span class="o">(</span><span class="kt">int</span> <span class="n">major</span><span class="o">,</span> <span class="kt">int</span> <span class="n">minor</span><span class="o">,</span> <span class="kt">int</span> <span class="n">smajor</span><span class="o">,</span> <span class="kt">int</span> <span class="n">sminor</span><span class="o">,</span> <span class="n">List</span> <span class="n">typeLst</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">IntByReference</span> <span class="n">myref</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IntByReference</span><span class="o">();</span>
+		<span class="kt">boolean</span> <span class="n">res</span> <span class="o">=</span> <span class="n">Kernel32GetProductInfo</span><span class="o">.</span><span class="na">Kernel32</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">.</span><span class="na">GetProductInfo</span><span class="o">(</span><span class="n">major</span><span class="o">,</span> <span class="n">minor</span><span class="o">,</span> <span class="n">smajor</span><span class="o">,</span> <span class="n">sminor</span><span class="o">,</span> <span class="n">myref</span><span class="o">);</span>
+		<span class="n">typeLst</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">myref</span><span class="o">.</span><span class="na">getValue</span><span class="o">());</span>
+		<span class="k">return</span> <span class="n">res</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="cm">/**</span>
+<span class="cm">	 * Get product type, return by ref pointer.</span>
+<span class="cm">	 *</span>
+<span class="cm">	 * @param versx</span>
+<span class="cm">	 *            Value by reference for the product version Map.</span>
+<span class="cm">	 * @return boolean</span>
+<span class="cm">	 */</span>
+	<span class="c1">// public boolean GetVersionEx(Map&lt;String, String&gt; versx) {</span>
+	<span class="c1">// public boolean GetVersionEx(Map versx) {</span>
+	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">GetVersionEx</span><span class="o">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">versx</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">WinNT</span><span class="o">.</span><span class="na">OSVERSIONINFOEX</span> <span class="n">_vx</span> <span class="o">=</span> <span class="k">new</span> <span class="n">WinNT</span><span class="o">.</span><span class="na">OSVERSIONINFOEX</span><span class="o">();</span>
+		<span class="kt">boolean</span> <span class="n">res</span> <span class="o">=</span> <span class="n">Kernel32GetProductInfo</span><span class="o">.</span><span class="na">Kernel32</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">.</span><span class="na">GetVersionEx</span><span class="o">(</span><span class="n">_vx</span><span class="o">);</span>
+
+		<span class="c1">// versx[&quot;build&quot;] = _vx.dwBuildNumber;</span>
+		<span class="n">versx</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;dwOSVersionInfoSize&quot;</span><span class="o">,</span> <span class="n">_vx</span><span class="o">.</span><span class="na">dwOSVersionInfoSize</span><span class="o">);</span>
+		<span class="n">versx</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot; dwMajorVersion&quot;</span><span class="o">,</span> <span class="n">_vx</span><span class="o">.</span><span class="na">dwMajorVersion</span><span class="o">);</span>
+		<span class="n">versx</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot; dwMinorVersion&quot;</span><span class="o">,</span> <span class="n">_vx</span><span class="o">.</span><span class="na">dwMinorVersion</span><span class="o">);</span>
+		<span class="n">versx</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;dwBuildNumber&quot;</span><span class="o">,</span> <span class="n">_vx</span><span class="o">.</span><span class="na">dwBuildNumber</span><span class="o">);</span>
+		<span class="n">versx</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;dwBuildNumber&quot;</span><span class="o">,</span> <span class="n">_vx</span><span class="o">.</span><span class="na">dwBuildNumber</span><span class="o">);</span>
+		<span class="n">versx</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;dwPlatformId&quot;</span><span class="o">,</span> <span class="n">_vx</span><span class="o">.</span><span class="na">dwPlatformId</span><span class="o">);</span>
+		<span class="n">versx</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;szCSDVersion&quot;</span><span class="o">,</span> <span class="n">_vx</span><span class="o">.</span><span class="na">szCSDVersion</span><span class="o">);</span>
+		<span class="n">versx</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;wServicePackMajor&quot;</span><span class="o">,</span> <span class="n">_vx</span><span class="o">.</span><span class="na">wServicePackMajor</span><span class="o">);</span>
+		<span class="n">versx</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;wServicePackMinor&quot;</span><span class="o">,</span> <span class="n">_vx</span><span class="o">.</span><span class="na">wServicePackMinor</span><span class="o">);</span>
+		<span class="n">versx</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;wSuiteMask&quot;</span><span class="o">,</span> <span class="n">_vx</span><span class="o">.</span><span class="na">wSuiteMask</span><span class="o">);</span>
+		<span class="n">versx</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;wReserved&quot;</span><span class="o">,</span> <span class="n">_vx</span><span class="o">.</span><span class="na">wReserved</span><span class="o">);</span>
+		<span class="n">versx</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;wProductType&quot;</span><span class="o">,</span> <span class="n">_vx</span><span class="o">.</span><span class="na">wProductType</span><span class="o">);</span>
+
+		<span class="k">return</span> <span class="n">res</span><span class="o">;</span>
+	<span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="download">
+<h2>8.47.2. Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="../../../_static/jy/dist//nt/Kernel32GetProductInfo.java">Kernel32GetProductInfo.java</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ReadCurrentVersionWinPrefs.html" class="btn btn-neutral float-right" title="8.48. jy.dist.nt.ReadCurrentVersionWinPrefs(.java)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Advapi32GetCurrentVersion.html" class="btn btn-neutral float-left" title="8.46. jy.dist.nt.Advapi32GetCurrentVersion(.java)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+      <span class="lastupdated">
+        Last updated on Dec 08, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

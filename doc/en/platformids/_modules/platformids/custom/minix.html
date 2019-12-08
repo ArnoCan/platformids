@@ -1,0 +1,388 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>platformids.custom.minix &mdash; platformids  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.36
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Shortcuts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">PlatformIDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_cockpit.html">apidoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_apiref_scaled.html">apiref</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_abstract.html">1. Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_platform_support.html">2. Platform Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_blueprint.html">3. Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rtplatformids_cli.html">4. Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../os_categorization.html">5. OS Categorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../distributions.html">6. Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_documents.html">7. Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_modules.html">8. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_indices.html">9. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_resources.html">10. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">11. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../references.html">12. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_part_license.html">13. Licenses</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../howto/index.html">Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq/index.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">platformids</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>platformids.custom.minix</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for platformids.custom.minix</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;Example for a dynamic added custom platform.</span>
+
+<span class="sd">Here Minix as a new OS type, which actually has a default </span>
+<span class="sd">release version layout, and though could be handled by the </span>
+<span class="sd">default handler.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span>
+
+<span class="kn">from</span> <span class="nn">platformids</span> <span class="k">import</span> <span class="n">RTE</span><span class="p">,</span> <span class="n">rte2num</span><span class="p">,</span> <span class="n">num2rte</span><span class="p">,</span> <span class="n">num2pretty</span><span class="p">,</span> \
+    <span class="n">RTE_POSIX</span><span class="p">,</span> <span class="n">RTE_OSTYPE</span><span class="p">,</span> <span class="n">RTE_DIST</span><span class="p">,</span> \
+    <span class="n">custom_ostype</span><span class="p">,</span> <span class="n">custom_dist</span><span class="p">,</span> <span class="n">custom_rte_distrel2tuple</span><span class="p">,</span> \
+    <span class="n">PlatformIDsUnknownError</span>
+
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;Arno-Can Uestuensoez&#39;</span>
+<span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;Artistic-License-2.0 + Forced-Fairplay-Constraints&quot;</span>
+<span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright (C) 2019 Arno-Can Uestuensoez&quot;</span> \
+                <span class="s2">&quot; @Ingenieurbuero Arno-Can Uestuensoez&quot;</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="s1">&#39;0.0.1&#39;</span>
+<span class="n">__uuid__</span> <span class="o">=</span> <span class="s2">&quot;7add5ded-c39b-4b6e-8c87-1b3a1c150ee9&quot;</span>
+
+
+<span class="n">RTE_MINIX</span>         <span class="o">=</span> <span class="n">RTE_POSIX</span>   <span class="o">+</span> <span class="n">custom_ostype</span><span class="o">.</span><span class="n">add_enum</span><span class="p">()</span>     <span class="c1">#: Minix as ostype</span>
+<span class="n">RTE_MINIX3</span>        <span class="o">=</span> <span class="n">RTE_MINIX</span>   <span class="o">+</span> <span class="n">custom_dist</span><span class="o">.</span><span class="n">add_enum</span><span class="p">()</span>       <span class="c1">#: Minix3 as dist</span>
+
+    
+<span class="c1">#: mapping of the rte string and numeric representation to the numeric value</span>
+<span class="n">rte2num</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;minix&#39;</span><span class="p">:</span>         <span class="n">RTE_MINIX</span><span class="p">,</span>    <span class="c1"># ostype</span>
+        <span class="s1">&#39;minix3&#39;</span><span class="p">:</span>        <span class="n">RTE_MINIX3</span><span class="p">,</span>   <span class="c1"># dist</span>
+        <span class="n">RTE_MINIX</span><span class="p">:</span>       <span class="n">RTE_MINIX</span><span class="p">,</span>    <span class="c1"># ostype</span>
+        <span class="n">RTE_MINIX3</span><span class="p">:</span>      <span class="n">RTE_MINIX3</span><span class="p">,</span>   <span class="c1"># dist</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+
+<span class="c1">#: mapping of the rte numeric representation to the string value</span>
+<span class="n">num2rte</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="n">RTE_MINIX</span><span class="p">:</span>     <span class="s1">&#39;minix&#39;</span><span class="p">,</span>
+        <span class="n">RTE_MINIX3</span><span class="p">:</span>    <span class="s1">&#39;minix3&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="c1">#: mapping of the rte numeric representation to the string value</span>
+<span class="n">num2pretty</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="n">RTE_MINIX</span><span class="p">:</span>     <span class="s1">&#39;Minix&#39;</span><span class="p">,</span>
+        <span class="n">RTE_MINIX3</span><span class="p">:</span>    <span class="s1">&#39;Minix3&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="c1">#-----------------------------------------------#</span>
+<span class="c1">#                                               #</span>
+<span class="c1"># optional constants for convenience            #</span>
+<span class="c1">#                                               #</span>
+<span class="c1">#-----------------------------------------------#</span>
+
+<span class="n">RTE_MINIX321</span>      <span class="o">=</span> <span class="n">RTE_MINIX</span>  <span class="o">+</span> <span class="mh">0x00000641</span>                                <span class="c1">#: Minix-3.2.1</span>
+<span class="n">RTE_MINIX330</span>      <span class="o">=</span> <span class="n">RTE_MINIX</span>  <span class="o">+</span> <span class="mh">0x00000660</span>                                <span class="c1">#: Minix-3.3.0</span>
+
+    
+<span class="c1">#: mapping of the rte string and numeric representation to the numeric value</span>
+<span class="n">rte2num</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;minix321&#39;</span><span class="p">:</span>      <span class="n">RTE_MINIX321</span><span class="p">,</span> <span class="c1"># distrel</span>
+        <span class="s1">&#39;minix330&#39;</span><span class="p">:</span>      <span class="n">RTE_MINIX330</span><span class="p">,</span> <span class="c1"># distrel</span>
+        <span class="n">RTE_MINIX321</span><span class="p">:</span>    <span class="n">RTE_MINIX321</span><span class="p">,</span> <span class="c1"># distrel</span>
+        <span class="n">RTE_MINIX330</span><span class="p">:</span>    <span class="n">RTE_MINIX330</span><span class="p">,</span> <span class="c1"># distrel</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+
+<span class="c1">#: mapping of the rte numeric representation to the string value</span>
+<span class="n">num2rte</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="n">RTE_MINIX321</span><span class="p">:</span>  <span class="s1">&#39;minix321&#39;</span><span class="p">,</span>
+        <span class="n">RTE_MINIX330</span><span class="p">:</span>  <span class="s1">&#39;minix330&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="c1">#: mapping of the rte numeric representation to the string value</span>
+<span class="n">num2pretty</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="n">RTE_MINIX321</span><span class="p">:</span>  <span class="s1">&#39;Minix-3.2.1&#39;</span><span class="p">,</span>
+        <span class="n">RTE_MINIX330</span><span class="p">:</span>  <span class="s1">&#39;Minix-3.3.0&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<div class="viewcode-block" id="my_distrel2tuple"><a class="viewcode-back" href="../../../custom/minix.html#platformids.custom.minix.my_distrel2tuple">[docs]</a><span class="k">def</span> <span class="nf">my_distrel2tuple</span><span class="p">(</span><span class="n">rte</span><span class="o">=</span><span class="n">RTE</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A custom example only - standard encoding is default layout.</span>
+
+<span class="sd">    Convert the *Minix* specific *distrel* version layout</span>
+<span class="sd">    to a tuple.</span>
+<span class="sd">    </span>
+<span class="sd">    A callback to be used by the function:</span>
+<span class="sd">    </span>
+<span class="sd">       platformids.decode_rte_distrel_to_segments(rte=RTE)</span>
+<span class="sd">    </span>
+<span class="sd">    Decodes the compressed *distrel* from the 32bit integer</span>
+<span class="sd">    bitmask *rte* into the corresponding tuple of integer</span>
+<span class="sd">    segments.</span>
+
+<span class="sd">   Args:</span>
+<span class="sd">       rte:</span>
+<span class="sd">           The comppressed runtime environment identifier bitmask.</span>
+<span class="sd">            </span>
+<span class="sd">           default := RTE</span>
+
+<span class="sd">   Returns:</span>
+<span class="sd">       Tuple of Integer values of the encoded segments, either</span>
+<span class="sd">       as defined by the default layout, or any known as defined</span>
+<span class="sd">       by additional extended and/or custom criteria.</span>
+<span class="sd">    </span>
+<span class="sd">   Raises:</span>
+<span class="sd">       pass-through</span>
+
+<span class="sd">   Examples:</span>
+<span class="sd">     ::</span>
+
+<span class="sd">        decode_rte_distrel_to_segments()     </span>
+<span class="sd">        =&gt;  (3, 2, 1)     # on Minix-3.2.1</span>
+<span class="sd">        =&gt;  (3, 3, 0)     # on Minix-3.3.0</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">rte</span> <span class="o">&amp;</span> <span class="n">RTE_OSTYPE</span> <span class="o">!=</span> <span class="n">RTE_MINIX</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">PlatformIDsUnknownError</span><span class="p">(</span><span class="s2">&quot;Not Minix:  rte = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">rte</span><span class="p">))</span>
+        
+    <span class="k">if</span> <span class="n">rte</span> <span class="o">&amp;</span> <span class="n">RTE_DIST</span> <span class="o">!=</span> <span class="n">RTE_MINIX3</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">PlatformIDsUnknownError</span><span class="p">(</span><span class="s2">&quot;Not Minix3: rte = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">rte</span><span class="p">))</span>
+    
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">_rte</span> <span class="o">=</span> <span class="n">rte2num</span><span class="p">[</span><span class="n">rte</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="c1"># non-registered release</span>
+        
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">_rte</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">int</span><span class="p">:</span>
+            <span class="c1"># can split basically any number, let&#39;s see...</span>
+            <span class="n">_rte</span> <span class="o">=</span> <span class="n">rte</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformIDsUnknownError</span><span class="p">(</span><span class="s2">&quot;Unknown Minix3 release rte = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">rte</span><span class="p">))</span>
+
+    <span class="c1"># here same as the default handler</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">_rte</span> <span class="o">&amp;</span> <span class="mh">0xfc00</span><span class="p">,</span> 
+        <span class="n">_rte</span> <span class="o">&amp;</span> <span class="mh">0x03e0</span><span class="p">,</span> 
+        <span class="n">_rte</span> <span class="o">&amp;</span> <span class="mh">0x001f</span><span class="p">,</span> 
+        <span class="p">)</span></div>
+
+
+<span class="c1">#: registered callbacks for special handling of custom layout</span>
+<span class="n">custom_rte_distrel2tuple</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="c1"># e.g. RTE_MINIX3: parrot.platformids.my_distrel2tuple,</span>
+        
+        <span class="n">RTE_MINIX3</span><span class="p">:</span> <span class="n">my_distrel2tuple</span><span class="p">,</span>  <span class="c1">#: the callback to be registered</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+      <span class="lastupdated">
+        Last updated on Dec 08, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

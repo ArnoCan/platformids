@@ -1,0 +1,899 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.43. dist.nt.windows_kernel32_dll &mdash; platformids  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="8.44. dist.nt.windows_products" href="windows_products.html" />
+    <link rel="prev" title="8.42. platformids.embed.raspbian" href="../../embed/raspbian.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.36
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Shortcuts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">PlatformIDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_part_cockpit.html">apidoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_part_apiref_scaled.html">apiref</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index_part_abstract.html">1. Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_part_platform_support.html">2. Platform Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_part_blueprint.html">3. Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rtplatformids_cli.html">4. Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../os_categorization.html">5. OS Categorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../distributions.html">6. Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_part_documents.html">7. Documents</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index_modules.html">8. Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../platformids.html">8.1. platformids.__init__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../platformids.platforms.html">8.2. platformids.platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../alpinelinux.html">8.3. platformids.dist.alpinelinux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../archlinux.html">8.4. platformids.dist.archlinux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../centos.html">8.5. platformids.dist.centos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cygwin.html">8.6. platformids.dist.cygwin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../darwin.html">8.7. platformids.dist.darwin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../debian.html">8.8. platformids.dist.debian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fedora.html">8.9. platformids.dist.fedora</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freebsd.html">8.10. platformids.dist.freebsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gentoo.html">8.11. platformids.dist.gentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hpux.html">8.12. platformids.dist.hpux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../netbsd.html">8.13. platformids.dist.netbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openbsd.html">8.14. platformids.dist.openbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opensuse.html">8.15. platformids.dist.opensuse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oraclelinux.html">8.16. platformids.dist.oraclelinux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../posix.html">8.17. platformids.dist.posix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rhel.html">8.18. platformids.dist.rhel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sles.html">8.19. platformids.dist.sles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solaris.html">8.20. platformids.dist.solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ubuntu.html">8.21. platformids.dist.ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../windows.html">8.22. platformids.dist.windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../net/kali.html">8.23. platformids.net.kali</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../net/openwrt.html">8.24. platformids.net.openwrt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../net/pfsense.html">8.25. platformids.net.pfsense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom/aix.html">8.26. pythonids.dist.aix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom/blackarch.html">8.27. pythonids.dist.blackarch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom/dragonbsd.html">8.28. platformids.custom.dragonbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom/ghostbsd.html">8.29. platformids.custom.ghostbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom/linuxmint.html">8.30. platformids.custom.linuxmint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom/minix.html">8.31. platformids.custom.minix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom/minix2.html">8.32. platformids.custom.minix2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom/nomadbsd.html">8.33. platformids.custom.nomadbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom/parrot.html">8.34. platformids.custom.parrot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom/pentoo.html">8.35. platformids.custom.pentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom/reactos.html">8.36. platformids.custom.reactos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom/slackware.html">8.37. platformids.custom.slackware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom/trueos.html">8.38. platformids.custom.trueos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../embed/armbian.html">8.39. platformids.embed.armbian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../embed/circuitpython.html">8.40. platformids.embed.circuitpython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../embed/micropython.html">8.41. platformids.embed.micropython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../embed/raspbian.html">8.42. platformids.embed.raspbian</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8.43. windows_kernel32_dll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-platformids.dist.nt.windows_kernel32dll">8.43.1. Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-structures">8.43.2. Data Structures</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#product-identifiers">8.43.2.1. Product Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#product-type-categories">8.43.2.2. Product Type Categories</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#product-enums">8.43.2.3. Product Enums</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#functions">8.43.3. Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#get-win32-osversioninfo">8.43.3.1. get_win32_OSVersionInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-win32-osversioninfoexa">8.43.3.2. get_win32_OSVersionInfoExa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-win32-osproductinfo">8.43.3.3. get_win32_OSProductInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#print-versinfo">8.43.3.4. print_versinfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-win32-iswindowsxpsp1orgreater">8.43.3.5. get_win32_IsWindowsXPSP1OrGreater</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#source">8.43.4. Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#download">8.43.5. Download</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resources">8.43.6. Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="windows_products.html">8.44. windows_products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows_subprocess_reg_exe.html">8.45. windows_subprocess_reg_exe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jy/dist/nt/Advapi32GetCurrentVersion.html">8.46. Advapi32GetCurrentVersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jy/dist/nt/Kernel32GetProductInfo.html">8.47. Kernel32GetProductInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jy/dist/nt/ReadCurrentVersionWinPrefs.html">8.48. ReadCurrentVersionWinPrefs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_part_indices.html">9. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_part_resources.html">10. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">11. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">12. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_part_license.html">13. Licenses</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../howto/index.html">Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">platformids</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index_modules.html">8. Modules</a> &raquo;</li>
+        
+      <li>8.43. dist.nt.windows_kernel32_dll</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/dist/nt/windows_kernel32_dll.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="dist-windows-kernel32-dll"></span><div class="section" id="dist-nt-windows-kernel32-dll">
+<span id="index-0"></span><h1>8.43. dist.nt.windows_kernel32_dll<a class="headerlink" href="#dist-nt-windows-kernel32-dll" title="Permalink to this headline">¶</a></h1>
+<p>Support module for the original Windows product enumerations [<a class="reference internal" href="../../os_categorization.html#enumwinnt"><span class="std std-ref">doc</span></a>]
+including additional definitions.</p>
+<div class="section" id="module-platformids.dist.nt.windows_kernel32dll">
+<span id="module"></span><h2>8.43.1. Module<a class="headerlink" href="#module-platformids.dist.nt.windows_kernel32dll" title="Permalink to this headline">¶</a></h2>
+<p>MS-Windows releases for the WindowsNT family.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>ATTENTION</strong>: The ostype == RTE_NT uses for <em>dist</em> and <em>distrel</em> it’s own non-default
+encoding, while the scheme follows the default record layout, see ‘<a class="reference internal" href="../../os_categorization.html#enumwinnt"><span class="std std-ref">Windows NT</span></a>’.</p>
+</div>
+</div>
+<div class="section" id="data-structures">
+<h2>8.43.2. Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this headline">¶</a></h2>
+<p>This module defines product related data structures representing the namebinding and extensions.</p>
+<div class="section" id="product-identifiers">
+<span id="winntproductidentifiers-kern32"></span><h3>8.43.2.1. Product Identifiers<a class="headerlink" href="#product-identifiers" title="Permalink to this headline">¶</a></h3>
+<p>The list of product identifiers provided by Microsoft.</p>
+<ul>
+<li><dl>
+<dt><em>prod_ext</em></dt><dd><p>A map of original const values defined by
+GetProductInfo function parameter values
+of <em>pwReturnedProductType</em>, see <a class="reference internal" href="../../references.html#getproductinfo" id="id1"><span>[GetProductInfo]</span></a> and <a class="reference internal" href="../../references.html#pwreturnedproducttype" id="id2"><span>[pwReturnedProductType]</span></a>.
+This defines a proprietary category index of cumulated product types,
+see <a class="reference internal" href="windows_products.html#winntproducttypecategories"><span class="std std-ref">Product Type Categories</span></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prod_ext</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mh">0x00000006</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>   <span class="c1"># PRODUCT_BUSINESS</span>
+    <span class="mh">0x00000010</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>   <span class="c1"># PRODUCT_BUSINESS_N</span>
+    <span class="mh">0x00000012</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>   <span class="c1"># PRODUCT_CLUSTER_SERVER</span>
+    <span class="mh">0x00000040</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>   <span class="c1"># PRODUCT_CLUSTER_SERVER_V</span>
+    <span class="mh">0x00000065</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>   <span class="c1"># PRODUCT_CORE</span>
+    <span class="o">...</span> <span class="c1"># see Source</span>
+</pre></div>
+</div>
+<p>The <em>dict</em> values provide the cumulative index for <a class="reference internal" href="windows_products.html#winntproducttypecategories"><span class="std std-ref">prod_type_categories</span></a>.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="product-type-categories">
+<span id="winntproducttypecategories-kern32"></span><h3>8.43.2.2. Product Type Categories<a class="headerlink" href="#product-type-categories" title="Permalink to this headline">¶</a></h3>
+<p>A proprietary category abstraction of cumulated product types by the <em>platformids</em>,
+see <a class="reference internal" href="windows_products.html#winntproductidentifiers"><span class="std std-ref">Product Identifiers</span></a>.</p>
+<ul>
+<li><dl>
+<dt><em>prod_type_categories</em></dt><dd><p>A cumulative abstraction of the defined product identifiers in order to
+get more abstract and though less variants of products.
+The view is an attempt to a more technical categorization of the
+predefined enums.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1"># see Source</span>
+<span class="c1">#</span>
+<span class="n">prod_type_categories</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;H&quot;</span><span class="p">,</span>     <span class="c1">#  0:  Home</span>
+    <span class="s2">&quot;HS&quot;</span><span class="p">,</span>    <span class="c1">#  1:  Home Server</span>
+    <span class="s2">&quot;WS&quot;</span><span class="p">,</span>    <span class="c1">#  2:  Workstation</span>
+    <span class="s2">&quot;D&quot;</span><span class="p">,</span>     <span class="c1">#  3:  Data Center</span>
+    <span class="s2">&quot;E&quot;</span><span class="p">,</span>     <span class="c1">#  4:  Enterprise Server</span>
+    <span class="s2">&quot;STD&quot;</span><span class="p">,</span>   <span class="c1">#  5:  Standard Server</span>
+    <span class="s2">&quot;BS&quot;</span><span class="p">,</span>    <span class="c1">#  6:  Basic Server: Small Business Server / Essential Server</span>
+    <span class="s2">&quot;VIRT&quot;</span><span class="p">,</span>  <span class="c1">#  7:  Virtualization</span>
+    <span class="s2">&quot;IOT&quot;</span><span class="p">,</span>   <span class="c1">#  8:  IoT</span>
+    <span class="s2">&quot;EDU&quot;</span><span class="p">,</span>   <span class="c1">#  9:  Education</span>
+    <span class="s2">&quot;EMB&quot;</span><span class="p">,</span>   <span class="c1"># 10:  Embedded</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="product-enums">
+<h3>8.43.2.3. Product Enums<a class="headerlink" href="#product-enums" title="Permalink to this headline">¶</a></h3>
+<p>The provides values by the interface parameter <em>pwReturnedProductType</em> <a class="reference internal" href="../../references.html#pwreturnedproducttype" id="id3"><span>[pwReturnedProductType]</span></a>,
+and their defining macros from the SDK are provided as Python constants with the same names.</p>
+<pre class="literal-block">PRODUCT_BUSINESS = 0x00000006
+PRODUCT_BUSINESS_N = 0x00000010
+PRODUCT_CLUSTER_SERVER = 0x00000012
+... # <a class="reference internal" href="windows_products.html#dist-windows-products-module"><span class="std std-ref">see Source</span></a></pre>
+</div>
+</div>
+<div class="section" id="functions">
+<h2>8.43.3. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<p>The following specific functions are available on the platforms
+of “<em>category == Windows</em>” including “<em>Cygwin</em>”.
+The functions provide access to the native API of the platform library “<em>kernel32.dll</em>”.</p>
+<div class="section" id="get-win32-osversioninfo">
+<h3>8.43.3.1. get_win32_OSVersionInfo<a class="headerlink" href="#get-win32-osversioninfo" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="platformids.dist.nt.windows_kernel32dll.get_win32_OSVersionInfo">
+<code class="sig-prename descclassname">platformids.dist.nt.windows_kernel32dll.</code><code class="sig-name descname">get_win32_OSVersionInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/platformids/dist/nt/windows_kernel32dll.html#get_win32_OSVersionInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.dist.nt.windows_kernel32dll.get_win32_OSVersionInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the system information, by mapping the call onto <em>GetVersionExA</em>.
+See original <em>GetVersionExA</em> function description <a class="reference internal" href="../../references.html#getversionexa" id="id4"><span>[GetVersionExA]</span></a>.</p>
+<dl>
+<dt>Args:</dt><dd><p>None</p>
+</dd>
+<dt>Returns:</dt><dd><p>The <em>ctypes.Structure</em> for current platform</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OSVersionInfo</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">Structure</span><span class="p">):</span>
+   <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+       <span class="p">(</span><span class="s2">&quot;dwOSVersionInfoSize&quot;</span> <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+       <span class="p">(</span><span class="s2">&quot;dwMajorVersion&quot;</span>      <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+       <span class="p">(</span><span class="s2">&quot;dwMinorVersion&quot;</span>      <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+       <span class="p">(</span><span class="s2">&quot;dwBuildNumber&quot;</span>       <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+       <span class="p">(</span><span class="s2">&quot;dwPlatformId&quot;</span>        <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+       <span class="p">(</span><span class="s2">&quot;szCSDVersion&quot;</span>        <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_char</span> <span class="o">*</span> <span class="mi">128</span><span class="p">),</span> <span class="c1"># CHAR</span>
+   <span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>when on <em>RTE_NT</em>, returns <em>None</em> else.</p>
+</dd>
+<dt>Raises:</dt><dd><p>pass-through</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="get-win32-osversioninfoexa">
+<h3>8.43.3.2. get_win32_OSVersionInfoExa<a class="headerlink" href="#get-win32-osversioninfoexa" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="platformids.dist.nt.windows_kernel32dll.get_win32_OSVersionInfoExa">
+<code class="sig-prename descclassname">platformids.dist.nt.windows_kernel32dll.</code><code class="sig-name descname">get_win32_OSVersionInfoExa</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/platformids/dist/nt/windows_kernel32dll.html#get_win32_OSVersionInfoExa"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.dist.nt.windows_kernel32dll.get_win32_OSVersionInfoExa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retuns a structure OSVERSIONINFOEXA, which contains the value
+for wProductType.</p>
+<p>Gets the system information, by mapping the call onto <em>OSVersionInfoExa</em>.
+See original <em>OSVersionInfoExa</em> function description <a class="reference internal" href="../../references.html#osversioninfoexa" id="id5"><span>[OSVERSIONINFOEXA]</span></a>.</p>
+<dl>
+<dt>Args:</dt><dd><p>None</p>
+</dd>
+<dt>Returns:</dt><dd><p>The <em>ctypes.Structure</em> for current platform</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OSVersionInfoExa</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">Structure</span><span class="p">):</span>
+   <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+       <span class="p">(</span><span class="s2">&quot;dwOSVersionInfoSize&quot;</span> <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+       <span class="p">(</span><span class="s2">&quot;dwMajorVersion&quot;</span>      <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+       <span class="p">(</span><span class="s2">&quot;dwMinorVersion&quot;</span>      <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+       <span class="p">(</span><span class="s2">&quot;dwBuildNumber&quot;</span>       <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+       <span class="p">(</span><span class="s2">&quot;dwPlatformId&quot;</span>        <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+       <span class="p">(</span><span class="s2">&quot;szCSDVersion&quot;</span>        <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_char</span> <span class="o">*</span> <span class="mi">128</span><span class="p">),</span> <span class="c1"># CHAR</span>
+
+       <span class="p">(</span><span class="s2">&quot;wServicePackMajor&quot;</span>   <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int16</span><span class="p">),</span>      <span class="c1"># WORD</span>
+       <span class="p">(</span><span class="s2">&quot;wServicePackMinor&quot;</span>   <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int16</span><span class="p">),</span>      <span class="c1"># WORD</span>
+       <span class="p">(</span><span class="s2">&quot;wSuiteMask&quot;</span>          <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int16</span><span class="p">),</span>      <span class="c1"># WORD</span>
+       <span class="p">(</span><span class="s2">&quot;wProductType&quot;</span>        <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int8</span><span class="p">),</span>       <span class="c1"># BYTE</span>
+           <span class="c1"># wProductType - one of:</span>
+           <span class="c1"># - VER_NT_DOMAIN_CONTROLLER</span>
+           <span class="c1"># - VER_NT_SERVER</span>
+           <span class="c1"># - VER_NT_WORKSTATION</span>
+           <span class="c1">#</span>
+       <span class="p">(</span><span class="s2">&quot;wReserved&quot;</span>           <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int8</span><span class="p">),</span>       <span class="c1"># BYTE</span>
+
+       <span class="p">];</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>when on <em>RTE_NT</em>, returns <em>None</em> else.</p>
+</dd>
+<dt>Raises:</dt><dd><p>pass-through</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="get-win32-osproductinfo">
+<h3>8.43.3.3. get_win32_OSProductInfo<a class="headerlink" href="#get-win32-osproductinfo" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="platformids.dist.nt.windows_kernel32dll.get_win32_OSProductInfo">
+<code class="sig-prename descclassname">platformids.dist.nt.windows_kernel32dll.</code><code class="sig-name descname">get_win32_OSProductInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/platformids/dist/nt/windows_kernel32dll.html#get_win32_OSProductInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.dist.nt.windows_kernel32dll.get_win32_OSProductInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the system information, by mapping the call onto <em>OSProductInfo</em>.
+See original <em>OSProductInfo</em> function description <span id="id6">[OSProductInfo]</span>.</p>
+<dl>
+<dt>Args:</dt><dd><p>None</p>
+</dd>
+<dt>Returns:</dt><dd><p>The <em>ctypes.Structure</em> for current platform</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OSProdInfo</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">Structure</span><span class="p">):</span>
+   <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+       <span class="p">(</span><span class="s2">&quot;pdwReturnedProductType&quot;</span> <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># PDWORD</span>
+       <span class="p">];</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>when on <em>RTE_NT</em>, returns <em>None</em> else.</p>
+</dd>
+<dt>Raises:</dt><dd><p>pass-through</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="print-versinfo">
+<h3>8.43.3.4. print_versinfo<a class="headerlink" href="#print-versinfo" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="platformids.dist.nt.windows_kernel32dll.print_versinfo">
+<code class="sig-prename descclassname">platformids.dist.nt.windows_kernel32dll.</code><code class="sig-name descname">print_versinfo</code><span class="sig-paren">(</span><em class="sig-param">vinfo</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/platformids/dist/nt/windows_kernel32dll.html#print_versinfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.dist.nt.windows_kernel32dll.print_versinfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints the summerized version info.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="get-win32-iswindowsxpsp1orgreater">
+<h3>8.43.3.5. get_win32_IsWindowsXPSP1OrGreater<a class="headerlink" href="#get-win32-iswindowsxpsp1orgreater" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="platformids.dist.nt.windows_kernel32dll.get_win32_IsWindowsXPSP1OrGreater">
+<code class="sig-prename descclassname">platformids.dist.nt.windows_kernel32dll.</code><code class="sig-name descname">get_win32_IsWindowsXPSP1OrGreater</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/platformids/dist/nt/windows_kernel32dll.html#get_win32_IsWindowsXPSP1OrGreater"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.dist.nt.windows_kernel32dll.get_win32_IsWindowsXPSP1OrGreater" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks the system information, by mapping the call onto <em>IsWindowsXPSP1OrGreater</em>.
+See original <em>IsWindowsXPSP1OrGreater</em> function description <a class="reference internal" href="../../references.html#iswindowsxpsp1orgreater" id="id7"><span>[IsWindowsXPSP1OrGreater]</span></a>.</p>
+<dl>
+<dt>Args:</dt><dd><p>None</p>
+</dd>
+<dt>Returns:</dt><dd><p>The <em>ctypes.Structure</em> for current platform</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OSProdInfo</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">Structure</span><span class="p">):</span>
+   <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+       <span class="p">(</span><span class="s2">&quot;pdwReturnedProductType&quot;</span> <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># PDWORD</span>
+       <span class="p">];</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>when on <em>RTE_NT</em>, returns <em>None</em> else.</p>
+</dd>
+<dt>Raises:</dt><dd><p>pass-through</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="source">
+<h2>8.43.4. Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;MS-Windows releases for the WindowsNT family.</span>
+
+<span class="sd">.. note::</span>
+
+<span class="sd">   **ATTENTION**: The ostype == RTE_NT uses for *dist* and *distrel* it&#39;s own non-default </span>
+<span class="sd">   encoding, while the scheme follows the default record layout, see &#39;:ref:`Windows NT &lt;enumWINNT&gt;`&#39;.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">platformids</span> <span class="kn">import</span> <span class="n">RTE_NT</span><span class="p">,</span> <span class="n">RTE_WIN</span><span class="p">,</span> <span class="n">RTE_WINDOWS</span><span class="p">,</span> \
+    <span class="n">rte2num</span><span class="p">,</span> <span class="n">num2rte</span><span class="p">,</span> <span class="n">num2pretty</span>
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;Arno-Can Uestuensoez&#39;</span>
+<span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;Artistic-License-2.0 + Forced-Fairplay-Constraints&quot;</span>
+<span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright (C) 2010-2018 Arno-Can Uestuensoez&quot;</span> \
+                <span class="s2">&quot; @Ingenieurbuero Arno-Can Uestuensoez&quot;</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="s1">&#39;0.1.2&#39;</span>
+<span class="n">__uuid__</span> <span class="o">=</span> <span class="s2">&quot;7add5ded-c39b-4b6e-8c87-1b3a1c150ee9&quot;</span>
+
+<span class="n">__docformat__</span> <span class="o">=</span> <span class="s2">&quot;restructuredtext en&quot;</span>
+
+
+<span class="c1">#</span>
+<span class="c1"># Microsoft: OSVERSIONINFOEXA.wProductType</span>
+<span class="c1">#</span>
+<span class="n">VER_NT_WORKSTATION</span>       <span class="o">=</span> <span class="mh">0x0000001</span>  <span class="c1">#: see wProductType</span>
+<span class="n">VER_NT_DOMAIN_CONTROLLER</span> <span class="o">=</span> <span class="mh">0x0000002</span>  <span class="c1">#: see wProductType</span>
+<span class="n">VER_NT_SERVER</span>            <span class="o">=</span> <span class="mh">0x0000003</span>  <span class="c1">#: see wProductType</span>
+
+<span class="n">VER_NT_IOT</span>               <span class="o">=</span> <span class="mh">0x0000004</span>  <span class="c1">#: non standard enum</span>
+
+<span class="c1">#</span>
+<span class="c1"># platform specific adapters: win/nt and cygwin</span>
+<span class="c1">#</span>
+<span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;win32&#39;</span><span class="p">,):</span>
+    <span class="kn">import</span> <span class="nn">ctypes</span>
+    <span class="n">kernel32</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">windll</span><span class="o">.</span><span class="n">kernel32</span>  <span class="c1"># @UndefinedVariable</span>
+
+<span class="k">elif</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;cygwin&#39;</span><span class="p">,):</span>
+    <span class="kn">import</span> <span class="nn">ctypes</span>  <span class="c1"># @Reimport</span>
+    <span class="n">kernel32</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">CDLL</span><span class="p">(</span><span class="s1">&#39;kernel32.dll&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">get_win32_OSVersionInfo</span><span class="p">():</span>   
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">class</span> <span class="nc">OSVersionInfo</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">Structure</span><span class="p">):</span>
+            <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="p">(</span><span class="s2">&quot;dwOSVersionInfoSize&quot;</span> <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+                <span class="p">(</span><span class="s2">&quot;dwMajorVersion&quot;</span>      <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+                <span class="p">(</span><span class="s2">&quot;dwMinorVersion&quot;</span>      <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+                <span class="p">(</span><span class="s2">&quot;dwBuildNumber&quot;</span>       <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+                <span class="p">(</span><span class="s2">&quot;dwPlatformId&quot;</span>        <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+                <span class="p">(</span><span class="s2">&quot;szCSDVersion&quot;</span>        <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_char</span> <span class="o">*</span> <span class="mi">128</span><span class="p">),</span> <span class="c1"># CHAR</span>
+            <span class="p">]</span>
+    
+        <span class="n">_GetVersionEx</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">windll</span><span class="o">.</span><span class="n">kernel32</span> <span class="p">,</span> <span class="s2">&quot;GetVersionExA&quot;</span><span class="p">)</span>  <span class="c1"># @UndefinedVariable</span>
+        <span class="n">version</span>  <span class="o">=</span> <span class="n">OSVersionInfo</span><span class="p">()</span>
+        <span class="n">version</span><span class="o">.</span><span class="n">dwOSVersionInfoSize</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">sizeof</span><span class="p">(</span><span class="n">OSVersionInfo</span><span class="p">)</span>
+        <span class="n">_GetVersionEx</span><span class="p">(</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">byref</span><span class="p">(</span><span class="n">version</span><span class="p">)</span> <span class="p">)</span>    
+        <span class="k">return</span> <span class="n">version</span>
+
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span>
+    
+<span class="k">def</span> <span class="nf">get_win32_OSVersionInfoExa</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Retuns a structure OSVERSIONINFOEXA, which contains the value</span>
+<span class="sd">    for wProductType.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">class</span> <span class="nc">OSVersionInfoExa</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">Structure</span><span class="p">):</span>
+            <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="p">(</span><span class="s2">&quot;dwOSVersionInfoSize&quot;</span> <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+                <span class="p">(</span><span class="s2">&quot;dwMajorVersion&quot;</span>      <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+                <span class="p">(</span><span class="s2">&quot;dwMinorVersion&quot;</span>      <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+                <span class="p">(</span><span class="s2">&quot;dwBuildNumber&quot;</span>       <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+                <span class="p">(</span><span class="s2">&quot;dwPlatformId&quot;</span>        <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># DWORD</span>
+                <span class="p">(</span><span class="s2">&quot;szCSDVersion&quot;</span>        <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_char</span> <span class="o">*</span> <span class="mi">128</span><span class="p">),</span> <span class="c1"># CHAR</span>
+
+                <span class="p">(</span><span class="s2">&quot;wServicePackMajor&quot;</span>   <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int16</span><span class="p">),</span>      <span class="c1"># WORD</span>
+                <span class="p">(</span><span class="s2">&quot;wServicePackMinor&quot;</span>   <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int16</span><span class="p">),</span>      <span class="c1"># WORD</span>
+                <span class="p">(</span><span class="s2">&quot;wSuiteMask&quot;</span>          <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int16</span><span class="p">),</span>      <span class="c1"># WORD</span>
+                <span class="p">(</span><span class="s2">&quot;wProductType&quot;</span>        <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int8</span><span class="p">),</span>       <span class="c1"># BYTE</span>
+                    <span class="c1"># wProductType - one of:</span>
+                    <span class="c1"># - VER_NT_DOMAIN_CONTROLLER</span>
+                    <span class="c1"># - VER_NT_SERVER</span>
+                    <span class="c1"># - VER_NT_WORKSTATION</span>
+                    <span class="c1">#</span>
+                <span class="p">(</span><span class="s2">&quot;wReserved&quot;</span>           <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int8</span><span class="p">),</span>       <span class="c1"># BYTE</span>
+
+                <span class="p">];</span>
+
+        <span class="n">_GetVersionExa</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span> <span class="n">kernel32</span> <span class="p">,</span> <span class="s2">&quot;GetVersionExA&quot;</span><span class="p">)</span>
+        <span class="n">version</span>  <span class="o">=</span> <span class="n">OSVersionInfoExa</span><span class="p">()</span>
+        <span class="n">version</span><span class="o">.</span><span class="n">dwOSVersionInfoSize</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">sizeof</span><span class="p">(</span><span class="n">OSVersionInfoExa</span><span class="p">)</span>
+        <span class="n">_GetVersionExa</span><span class="p">(</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">byref</span><span class="p">(</span><span class="n">version</span><span class="p">)</span> <span class="p">)</span>
+        <span class="k">return</span> <span class="n">version</span>
+
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span>
+
+<span class="k">def</span> <span class="nf">get_win32_OSProductInfo</span><span class="p">():</span>   
+
+        <span class="c1"># BOOL WINAPI GetProductInfo(</span>
+        <span class="c1">#   _In_  DWORD  dwOSMajorVersion,</span>
+        <span class="c1">#   _In_  DWORD  dwOSMinorVersion,</span>
+        <span class="c1">#   _In_  DWORD  dwSpMajorVersion,</span>
+        <span class="c1">#   _In_  DWORD  dwSpMinorVersion,</span>
+        <span class="c1">#   _Out_ PDWORD pdwReturnedProductType</span>
+        <span class="c1"># );</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">class</span> <span class="nc">OSProdInfo</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">Structure</span><span class="p">):</span>
+            <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="p">(</span><span class="s2">&quot;pdwReturnedProductType&quot;</span> <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># PDWORD</span>
+                <span class="p">];</span>
+
+        <span class="n">_GetProductInfo</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span> <span class="n">kernel32</span> <span class="p">,</span> <span class="s2">&quot;GetProductInfo&quot;</span><span class="p">)</span>
+        <span class="n">ptype</span>  <span class="o">=</span> <span class="n">OSProdInfo</span><span class="p">()</span>
+        <span class="n">ptype</span><span class="o">.</span><span class="n">dwOSVersionInfoSize</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">sizeof</span><span class="p">(</span><span class="n">OSProdInfo</span><span class="p">)</span>
+
+        <span class="n">osver</span> <span class="o">=</span> <span class="n">get_win32_OSVersionInfoExa</span><span class="p">()</span>
+        <span class="n">_GetProductInfo</span><span class="p">(</span>
+            <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">(</span><span class="n">osver</span><span class="o">.</span><span class="n">dwMajorVersion</span><span class="p">),</span>
+            <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">(</span><span class="n">osver</span><span class="o">.</span><span class="n">dwMinorVersion</span><span class="p">),</span>
+            <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">(</span><span class="n">osver</span><span class="o">.</span><span class="n">wServicePackMajor</span><span class="p">),</span>
+            <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">(</span><span class="n">osver</span><span class="o">.</span><span class="n">wServicePackMinor</span><span class="p">),</span>
+            <span class="n">ctypes</span><span class="o">.</span><span class="n">byref</span><span class="p">(</span><span class="n">ptype</span><span class="p">)</span> 
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="n">ptype</span>
+
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span>
+
+<span class="k">def</span> <span class="nf">print_versinfo</span><span class="p">(</span><span class="n">vinfo</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;dwOSVersionInfoSize  = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vinfo</span><span class="o">.</span><span class="n">dwOSVersionInfoSize</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;dwMajorVersion       = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vinfo</span><span class="o">.</span><span class="n">dwMajorVersion</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;dwMinorVersion       = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vinfo</span><span class="o">.</span><span class="n">dwMinorVersion</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;dwBuildNumber        = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vinfo</span><span class="o">.</span><span class="n">dwBuildNumber</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;dwPlatformId         = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vinfo</span><span class="o">.</span><span class="n">dwPlatformId</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;szCSDVersion         = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vinfo</span><span class="o">.</span><span class="n">szCSDVersion</span><span class="p">))</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;wServicePackMajor    = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vinfo</span><span class="o">.</span><span class="n">wServicePackMajor</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;wServicePackMinor    = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vinfo</span><span class="o">.</span><span class="n">wServicePackMinor</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;wSuiteMask           = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vinfo</span><span class="o">.</span><span class="n">wSuiteMask</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;wProductType         = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vinfo</span><span class="o">.</span><span class="n">wProductType</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;wReserved            = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">vinfo</span><span class="o">.</span><span class="n">wReserved</span><span class="p">))</span>
+
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span>
+
+
+<span class="k">def</span> <span class="nf">get_win32_IsWindowsXPSP1OrGreater</span><span class="p">():</span>   
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># BOOL WINAPI  IsWindowsXPSP1OrGreater(</span>
+        <span class="c1"># );</span>
+
+        <span class="k">class</span> <span class="nc">OSProdInfo</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">Structure</span><span class="p">):</span>
+            <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="p">(</span><span class="s2">&quot;pdwReturnedProductType&quot;</span> <span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">),</span>        <span class="c1"># PDWORD</span>
+                <span class="p">];</span>
+
+        <span class="n">_IsWindowsXPSP1OrGreater</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span> <span class="n">kernel32</span> <span class="p">,</span> <span class="s2">&quot;IsWindowsXPSP1OrGreater&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">_IsWindowsXPSP1OrGreater</span><span class="p">()</span>
+
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="download">
+<h2>8.43.5. Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="../../_static/dist/nt/windows_kernel32dll.py">windows_kernel32dll.py</a></p>
+</div>
+<div class="section" id="resources">
+<h2>8.43.6. Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>API: GetProductInfo - <a class="reference internal" href="../../references.html#getproductinfo" id="id8"><span>[GetProductInfo]</span></a></p></li>
+<li><p>API: GetProductInfo parameter pwReturnedProductType - <a class="reference internal" href="../../references.html#pwreturnedproducttype" id="id9"><span>[pwReturnedProductType]</span></a></p></li>
+<li><p>SDK: Macros for Conditional Declarations - <a class="reference internal" href="../../references.html#macrosrelcond" id="id10"><span>[MACROSRELCOND]</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="windows_products.html" class="btn btn-neutral float-right" title="8.44. dist.nt.windows_products" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../embed/raspbian.html" class="btn btn-neutral float-left" title="8.42. platformids.embed.raspbian" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+      <span class="lastupdated">
+        Last updated on Dec 08, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

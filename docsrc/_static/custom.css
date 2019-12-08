@@ -1,0 +1,490 @@
+/*
+AUTHOR:     Arno-Can Uestuensoez
+LICENSE:    Artistic-License-2.0 + Forced-Fairplay-Constraints
+COPYRIGHT:  Copyright (C) 2010-2016 Arno-Can Uestuensoez
+            @Ingenieurbuero Arno-Can Uestuensoez
+VERSION:    0.1.23
+UUID:       4135ab0f-fbb8-45a2-a6b1-80d96c164b72
+*/
+
+/*
+original values:
+div.body {
+    min-width: 450px;
+    max-width: 800px;
+}
+*/
+div.body {
+    min-width: 80%;
+    max-width: 95%;
+}
+
+
+
+table th {
+    background: #9DCBD6;
+    color: #000000;
+}
+
+table {
+    margin: 0 0 1em 0; 
+}
+
+div.nonbreakheadtab table th {
+    white-space:nowrap;
+}
+
+div.autocoltab table col {
+    width: auto;
+}
+
+div.nonbreaktab table td, div.nonbreaktab table th {
+    white-space:nowrap;
+}
+
+div.centertab table {
+ 	margin-left:auto; 
+    margin-right:auto;
+}
+
+
+div.nonbreaktabcol1 table  td:nth-child(1),
+{
+    white-space:nowrap;
+}
+div.nonbreaktabcol2 table  td:nth-child(2),
+{
+    white-space:nowrap;
+}
+div.nonbreaktabcol3 table  td:nth-child(3),
+{
+    white-space:nowrap;
+}
+
+/*
+    classdiagramhref
+*/
+
+div.classdiagramhref img {
+    pointer-events: none;
+}
+
+
+/*
+    teststatetab
+*/
+
+/*
+  #table_id td:nth-child(2)  {white-space: nowrap;}
+      <div class="teststatetab">
+*/
+
+
+div.teststatetab table tr:hover {
+    background: lightgrey;
+    color: black;
+}
+
+div.teststatetab table td a:hover {
+    background: yellow;
+    color: green;
+/*
+    font-weight: bold;
+*/
+}
+
+div.teststatetab table td:hover {
+    background: lightyellow;
+    color: green;
+/*
+    font-weight: bold;
+*/
+}
+
+div.teststatetab table {
+    margin: 1em 0 2em 0; 
+}
+
+div.teststatetab table th {
+    background: #9DCBD6;
+    color: #000000;
+    border-top: 0px;
+    border-bottom: 0px;
+    padding-left:1em;
+    padding-right:1em;
+}
+
+
+/*
+    index
+*/
+
+div.indextab table tr:hover {
+    background: lightgrey;
+    color: black;
+}
+
+div.indextab table td a:hover {
+    background: yellow;
+    color: green;
+/*
+    font-weight: bold;
+*/
+}
+
+div.indextab table td:hover {
+    background: lightyellow;
+    color: green;
+/*
+    font-weight: bold;
+*/
+}
+
+div.indextab table {
+    margin: 1em 0 2em 0; 
+}
+
+div.indextab table th {
+    background: #9DCBD6;
+    color: #000000;
+    border-top: 0px;
+    border-bottom: 0px;
+    padding-left:1em;
+    padding-right:1em;
+}
+
+
+/*
+    featuretab mixed
+*/
+
+div.featuretabmixed table  td:nth-child(2),
+div.featuretabmixed table  td:nth-child(3),
+div.featuretabmixed table  td:nth-child(4)
+{
+    background: lightgrey;
+}
+
+div.featuretabmixed table  td:nth-child(8),
+div.featuretabmixed table  td:nth-child(10),
+div.featuretabmixed table  td:nth-child(11)
+{
+    color: grey;
+/*
+    background: yellow;
+*/
+}
+
+div.featuretabmixed table  th:nth-child(8),
+div.featuretabmixed table  th:nth-child(10),
+div.featuretabmixed table  th:nth-child(11)
+{
+    color: grey;
+/*
+    background: yellow;
+*/
+}
+
+div.featuretabmixed table  td {
+    text-align: center; 
+/*
+    background: yellow;
+*/
+}
+
+div.featuretabmixed table  td:nth-child(1)
+{
+    text-align: left; 
+}
+
+div.featuretabmixed table tr:hover {
+    background: lightgrey;
+    color: black;
+}
+
+div.featuretabmixed table td a:hover {
+    background: yellow;
+    color: green;
+/*
+    font-weight: bold;
+*/
+}
+
+div.featuretabmixed table td:hover {
+    background: lightyellow;
+    color: green;
+/*
+    font-weight: bold;
+*/
+}
+
+div.featuretabmixed table {
+    margin: 1em 0 2em 0;
+}
+
+div.featuretabmixed table th {
+    background: #9DCBD6;
+    color: #000000;
+    border-top: 0px;
+    border-bottom: 0px;
+    padding-left:1em;
+    padding-right:1em;
+}
+
+
+
+
+/*
+    shortcuts
+*/
+div.shortcuttab table tr:hover {
+    background: lightgrey;
+    color: black;
+}
+
+div.shortcuttab table td a:hover {
+    color: green;
+    background: yellow;
+}
+
+div.shortcuttab table td:hover {
+    background: lightyellow;
+}
+
+
+div.shortcuttab table {
+    margin: 1em 0 2em 0; 
+}
+
+div.shortcuttab table th {
+    background: #9DCBD6;
+    color: #000000;
+    border-top: 0px;
+    border-bottom: 0px;
+    padding-left:1em;
+    padding-right:1em;
+}
+
+
+/*
+    large tables wil column color
+*/
+div.tabcolumncolor table  td:nth-child(even)
+{
+/*
+   background-color: #EAEDDC;
+*/
+   background-color: #EFF2E0;
+}
+
+div.tabcolumncolor table  td:nth-child(even),
+div.tabcolumncolor table  td:nth-child(3),
+div.tabcolumncolor table  td:nth-child(5),
+div.tabcolumncolor table  td:nth-child(7),
+div.tabcolumncolor table  td:nth-child(9)
+{
+    text-align: center;
+}
+
+div.tabcolumncolor table tr:hover {
+    background: lightgrey;
+    color: black;
+}
+
+div.tabcolumncolor table td a:hover {
+    color: green;
+    background: yellow;
+}
+
+div.tabcolumncolor table td:hover {
+    background: lightyellow;
+}
+
+div.tabcolumncolor table {
+    margin: 1em 0 2em 0; 
+}
+
+div.tabcolumncolor table th {
+    background: #9DCBD6;
+    color: #000000;
+    border-top: 0px;
+    border-bottom: 0px;
+    padding-left:1em;
+    padding-right:1em;
+}
+
+
+div.codeasmath pre {
+    background: #ffffff;
+    color: #000000;
+    border-top: 0px;
+    border-bottom: 0px;
+    padding-left:1em;
+}
+
+div.codeasmath td.code pre {
+    background: #ffffff; color: #000000;
+    border-top: 1px solid #ac9;
+    border-bottom: 1px solid #ac9;
+}
+
+pre {
+/*
+#e9f9f2;
+#1C4E63;
+#1DD9CF
+#60C0BA
+#93F3ED
+#99F9F2
+*/
+    background: #CAF9F2;    
+    color: #000000;
+    border-top: 0px;
+    border-bottom: 0px;
+    padding-left:1em;
+}
+
+body.nicknameinfopage {
+    width: 100%;
+    height: 100%;
+    vertical-align: center;
+}
+
+body.nicknameinfopage div.nicknameinfo table {
+    width: 100%;
+    height: 90%;
+    vertical-align: center;
+}
+
+div.nicknameinfo table {
+    width: 100%;
+    height: 90%;
+    vertical-align: center;
+}
+
+body.nicknameinfopage div.footer {
+    color: #ffffff;
+    width: 100%;
+    height: 3em;
+    padding: 9px 0 9px 0;
+    text-align: center;
+    font-size: 100%;
+}
+
+body.profileinfopage {
+    width: 100%;
+    height: 100%;
+    vertical-align: center;
+}
+
+div.thumbup {
+    color: #ffffff;
+    width: 100%;
+    padding: 9px 0 9px 0;
+    text-align: center;
+    font-size: 100%;
+}
+
+div.thumbdown {
+    color: #ffffff;
+    width: 100%;
+    height: 3em;
+    padding: 9px 0 9px 0;
+    text-align: center;
+    font-size: 100%;
+}
+
+div.thumbup img {
+    height: 1.5em;
+    vertical-align: -0.2em;
+}
+
+div.thumbdown img {
+    height: 1.5em;
+    vertical-align: -0.8em;
+}
+
+/*
+    apisynopsis
+*/
+div.apisynopsis pre.literal-block {
+    color: black;
+    font-weight: bold;
+    line-height: 2em;
+}
+
+div.apisynopsis pre.literal-block a:link {
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: none;
+}
+div.apisynopsis pre.literal-block a:visited {
+    font-weight: bold;
+    text-decoration: none;
+}
+div.apisynopsis pre.literal-block a:hover {
+    color: black;
+    font-weight: bold;
+    background: yellow;
+}
+
+
+/*
+    text marker
+*/
+span.textmarker {
+    background: yellow;
+    font-weight: bold;
+    color: black;
+}
+
+
+/*
+    warning
+*/
+div.admonition.warning {
+    background: orange;
+}
+
+/*
+    note
+*/
+div.admonition.note {
+    background: yellow;
+}
+
+/*
+  border-bottom: solid 1px blue;
+  text-underline-style: dotted;
+  font-weight: bold;
+  color: green;
+  text-decoration: none;
+  text-decoration: underline;
+  font-weight: bold;
+  color: green;
+  background: yellow;
+  margin: 0 0 3em 0; 
+  border-top:1em;
+  padding: 2cm 4cm 3cm 4cm;
+  padding-top:1em;
+  h1, h2, h3, h4 {line-height: 1em;}
+  line-height: 2em;
+  border-top: 0px;
+  border-bottom: 0px;
+  padding-left:1em;
+  padding-right:1em;
+  width: 100%
+  background: #9DCBD6; color: #000000;
+  background: #f5fdf9;
+  background: #E7E7B1;
+  background: #E4EEFA;
+  background: #E5EFF5;
+  background: #E4EFF1;
+  background: #E1EFF1;
+  background: #ffffff;
+  background: red;
+  width: 100%
+  text-decoration: underline;
+  background: yellow;
+  color: black;
+*/

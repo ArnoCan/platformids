@@ -1,0 +1,1196 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>platformids.platforms &mdash; platformids  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.36
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Shortcuts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">PlatformIDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_part_cockpit.html">apidoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_part_apiref_scaled.html">apiref</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_part_abstract.html">1. Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_part_platform_support.html">2. Platform Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_part_blueprint.html">3. Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rtplatformids_cli.html">4. Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../os_categorization.html">5. OS Categorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../distributions.html">6. Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_part_documents.html">7. Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_modules.html">8. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_part_indices.html">9. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_part_resources.html">10. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">11. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">12. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index_part_license.html">13. Licenses</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../howto/index.html">Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">platformids</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>platformids.platforms</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for platformids.platforms</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;The module &#39;platforms&#39; provides the class for the representation of platform parameters.</span>
+<span class="sd">This includes the scan of the current platform and the calculation of arbitrary hexadecimal</span>
+<span class="sd">labels for the fast processing of repetitive comparisons.</span>
+
+<span class="sd">The supported implementations are: CPython, IPython, IronPython, Jython, and PyPy.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="c1">#############################################</span>
+<span class="c1">#</span>
+<span class="c1"># See manuals for the detailed API.</span>
+<span class="c1">#</span>
+<span class="c1">#############################################</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">absolute_import</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">print_function</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">platform</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+
+<span class="kn">from</span> <span class="nn">pythonids.pythondist</span> <span class="k">import</span> <span class="n">ISINT</span>
+<span class="c1"># from platformids import _debug, _verbose</span>
+<span class="kn">import</span> <span class="nn">platformids</span>
+<span class="kn">from</span> <span class="nn">platformids</span> <span class="k">import</span> <span class="n">RTE</span><span class="p">,</span> <span class="n">ISSTR</span><span class="p">,</span> <span class="n">RTE_DIST</span><span class="p">,</span> <span class="n">RTE_GENERIC</span>
+
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;Arno-Can Uestuensoez&#39;</span>
+<span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;Artistic-License-2.0 + Forced-Fairplay-Constraints&quot;</span>
+<span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright (C) 2010-2018 Arno-Can Uestuensoez&quot;</span> \
+                <span class="s2">&quot; @Ingenieurbuero Arno-Can Uestuensoez&quot;</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="s1">&#39;0.1.35&#39;</span>
+<span class="n">__uuid__</span> <span class="o">=</span> <span class="s2">&quot;7add5ded-c39b-4b6e-8c87-1b3a1c150ee9&quot;</span>
+
+<span class="n">__docformat__</span> <span class="o">=</span> <span class="s2">&quot;restructuredtext en&quot;</span>
+
+
+<span class="c1"># : The corresponding *bash* environment names for print out.</span>
+<span class="n">bash_map</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="s2">&quot;CATEGORY&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;ostype&#39;</span><span class="p">:</span> <span class="s2">&quot;OSTYPE&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;dist&#39;</span><span class="p">:</span> <span class="s2">&quot;DIST&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;distrel&#39;</span><span class="p">:</span> <span class="s2">&quot;DISTREL&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;distrel_hexversion&#39;</span><span class="p">:</span> <span class="s2">&quot;distrel_hexversion&quot;</span><span class="p">,</span>
+
+    <span class="s1">&#39;distrel_key&#39;</span><span class="p">:</span> <span class="s2">&quot;DISTRIBUTION_KEY&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;distrel_name&#39;</span><span class="p">:</span> <span class="s2">&quot;DISTRIBUTION_NAME&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;distrel_version&#39;</span><span class="p">:</span> <span class="s2">&quot;DISTRIBUTION_VERSION&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;os_id&#39;</span><span class="p">:</span> <span class="s2">&quot;OS_ID&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;osrel_version&#39;</span><span class="p">:</span> <span class="s2">&quot;OS_VERSION&quot;</span><span class="p">,</span>
+
+    <span class="s1">&#39;cpu&#39;</span><span class="p">:</span> <span class="s2">&quot;CPU&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;cpudata&#39;</span><span class="p">:</span> <span class="s2">&quot;CPUDATA&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1"># : The mapping of attributes to values for pretty print.</span>
+<span class="n">attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;ostype&#39;</span><span class="p">:</span> <span class="s2">&quot;ostype&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;dist&#39;</span><span class="p">:</span> <span class="s2">&quot;dist&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;distrel&#39;</span><span class="p">:</span> <span class="s2">&quot;distrel&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;distrel_hexversion&#39;</span><span class="p">:</span> <span class="s2">&quot;distrel_hexversion&quot;</span><span class="p">,</span>
+
+<span class="c1">#FIXME:    &#39;distribution_key&#39;: &quot;distribution_key&quot;,</span>
+    <span class="s1">&#39;distrel_key&#39;</span><span class="p">:</span> <span class="s2">&quot;distribution_key&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;distrel_name&#39;</span><span class="p">:</span> <span class="s2">&quot;distribution_name&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;distrel_version&#39;</span><span class="p">:</span> <span class="s2">&quot;distribution_version&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;os_id&#39;</span><span class="p">:</span> <span class="s2">&quot;os_id&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;osrel_version&#39;</span><span class="p">:</span> <span class="s2">&quot;os_version&quot;</span><span class="p">,</span>
+
+    <span class="s1">&#39;cpu&#39;</span><span class="p">:</span> <span class="s2">&quot;cpu&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;cpudata&#39;</span><span class="p">:</span> <span class="s2">&quot;cpudata&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="n">platformids</span><span class="o">.</span><span class="n">osname</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;nt&#39;</span><span class="p">,</span> <span class="s1">&#39;cygwin&#39;</span><span class="p">):</span>
+    <span class="c1">#</span>
+    <span class="c1"># specials for ostype NT for bash print outs and pretty print</span>
+    <span class="c1">#</span>
+    <span class="n">bash_map</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+        <span class="s1">&#39;wServicePack&#39;</span><span class="p">:</span> <span class="s2">&quot;WSERVICEPACK&quot;</span><span class="p">,</span>
+        <span class="s1">&#39;wProductType&#39;</span><span class="p">:</span> <span class="s2">&quot;WPRODUCTTYPE&quot;</span><span class="p">,</span>
+        <span class="s1">&#39;wSuiteMask&#39;</span><span class="p">:</span> <span class="s2">&quot;WSUITEMASK&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+
+    <span class="n">attribute_map</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+        <span class="s1">&#39;wServicePack&#39;</span><span class="p">:</span> <span class="s2">&quot;wServicePack&quot;</span><span class="p">,</span>
+        <span class="s1">&#39;wProductType&#39;</span><span class="p">:</span> <span class="s2">&quot;wProductType&quot;</span><span class="p">,</span>
+        <span class="s1">&#39;wSuiteMask&#39;</span><span class="p">:</span> <span class="s2">&quot;wSuiteMask&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+
+
+<div class="viewcode-block" id="PlatformParametersError"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParametersError">[docs]</a><span class="k">class</span> <span class="nc">PlatformParametersError</span><span class="p">(</span><span class="n">platformids</span><span class="o">.</span><span class="n">PlatformIDsError</span><span class="p">):</span>
+    <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="PlatformParameters"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters">[docs]</a><span class="k">class</span> <span class="nc">PlatformParameters</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    
+<div class="viewcode-block" id="PlatformParameters.__init__"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Creates an empty object.</span>
+<span class="sd">        No automatic call of *PlatformParameters.scan()*.</span>
+<span class="sd">        The instance could be either initialized by the provided</span>
+<span class="sd">        parameters, or remains empty - which is zero *0*.</span>
+<span class="sd">        </span>
+<span class="sd">        Each call of *PlatformParameters.scan()* replaces the previous</span>
+<span class="sd">        values.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            args:</span>
+<span class="sd">                Optional positional parameters in the following order.</span>
+<span class="sd">                  The corresponding keyword-arguments dominate. ::</span>
+<span class="sd">           </span>
+<span class="sd">                    args[0] := category</span>
+<span class="sd">                    args[1] := ostype</span>
+<span class="sd">                    args[2] := dist</span>
+<span class="sd">                    args[3] := distrel</span>
+<span class="sd">        </span>
+<span class="sd">            kargs:</span>
+<span class="sd">                category:</span>
+<span class="sd">                    The *category* for initialization.</span>
+<span class="sd">                     </span>
+<span class="sd">                    default := 0</span>
+<span class="sd">                </span>
+<span class="sd">                ostype:</span>
+<span class="sd">                    The *ostype* for initialization.</span>
+<span class="sd">                     </span>
+<span class="sd">                    default := 0</span>
+<span class="sd">                 </span>
+<span class="sd">                dist:</span>
+<span class="sd">                    The *dist* for initialization.</span>
+<span class="sd">                     </span>
+<span class="sd">                    default := 0</span>
+<span class="sd">                 </span>
+<span class="sd">                distrel:</span>
+<span class="sd">                    The *distrel* for initialization.</span>
+<span class="sd">                     </span>
+<span class="sd">                    default := 0</span>
+
+<span class="sd">           Returns:</span>
+<span class="sd">                Initial instance, optionally initialized by the provided</span>
+<span class="sd">                parameters. </span>
+<span class="sd">        </span>
+<span class="sd">           Raises:</span>
+<span class="sd">                pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">category</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ostype</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wProductType</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wSuiteMask</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">distrel_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_key</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">os_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">osrel_id</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">distrel_version</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">osrel_version</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1">#</span>
+        <span class="c1"># first check positional arguments</span>
+        <span class="c1">#</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">osrel_sp</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">_myargs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">_myargs</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">category</span> <span class="o">=</span> <span class="n">_myargs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1">#: category</span>
+            <span class="n">_myargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">_myargs</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ostype</span> <span class="o">=</span> <span class="n">_myargs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1">#: ostype - cumulated sub-vector</span>
+            <span class="n">_myargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">_myargs</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dist</span> <span class="o">=</span> <span class="n">_myargs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#: dist - cumulated sub-vector</span>
+            <span class="n">_myargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">_myargs</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel</span> <span class="o">=</span> <span class="n">_myargs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#: distrel - cumulated sub-vector</span>
+            <span class="c1"># _myargs.pop(0)</span>
+
+        <span class="c1">#</span>
+        <span class="c1"># second check keyword arguments, when present superpose current values</span>
+        <span class="c1">#</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">category</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">category</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ostype</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ostype&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ostype</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dist</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;dist&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dist</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;distrel&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PlatformParameters.__and__"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.__and__">[docs]</a>    <span class="k">def</span> <span class="nf">__and__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The *&amp;* operator for the resulting *hexversion*: ::</span>
+<span class="sd">     </span>
+<span class="sd">            self-bitmask &amp; other-bitmask</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            other:</span>
+<span class="sd">                The bitmask for operations. ::</span>
+<span class="sd">        </span>
+<span class="sd">                    other := (</span>
+<span class="sd">                        &lt;int-32bit-mask&gt;                   # compare with hexversion </span>
+<span class="sd">                      | &lt;dictionary&gt;)                      # compare keys only</span>
+<span class="sd">                      | &lt;tuple&gt;)                           # compare key-index only</span>
+<span class="sd">                      | &lt;instance-of-PlatformParameters&gt;   # compare both hexversions</span>
+<span class="sd">                    )</span>
+<span class="sd">           </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            The resulting bitmask as numeric value.</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:   </span>
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_hexversion</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">&amp;</span> <span class="n">other</span>
+
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">PlatformParameters</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">&amp;</span> <span class="n">other</span><span class="o">.</span><span class="n">get_hexversion</span><span class="p">()</span>
+
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="c1"># use other as init parameters - simply trust or pass exception</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">&amp;</span> <span class="n">PlatformParameters</span><span class="p">(</span><span class="o">**</span><span class="n">other</span><span class="p">)</span><span class="o">.</span><span class="n">get_hexversion</span><span class="p">()</span>
+
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">&amp;</span> <span class="n">PlatformParameters</span><span class="p">(</span><span class="o">*</span><span class="n">other</span><span class="p">)</span><span class="o">.</span><span class="n">get_hexversion</span><span class="p">()</span>
+
+        <span class="k">raise</span> <span class="n">platformids</span><span class="o">.</span><span class="n">PlatformIDsError</span><span class="p">(</span><span class="s2">&quot;type not supported: other = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="PlatformParameters.__eq__"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.__eq__">[docs]</a>    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Supports standard comparison with the types</span>
+<span class="sd">        *PlatformParameters*, and *dict*. In case of</span>
+<span class="sd">        a dict the attributes are used as keys literally.</span>
+<span class="sd">             </span>
+<span class="sd">        Args:</span>
+<span class="sd">            other:</span>
+<span class="sd">                The instannce to be compared. The comparison is provided as:</span>
+<span class="sd">                </span>
+<span class="sd">                * literal contents of objects: </span>
+<span class="sd">                </span>
+<span class="sd">                  literally for objects *PlatformParameters*, or partially</span>
+<span class="sd">                  for *dict*.</span>
+<span class="sd">                </span>
+<span class="sd">                * partial hierarchical matches           </span>
+<span class="sd">                </span>
+<span class="sd">                  The partial comparison is based on the keys provided by</span>
+<span class="sd">                  the dictionary argument. Only attributes with a corresponding</span>
+<span class="sd">                  key are compared.</span>
+<span class="sd">                </span>
+<span class="sd">                  The following items are handled specially:</span>
+<span class="sd">                </span>
+<span class="sd">                    distrel_version, osrel_version:</span>
+<span class="sd">                        The present values are compared only, e.g. </span>
+<span class="sd">                        the following is considered as *True* ::</span>
+<span class="sd">                </span>
+<span class="sd">                           self.distrel_version = [1, 2, 3]</span>
+<span class="sd">                           other.distrel_version = [1, 2,]</span>
+<span class="sd">                </span>
+<span class="sd">                           TRUE: self.distrel_version == other.distrel_version</span>
+<span class="sd">                </span>
+<span class="sd">                        While still: :: </span>
+<span class="sd">                </span>
+<span class="sd">                           self.distrel_version = [1, 2, 3]</span>
+<span class="sd">                           other.distrel_version = [1, 2, 7]</span>
+<span class="sd">                </span>
+<span class="sd">                           FALSE: self.distrel_version == other.distrel_version</span>
+<span class="sd">                </span>
+<span class="sd">                      distrel:</span>
+<span class="sd">                        Valuesa are compared by *startswith()* e.g. </span>
+<span class="sd">                        the following is considered as *True* ::</span>
+<span class="sd">                </span>
+<span class="sd">                           self.distrel  = &#39;fedora-27.0.0&#39;</span>
+<span class="sd">                           other.distrel = &#39;fedora-27.0&#39;</span>
+<span class="sd">                </span>
+<span class="sd">                           TRUE: self.distrel == other.distrel</span>
+<span class="sd">                </span>
+<span class="sd">                        While still: :: </span>
+<span class="sd">                </span>
+<span class="sd">                           self.distrel  = &#39;fedora-27.0.0&#39;</span>
+<span class="sd">                           other.distrel = &#39;fedora-27.0.1&#39;</span>
+<span class="sd">                </span>
+<span class="sd">                           FALSE: self.distrel == other.distrel</span>
+<span class="sd">                </span>
+<span class="sd">                * integer bit masks</span>
+<span class="sd">                </span>
+<span class="sd">                  Special treatment of integers is provided:</span>
+<span class="sd">                  </span>
+<span class="sd">                  * *category*:</span>
+<span class="sd">                    </span>
+<span class="sd">                    When a valid *category*, *self.category* is compared only.</span>
+<span class="sd">                  </span>
+<span class="sd">                  * *ostype*:</span>
+<span class="sd">                    </span>
+<span class="sd">                    When a valid *ostype*, *self.ostype* is compared only.</span>
+<span class="sd">                  </span>
+<span class="sd">                  * *dist* and/or *distrel*:</span>
+<span class="sd">                </span>
+<span class="sd">                    The value is compared to the same maximal extend.                  </span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            True:  relevant parts are equal - see args.</span>
+<span class="sd">            False: else</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            KeyError</span>
+<span class="sd">            AttributeError</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="kc">False</span>
+        
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">other</span><span class="p">)</span> <span class="ow">in</span> <span class="n">ISINT</span><span class="p">:</span>
+            <span class="c1"># some special type comparison</span>
+            <span class="c1"># hex id of dist and/or distrel</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">==</span> <span class="n">other</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">True</span>
+            <span class="k">elif</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">&amp;</span> <span class="n">RTE_DIST</span> <span class="o">==</span> <span class="n">other</span>
+                <span class="ow">and</span>  <span class="n">other</span> <span class="o">&amp;</span> <span class="n">RTE_DIST</span> <span class="o">==</span> <span class="n">other</span>  <span class="c1"># it is actually a dist only</span>
+                <span class="p">):</span>
+                <span class="k">return</span> <span class="kc">True</span>
+            
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">PlatformParameters</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">get_hexversion</span><span class="p">()</span>
+
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="c1"># compare selected keys only</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">other</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;osrel_sp&quot;</span><span class="p">,</span> <span class="s2">&quot;wProductType&quot;</span><span class="p">,</span> <span class="s2">&quot;wSuiteMask&quot;</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ostype</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;nt&#39;</span><span class="p">,</span> <span class="s1">&#39;cygwin&#39;</span><span class="p">):</span>
+                            <span class="n">res</span> <span class="o">&amp;=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">v</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="n">res</span> <span class="o">=</span> <span class="kc">False</span> 
+                    <span class="k">elif</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;distrel_version&quot;</span><span class="p">,</span> <span class="s2">&quot;osrel_version&quot;</span><span class="p">,):</span>
+                        <span class="n">res</span> <span class="o">&amp;=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;distrel_version&#39;</span><span class="p">][:</span><span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)]</span> <span class="o">==</span> <span class="n">v</span>
+                    <span class="k">elif</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;distrel&quot;</span><span class="p">:</span>
+                        <span class="n">res</span> <span class="o">&amp;=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;distrel&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">v</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">res</span> <span class="o">&amp;=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">v</span> 
+                <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                    <span class="n">res</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="c1"># compare selected keys only</span>
+
+            <span class="n">res</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">osrel_sp</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">_myargs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">_myargs</span><span class="p">:</span>
+                <span class="n">res</span> <span class="o">&amp;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">category</span> <span class="o">==</span> <span class="n">_myargs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">_myargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">_myargs</span><span class="p">:</span>
+                <span class="n">res</span> <span class="o">&amp;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ostype</span> <span class="o">==</span> <span class="n">_myargs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">_myargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">_myargs</span><span class="p">:</span>
+                <span class="n">res</span> <span class="o">&amp;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dist</span> <span class="o">==</span> <span class="n">_myargs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">_myargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">_myargs</span><span class="p">:</span>
+                <span class="n">res</span> <span class="o">&amp;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel</span> <span class="o">==</span> <span class="n">_myargs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">_myargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            
+        <span class="k">return</span> <span class="n">res</span></div>
+
+<div class="viewcode-block" id="PlatformParameters.__getitem__"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.__getitem__">[docs]</a>    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Gets the value of an attribute.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> </div>
+
+<div class="viewcode-block" id="PlatformParameters.__iter__"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.__iter__">[docs]</a>    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Iterates the non-private attribute names.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;_&#39;</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="n">k</span> </div>
+                
+<div class="viewcode-block" id="PlatformParameters.items"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.items">[docs]</a>    <span class="k">def</span> <span class="nf">items</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Yields the non-private attributes as key-value-pairs.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;_&#39;</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">k</span><span class="p">],)</span></div>
+        
+<div class="viewcode-block" id="PlatformParameters.keys"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.keys">[docs]</a>    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Yields the non-private attribute names.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;_&#39;</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="n">k</span></div>
+
+<div class="viewcode-block" id="PlatformParameters.__len__"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.__len__">[docs]</a>    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Counts and returns the number of non-private attributes - not starting with underscore.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;_&#39;</span><span class="p">:</span>
+                <span class="n">l</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">l</span></div>
+
+<div class="viewcode-block" id="PlatformParameters.values"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.values">[docs]</a>    <span class="k">def</span> <span class="nf">values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Yields the values of non-private attributes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;_&#39;</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">k</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="PlatformParameters.__setitem__"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.__setitem__">[docs]</a>    <span class="k">def</span> <span class="nf">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Standard set.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span> </div>
+
+<div class="viewcode-block" id="PlatformParameters.__ne__"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.__ne__">[docs]</a>    <span class="k">def</span> <span class="nf">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PlatformParameters.__repr__"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.__repr__">[docs]</a>    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="s1">&#39;{&quot;category&quot;: &quot;</span><span class="si">%s</span><span class="s1">&quot;, &quot;ostype&quot;: &quot;</span><span class="si">%s</span><span class="s1">&quot;, &quot;dist&quot;: &quot;</span><span class="si">%s</span><span class="s1">&quot;, &quot;distrel&quot;: &quot;</span><span class="si">%s</span><span class="s1">&quot;, &#39;</span>
+            <span class="s1">&#39;&quot;distrel_name&quot;: &quot;</span><span class="si">%s</span><span class="s1">&quot;, &quot;distrel_key&quot;: &quot;</span><span class="si">%s</span><span class="s1">&quot;, &#39;</span>
+            <span class="s1">&#39;&quot;distrel_version&quot;: </span><span class="si">%s</span><span class="s1">, &quot;osrel_version&quot;: </span><span class="si">%s</span><span class="s1">, &quot;distrel_hexversion&quot;: </span><span class="si">%s</span><span class="s1">, &quot;os_id&quot;: </span><span class="si">%s</span><span class="s1">, &quot;osrel_id&quot;: </span><span class="si">%s</span><span class="s1">}&#39;</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span>
+                <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">category</span><span class="p">),</span>
+                <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ostype</span><span class="p">),</span>
+                <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dist</span><span class="p">),</span>
+                <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">distrel</span><span class="p">),</span>
+                <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">distrel_name</span><span class="p">),</span>
+                <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">distrel_key</span><span class="p">),</span>
+                <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">distrel_version</span><span class="p">),</span>
+                <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">osrel_version</span><span class="p">),</span>
+                <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span><span class="p">),</span>
+                <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">os_id</span><span class="p">),</span>
+                <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">osrel_id</span><span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ostype</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;nt&#39;</span><span class="p">,</span> <span class="s1">&#39;cygwin&#39;</span><span class="p">):</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s1">&#39;&quot;wServicePack&quot;: </span><span class="si">%s</span><span class="s1">, &#39;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">osrel_sp</span><span class="p">)</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s1">&#39;&quot;wProductType&quot;: </span><span class="si">%s</span><span class="s1">, &#39;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wProductType</span><span class="p">)</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s1">&#39;&quot;wSuiteMask&quot;: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wSuiteMask</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;}&quot;</span>
+
+        <span class="k">return</span> <span class="n">res</span></div>
+
+<div class="viewcode-block" id="PlatformParameters.__str__"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.__str__">[docs]</a>    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pretty_format</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;str&#39;</span><span class="p">)</span></div>
+ 
+<div class="viewcode-block" id="PlatformParameters.pretty_format"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.pretty_format">[docs]</a>    <span class="k">def</span> <span class="nf">pretty_format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;   Formats and returns a string of attributes.</span>
+<span class="sd">   </span>
+<span class="sd">        Args:</span>
+<span class="sd">            kargs:</span>
+<span class="sd">                quiet:</span>
+<span class="sd">                    Supress standard display contents.</span>
+<span class="sd">        </span>
+<span class="sd">                    default := False</span>
+<span class="sd">        </span>
+<span class="sd">                terse:</span>
+<span class="sd">                    Format for postprocessing.</span>
+<span class="sd">        </span>
+<span class="sd">                    default := False</span>
+<span class="sd">        </span>
+<span class="sd">                type:</span>
+<span class="sd">                    Defines the type for the output::</span>
+<span class="sd">               </span>
+<span class="sd">                        type := (</span>
+<span class="sd">                             bashvars</span>
+<span class="sd">                           | json</span>
+<span class="sd">                           | raw</span>
+<span class="sd">                           | repr</span>
+<span class="sd">                           | str</span>
+<span class="sd">                        )</span>
+<span class="sd">        </span>
+<span class="sd">                    default := str</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Formatted string of attributes.</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            TypeError</span>
+<span class="sd">        </span>
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">_type</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+        <span class="n">_terse</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;terse&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">_quiet</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;quiet&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="n">_select</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;select&#39;</span><span class="p">,</span>
+            <span class="n">attribute_map</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+        <span class="p">)</span>
+
+        <span class="n">res</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">_type</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">,):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">_select</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">_terse</span> <span class="ow">and</span> <span class="n">_quiet</span><span class="p">:</span>
+                        <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">))))</span>
+        
+                    <span class="k">elif</span> <span class="n">_terse</span><span class="p">:</span>
+                        <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="si">%s</span><span class="s2">=</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">))))</span>
+        
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="si">%-25s</span><span class="s2"> = </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">))))</span>
+
+            <span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">exinfo</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()</span>
+                <span class="n">exinfo</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">args</span> <span class="o">+=</span> <span class="p">(</span>
+                    <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> attribute error for str-map key: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="p">),</span> <span class="p">)</span>            
+                <span class="k">raise</span>
+            
+        <span class="k">elif</span> <span class="n">_type</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;raw&#39;</span><span class="p">,):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">_select</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">_terse</span> <span class="ow">and</span> <span class="n">_quiet</span><span class="p">:</span>
+                        <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">))))</span>
+        
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="si">%s</span><span class="s2">=</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">))))</span>
+
+            <span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">exinfo</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()</span>
+                <span class="n">exinfo</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">args</span> <span class="o">+=</span> <span class="p">(</span>
+                    <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> attribute error for raw-map key: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="p">),</span> <span class="p">)</span>            
+                <span class="k">raise</span>
+
+        <span class="k">elif</span> <span class="n">_type</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;repr&#39;</span><span class="p">,):</span>
+            <span class="k">if</span> <span class="n">_terse</span> <span class="ow">and</span> <span class="n">_quiet</span><span class="p">:</span>
+                <span class="n">res</span> <span class="o">=</span> <span class="s1">&#39;[&#39;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">res</span> <span class="o">=</span> <span class="s1">&#39;{&#39;</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">_select</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="ow">in</span> <span class="n">ISSTR</span><span class="p">:</span>
+                    <span class="n">_k</span> <span class="o">=</span> <span class="s1">&#39;&quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">k</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">_k</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+                
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">v</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
+                <span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="n">exinfo</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()</span>
+                    <span class="n">exinfo</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">args</span> <span class="o">+=</span> <span class="p">(</span>
+                        <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> attribute error for repr-map key: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="p">),</span> <span class="p">)</span>            
+                    <span class="k">raise</span>
+
+                <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">ISSTR</span><span class="p">:</span>
+                    <span class="n">_v</span> <span class="o">=</span> <span class="s1">&#39;&quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">v</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">_v</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">_terse</span> <span class="ow">and</span> <span class="n">_quiet</span><span class="p">:</span>
+                    <span class="n">res</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">, &#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">_v</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">res</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">: </span><span class="si">%s</span><span class="s1">, &#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">_k</span><span class="p">,</span> <span class="n">_v</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">_terse</span> <span class="ow">and</span> <span class="n">_quiet</span><span class="p">:</span>
+                <span class="n">res</span> <span class="o">+=</span> <span class="s1">&#39;]&#39;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">res</span> <span class="o">+=</span> <span class="s1">&#39;}&#39;</span>
+
+        <span class="k">elif</span> <span class="n">_type</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;json&#39;</span><span class="p">,):</span>
+            <span class="k">try</span><span class="p">:</span>
+
+<span class="c1"># REMINDER: For now dropped due to layering architecture.</span>
+<span class="c1">#                 if _terse:</span>
+<span class="c1">#                     sys.stdout.write(repr(JSONData(self.get_json(select=_select))))</span>
+<span class="c1">#                 else:</span>
+<span class="c1">#                     sys.stdout.write(str(JSONData(self.get_json(select=_select))))</span>
+
+                <span class="k">if</span> <span class="n">_terse</span><span class="p">:</span>
+                    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_json</span><span class="p">(</span><span class="n">select</span><span class="o">=</span><span class="n">_select</span><span class="p">)))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_json</span><span class="p">(</span><span class="n">select</span><span class="o">=</span><span class="n">_select</span><span class="p">)))</span>
+                <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                    <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> 
+                    <span class="o">+</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">TypeError: Check the contents of the environment variables for JSON conformity,&quot;</span>
+                    <span class="o">+</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">           and/or Choose another output format.</span><span class="se">\n</span><span class="s2">&quot;</span>
+                    <span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">_type</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;bashvars&#39;</span><span class="p">,):</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">_select</span><span class="p">:</span>
+                <span class="n">v</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
+                <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">ISSTR</span><span class="p">:</span>
+                    <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="si">%s</span><span class="s2">=&#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="p">(</span>
+                        <span class="nb">str</span><span class="p">(</span><span class="n">bash_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">)),</span>
+                        <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">)))</span>
+                    <span class="p">)</span>
+                <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+                    <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">typeset -a </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">bash_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">)))</span>
+                    <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="si">%s</span><span class="s2">=</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span>
+                        <span class="nb">str</span><span class="p">(</span><span class="n">bash_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">)),</span>
+                        <span class="nb">str</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">))))</span>
+                    <span class="p">)</span>
+                <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">dict</span><span class="p">:</span>
+                    <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">typeset -A </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">bash_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">)))</span>
+                    <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="si">%s</span><span class="s2">=(&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">bash_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">)))</span>
+                    <span class="k">for</span> <span class="n">k0</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                        <span class="n">res</span> <span class="o">+=</span> <span class="s1">&#39;&quot;</span><span class="se">\n</span><span class="s1">  </span><span class="si">%s</span><span class="s1">[</span><span class="si">%s</span><span class="s1">]=&quot;</span><span class="si">%a</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span>
+                            <span class="nb">str</span><span class="p">(</span><span class="n">bash_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">)),</span>
+                            <span class="nb">str</span><span class="p">(</span><span class="n">bash_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k0</span><span class="p">)),</span>
+                            <span class="nb">str</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">))))</span>
+                        <span class="p">)</span>
+                    <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">)&quot;</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="si">%s</span><span class="s2">=</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span>
+                        <span class="nb">str</span><span class="p">(</span><span class="n">bash_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">)),</span>
+                        <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">)))</span>
+                    <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">res</span></div>
+
+<div class="viewcode-block" id="PlatformParameters.__iand__"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.__iand__">[docs]</a>    <span class="k">def</span> <span class="nf">__iand__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The in-place *&amp;* operator for the resulting *hexversion*: ::</span>
+<span class="sd">     </span>
+<span class="sd">           self-bitmask &amp;= other-bitmask</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            other:</span>
+<span class="sd">                The bitmask for operations. ::</span>
+<span class="sd">               </span>
+<span class="sd">                    other := (&lt;int-32bit-mask&gt; | &lt;instance-of-PlatformParameters&gt;)</span>
+<span class="sd">           </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            The resulting bitmask as numeric value.</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_hexversion</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">&amp;=</span> <span class="n">other</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">PlatformParameters</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">&amp;=</span> <span class="n">other</span><span class="o">.</span><span class="n">get_hexversion</span><span class="p">()</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">&amp;=</span> <span class="n">PlatformParameters</span><span class="p">(</span><span class="o">**</span><span class="n">other</span><span class="p">)</span><span class="o">.</span><span class="n">get_hexversion</span><span class="p">()</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">&amp;=</span> <span class="n">PlatformParameters</span><span class="p">(</span><span class="o">*</span><span class="n">other</span><span class="p">)</span><span class="o">.</span><span class="n">get_hexversion</span><span class="p">()</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+        <span class="k">raise</span> <span class="n">platformids</span><span class="o">.</span><span class="n">PlatformIDsError</span><span class="p">(</span><span class="s2">&quot;type not supported: other = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="PlatformParameters.__int__"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.__int__">[docs]</a>    <span class="k">def</span> <span class="nf">__int__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;   The cast operator into the botmask: ::</span>
+<span class="sd">     </span>
+<span class="sd">            int(self) == self-bitmask</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            none</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            The resulting bitmask of self as numeric value.</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_hexversion</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span></div>
+
+<div class="viewcode-block" id="PlatformParameters.__ior__"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.__ior__">[docs]</a>    <span class="k">def</span> <span class="nf">__ior__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The in-place *|* operator for the resulting *hexversion*::</span>
+<span class="sd">     </span>
+<span class="sd">            self-bitmask |= other-bitmask</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            other:</span>
+<span class="sd">                The bitmask for operations. ::</span>
+<span class="sd">               </span>
+<span class="sd">                    other := (&lt;int-32bit-mask&gt; | &lt;instance-of-PlatformParameters&gt;)</span>
+<span class="sd">           </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            The resulting bitmask as numeric value.</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_hexversion</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">|=</span> <span class="n">other</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">PlatformParameters</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">|=</span> <span class="n">other</span><span class="o">.</span><span class="n">get_hexversion</span><span class="p">()</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">|=</span> <span class="n">PlatformParameters</span><span class="p">(</span><span class="o">**</span><span class="n">other</span><span class="p">)</span><span class="o">.</span><span class="n">get_hexversion</span><span class="p">()</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">|=</span> <span class="n">PlatformParameters</span><span class="p">(</span><span class="o">*</span><span class="n">other</span><span class="p">)</span><span class="o">.</span><span class="n">get_hexversion</span><span class="p">()</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+        <span class="k">raise</span> <span class="n">platformids</span><span class="o">.</span><span class="n">PlatformIDsError</span><span class="p">(</span><span class="s2">&quot;type not supported: other = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="PlatformParameters.__or__"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.__or__">[docs]</a>    <span class="k">def</span> <span class="nf">__or__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The *|* operator for the resulting *hexversion*: ::</span>
+
+<span class="sd">           self-bitmask | other-bitmask</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            other:</span>
+<span class="sd">                The bitmask for operations. ::</span>
+<span class="sd">               </span>
+<span class="sd">                    other := (&lt;int-32bit-mask&gt; | &lt;instance-of-PlatformParameters&gt;)</span>
+<span class="sd">           </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            The resulting bitmask as numeric value.</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_hexversion</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">|</span> <span class="n">other</span>
+
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">PlatformParameters</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">|</span> <span class="n">other</span><span class="o">.</span><span class="n">get_hexversion</span><span class="p">()</span>
+
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="c1"># use other as init parameters - simply trust or pass exception</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">|</span> <span class="n">PlatformParameters</span><span class="p">(</span><span class="o">**</span><span class="n">other</span><span class="p">)</span><span class="o">.</span><span class="n">get_hexversion</span><span class="p">()</span>
+
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">|</span> <span class="n">PlatformParameters</span><span class="p">(</span><span class="o">*</span><span class="n">other</span><span class="p">)</span><span class="o">.</span><span class="n">get_hexversion</span><span class="p">()</span>
+
+        <span class="k">raise</span> <span class="n">platformids</span><span class="o">.</span><span class="n">PlatformIDsError</span><span class="p">(</span><span class="s2">&quot;type not supported: other = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">other</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="PlatformParameters.__rand__"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.__rand__">[docs]</a>    <span class="k">def</span> <span class="nf">__rand__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;   The r-side *&amp;* operator for the resulting *hexversion*: ::</span>
+<span class="sd">     </span>
+<span class="sd">           other-bitmask &amp; self-bitmask</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            other:</span>
+<span class="sd">                The bitmask for operations. ::</span>
+<span class="sd">               </span>
+<span class="sd">                    other := (&lt;int-32bit-mask&gt; | &lt;instance-of-PlatformParameters&gt;)</span>
+<span class="sd">           </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            The resulting bitmask as numeric value.</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__and__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PlatformParameters.__ror__"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.__ror__">[docs]</a>    <span class="k">def</span> <span class="nf">__ror__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;   The right-side *|* operator for the resulting *hexversion*: ::</span>
+<span class="sd">     </span>
+<span class="sd">           other-bitmask | self-bitmask</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            other:</span>
+<span class="sd">                The bitmask for operations. ::</span>
+<span class="sd">               </span>
+<span class="sd">                    other := (&lt;int-32bit-mask&gt; | &lt;instance-of-PlatformParameters&gt;)</span>
+<span class="sd">           </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            The resulting bitmask as numeric value.</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__or__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PlatformParameters.get_json"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.get_json">[docs]</a>    <span class="k">def</span> <span class="nf">get_json</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns a dictionary of attributes prepared to be processed</span>
+<span class="sd">        as JSON data.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            kargs:</span>
+<span class="sd">                select:</span>
+<span class="sd">                    List of attributes to be returned.</span>
+<span class="sd">        </span>
+<span class="sd">                default: all non-private</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Dictionary of key-value-pairs.</span>
+<span class="sd">        </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            pass-through</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">_select</span> <span class="o">=</span> <span class="n">kargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;select&#39;</span><span class="p">,</span>
+            <span class="n">attribute_map</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+        <span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">_select</span><span class="p">:</span>
+            <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">res</span></div>
+   
+<div class="viewcode-block" id="PlatformParameters.scan"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.scan">[docs]</a>    <span class="k">def</span> <span class="nf">scan</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Scans local platform for attributes specifying the underlying</span>
+<span class="sd">        OS platform including the distribution. The provided data is</span>
+<span class="sd">        consistent across all supported *Python* implementations</span>
+<span class="sd">        including *Jython*. </span>
+<span class="sd">        Internally calls *platformids.platformids.fetch_platform_distribution()*.</span>
+<span class="sd">        </span>
+<span class="sd">        * distrel_version</span>
+<span class="sd">        * distrel_id</span>
+<span class="sd">        * dist</span>
+<span class="sd">        * distrel</span>
+<span class="sd">        * ostype</span>
+<span class="sd">        * osrel_id</span>
+<span class="sd">        * osrel_version</span>
+<span class="sd">        * distrel_hexversion</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+         
+        <span class="c1">#   </span>
+        <span class="c1"># Common standard data</span>
+        <span class="c1">#</span>
+        
+        <span class="c1"># numeric bitmasks   </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">category</span> <span class="o">=</span> <span class="n">platformids</span><span class="o">.</span><span class="n">fetch_category</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ostype</span> <span class="o">=</span> <span class="n">platformids</span><span class="o">.</span><span class="n">fetch_ostype</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dist</span> <span class="o">=</span> <span class="n">platformids</span><span class="o">.</span><span class="n">fetch_dist</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">distrel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_hexversion</span> <span class="o">=</span> <span class="n">RTE</span>
+
+        <span class="c1">#</span>
+        <span class="c1"># native platform string representation</span>
+        <span class="c1">#</span>
+        <span class="c1"># platform info - OS release</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">os_id</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">os_version</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">os_version_num</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">osrel_id</span><span class="p">,</span> <span class="o">=</span> <span class="n">platformids</span><span class="o">.</span><span class="n">fetch_platform_os</span><span class="p">()</span>
+  
+        <span class="c1"># platform info - distribution release</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">distribution</span> <span class="o">=</span> <span class="n">platformids</span><span class="o">.</span><span class="n">fetch_platform_distribution</span><span class="p">()</span>
+        <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distribution_key</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">distribution_version</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">distribution_name</span><span class="p">,</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">distribution_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">distribution_version_num</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">distribution</span>
+        <span class="p">)</span>  <span class="o">=</span> <span class="n">platformids</span><span class="o">.</span><span class="n">fetch_platform_distribution</span><span class="p">()</span>
+
+        <span class="c1">#   </span>
+        <span class="c1"># Common basic HW data</span>
+        <span class="c1">#   </span>
+
+        <span class="c1"># CPU architecture</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cpu</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">machine</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cpudata</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;bit&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">platform</span><span class="o">.</span><span class="n">architecture</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">cpudata</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cpu</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span> 
+            <span class="k">except</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">cpudata</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># for now...</span>
+            
+
+        <span class="c1">#   </span>
+        <span class="c1"># Jython with optional special data about Java and JVM</span>
+        <span class="c1">#   </span>
+        
+        <span class="k">if</span> <span class="n">platformids</span><span class="o">.</span><span class="n">isJython</span><span class="p">:</span>
+            <span class="c1"># some optional data about Java</span>
+            
+            <span class="n">_jv</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">java_ver</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">java_version</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[._]&#39;</span><span class="p">,</span><span class="n">_jv</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+            
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">javadata</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*([0-9]+)-[Bb]it.*&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\1&#39;</span><span class="p">,</span> <span class="n">_jv</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span>  <span class="c1"># could be different from platform, e.g. 32 on 64</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">javadata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cpudata</span>  <span class="c1"># for now...</span>
+
+            <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*(HotSpot).*&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\1&#39;</span><span class="p">,</span> <span class="n">_jv</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="s1">&#39;HotSpot&#39;</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">jvm</span> <span class="o">=</span> <span class="s1">&#39;JHS&#39;</span>  <span class="c1"># Java-HotSpot</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">jvm</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># for now...</span>
+
+
+
+        <span class="c1">#   </span>
+        <span class="c1"># Cygwin or Windows with optional special data about Windows Product and SP/build</span>
+        <span class="c1">#   </span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ostype</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;cygwinnt&#39;</span><span class="p">,</span> <span class="s1">&#39;nt&#39;</span><span class="p">):</span>
+
+            <span class="kn">from</span> <span class="nn">platformids.dist.nt.windows_kernel32dll</span> <span class="k">import</span> <span class="n">get_win32_OSVersionInfoExa</span><span class="p">,</span> \
+                <span class="n">get_win32_OSProductInfo</span>
+
+ 
+            <span class="n">osver</span> <span class="o">=</span> <span class="n">get_win32_OSVersionInfoExa</span><span class="p">()</span>  <span class="c1"># @UndefinedVariable</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">osrel_sp</span> <span class="o">=</span> <span class="p">[</span><span class="n">osver</span><span class="o">.</span><span class="n">wServicePackMajor</span><span class="p">,</span> <span class="n">osver</span><span class="o">.</span><span class="n">wServicePackMinor</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">wProductType</span> <span class="o">=</span> <span class="n">osver</span><span class="o">.</span><span class="n">wProductType</span>  <span class="c1"># ostype, server, workstation, domain-controller</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">wSuiteMask</span> <span class="o">=</span> <span class="n">osver</span><span class="o">.</span><span class="n">wSuiteMask</span>
+
+            <span class="c1"># the sub type - e.g. Ultimate, Enterprise, etc.</span>
+            <span class="n">pinfo</span> <span class="o">=</span> <span class="n">get_win32_OSProductInfo</span><span class="p">()</span>  <span class="c1"># @UndefinedVariable</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">wProductVariant</span> <span class="o">=</span> <span class="n">pinfo</span><span class="o">.</span><span class="n">pdwReturnedProductType</span>
+
+
+            <span class="k">if</span> <span class="n">osver</span><span class="o">.</span><span class="n">wProductType</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># VER_NT_WORKSTATION</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">dist</span> <span class="o">=</span> <span class="s1">&#39;winws&#39;</span>
+            <span class="k">elif</span> <span class="n">osver</span><span class="o">.</span><span class="n">wProductType</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>  <span class="c1"># VER_NT_IOT</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">dist</span> <span class="o">=</span> <span class="s1">&#39;iot&#39;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">dist</span> <span class="o">=</span> <span class="s1">&#39;wins&#39;</span></div>
+
+            <span class="c1"># base - well-known - marketing name</span>
+            <span class="c1"># self.distrel_name = &quot;Windows%s&quot; % (_uname[2])</span>
+
+            <span class="c1"># specialization extension - well-known too</span>
+            <span class="c1"># self.distrel_name += str(prod_type_categories[prod_ext[self.wProductVariant]]) </span>
+
+        
+
+<div class="viewcode-block" id="PlatformParameters.get_hexversion"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.get_hexversion">[docs]</a>    <span class="k">def</span> <span class="nf">get_hexversion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the hexversion of calculated platform from current </span>
+<span class="sd">        parameters. The conversion is based on the table </span>
+<span class="sd">        *platformids.platformids.rte2num*.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="c1"># 1. try version steps</span>
+        <span class="k">for</span> <span class="n">rx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">distrel_version</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">_kx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dist</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">distrel_version</span><span class="p">[:</span><span class="n">rx</span><span class="p">])</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">res</span> <span class="o">=</span> <span class="n">platformids</span><span class="o">.</span><span class="n">rte2num</span><span class="p">[</span><span class="n">_kx</span><span class="p">]</span>
+                <span class="k">break</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+        <span class="k">if</span> <span class="n">res</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">res</span>
+
+        <span class="n">res</span> <span class="o">=</span> <span class="n">RTE_GENERIC</span>  <span class="c1"># generic fallback</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># complete distribution release key in canonical platformids format</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">platformids</span><span class="o">.</span><span class="n">rte2num</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">distrel</span><span class="p">]</span>
+
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="c1"># complete distribution release key in accordance to the project</span>
+                <span class="n">res</span> <span class="o">=</span> <span class="n">platformids</span><span class="o">.</span><span class="n">rte2num</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">distrel_key</span><span class="p">]</span>
+
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="c1"># distribution without release information</span>
+                    <span class="n">res</span> <span class="o">=</span> <span class="n">platformids</span><span class="o">.</span><span class="n">rte2num</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">dist</span><span class="p">]</span>
+
+                <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="c1"># os type, very basic, almost generic</span>
+                        <span class="n">res</span> <span class="o">=</span> <span class="n">platformids</span><span class="o">.</span><span class="n">rte2num</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">ostype</span><span class="p">]</span>
+
+                    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                        <span class="k">try</span><span class="p">:</span>
+                            <span class="c1"># category - lets say more generic than specific, </span>
+                            <span class="c1"># even though POSIX or Windows defines a lot of </span>
+                            <span class="c1"># standrad interfaces </span>
+                            <span class="n">res</span> <span class="o">=</span> <span class="n">platformids</span><span class="o">.</span><span class="n">rte2num</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">category</span><span class="p">]</span>
+
+                        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                            <span class="c1"># keep the generic fallback</span>
+                            <span class="k">pass</span>
+
+        <span class="k">return</span> <span class="n">res</span></div>
+
+<div class="viewcode-block" id="PlatformParameters.get_oshexversion"><a class="viewcode-back" href="../../platformids.platforms.html#platformids.platforms.PlatformParameters.get_oshexversion">[docs]</a>    <span class="k">def</span> <span class="nf">get_oshexversion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the oshexversion calculated from current parameters.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;avaiable soon&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span></div></div>
+
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+      <span class="lastupdated">
+        Last updated on Dec 08, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

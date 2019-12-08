@@ -1,0 +1,459 @@
+/*
+AUTHOR:     Arno-Can Uestuensoez
+LICENSE:    Artistic-License-2.0 + Forced-Fairplay-Constraints
+COPYRIGHT:  Copyright (C) 2010-2019 Arno-Can Uestuensoez
+            @Ingenieurbuero Arno-Can Uestuensoez
+VERSION:    0.1.29
+UUID:       4135ab0f-fbb8-45a2-a6b1-80d96c164b72
+
+THEME:      rtd
+*/
+
+.wy-nav-content-wrap {
+   max-width: 100%;
+}
+
+div.wy-nav-content {
+   max-width: 95%;
+   background: white;
+}
+
+.wy-side-nav-search {
+	background: black;
+}
+
+div.body {
+    min-width: 80%;
+    max-width: 95%;
+}
+
+
+
+table th {
+    background: #999999;
+    color: #000000;
+}
+
+table {
+    margin: 0 0 1em 0; 
+}
+
+div.indextab table.docutils th,
+div.indextab table.docutils {
+     border: 1px solid silver;
+     overflow-x: auto;
+}
+div.indextab table.docutils tr,
+div.indextab table.docutils td {
+     border: 1px solid lightgrey;
+}
+
+div.nonbreakheadtab table th {
+    white-space:nowrap;
+}
+
+div.autocoltab table col {
+    width: auto;
+}
+
+div.nonbreaktab table td, div.nonbreaktab table th {
+    white-space:nowrap;
+}
+
+div.centertab table {
+ 	margin-left:auto; 
+    margin-right:auto;
+}
+
+div.centerfigure {
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+div.nonbreaktabcol1 table  td:nth-child(1),
+{
+    white-space:nowrap;
+}
+div.nonbreaktabcol2 table  td:nth-child(2),
+{
+    white-space:nowrap;
+}
+div.nonbreaktabcol3 table  td:nth-child(3),
+{
+    white-space:nowrap;
+}
+
+/*
+    classdiagramhref
+*/
+
+div.classdiagramhref img {
+    pointer-events: none;
+}
+
+
+/*
+    teststatetab
+*/
+div.teststatetab table tr:hover {
+    background: lightgrey;
+    color: black;
+}
+
+div.teststatetab table td a:hover {
+    background: yellow;
+    color: green;
+}
+
+div.teststatetab table td:hover {
+    background: lightyellow;
+    color: green;
+}
+
+div.teststatetab table {
+    margin: 1em 0 2em 0; 
+    overflow-x: auto;
+}
+
+div.teststatetab table th {
+    background: #999999;
+    color: #000000;
+    padding-left:1em;
+    padding-right:1em;
+}
+
+
+/*
+    index
+*/
+div.indextab table tr:hover {
+    background: lightgrey;
+    color: black;
+}
+div.indextab table td a:hover {
+    background: yellow;
+    color: green;
+}
+div.indextab table td:hover {
+    background: lightyellow;
+    color: green;
+}
+div.indextab table {
+    margin: 1em 0 2em 0; 
+}
+div.indextab table th {
+    background: #999999;
+    color: #000000;
+    padding-left:1em;
+    padding-right:1em;
+}
+
+
+/*
+    featuretab mixed
+*/
+div.featuretabmixed table  td:nth-child(2),
+div.featuretabmixed table  td:nth-child(3),
+div.featuretabmixed table  td:nth-child(4)
+{
+    background: lightgrey;
+}
+
+div.featuretabmixed table  td:nth-child(8),
+div.featuretabmixed table  td:nth-child(10),
+div.featuretabmixed table  td:nth-child(11)
+{
+    color: grey;
+}
+
+div.featuretabmixed table  th:nth-child(8),
+div.featuretabmixed table  th:nth-child(10),
+div.featuretabmixed table  th:nth-child(11)
+{
+    color: grey;
+}
+
+div.featuretabmixed table  td {
+    text-align: center; 
+}
+
+div.featuretabmixed table  td:nth-child(1)
+{
+    text-align: left; 
+}
+
+div.featuretabmixed table tr:hover {
+    background: lightgrey;
+    color: black;
+}
+
+div.featuretabmixed table td a:hover {
+    background: yellow;
+    color: green;
+}
+
+div.featuretabmixed table td:hover {
+    background: lightyellow;
+    color: green;
+}
+
+div.featuretabmixed table {
+    margin: 1em 0 2em 0;
+    overflow-x: auto;
+}
+
+div.featuretabmixed table th {
+    background: #999999;
+    color: #000000;
+    padding-left:1em;
+    padding-right:1em;
+}
+
+
+
+/*
+    shortcuts
+*/
+div.shortcuttab table tr:hover {
+    background: lightgrey;
+    color: black;
+}
+
+div.shortcuttab table td a:hover {
+    color: green;
+    background: yellow;
+}
+
+div.shortcuttab table td:hover {
+    background: lightyellow;
+}
+
+
+div.shortcuttab table {
+    margin: 1em 0 2em 0; 
+    overflow-x: auto;
+}
+
+div.shortcuttab table th {
+    background: #999999;
+    color: #000000;
+    padding-left:1em;
+    padding-right:1em;
+}
+
+
+/*
+    large tables wil column color
+*/
+div.tabcolumncolor table  td:nth-child(even)
+{
+   background-color: #EFF2E0;
+}
+
+div.tabcolumncolor table  td:nth-child(even),
+div.tabcolumncolor table  td:nth-child(3),
+div.tabcolumncolor table  td:nth-child(5),
+div.tabcolumncolor table  td:nth-child(7),
+div.tabcolumncolor table  td:nth-child(9)
+{
+    text-align: center;
+}
+
+div.tabcolumncolor table tr:hover {
+    background: lightgrey;
+    color: black;
+}
+
+div.tabcolumncolor table td a:hover {
+    color: green;
+    background: yellow;
+}
+
+div.tabcolumncolor table td:hover {
+    background: lightyellow;
+}
+
+div.tabcolumncolor table {
+    margin: 1em 0 2em 0; 
+    overflow-x: auto;
+}
+
+div.tabcolumncolor table th {
+    background: #999999;
+    color: #000000;
+    padding-left:1em;
+    padding-right:1em;
+}
+
+
+div.codeasmath pre {
+    background: #ffffff;
+    color: #000000;
+    padding-left:1em;
+}
+
+div.codeasmath td.code pre {
+    background: #ffffff; color: #000000;
+    border-top: 1px solid #ac9;
+    border-bottom: 1px solid #ac9;
+}
+
+pre {
+    background: #CAF9F2;    
+    color: #000000;
+    border-top: 0px;
+    border-bottom: 0px;
+    padding-left:1em;
+}
+
+body.nicknameinfopage {
+    width: 100%;
+    height: 100%;
+    vertical-align: center;
+}
+
+body.nicknameinfopage div.nicknameinfo table {
+    width: 100%;
+    height: 90%;
+    vertical-align: center;
+}
+
+div.nicknameinfo table {
+    width: 100%;
+    height: 90%;
+    vertical-align: center;
+}
+
+body.nicknameinfopage div.footer {
+    color: #ffffff;
+    width: 100%;
+    height: 3em;
+    padding: 9px 0 9px 0;
+    text-align: center;
+    font-size: 100%;
+}
+
+body.profileinfopage {
+    width: 100%;
+    height: 100%;
+    vertical-align: center;
+}
+
+div.thumbup {
+    color: #ffffff;
+    width: 100%;
+    padding: 9px 0 9px 0;
+    text-align: center;
+    font-size: 100%;
+}
+
+div.thumbdown {
+    color: #ffffff;
+    width: 100%;
+    height: 3em;
+    padding: 9px 0 9px 0;
+    text-align: center;
+    font-size: 100%;
+}
+
+div.thumbup img {
+    height: 1.5em;
+    vertical-align: -0.2em;
+}
+
+div.thumbdown img {
+    height: 1.5em;
+    vertical-align: -0.8em;
+}
+
+/*
+    apisynopsis
+*/
+div.apisynopsis pre.literal-block {
+    color: black;
+    font-weight: bold;
+    line-height: 2em;
+}
+
+div.apisynopsis pre.literal-block a:link {
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: none;
+}
+div.apisynopsis pre.literal-block a:visited {
+    font-weight: bold;
+    text-decoration: none;
+}
+div.apisynopsis pre.literal-block a:hover {
+    color: black;
+    font-weight: bold;
+    background: yellow;
+}
+
+
+/*
+    text marker
+*/
+span.textmarker {
+    background: yellow;
+    font-weight: bold;
+    color: black;
+}
+
+
+/*
+    warning
+*/
+div.admonition.warning {
+    background: orange;
+}
+
+/*
+    note
+*/
+div.admonition.note {
+    background: yellow;
+}
+
+
+body {
+    background-color: #3e3e3e;
+}
+
+div.footer {
+    background-color: #3e3e3e;
+}
+
+div.related {
+    background-color: #3e3e3e;
+}
+a:hover {
+	color: black;
+	background: #bebc82;
+}
+div.table-of-contents a:hover {
+	color: red;
+}
+
+div."highlight-python notranslate" {
+    background: #CAF9F2;    
+}
+
+.rst-content pre.literal-block,.rst-content div[class^='highlight'] pre,.rst-content .linenodiv pre{
+    background: #dbdede;
+}
+
+
+.rst-content .linenodiv pre {
+    border-color: grey;
+}
+
+
+div.figabstract {
+	text-align: center;
+}
+
+div.figabstract p {
+	text-align: center;
+}
+

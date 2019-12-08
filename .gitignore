@@ -13,16 +13,19 @@
 /**/backup/
 /**/tmp/
 
+*.vsd
+*.VSD
+setenv-acue2.sh
+setenv-acue3.sh
+setenv.sh
+setenv.bat
+
+
 #Python + stuptools + sphinx
-/**/build/
-/**/dist/
-/**/*.egg-info/
+/build/
+/dist/
+*.egg-info/
 
-
-# by default these are copies only, the source are in components 
-# and/or src if required set individually
-/**/repos/
-/**/raw/
 
 # epydoc
 profile.out
@@ -35,27 +38,26 @@ profile.out
 # AUTOTOOLS:
 # REMARK: Do not put here Makefile.in, in some cases it is the source! 
 #Makefile.in
-/autom4te.cache/
-/aclocal.m4
-/autoscan.log
-/compile
-/configure
-/depcomp
-/install-sh
-/missing
-/config.status
-/config.sub
-/config.guess
-/config.log
-/config.h
-/configure
+autom4te.cache
+aclocal.m4
+autoscan.log
+compile
+configure
+depcomp
+install-sh
+missing
+config.status
+config.sub
+config.guess
+config.log
+config.h
+configure
 
 #
 # common suffixes
 .build
 .made
 .settings
-*.elc
 
 # Object files
 *.slo
@@ -98,16 +100,11 @@ y.tab.[cho]
 # Python - Packages
 *.egg
 *.egg-info
-dist
-build
 eggs
 parts
-bin
-var
 sdist
 develop-eggs
 .installed.cfg
-lib
 lib64
 __pycache__
 
@@ -142,10 +139,10 @@ nosetests.xml
 #
 
 # -> ignore dynamic eclipse data
-/**/RemoteSystemsTempFiles/
-/**/.settings/
-/**/.includepath
-/**/.pydevproject
+RemoteSystemsTempFiles
+.settings/
+.includepath
+.pydevproject
 
 
 #allow context specific eclipse framework settings
