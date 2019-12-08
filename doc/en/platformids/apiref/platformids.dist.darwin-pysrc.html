@@ -1,0 +1,1603 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>platformids.dist.darwin</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link - Main Document -->
+      <th>&nbsp;&nbsp;&nbsp;<a target="_top"
+        href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th>&nbsp;&nbsp;&nbsp;<a target="_top"
+        href="../index_part_apiref_scaled.html">Top</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th>
+          &nbsp;&nbsp;&nbsp;
+          <a target="_parent" href="frames.html">&larr;</a>
+          &nbsp;
+      <th>
+      <th>
+          &nbsp;
+          <a target="_parent" href="frames-right.html">&rarr;</a>
+          &nbsp;&nbsp;&nbsp;
+      </th>
+
+  <!-- Overview link - api reference-->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="platformids-module.html">Overview</a>&nbsp;&nbsp;&nbsp;</th>
+
+
+  <!-- Module -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Module</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Class -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="class-tree.html">Class</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+  <!--
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Tree</a>&nbsp;&nbsp;&nbsp;</th>
+  -->
+  
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr>
+              <th>&nbsp;&nbsp;&nbsp;<a
+                href="http://pypi.python.org/pypi/setupdocx">@www</a>&nbsp;&nbsp;&nbsp;</th>
+          </tr></table></th>
+
+  <!-- About link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="about.html">About</a>&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+</table>
+<table class="subnavbar" width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td>
+      <table class="items" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center">
+                <span class="options">
+                  <a href="frames.html" target="_top">&lt;Frames(L)</a>
+                </span>
+                &nbsp;
+            </td>
+            <td align="center">
+                &#124;
+                &nbsp;
+                <span class="options">
+                    <a href="platformids.dist.darwin-pysrc.html" target="_top">No&nbsp;Frames</a>
+                </span>
+                &nbsp;
+                &#124;
+            </td>
+            <td align="center">
+                &nbsp;
+                <span class="options">
+                   <a href="frames-right.html" target="_top">Frames(R)&gt;</a>
+                </span>
+            </td>
+           </tr>
+      </table>
+    </td>
+    <td>
+    </td>
+ </tr>
+ <tr>
+</table>
+      <span class="breadcrumbs">
+        <a href="platformids-module.html">Package&nbsp;platformids</a> ::
+        <a href="platformids.dist-module.html">Package&nbsp;dist</a> ::
+        Module&nbsp;darwin
+      </span>
+<h1 class="epydoc">Source Code for <a href="platformids.dist.darwin-module.html">Module platformids.dist.darwin</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">&quot;&quot;&quot;Darwin / OS-X / macOS - &quot;happy marketing&quot; naming releases - map u&#x27; all.</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">&quot;&quot;&quot;</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">__future__</tt> <tt class="py-keyword">import</tt> <tt class="py-name">absolute_import</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">re</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">platform</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">pythonids</tt> <tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Variable platformids.dist.centos.PYV35Plus=platformids.dist.centos-module.html#PYV35Plus,Variable platformids.optionparser_platformids.PYV35Plus=platformids.optionparser_platformids-module.html#PYV35Plus,Variable platformids.dist.darwin.PYV35Plus=platformids.dist.darwin-module.html#PYV35Plus,Variable platformids.dist.darwin_enum_labels.PYV35Plus=platformids.dist.darwin_enum_labels-module.html#PYV35Plus,Variable platformids.dist.rhel_enum_labels.PYV35Plus=platformids.dist.rhel_enum_labels-module.html#PYV35Plus,Variable platformids.dist.cygwin.PYV35Plus=platformids.dist.cygwin-module.html#PYV35Plus,Variable platformids.dist.oraclelinux.PYV35Plus=platformids.dist.oraclelinux-module.html#PYV35Plus,Variable platformids.dist.openbsd.PYV35Plus=platformids.dist.openbsd-module.html#PYV35Plus,Variable platformids.dist.fedora_enum_labels.PYV35Plus=platformids.dist.fedora_enum_labels-module.html#PYV35Plus,Variable platformids.dist.netbsd.PYV35Plus=platformids.dist.netbsd-module.html#PYV35Plus,Variable platformids.dist.rhel.PYV35Plus=platformids.dist.rhel-module.html#PYV35Plus,Variable platformids.dist.freebsd.PYV35Plus=platformids.dist.freebsd-module.html#PYV35Plus,Variable platformids.dist.solaris.PYV35Plus=platformids.dist.solaris-module.html#PYV35Plus,Variable platformids.dist.gentoo.PYV35Plus=platformids.dist.gentoo-module.html#PYV35Plus,Variable platformids.dist.solaris_enum_labels.PYV35Plus=platformids.dist.solaris_enum_labels-module.html#PYV35Plus,Variable platformids.dist.fedora.PYV35Plus=platformids.dist.fedora-module.html#PYV35Plus,Variable platformids.dist.openbsd_enum_labels.PYV35Plus=platformids.dist.openbsd_enum_labels-module.html#PYV35Plus,Variable platformids.dist.debian.PYV35Plus=platformids.dist.debian-module.html#PYV35Plus,Variable platformids.dist.ubuntu.PYV35Plus=platformids.dist.ubuntu-module.html#PYV35Plus,Variable platformids.dist.alpinelinux.PYV35Plus=platformids.dist.alpinelinux-module.html#PYV35Plus,Variable platformids.map_enum_labels.PYV35Plus=platformids.map_enum_labels-module.html#PYV35Plus,Variable platformids.dist.centos_enum_labels.PYV35Plus=platformids.dist.centos_enum_labels-module.html#PYV35Plus,Variable platformids.PYV35Plus=platformids-module.html#PYV35Plus,Variable platformids.dist.archlinux.PYV35Plus=platformids.dist.archlinux-module.html#PYV35Plus"><a title="platformids.dist.centos.PYV35Plus
+platformids.optionparser_platformids.PYV35Plus
+platformids.dist.darwin.PYV35Plus
+platformids.dist.darwin_enum_labels.PYV35Plus
+platformids.dist.rhel_enum_labels.PYV35Plus
+platformids.dist.cygwin.PYV35Plus
+platformids.dist.oraclelinux.PYV35Plus
+platformids.dist.openbsd.PYV35Plus
+platformids.dist.fedora_enum_labels.PYV35Plus
+platformids.dist.netbsd.PYV35Plus
+platformids.dist.rhel.PYV35Plus
+platformids.dist.freebsd.PYV35Plus
+platformids.dist.solaris.PYV35Plus
+platformids.dist.gentoo.PYV35Plus
+platformids.dist.solaris_enum_labels.PYV35Plus
+platformids.dist.fedora.PYV35Plus
+platformids.dist.openbsd_enum_labels.PYV35Plus
+platformids.dist.debian.PYV35Plus
+platformids.dist.ubuntu.PYV35Plus
+platformids.dist.alpinelinux.PYV35Plus
+platformids.map_enum_labels.PYV35Plus
+platformids.dist.centos_enum_labels.PYV35Plus
+platformids.PYV35Plus
+platformids.dist.archlinux.PYV35Plus" class="py-name" href="#" onclick="return doclink('link-0', 'PYV35Plus', 'link-0');">PYV35Plus</a></tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name" targets="Package platformids=platformids-module.html"><a title="platformids" class="py-name" href="#" onclick="return doclink('link-1', 'platformids', 'link-1');">platformids</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX10=platformids.dist.darwin-module.html#RTE_OSX10,Variable platformids.dist.darwin_enum_labels.RTE_OSX10=platformids.dist.darwin_enum_labels-module.html#RTE_OSX10,Variable platformids.dist.rhel_enum_labels.RTE_OSX10=platformids.dist.rhel_enum_labels-module.html#RTE_OSX10,Variable platformids.dist.fedora_enum_labels.RTE_OSX10=platformids.dist.fedora_enum_labels-module.html#RTE_OSX10,Variable platformids.dist.solaris_enum_labels.RTE_OSX10=platformids.dist.solaris_enum_labels-module.html#RTE_OSX10,Variable platformids.dist.openbsd_enum_labels.RTE_OSX10=platformids.dist.openbsd_enum_labels-module.html#RTE_OSX10,Variable platformids.map_enum_labels.RTE_OSX10=platformids.map_enum_labels-module.html#RTE_OSX10,Variable platformids.dist.centos_enum_labels.RTE_OSX10=platformids.dist.centos_enum_labels-module.html#RTE_OSX10,Variable platformids.RTE_OSX10=platformids-module.html#RTE_OSX10"><a title="platformids.dist.darwin.RTE_OSX10
+platformids.dist.darwin_enum_labels.RTE_OSX10
+platformids.dist.rhel_enum_labels.RTE_OSX10
+platformids.dist.fedora_enum_labels.RTE_OSX10
+platformids.dist.solaris_enum_labels.RTE_OSX10
+platformids.dist.openbsd_enum_labels.RTE_OSX10
+platformids.map_enum_labels.RTE_OSX10
+platformids.dist.centos_enum_labels.RTE_OSX10
+platformids.RTE_OSX10" class="py-name" href="#" onclick="return doclink('link-2', 'RTE_OSX10', 'link-2');">RTE_OSX10</a></tt><tt class="py-op">,</tt> <tt id="link-3" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX=platformids.dist.darwin-module.html#RTE_OSX,Variable platformids.dist.darwin_enum_labels.RTE_OSX=platformids.dist.darwin_enum_labels-module.html#RTE_OSX,Variable platformids.dist.rhel_enum_labels.RTE_OSX=platformids.dist.rhel_enum_labels-module.html#RTE_OSX,Variable platformids.dist.fedora_enum_labels.RTE_OSX=platformids.dist.fedora_enum_labels-module.html#RTE_OSX,Variable platformids.dist.solaris_enum_labels.RTE_OSX=platformids.dist.solaris_enum_labels-module.html#RTE_OSX,Variable platformids.dist.openbsd_enum_labels.RTE_OSX=platformids.dist.openbsd_enum_labels-module.html#RTE_OSX,Variable platformids.map_enum_labels.RTE_OSX=platformids.map_enum_labels-module.html#RTE_OSX,Variable platformids.dist.centos_enum_labels.RTE_OSX=platformids.dist.centos_enum_labels-module.html#RTE_OSX,Variable platformids.RTE_OSX=platformids-module.html#RTE_OSX"><a title="platformids.dist.darwin.RTE_OSX
+platformids.dist.darwin_enum_labels.RTE_OSX
+platformids.dist.rhel_enum_labels.RTE_OSX
+platformids.dist.fedora_enum_labels.RTE_OSX
+platformids.dist.solaris_enum_labels.RTE_OSX
+platformids.dist.openbsd_enum_labels.RTE_OSX
+platformids.map_enum_labels.RTE_OSX
+platformids.dist.centos_enum_labels.RTE_OSX
+platformids.RTE_OSX" class="py-name" href="#" onclick="return doclink('link-3', 'RTE_OSX', 'link-3');">RTE_OSX</a></tt><tt class="py-op">,</tt> <tt id="link-4" class="py-name" targets="Variable platformids.dist.opensuse.rte2num=platformids.dist.opensuse-module.html#rte2num,Variable platformids.dist.centos.rte2num=platformids.dist.centos-module.html#rte2num,Variable platformids.dist.darwin.rte2num=platformids.dist.darwin-module.html#rte2num,Variable platformids.dist.darwin_enum_labels.rte2num=platformids.dist.darwin_enum_labels-module.html#rte2num,Variable platformids.dist.rhel_enum_labels.rte2num=platformids.dist.rhel_enum_labels-module.html#rte2num,Variable platformids.dist.oraclelinux.rte2num=platformids.dist.oraclelinux-module.html#rte2num,Variable platformids.dist.openbsd.rte2num=platformids.dist.openbsd-module.html#rte2num,Variable platformids.dist.fedora_enum_labels.rte2num=platformids.dist.fedora_enum_labels-module.html#rte2num,Variable platformids.dist.netbsd.rte2num=platformids.dist.netbsd-module.html#rte2num,Variable platformids.dist.windows.rte2num=platformids.dist.windows-module.html#rte2num,Variable platformids.dist.rhel.rte2num=platformids.dist.rhel-module.html#rte2num,Variable platformids.dist.freebsd.rte2num=platformids.dist.freebsd-module.html#rte2num,Variable platformids.dist.solaris.rte2num=platformids.dist.solaris-module.html#rte2num,Variable platformids.dist.gentoo.rte2num=platformids.dist.gentoo-module.html#rte2num,Variable platformids.dist.solaris_enum_labels.rte2num=platformids.dist.solaris_enum_labels-module.html#rte2num,Variable platformids.dist.fedora.rte2num=platformids.dist.fedora-module.html#rte2num,Variable platformids.dist.openbsd_enum_labels.rte2num=platformids.dist.openbsd_enum_labels-module.html#rte2num,Variable platformids.dist.debian.rte2num=platformids.dist.debian-module.html#rte2num,Variable platformids.dist.ubuntu.rte2num=platformids.dist.ubuntu-module.html#rte2num,Variable platformids.dist.alpinelinux.rte2num=platformids.dist.alpinelinux-module.html#rte2num,Variable platformids.map_enum_labels.rte2num=platformids.map_enum_labels-module.html#rte2num,Variable platformids.dist.centos_enum_labels.rte2num=platformids.dist.centos_enum_labels-module.html#rte2num,Variable platformids.dist.sles.rte2num=platformids.dist.sles-module.html#rte2num,Variable platformids.rte2num=platformids-module.html#rte2num,Variable platformids.dist.archlinux.rte2num=platformids.dist.archlinux-module.html#rte2num"><a title="platformids.dist.opensuse.rte2num
+platformids.dist.centos.rte2num
+platformids.dist.darwin.rte2num
+platformids.dist.darwin_enum_labels.rte2num
+platformids.dist.rhel_enum_labels.rte2num
+platformids.dist.oraclelinux.rte2num
+platformids.dist.openbsd.rte2num
+platformids.dist.fedora_enum_labels.rte2num
+platformids.dist.netbsd.rte2num
+platformids.dist.windows.rte2num
+platformids.dist.rhel.rte2num
+platformids.dist.freebsd.rte2num
+platformids.dist.solaris.rte2num
+platformids.dist.gentoo.rte2num
+platformids.dist.solaris_enum_labels.rte2num
+platformids.dist.fedora.rte2num
+platformids.dist.openbsd_enum_labels.rte2num
+platformids.dist.debian.rte2num
+platformids.dist.ubuntu.rte2num
+platformids.dist.alpinelinux.rte2num
+platformids.map_enum_labels.rte2num
+platformids.dist.centos_enum_labels.rte2num
+platformids.dist.sles.rte2num
+platformids.rte2num
+platformids.dist.archlinux.rte2num" class="py-name" href="#" onclick="return doclink('link-4', 'rte2num', 'link-4');">rte2num</a></tt><tt class="py-op">,</tt> <tt id="link-5" class="py-name" targets="Variable platformids.dist.opensuse.num2rte=platformids.dist.opensuse-module.html#num2rte,Variable platformids.dist.centos.num2rte=platformids.dist.centos-module.html#num2rte,Variable platformids.dist.darwin.num2rte=platformids.dist.darwin-module.html#num2rte,Variable platformids.dist.darwin_enum_labels.num2rte=platformids.dist.darwin_enum_labels-module.html#num2rte,Variable platformids.dist.rhel_enum_labels.num2rte=platformids.dist.rhel_enum_labels-module.html#num2rte,Variable platformids.dist.oraclelinux.num2rte=platformids.dist.oraclelinux-module.html#num2rte,Variable platformids.dist.openbsd.num2rte=platformids.dist.openbsd-module.html#num2rte,Variable platformids.dist.fedora_enum_labels.num2rte=platformids.dist.fedora_enum_labels-module.html#num2rte,Variable platformids.dist.netbsd.num2rte=platformids.dist.netbsd-module.html#num2rte,Variable platformids.dist.windows.num2rte=platformids.dist.windows-module.html#num2rte,Variable platformids.dist.rhel.num2rte=platformids.dist.rhel-module.html#num2rte,Variable platformids.dist.freebsd.num2rte=platformids.dist.freebsd-module.html#num2rte,Variable platformids.dist.solaris.num2rte=platformids.dist.solaris-module.html#num2rte,Variable platformids.dist.gentoo.num2rte=platformids.dist.gentoo-module.html#num2rte,Variable platformids.dist.solaris_enum_labels.num2rte=platformids.dist.solaris_enum_labels-module.html#num2rte,Variable platformids.dist.fedora.num2rte=platformids.dist.fedora-module.html#num2rte,Variable platformids.dist.openbsd_enum_labels.num2rte=platformids.dist.openbsd_enum_labels-module.html#num2rte,Variable platformids.dist.debian.num2rte=platformids.dist.debian-module.html#num2rte,Variable platformids.dist.ubuntu.num2rte=platformids.dist.ubuntu-module.html#num2rte,Variable platformids.dist.alpinelinux.num2rte=platformids.dist.alpinelinux-module.html#num2rte,Variable platformids.map_enum_labels.num2rte=platformids.map_enum_labels-module.html#num2rte,Variable platformids.dist.centos_enum_labels.num2rte=platformids.dist.centos_enum_labels-module.html#num2rte,Variable platformids.dist.sles.num2rte=platformids.dist.sles-module.html#num2rte,Variable platformids.num2rte=platformids-module.html#num2rte,Variable platformids.dist.archlinux.num2rte=platformids.dist.archlinux-module.html#num2rte"><a title="platformids.dist.opensuse.num2rte
+platformids.dist.centos.num2rte
+platformids.dist.darwin.num2rte
+platformids.dist.darwin_enum_labels.num2rte
+platformids.dist.rhel_enum_labels.num2rte
+platformids.dist.oraclelinux.num2rte
+platformids.dist.openbsd.num2rte
+platformids.dist.fedora_enum_labels.num2rte
+platformids.dist.netbsd.num2rte
+platformids.dist.windows.num2rte
+platformids.dist.rhel.num2rte
+platformids.dist.freebsd.num2rte
+platformids.dist.solaris.num2rte
+platformids.dist.gentoo.num2rte
+platformids.dist.solaris_enum_labels.num2rte
+platformids.dist.fedora.num2rte
+platformids.dist.openbsd_enum_labels.num2rte
+platformids.dist.debian.num2rte
+platformids.dist.ubuntu.num2rte
+platformids.dist.alpinelinux.num2rte
+platformids.map_enum_labels.num2rte
+platformids.dist.centos_enum_labels.num2rte
+platformids.dist.sles.num2rte
+platformids.num2rte
+platformids.dist.archlinux.num2rte" class="py-name" href="#" onclick="return doclink('link-5', 'num2rte', 'link-5');">num2rte</a></tt><tt class="py-op">,</tt> <tt id="link-6" class="py-name" targets="Variable platformids.dist.opensuse.num2pretty=platformids.dist.opensuse-module.html#num2pretty,Variable platformids.dist.centos.num2pretty=platformids.dist.centos-module.html#num2pretty,Variable platformids.dist.darwin.num2pretty=platformids.dist.darwin-module.html#num2pretty,Variable platformids.dist.darwin_enum_labels.num2pretty=platformids.dist.darwin_enum_labels-module.html#num2pretty,Variable platformids.dist.rhel_enum_labels.num2pretty=platformids.dist.rhel_enum_labels-module.html#num2pretty,Variable platformids.dist.oraclelinux.num2pretty=platformids.dist.oraclelinux-module.html#num2pretty,Variable platformids.dist.openbsd.num2pretty=platformids.dist.openbsd-module.html#num2pretty,Variable platformids.dist.fedora_enum_labels.num2pretty=platformids.dist.fedora_enum_labels-module.html#num2pretty,Variable platformids.dist.netbsd.num2pretty=platformids.dist.netbsd-module.html#num2pretty,Variable platformids.dist.windows.num2pretty=platformids.dist.windows-module.html#num2pretty,Variable platformids.dist.rhel.num2pretty=platformids.dist.rhel-module.html#num2pretty,Variable platformids.dist.freebsd.num2pretty=platformids.dist.freebsd-module.html#num2pretty,Variable platformids.dist.solaris.num2pretty=platformids.dist.solaris-module.html#num2pretty,Variable platformids.dist.gentoo.num2pretty=platformids.dist.gentoo-module.html#num2pretty,Variable platformids.dist.solaris_enum_labels.num2pretty=platformids.dist.solaris_enum_labels-module.html#num2pretty,Variable platformids.dist.fedora.num2pretty=platformids.dist.fedora-module.html#num2pretty,Variable platformids.dist.openbsd_enum_labels.num2pretty=platformids.dist.openbsd_enum_labels-module.html#num2pretty,Variable platformids.dist.debian.num2pretty=platformids.dist.debian-module.html#num2pretty,Variable platformids.dist.ubuntu.num2pretty=platformids.dist.ubuntu-module.html#num2pretty,Variable platformids.dist.alpinelinux.num2pretty=platformids.dist.alpinelinux-module.html#num2pretty,Variable platformids.map_enum_labels.num2pretty=platformids.map_enum_labels-module.html#num2pretty,Variable platformids.dist.centos_enum_labels.num2pretty=platformids.dist.centos_enum_labels-module.html#num2pretty,Variable platformids.dist.sles.num2pretty=platformids.dist.sles-module.html#num2pretty,Variable platformids.num2pretty=platformids-module.html#num2pretty,Variable platformids.dist.archlinux.num2pretty=platformids.dist.archlinux-module.html#num2pretty"><a title="platformids.dist.opensuse.num2pretty
+platformids.dist.centos.num2pretty
+platformids.dist.darwin.num2pretty
+platformids.dist.darwin_enum_labels.num2pretty
+platformids.dist.rhel_enum_labels.num2pretty
+platformids.dist.oraclelinux.num2pretty
+platformids.dist.openbsd.num2pretty
+platformids.dist.fedora_enum_labels.num2pretty
+platformids.dist.netbsd.num2pretty
+platformids.dist.windows.num2pretty
+platformids.dist.rhel.num2pretty
+platformids.dist.freebsd.num2pretty
+platformids.dist.solaris.num2pretty
+platformids.dist.gentoo.num2pretty
+platformids.dist.solaris_enum_labels.num2pretty
+platformids.dist.fedora.num2pretty
+platformids.dist.openbsd_enum_labels.num2pretty
+platformids.dist.debian.num2pretty
+platformids.dist.ubuntu.num2pretty
+platformids.dist.alpinelinux.num2pretty
+platformids.map_enum_labels.num2pretty
+platformids.dist.centos_enum_labels.num2pretty
+platformids.dist.sles.num2pretty
+platformids.num2pretty
+platformids.dist.archlinux.num2pretty" class="py-name" href="#" onclick="return doclink('link-6', 'num2pretty', 'link-6');">num2pretty</a></tt><tt class="py-op">,</tt> <tt id="link-7" class="py-name" targets="Function platformids.decode_version_str_to_segments()=platformids-module.html#decode_version_str_to_segments"><a title="platformids.decode_version_str_to_segments" class="py-name" href="#" onclick="return doclink('link-7', 'decode_version_str_to_segments', 'link-7');">decode_version_str_to_segments</a></tt><tt class="py-op">,</tt> \ </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line">    <tt id="link-8" class="py-name" targets="Variable platformids.dist.opensuse.PlatformIDsFileCheck=platformids.dist.opensuse-module.html#PlatformIDsFileCheck,Variable platformids.dist.centos.PlatformIDsFileCheck=platformids.dist.centos-module.html#PlatformIDsFileCheck,Variable platformids.dist.darwin.PlatformIDsFileCheck=platformids.dist.darwin-module.html#PlatformIDsFileCheck,Variable platformids.dist.darwin_enum_labels.PlatformIDsFileCheck=platformids.dist.darwin_enum_labels-module.html#PlatformIDsFileCheck,Variable platformids.dist.rhel_enum_labels.PlatformIDsFileCheck=platformids.dist.rhel_enum_labels-module.html#PlatformIDsFileCheck,Variable platformids.dist.oraclelinux.PlatformIDsFileCheck=platformids.dist.oraclelinux-module.html#PlatformIDsFileCheck,Variable platformids.dist.openbsd.PlatformIDsFileCheck=platformids.dist.openbsd-module.html#PlatformIDsFileCheck,Variable platformids.dist.fedora_enum_labels.PlatformIDsFileCheck=platformids.dist.fedora_enum_labels-module.html#PlatformIDsFileCheck,Variable platformids.dist.netbsd.PlatformIDsFileCheck=platformids.dist.netbsd-module.html#PlatformIDsFileCheck,Variable platformids.dist.windows.PlatformIDsFileCheck=platformids.dist.windows-module.html#PlatformIDsFileCheck,Variable platformids.dist.rhel.PlatformIDsFileCheck=platformids.dist.rhel-module.html#PlatformIDsFileCheck,Variable platformids.dist.freebsd.PlatformIDsFileCheck=platformids.dist.freebsd-module.html#PlatformIDsFileCheck,Variable platformids.dist.solaris.PlatformIDsFileCheck=platformids.dist.solaris-module.html#PlatformIDsFileCheck,Variable platformids.dist.gentoo.PlatformIDsFileCheck=platformids.dist.gentoo-module.html#PlatformIDsFileCheck,Variable platformids.dist.solaris_enum_labels.PlatformIDsFileCheck=platformids.dist.solaris_enum_labels-module.html#PlatformIDsFileCheck,Variable platformids.dist.fedora.PlatformIDsFileCheck=platformids.dist.fedora-module.html#PlatformIDsFileCheck,Variable platformids.dist.openbsd_enum_labels.PlatformIDsFileCheck=platformids.dist.openbsd_enum_labels-module.html#PlatformIDsFileCheck,Variable platformids.dist.debian.PlatformIDsFileCheck=platformids.dist.debian-module.html#PlatformIDsFileCheck,Variable platformids.dist.ubuntu.PlatformIDsFileCheck=platformids.dist.ubuntu-module.html#PlatformIDsFileCheck,Variable platformids.dist.alpinelinux.PlatformIDsFileCheck=platformids.dist.alpinelinux-module.html#PlatformIDsFileCheck,Variable platformids.map_enum_labels.PlatformIDsFileCheck=platformids.map_enum_labels-module.html#PlatformIDsFileCheck,Variable platformids.dist.centos_enum_labels.PlatformIDsFileCheck=platformids.dist.centos_enum_labels-module.html#PlatformIDsFileCheck,Variable platformids.dist.sles.PlatformIDsFileCheck=platformids.dist.sles-module.html#PlatformIDsFileCheck,Variable platformids.PlatformIDsFileCheck=platformids-module.html#PlatformIDsFileCheck,Variable platformids.dist.archlinux.PlatformIDsFileCheck=platformids.dist.archlinux-module.html#PlatformIDsFileCheck"><a title="platformids.dist.opensuse.PlatformIDsFileCheck
+platformids.dist.centos.PlatformIDsFileCheck
+platformids.dist.darwin.PlatformIDsFileCheck
+platformids.dist.darwin_enum_labels.PlatformIDsFileCheck
+platformids.dist.rhel_enum_labels.PlatformIDsFileCheck
+platformids.dist.oraclelinux.PlatformIDsFileCheck
+platformids.dist.openbsd.PlatformIDsFileCheck
+platformids.dist.fedora_enum_labels.PlatformIDsFileCheck
+platformids.dist.netbsd.PlatformIDsFileCheck
+platformids.dist.windows.PlatformIDsFileCheck
+platformids.dist.rhel.PlatformIDsFileCheck
+platformids.dist.freebsd.PlatformIDsFileCheck
+platformids.dist.solaris.PlatformIDsFileCheck
+platformids.dist.gentoo.PlatformIDsFileCheck
+platformids.dist.solaris_enum_labels.PlatformIDsFileCheck
+platformids.dist.fedora.PlatformIDsFileCheck
+platformids.dist.openbsd_enum_labels.PlatformIDsFileCheck
+platformids.dist.debian.PlatformIDsFileCheck
+platformids.dist.ubuntu.PlatformIDsFileCheck
+platformids.dist.alpinelinux.PlatformIDsFileCheck
+platformids.map_enum_labels.PlatformIDsFileCheck
+platformids.dist.centos_enum_labels.PlatformIDsFileCheck
+platformids.dist.sles.PlatformIDsFileCheck
+platformids.PlatformIDsFileCheck
+platformids.dist.archlinux.PlatformIDsFileCheck" class="py-name" href="#" onclick="return doclink('link-8', 'PlatformIDsFileCheck', 'link-8');">PlatformIDsFileCheck</a></tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-name">__author__</tt> <tt class="py-op">=</tt> <tt class="py-string">&#x27;Arno-Can Uestuensoez&#x27;</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-name">__license__</tt> <tt class="py-op">=</tt> <tt class="py-string">&quot;Artistic-License-2.0 + Forced-Fairplay-Constraints&quot;</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-name">__copyright__</tt> <tt class="py-op">=</tt> <tt class="py-string">&quot;Copyright (C) 2010-2018 Arno-Can Uestuensoez&quot;</tt> \ </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">                <tt class="py-string">&quot; @Ingenieurbuero Arno-Can Uestuensoez&quot;</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-name">__version__</tt> <tt class="py-op">=</tt> <tt class="py-string">&#x27;0.1.29&#x27;</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt id="link-9" class="py-name" targets="Variable platformids.custom.slackware.__uuid__=platformids.custom.slackware-module.html#__uuid__,Variable platformids.dist.opensuse.__uuid__=platformids.dist.opensuse-module.html#__uuid__,Variable platformids.dist.centos.__uuid__=platformids.dist.centos-module.html#__uuid__,Variable platformids.net.openwrt.__uuid__=platformids.net.openwrt-module.html#__uuid__,Variable platformids.custom.blackarch.__uuid__=platformids.custom.blackarch-module.html#__uuid__,Variable platformids.embed.armbian.__uuid__=platformids.embed.armbian-module.html#__uuid__,Variable platformids.custom.minix2.__uuid__=platformids.custom.minix2-module.html#__uuid__,Variable platformids.optionparser_platformids.__uuid__=platformids.optionparser_platformids-module.html#__uuid__,Variable platformids.dist.darwin.__uuid__=platformids.dist.darwin-module.html#__uuid__,Variable platformids.dist.nt.windows_kernel32dll.__uuid__=platformids.dist.nt.windows_kernel32dll-module.html#__uuid__,Variable platformids.dist.darwin_enum_labels.__uuid__=platformids.dist.darwin_enum_labels-module.html#__uuid__,Variable platformids.embed.micropython.__uuid__=platformids.embed.micropython-module.html#__uuid__,Variable platformids.custom.dragonbsd.__uuid__=platformids.custom.dragonbsd-module.html#__uuid__,Variable platformids.dist.rhel_enum_labels.__uuid__=platformids.dist.rhel_enum_labels-module.html#__uuid__,Variable platformids.dist.cygwin.__uuid__=platformids.dist.cygwin-module.html#__uuid__,Variable platformids.custom.ghostbsd.__uuid__=platformids.custom.ghostbsd-module.html#__uuid__,Variable platformids.dist.oraclelinux.__uuid__=platformids.dist.oraclelinux-module.html#__uuid__,Variable platformids.custom.linuxmint.__uuid__=platformids.custom.linuxmint-module.html#__uuid__,Variable platformids.dist.openbsd.__uuid__=platformids.dist.openbsd-module.html#__uuid__,Variable platformids.dist.fedora_enum_labels.__uuid__=platformids.dist.fedora_enum_labels-module.html#__uuid__,Variable platformids.dist.netbsd.__uuid__=platformids.dist.netbsd-module.html#__uuid__,Variable platformids.dist.windows.__uuid__=platformids.dist.windows-module.html#__uuid__,Variable platformids.dist.rhel.__uuid__=platformids.dist.rhel-module.html#__uuid__,Variable platformids.net.pfsense.__uuid__=platformids.net.pfsense-module.html#__uuid__,Variable platformids.custom.pentoo.__uuid__=platformids.custom.pentoo-module.html#__uuid__,Variable platformids.embed.circuitpython.__uuid__=platformids.embed.circuitpython-module.html#__uuid__,Variable platformids.dist.debian_enum_labels.__uuid__=platformids.dist.debian_enum_labels-module.html#__uuid__,Variable platformids.dist.freebsd.__uuid__=platformids.dist.freebsd-module.html#__uuid__,Variable platformids.embed.raspbian.__uuid__=platformids.embed.raspbian-module.html#__uuid__,Variable platformids.dist.posix.__uuid__=platformids.dist.posix-module.html#__uuid__,Variable platformids.custom.nomadbsd.__uuid__=platformids.custom.nomadbsd-module.html#__uuid__,Variable platformids.dist.solaris.__uuid__=platformids.dist.solaris-module.html#__uuid__,Variable platformids.dist.gentoo.__uuid__=platformids.dist.gentoo-module.html#__uuid__,Variable platformids.dist.solaris_enum_labels.__uuid__=platformids.dist.solaris_enum_labels-module.html#__uuid__,Variable platformids.custom.trueos.__uuid__=platformids.custom.trueos-module.html#__uuid__,Variable platformids.dist.nt.windows_subprocess_reg_exe.__uuid__=platformids.dist.nt.windows_subprocess_reg_exe-module.html#__uuid__,Variable platformids.custom.minix.__uuid__=platformids.custom.minix-module.html#__uuid__,Variable platformids.dist.fedora.__uuid__=platformids.dist.fedora-module.html#__uuid__,Variable platformids.dist.openbsd_enum_labels.__uuid__=platformids.dist.openbsd_enum_labels-module.html#__uuid__,Variable platformids.dist.debian.__uuid__=platformids.dist.debian-module.html#__uuid__,Variable platformids.dist.ubuntu.__uuid__=platformids.dist.ubuntu-module.html#__uuid__,Variable platformids.platforms.__uuid__=platformids.platforms-module.html#__uuid__,Variable platformids.__main__.__uuid__=platformids.__main__-module.html#__uuid__,Variable platformids.dist.alpinelinux.__uuid__=platformids.dist.alpinelinux-module.html#__uuid__,Variable platformids.custom.aix.__uuid__=platformids.custom.aix-module.html#__uuid__,Variable platformids.dist.pemu.__uuid__=platformids.dist.pemu-module.html#__uuid__,Variable platformids.dist.nt.windows_enum_labels.__uuid__=platformids.dist.nt.windows_enum_labels-module.html#__uuid__,Variable platformids.map_enum_labels.__uuid__=platformids.map_enum_labels-module.html#__uuid__,Variable platformids.dist.hpux.__uuid__=platformids.dist.hpux-module.html#__uuid__,Variable platformids.custom.parrot.__uuid__=platformids.custom.parrot-module.html#__uuid__,Variable platformids.dist.pwemu.__uuid__=platformids.dist.pwemu-module.html#__uuid__,Variable platformids.net.kali.__uuid__=platformids.net.kali-module.html#__uuid__,Variable platformids.dist.sles.__uuid__=platformids.dist.sles-module.html#__uuid__,Variable platformids.custom.reactos.__uuid__=platformids.custom.reactos-module.html#__uuid__,Variable platformids.__uuid__=platformids-module.html#__uuid__,Variable platformids.dist.archlinux.__uuid__=platformids.dist.archlinux-module.html#__uuid__"><a title="platformids.custom.slackware.__uuid__
+platformids.dist.opensuse.__uuid__
+platformids.dist.centos.__uuid__
+platformids.net.openwrt.__uuid__
+platformids.custom.blackarch.__uuid__
+platformids.embed.armbian.__uuid__
+platformids.custom.minix2.__uuid__
+platformids.optionparser_platformids.__uuid__
+platformids.dist.darwin.__uuid__
+platformids.dist.nt.windows_kernel32dll.__uuid__
+platformids.dist.darwin_enum_labels.__uuid__
+platformids.embed.micropython.__uuid__
+platformids.custom.dragonbsd.__uuid__
+platformids.dist.rhel_enum_labels.__uuid__
+platformids.dist.cygwin.__uuid__
+platformids.custom.ghostbsd.__uuid__
+platformids.dist.oraclelinux.__uuid__
+platformids.custom.linuxmint.__uuid__
+platformids.dist.openbsd.__uuid__
+platformids.dist.fedora_enum_labels.__uuid__
+platformids.dist.netbsd.__uuid__
+platformids.dist.windows.__uuid__
+platformids.dist.rhel.__uuid__
+platformids.net.pfsense.__uuid__
+platformids.custom.pentoo.__uuid__
+platformids.embed.circuitpython.__uuid__
+platformids.dist.debian_enum_labels.__uuid__
+platformids.dist.freebsd.__uuid__
+platformids.embed.raspbian.__uuid__
+platformids.dist.posix.__uuid__
+platformids.custom.nomadbsd.__uuid__
+platformids.dist.solaris.__uuid__
+platformids.dist.gentoo.__uuid__
+platformids.dist.solaris_enum_labels.__uuid__
+platformids.custom.trueos.__uuid__
+platformids.dist.nt.windows_subprocess_reg_exe.__uuid__
+platformids.custom.minix.__uuid__
+platformids.dist.fedora.__uuid__
+platformids.dist.openbsd_enum_labels.__uuid__
+platformids.dist.debian.__uuid__
+platformids.dist.ubuntu.__uuid__
+platformids.platforms.__uuid__
+platformids.__main__.__uuid__
+platformids.dist.alpinelinux.__uuid__
+platformids.custom.aix.__uuid__
+platformids.dist.pemu.__uuid__
+platformids.dist.nt.windows_enum_labels.__uuid__
+platformids.map_enum_labels.__uuid__
+platformids.dist.hpux.__uuid__
+platformids.custom.parrot.__uuid__
+platformids.dist.pwemu.__uuid__
+platformids.net.kali.__uuid__
+platformids.dist.sles.__uuid__
+platformids.custom.reactos.__uuid__
+platformids.__uuid__
+platformids.dist.archlinux.__uuid__" class="py-name" href="#" onclick="return doclink('link-9', '__uuid__', 'link-9');">__uuid__</a></tt> <tt class="py-op">=</tt> <tt class="py-string">&quot;7add5ded-c39b-4b6e-8c87-1b3a1c150ee9&quot;</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-comment"># The values for Darwin OS-X are represented by sub-bitmasks, which map</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-comment"># a specific release to it&#x27;s sub releases:</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-comment">#    aaaaaabbb : ...aaaaaaaa:   main releases: 8...</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-comment">#                bbb:           sub releases:  0-7</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-comment"># *********************************</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-comment"># rebased to RTE_OSX10, because any modern OS-X fom 2001 on is of version 10, </tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-comment"># or to say - is OS-X - see documentation</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-comment"># *********************************</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-comment"># # context: RTE_POSIX.RTE_DARWIN</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-comment"># RTE_OSX      = RTE_DARWIN   + 0x00020000    #: Mac OS-X RTE_OSX is basically the short form of RTE_OSX10</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt class="py-comment"># RTE_OSX10    = RTE_DARWIN   + 0x00040000    #: Mac OS-X v10.x, as Posix system [POSIX]_, no macpath-legacy.</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">                                              </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt class="py-comment"># Leopard - 2007</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt id="link-10" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX105=platformids.dist.darwin-module.html#RTE_OSX105,Variable platformids.dist.darwin_enum_labels.RTE_OSX105=platformids.dist.darwin_enum_labels-module.html#RTE_OSX105"><a title="platformids.dist.darwin.RTE_OSX105
+platformids.dist.darwin_enum_labels.RTE_OSX105" class="py-name" href="#" onclick="return doclink('link-10', 'RTE_OSX105', 'link-10');">RTE_OSX105</a></tt> <tt class="py-op">=</tt> <tt id="link-11" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10
+platformids.dist.darwin_enum_labels.RTE_OSX10
+platformids.dist.rhel_enum_labels.RTE_OSX10
+platformids.dist.fedora_enum_labels.RTE_OSX10
+platformids.dist.solaris_enum_labels.RTE_OSX10
+platformids.dist.openbsd_enum_labels.RTE_OSX10
+platformids.map_enum_labels.RTE_OSX10
+platformids.dist.centos_enum_labels.RTE_OSX10
+platformids.RTE_OSX10" class="py-name" href="#" onclick="return doclink('link-11', 'RTE_OSX10', 'link-2');">RTE_OSX10</a></tt>      <tt class="py-op">+</tt>   <tt class="py-number">0x000028a0</tt>  <tt class="py-comment">#: Leopard      - OSX-10.5.0 - DARWIN-9.0</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt id="link-12" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX1050=platformids.dist.darwin-module.html#RTE_OSX1050,Variable platformids.dist.darwin_enum_labels.RTE_OSX1050=platformids.dist.darwin_enum_labels-module.html#RTE_OSX1050"><a title="platformids.dist.darwin.RTE_OSX1050
+platformids.dist.darwin_enum_labels.RTE_OSX1050" class="py-name" href="#" onclick="return doclink('link-12', 'RTE_OSX1050', 'link-12');">RTE_OSX1050</a></tt> <tt class="py-op">=</tt> <tt id="link-13" class="py-name"><a title="platformids.dist.darwin.RTE_OSX105
+platformids.dist.darwin_enum_labels.RTE_OSX105" class="py-name" href="#" onclick="return doclink('link-13', 'RTE_OSX105', 'link-10');">RTE_OSX105</a></tt>    <tt class="py-op">+</tt>   <tt class="py-number">0x000028a0</tt>  <tt class="py-comment">#: Leopard      - OSX-10.5.0 - DARWIN-9.0</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt id="link-14" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX1058=platformids.dist.darwin-module.html#RTE_OSX1058,Variable platformids.dist.darwin_enum_labels.RTE_OSX1058=platformids.dist.darwin_enum_labels-module.html#RTE_OSX1058"><a title="platformids.dist.darwin.RTE_OSX1058
+platformids.dist.darwin_enum_labels.RTE_OSX1058" class="py-name" href="#" onclick="return doclink('link-14', 'RTE_OSX1058', 'link-14');">RTE_OSX1058</a></tt> <tt class="py-op">=</tt> <tt id="link-15" class="py-name"><a title="platformids.dist.darwin.RTE_OSX105
+platformids.dist.darwin_enum_labels.RTE_OSX105" class="py-name" href="#" onclick="return doclink('link-15', 'RTE_OSX105', 'link-10');">RTE_OSX105</a></tt>    <tt class="py-op">+</tt>   <tt class="py-number">0x000028a8</tt>  <tt class="py-comment">#: Leopard      - OSX-10.5.8 - DARWIN-9.8</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt class="py-comment"># SnowLeopard - 2009</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"><tt id="link-16" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX106=platformids.dist.darwin-module.html#RTE_OSX106,Variable platformids.dist.darwin_enum_labels.RTE_OSX106=platformids.dist.darwin_enum_labels-module.html#RTE_OSX106"><a title="platformids.dist.darwin.RTE_OSX106
+platformids.dist.darwin_enum_labels.RTE_OSX106" class="py-name" href="#" onclick="return doclink('link-16', 'RTE_OSX106', 'link-16');">RTE_OSX106</a></tt> <tt class="py-op">=</tt> <tt id="link-17" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10
+platformids.dist.darwin_enum_labels.RTE_OSX10
+platformids.dist.rhel_enum_labels.RTE_OSX10
+platformids.dist.fedora_enum_labels.RTE_OSX10
+platformids.dist.solaris_enum_labels.RTE_OSX10
+platformids.dist.openbsd_enum_labels.RTE_OSX10
+platformids.map_enum_labels.RTE_OSX10
+platformids.dist.centos_enum_labels.RTE_OSX10
+platformids.RTE_OSX10" class="py-name" href="#" onclick="return doclink('link-17', 'RTE_OSX10', 'link-2');">RTE_OSX10</a></tt>      <tt class="py-op">+</tt>   <tt class="py-number">0x000028c0</tt>  <tt class="py-comment">#: SnowLeopard  - OSX-10.6.0 - DARWIN-10.0</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt id="link-18" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX1060=platformids.dist.darwin-module.html#RTE_OSX1060,Variable platformids.dist.darwin_enum_labels.RTE_OSX1060=platformids.dist.darwin_enum_labels-module.html#RTE_OSX1060"><a title="platformids.dist.darwin.RTE_OSX1060
+platformids.dist.darwin_enum_labels.RTE_OSX1060" class="py-name" href="#" onclick="return doclink('link-18', 'RTE_OSX1060', 'link-18');">RTE_OSX1060</a></tt> <tt class="py-op">=</tt> <tt id="link-19" class="py-name"><a title="platformids.dist.darwin.RTE_OSX106
+platformids.dist.darwin_enum_labels.RTE_OSX106" class="py-name" href="#" onclick="return doclink('link-19', 'RTE_OSX106', 'link-16');">RTE_OSX106</a></tt>    <tt class="py-op">+</tt>   <tt class="py-number">0x000028c6</tt>  <tt class="py-comment">#: SnowLeopard  - OSX-10.6.0 - DARWIN-10.0</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"><tt id="link-20" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX1068=platformids.dist.darwin-module.html#RTE_OSX1068,Variable platformids.dist.darwin_enum_labels.RTE_OSX1068=platformids.dist.darwin_enum_labels-module.html#RTE_OSX1068"><a title="platformids.dist.darwin.RTE_OSX1068
+platformids.dist.darwin_enum_labels.RTE_OSX1068" class="py-name" href="#" onclick="return doclink('link-20', 'RTE_OSX1068', 'link-20');">RTE_OSX1068</a></tt> <tt class="py-op">=</tt> <tt id="link-21" class="py-name"><a title="platformids.dist.darwin.RTE_OSX106
+platformids.dist.darwin_enum_labels.RTE_OSX106" class="py-name" href="#" onclick="return doclink('link-21', 'RTE_OSX106', 'link-16');">RTE_OSX106</a></tt>    <tt class="py-op">+</tt>   <tt class="py-number">0x000028c8</tt>  <tt class="py-comment">#: SnowLeopard  - OSX-10.6.8 - DARWIN-10.8</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-comment"># Lion - 2011</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt id="link-22" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX107=platformids.dist.darwin-module.html#RTE_OSX107,Variable platformids.dist.darwin_enum_labels.RTE_OSX107=platformids.dist.darwin_enum_labels-module.html#RTE_OSX107"><a title="platformids.dist.darwin.RTE_OSX107
+platformids.dist.darwin_enum_labels.RTE_OSX107" class="py-name" href="#" onclick="return doclink('link-22', 'RTE_OSX107', 'link-22');">RTE_OSX107</a></tt> <tt class="py-op">=</tt> <tt id="link-23" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10
+platformids.dist.darwin_enum_labels.RTE_OSX10
+platformids.dist.rhel_enum_labels.RTE_OSX10
+platformids.dist.fedora_enum_labels.RTE_OSX10
+platformids.dist.solaris_enum_labels.RTE_OSX10
+platformids.dist.openbsd_enum_labels.RTE_OSX10
+platformids.map_enum_labels.RTE_OSX10
+platformids.dist.centos_enum_labels.RTE_OSX10
+platformids.RTE_OSX10" class="py-name" href="#" onclick="return doclink('link-23', 'RTE_OSX10', 'link-2');">RTE_OSX10</a></tt>      <tt class="py-op">+</tt>   <tt class="py-number">0x000028e0</tt>  <tt class="py-comment">#: Lion         - OSX-10.7.0 - DARWIN-11.0.0</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt id="link-24" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX1070=platformids.dist.darwin-module.html#RTE_OSX1070,Variable platformids.dist.darwin_enum_labels.RTE_OSX1070=platformids.dist.darwin_enum_labels-module.html#RTE_OSX1070"><a title="platformids.dist.darwin.RTE_OSX1070
+platformids.dist.darwin_enum_labels.RTE_OSX1070" class="py-name" href="#" onclick="return doclink('link-24', 'RTE_OSX1070', 'link-24');">RTE_OSX1070</a></tt> <tt class="py-op">=</tt> <tt id="link-25" class="py-name"><a title="platformids.dist.darwin.RTE_OSX107
+platformids.dist.darwin_enum_labels.RTE_OSX107" class="py-name" href="#" onclick="return doclink('link-25', 'RTE_OSX107', 'link-22');">RTE_OSX107</a></tt>    <tt class="py-op">+</tt>   <tt class="py-number">0x000028e0</tt>  <tt class="py-comment">#: Lion         - OSX-10.7.0 - DARWIN-11.0.0</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt id="link-26" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX1075=platformids.dist.darwin-module.html#RTE_OSX1075,Variable platformids.dist.darwin_enum_labels.RTE_OSX1075=platformids.dist.darwin_enum_labels-module.html#RTE_OSX1075"><a title="platformids.dist.darwin.RTE_OSX1075
+platformids.dist.darwin_enum_labels.RTE_OSX1075" class="py-name" href="#" onclick="return doclink('link-26', 'RTE_OSX1075', 'link-26');">RTE_OSX1075</a></tt> <tt class="py-op">=</tt> <tt id="link-27" class="py-name"><a title="platformids.dist.darwin.RTE_OSX107
+platformids.dist.darwin_enum_labels.RTE_OSX107" class="py-name" href="#" onclick="return doclink('link-27', 'RTE_OSX107', 'link-22');">RTE_OSX107</a></tt>    <tt class="py-op">+</tt>   <tt class="py-number">0x000028e2</tt>  <tt class="py-comment">#: Lion         - OSX-10.7.5 - DARWIN-11.4.2</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt class="py-comment"># MountainLion - 2012</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt id="link-28" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX108=platformids.dist.darwin-module.html#RTE_OSX108,Variable platformids.dist.darwin_enum_labels.RTE_OSX108=platformids.dist.darwin_enum_labels-module.html#RTE_OSX108"><a title="platformids.dist.darwin.RTE_OSX108
+platformids.dist.darwin_enum_labels.RTE_OSX108" class="py-name" href="#" onclick="return doclink('link-28', 'RTE_OSX108', 'link-28');">RTE_OSX108</a></tt> <tt class="py-op">=</tt> <tt id="link-29" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10
+platformids.dist.darwin_enum_labels.RTE_OSX10
+platformids.dist.rhel_enum_labels.RTE_OSX10
+platformids.dist.fedora_enum_labels.RTE_OSX10
+platformids.dist.solaris_enum_labels.RTE_OSX10
+platformids.dist.openbsd_enum_labels.RTE_OSX10
+platformids.map_enum_labels.RTE_OSX10
+platformids.dist.centos_enum_labels.RTE_OSX10
+platformids.RTE_OSX10" class="py-name" href="#" onclick="return doclink('link-29', 'RTE_OSX10', 'link-2');">RTE_OSX10</a></tt>      <tt class="py-op">+</tt>   <tt class="py-number">0x00002900</tt>  <tt class="py-comment">#: MountainLion - OSX-10.8.0 - DARWIN-12.0.0</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt id="link-30" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX1080=platformids.dist.darwin-module.html#RTE_OSX1080,Variable platformids.dist.darwin_enum_labels.RTE_OSX1080=platformids.dist.darwin_enum_labels-module.html#RTE_OSX1080"><a title="platformids.dist.darwin.RTE_OSX1080
+platformids.dist.darwin_enum_labels.RTE_OSX1080" class="py-name" href="#" onclick="return doclink('link-30', 'RTE_OSX1080', 'link-30');">RTE_OSX1080</a></tt> <tt class="py-op">=</tt> <tt id="link-31" class="py-name"><a title="platformids.dist.darwin.RTE_OSX108
+platformids.dist.darwin_enum_labels.RTE_OSX108" class="py-name" href="#" onclick="return doclink('link-31', 'RTE_OSX108', 'link-28');">RTE_OSX108</a></tt>    <tt class="py-op">+</tt>   <tt class="py-number">0x00002900</tt>  <tt class="py-comment">#: MountainLion - OSX-10.8.0 - DARWIN-12.0.0</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt id="link-32" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX1085=platformids.dist.darwin-module.html#RTE_OSX1085,Variable platformids.dist.darwin_enum_labels.RTE_OSX1085=platformids.dist.darwin_enum_labels-module.html#RTE_OSX1085"><a title="platformids.dist.darwin.RTE_OSX1085
+platformids.dist.darwin_enum_labels.RTE_OSX1085" class="py-name" href="#" onclick="return doclink('link-32', 'RTE_OSX1085', 'link-32');">RTE_OSX1085</a></tt> <tt class="py-op">=</tt> <tt id="link-33" class="py-name"><a title="platformids.dist.darwin.RTE_OSX108
+platformids.dist.darwin_enum_labels.RTE_OSX108" class="py-name" href="#" onclick="return doclink('link-33', 'RTE_OSX108', 'link-28');">RTE_OSX108</a></tt>    <tt class="py-op">+</tt>   <tt class="py-number">0x00002905</tt>  <tt class="py-comment">#: MountainLion - OSX-10.8.5 - DARWIN-12.6.0</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt class="py-comment"># Mavericks - 2013</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"><tt id="link-34" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX109=platformids.dist.darwin-module.html#RTE_OSX109,Variable platformids.dist.darwin_enum_labels.RTE_OSX109=platformids.dist.darwin_enum_labels-module.html#RTE_OSX109"><a title="platformids.dist.darwin.RTE_OSX109
+platformids.dist.darwin_enum_labels.RTE_OSX109" class="py-name" href="#" onclick="return doclink('link-34', 'RTE_OSX109', 'link-34');">RTE_OSX109</a></tt> <tt class="py-op">=</tt> <tt id="link-35" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10
+platformids.dist.darwin_enum_labels.RTE_OSX10
+platformids.dist.rhel_enum_labels.RTE_OSX10
+platformids.dist.fedora_enum_labels.RTE_OSX10
+platformids.dist.solaris_enum_labels.RTE_OSX10
+platformids.dist.openbsd_enum_labels.RTE_OSX10
+platformids.map_enum_labels.RTE_OSX10
+platformids.dist.centos_enum_labels.RTE_OSX10
+platformids.RTE_OSX10" class="py-name" href="#" onclick="return doclink('link-35', 'RTE_OSX10', 'link-2');">RTE_OSX10</a></tt>      <tt class="py-op">+</tt>   <tt class="py-number">0x00002920</tt>  <tt class="py-comment">#: Mavericks    - OSX-10.9.0 - DARWIN-13.0.0</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt id="link-36" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX1090=platformids.dist.darwin-module.html#RTE_OSX1090,Variable platformids.dist.darwin_enum_labels.RTE_OSX1090=platformids.dist.darwin_enum_labels-module.html#RTE_OSX1090"><a title="platformids.dist.darwin.RTE_OSX1090
+platformids.dist.darwin_enum_labels.RTE_OSX1090" class="py-name" href="#" onclick="return doclink('link-36', 'RTE_OSX1090', 'link-36');">RTE_OSX1090</a></tt> <tt class="py-op">=</tt> <tt id="link-37" class="py-name"><a title="platformids.dist.darwin.RTE_OSX109
+platformids.dist.darwin_enum_labels.RTE_OSX109" class="py-name" href="#" onclick="return doclink('link-37', 'RTE_OSX109', 'link-34');">RTE_OSX109</a></tt>    <tt class="py-op">+</tt>   <tt class="py-number">0x00002920</tt>  <tt class="py-comment">#: Mavericks    - OSX-10.9.0 - DARWIN-13.0.0</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt id="link-38" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX1095=platformids.dist.darwin-module.html#RTE_OSX1095,Variable platformids.dist.darwin_enum_labels.RTE_OSX1095=platformids.dist.darwin_enum_labels-module.html#RTE_OSX1095"><a title="platformids.dist.darwin.RTE_OSX1095
+platformids.dist.darwin_enum_labels.RTE_OSX1095" class="py-name" href="#" onclick="return doclink('link-38', 'RTE_OSX1095', 'link-38');">RTE_OSX1095</a></tt> <tt class="py-op">=</tt> <tt id="link-39" class="py-name"><a title="platformids.dist.darwin.RTE_OSX109
+platformids.dist.darwin_enum_labels.RTE_OSX109" class="py-name" href="#" onclick="return doclink('link-39', 'RTE_OSX109', 'link-34');">RTE_OSX109</a></tt>    <tt class="py-op">+</tt>   <tt class="py-number">0x00002925</tt>  <tt class="py-comment">#: Mavericks    - OSX-10.9.5 - DARWIN-13.4.0</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-comment"># Yosemite - 2014</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt id="link-40" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX1010=platformids.dist.darwin-module.html#RTE_OSX1010,Variable platformids.dist.darwin_enum_labels.RTE_OSX1010=platformids.dist.darwin_enum_labels-module.html#RTE_OSX1010"><a title="platformids.dist.darwin.RTE_OSX1010
+platformids.dist.darwin_enum_labels.RTE_OSX1010" class="py-name" href="#" onclick="return doclink('link-40', 'RTE_OSX1010', 'link-40');">RTE_OSX1010</a></tt> <tt class="py-op">=</tt> <tt id="link-41" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10
+platformids.dist.darwin_enum_labels.RTE_OSX10
+platformids.dist.rhel_enum_labels.RTE_OSX10
+platformids.dist.fedora_enum_labels.RTE_OSX10
+platformids.dist.solaris_enum_labels.RTE_OSX10
+platformids.dist.openbsd_enum_labels.RTE_OSX10
+platformids.map_enum_labels.RTE_OSX10
+platformids.dist.centos_enum_labels.RTE_OSX10
+platformids.RTE_OSX10" class="py-name" href="#" onclick="return doclink('link-41', 'RTE_OSX10', 'link-2');">RTE_OSX10</a></tt>     <tt class="py-op">+</tt>   <tt class="py-number">0x00002940</tt>  <tt class="py-comment">#: Yosemite     - OSX-10.10.0 - DARWIN-14.0.0</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"><tt id="link-42" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX10100=platformids.dist.darwin-module.html#RTE_OSX10100,Variable platformids.dist.darwin_enum_labels.RTE_OSX10100=platformids.dist.darwin_enum_labels-module.html#RTE_OSX10100"><a title="platformids.dist.darwin.RTE_OSX10100
+platformids.dist.darwin_enum_labels.RTE_OSX10100" class="py-name" href="#" onclick="return doclink('link-42', 'RTE_OSX10100', 'link-42');">RTE_OSX10100</a></tt> <tt class="py-op">=</tt> <tt id="link-43" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1010
+platformids.dist.darwin_enum_labels.RTE_OSX1010" class="py-name" href="#" onclick="return doclink('link-43', 'RTE_OSX1010', 'link-40');">RTE_OSX1010</a></tt>  <tt class="py-op">+</tt>   <tt class="py-number">0x00002940</tt>  <tt class="py-comment">#: Yosemite     - OSX-10.10.0 - DARWIN-14.0.0</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt id="link-44" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX10105=platformids.dist.darwin-module.html#RTE_OSX10105,Variable platformids.dist.darwin_enum_labels.RTE_OSX10105=platformids.dist.darwin_enum_labels-module.html#RTE_OSX10105"><a title="platformids.dist.darwin.RTE_OSX10105
+platformids.dist.darwin_enum_labels.RTE_OSX10105" class="py-name" href="#" onclick="return doclink('link-44', 'RTE_OSX10105', 'link-44');">RTE_OSX10105</a></tt> <tt class="py-op">=</tt> <tt id="link-45" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1010
+platformids.dist.darwin_enum_labels.RTE_OSX1010" class="py-name" href="#" onclick="return doclink('link-45', 'RTE_OSX1010', 'link-40');">RTE_OSX1010</a></tt>  <tt class="py-op">+</tt>   <tt class="py-number">0x00002945</tt>  <tt class="py-comment">#: Yosemite     - OSX-10.10.5 - DARWIN-14.5.0</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt class="py-comment"># ElCapitan - 2015</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt id="link-46" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX1011=platformids.dist.darwin-module.html#RTE_OSX1011,Variable platformids.dist.darwin_enum_labels.RTE_OSX1011=platformids.dist.darwin_enum_labels-module.html#RTE_OSX1011"><a title="platformids.dist.darwin.RTE_OSX1011
+platformids.dist.darwin_enum_labels.RTE_OSX1011" class="py-name" href="#" onclick="return doclink('link-46', 'RTE_OSX1011', 'link-46');">RTE_OSX1011</a></tt> <tt class="py-op">=</tt> <tt id="link-47" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10
+platformids.dist.darwin_enum_labels.RTE_OSX10
+platformids.dist.rhel_enum_labels.RTE_OSX10
+platformids.dist.fedora_enum_labels.RTE_OSX10
+platformids.dist.solaris_enum_labels.RTE_OSX10
+platformids.dist.openbsd_enum_labels.RTE_OSX10
+platformids.map_enum_labels.RTE_OSX10
+platformids.dist.centos_enum_labels.RTE_OSX10
+platformids.RTE_OSX10" class="py-name" href="#" onclick="return doclink('link-47', 'RTE_OSX10', 'link-2');">RTE_OSX10</a></tt>     <tt class="py-op">+</tt>   <tt class="py-number">0x00002960</tt>  <tt class="py-comment">#: ElCapitan    - OSX-10.11.0 - DARWIN-15.0.0</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt id="link-48" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX10110=platformids.dist.darwin-module.html#RTE_OSX10110,Variable platformids.dist.darwin_enum_labels.RTE_OSX10110=platformids.dist.darwin_enum_labels-module.html#RTE_OSX10110"><a title="platformids.dist.darwin.RTE_OSX10110
+platformids.dist.darwin_enum_labels.RTE_OSX10110" class="py-name" href="#" onclick="return doclink('link-48', 'RTE_OSX10110', 'link-48');">RTE_OSX10110</a></tt> <tt class="py-op">=</tt> <tt id="link-49" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1011
+platformids.dist.darwin_enum_labels.RTE_OSX1011" class="py-name" href="#" onclick="return doclink('link-49', 'RTE_OSX1011', 'link-46');">RTE_OSX1011</a></tt>  <tt class="py-op">+</tt>   <tt class="py-number">0x00002960</tt>  <tt class="py-comment">#: ElCapitan    - OSX-10.11.0 - DARWIN-15.0.0</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt id="link-50" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX10116=platformids.dist.darwin-module.html#RTE_OSX10116,Variable platformids.dist.darwin_enum_labels.RTE_OSX10116=platformids.dist.darwin_enum_labels-module.html#RTE_OSX10116"><a title="platformids.dist.darwin.RTE_OSX10116
+platformids.dist.darwin_enum_labels.RTE_OSX10116" class="py-name" href="#" onclick="return doclink('link-50', 'RTE_OSX10116', 'link-50');">RTE_OSX10116</a></tt> <tt class="py-op">=</tt> <tt id="link-51" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1011
+platformids.dist.darwin_enum_labels.RTE_OSX1011" class="py-name" href="#" onclick="return doclink('link-51', 'RTE_OSX1011', 'link-46');">RTE_OSX1011</a></tt>  <tt class="py-op">+</tt>   <tt class="py-number">0x00002966</tt>  <tt class="py-comment">#: ElCapitan    - OSX-10.11.6 - DARWIN-15.6.0</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"><tt class="py-comment"># Sierra - 2016</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt id="link-52" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX1012=platformids.dist.darwin-module.html#RTE_OSX1012,Variable platformids.dist.darwin_enum_labels.RTE_OSX1012=platformids.dist.darwin_enum_labels-module.html#RTE_OSX1012"><a title="platformids.dist.darwin.RTE_OSX1012
+platformids.dist.darwin_enum_labels.RTE_OSX1012" class="py-name" href="#" onclick="return doclink('link-52', 'RTE_OSX1012', 'link-52');">RTE_OSX1012</a></tt> <tt class="py-op">=</tt> <tt id="link-53" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10
+platformids.dist.darwin_enum_labels.RTE_OSX10
+platformids.dist.rhel_enum_labels.RTE_OSX10
+platformids.dist.fedora_enum_labels.RTE_OSX10
+platformids.dist.solaris_enum_labels.RTE_OSX10
+platformids.dist.openbsd_enum_labels.RTE_OSX10
+platformids.map_enum_labels.RTE_OSX10
+platformids.dist.centos_enum_labels.RTE_OSX10
+platformids.RTE_OSX10" class="py-name" href="#" onclick="return doclink('link-53', 'RTE_OSX10', 'link-2');">RTE_OSX10</a></tt>     <tt class="py-op">+</tt>   <tt class="py-number">0x00002980</tt>  <tt class="py-comment">#: Sierra       - OSX-10.12.0 - DARWIN-16.0.0</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt id="link-54" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX10124=platformids.dist.darwin-module.html#RTE_OSX10124,Variable platformids.dist.darwin_enum_labels.RTE_OSX10124=platformids.dist.darwin_enum_labels-module.html#RTE_OSX10124"><a title="platformids.dist.darwin.RTE_OSX10124
+platformids.dist.darwin_enum_labels.RTE_OSX10124" class="py-name" href="#" onclick="return doclink('link-54', 'RTE_OSX10124', 'link-54');">RTE_OSX10124</a></tt> <tt class="py-op">=</tt> <tt id="link-55" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1012
+platformids.dist.darwin_enum_labels.RTE_OSX1012" class="py-name" href="#" onclick="return doclink('link-55', 'RTE_OSX1012', 'link-52');">RTE_OSX1012</a></tt>  <tt class="py-op">+</tt>   <tt class="py-number">0x00002984</tt>  <tt class="py-comment">#: Sierra       - OSX-10.12.4 - DARWIN-16.5.0</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt id="link-56" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX10126=platformids.dist.darwin-module.html#RTE_OSX10126,Variable platformids.dist.darwin_enum_labels.RTE_OSX10126=platformids.dist.darwin_enum_labels-module.html#RTE_OSX10126"><a title="platformids.dist.darwin.RTE_OSX10126
+platformids.dist.darwin_enum_labels.RTE_OSX10126" class="py-name" href="#" onclick="return doclink('link-56', 'RTE_OSX10126', 'link-56');">RTE_OSX10126</a></tt> <tt class="py-op">=</tt> <tt id="link-57" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1012
+platformids.dist.darwin_enum_labels.RTE_OSX1012" class="py-name" href="#" onclick="return doclink('link-57', 'RTE_OSX1012', 'link-52');">RTE_OSX1012</a></tt>  <tt class="py-op">+</tt>   <tt class="py-number">0x00002986</tt>  <tt class="py-comment">#: Sierra       - OSX-10.12.6 - DARWIN-16.6.0</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-comment"># HighSierra - 2017</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"><tt id="link-58" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX1013=platformids.dist.darwin-module.html#RTE_OSX1013,Variable platformids.dist.darwin_enum_labels.RTE_OSX1013=platformids.dist.darwin_enum_labels-module.html#RTE_OSX1013"><a title="platformids.dist.darwin.RTE_OSX1013
+platformids.dist.darwin_enum_labels.RTE_OSX1013" class="py-name" href="#" onclick="return doclink('link-58', 'RTE_OSX1013', 'link-58');">RTE_OSX1013</a></tt> <tt class="py-op">=</tt> <tt id="link-59" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10
+platformids.dist.darwin_enum_labels.RTE_OSX10
+platformids.dist.rhel_enum_labels.RTE_OSX10
+platformids.dist.fedora_enum_labels.RTE_OSX10
+platformids.dist.solaris_enum_labels.RTE_OSX10
+platformids.dist.openbsd_enum_labels.RTE_OSX10
+platformids.map_enum_labels.RTE_OSX10
+platformids.dist.centos_enum_labels.RTE_OSX10
+platformids.RTE_OSX10" class="py-name" href="#" onclick="return doclink('link-59', 'RTE_OSX10', 'link-2');">RTE_OSX10</a></tt>     <tt class="py-op">+</tt>   <tt class="py-number">0x000029a0</tt>  <tt class="py-comment">#: HighSierra   - OSX-10.13.0 - DARWIN-17.0.0</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt id="link-60" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX10130=platformids.dist.darwin-module.html#RTE_OSX10130,Variable platformids.dist.darwin_enum_labels.RTE_OSX10130=platformids.dist.darwin_enum_labels-module.html#RTE_OSX10130"><a title="platformids.dist.darwin.RTE_OSX10130
+platformids.dist.darwin_enum_labels.RTE_OSX10130" class="py-name" href="#" onclick="return doclink('link-60', 'RTE_OSX10130', 'link-60');">RTE_OSX10130</a></tt> <tt class="py-op">=</tt> <tt id="link-61" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1013
+platformids.dist.darwin_enum_labels.RTE_OSX1013" class="py-name" href="#" onclick="return doclink('link-61', 'RTE_OSX1013', 'link-58');">RTE_OSX1013</a></tt>  <tt class="py-op">+</tt>   <tt class="py-number">0x000029a0</tt>  <tt class="py-comment">#: HighSierra   - OSX-10.13.0 - DARWIN-17.5.0</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"><tt id="link-62" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX10131=platformids.dist.darwin-module.html#RTE_OSX10131,Variable platformids.dist.darwin_enum_labels.RTE_OSX10131=platformids.dist.darwin_enum_labels-module.html#RTE_OSX10131"><a title="platformids.dist.darwin.RTE_OSX10131
+platformids.dist.darwin_enum_labels.RTE_OSX10131" class="py-name" href="#" onclick="return doclink('link-62', 'RTE_OSX10131', 'link-62');">RTE_OSX10131</a></tt> <tt class="py-op">=</tt> <tt id="link-63" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1013
+platformids.dist.darwin_enum_labels.RTE_OSX1013" class="py-name" href="#" onclick="return doclink('link-63', 'RTE_OSX1013', 'link-58');">RTE_OSX1013</a></tt>  <tt class="py-op">+</tt>   <tt class="py-number">0x000029a1</tt>  <tt class="py-comment">#: HighSierra   - OSX-10.13.1 - DARWIN-17.5.0</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt id="link-64" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX10132=platformids.dist.darwin-module.html#RTE_OSX10132,Variable platformids.dist.darwin_enum_labels.RTE_OSX10132=platformids.dist.darwin_enum_labels-module.html#RTE_OSX10132"><a title="platformids.dist.darwin.RTE_OSX10132
+platformids.dist.darwin_enum_labels.RTE_OSX10132" class="py-name" href="#" onclick="return doclink('link-64', 'RTE_OSX10132', 'link-64');">RTE_OSX10132</a></tt> <tt class="py-op">=</tt> <tt id="link-65" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1013
+platformids.dist.darwin_enum_labels.RTE_OSX1013" class="py-name" href="#" onclick="return doclink('link-65', 'RTE_OSX1013', 'link-58');">RTE_OSX1013</a></tt>  <tt class="py-op">+</tt>   <tt class="py-number">0x000029a2</tt>  <tt class="py-comment">#: HighSierra   - OSX-10.13.2 - DARWIN-17.5.0</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt id="link-66" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX10133=platformids.dist.darwin-module.html#RTE_OSX10133,Variable platformids.dist.darwin_enum_labels.RTE_OSX10133=platformids.dist.darwin_enum_labels-module.html#RTE_OSX10133"><a title="platformids.dist.darwin.RTE_OSX10133
+platformids.dist.darwin_enum_labels.RTE_OSX10133" class="py-name" href="#" onclick="return doclink('link-66', 'RTE_OSX10133', 'link-66');">RTE_OSX10133</a></tt> <tt class="py-op">=</tt> <tt id="link-67" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1013
+platformids.dist.darwin_enum_labels.RTE_OSX1013" class="py-name" href="#" onclick="return doclink('link-67', 'RTE_OSX1013', 'link-58');">RTE_OSX1013</a></tt>  <tt class="py-op">+</tt>   <tt class="py-number">0x000029a3</tt>  <tt class="py-comment">#: HighSierra   - OSX-10.13.3 - DARWIN-17.5.0</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt id="link-68" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX10134=platformids.dist.darwin-module.html#RTE_OSX10134,Variable platformids.dist.darwin_enum_labels.RTE_OSX10134=platformids.dist.darwin_enum_labels-module.html#RTE_OSX10134"><a title="platformids.dist.darwin.RTE_OSX10134
+platformids.dist.darwin_enum_labels.RTE_OSX10134" class="py-name" href="#" onclick="return doclink('link-68', 'RTE_OSX10134', 'link-68');">RTE_OSX10134</a></tt> <tt class="py-op">=</tt> <tt id="link-69" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1013
+platformids.dist.darwin_enum_labels.RTE_OSX1013" class="py-name" href="#" onclick="return doclink('link-69', 'RTE_OSX1013', 'link-58');">RTE_OSX1013</a></tt>  <tt class="py-op">+</tt>   <tt class="py-number">0x000029a4</tt>  <tt class="py-comment">#: HighSierra   - OSX-10.13.4 - DARWIN-17.5.0</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"><tt id="link-70" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX10135=platformids.dist.darwin-module.html#RTE_OSX10135,Variable platformids.dist.darwin_enum_labels.RTE_OSX10135=platformids.dist.darwin_enum_labels-module.html#RTE_OSX10135"><a title="platformids.dist.darwin.RTE_OSX10135
+platformids.dist.darwin_enum_labels.RTE_OSX10135" class="py-name" href="#" onclick="return doclink('link-70', 'RTE_OSX10135', 'link-70');">RTE_OSX10135</a></tt> <tt class="py-op">=</tt> <tt id="link-71" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1013
+platformids.dist.darwin_enum_labels.RTE_OSX1013" class="py-name" href="#" onclick="return doclink('link-71', 'RTE_OSX1013', 'link-58');">RTE_OSX1013</a></tt>  <tt class="py-op">+</tt>   <tt class="py-number">0x000029a5</tt>  <tt class="py-comment">#: HighSierra   - OSX-10.13.5 - DARWIN-17.6.0</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"><tt id="link-72" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX10136=platformids.dist.darwin-module.html#RTE_OSX10136,Variable platformids.dist.darwin_enum_labels.RTE_OSX10136=platformids.dist.darwin_enum_labels-module.html#RTE_OSX10136"><a title="platformids.dist.darwin.RTE_OSX10136
+platformids.dist.darwin_enum_labels.RTE_OSX10136" class="py-name" href="#" onclick="return doclink('link-72', 'RTE_OSX10136', 'link-72');">RTE_OSX10136</a></tt> <tt class="py-op">=</tt> <tt id="link-73" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1013
+platformids.dist.darwin_enum_labels.RTE_OSX1013" class="py-name" href="#" onclick="return doclink('link-73', 'RTE_OSX1013', 'link-58');">RTE_OSX1013</a></tt>  <tt class="py-op">+</tt>   <tt class="py-number">0x000029a6</tt>  <tt class="py-comment">#: HighSierra   - OSX-10.13.6 - DARWIN-17.6.0</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-comment"># Mojave - 2018</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt id="link-74" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX1014=platformids.dist.darwin-module.html#RTE_OSX1014,Variable platformids.dist.darwin_enum_labels.RTE_OSX1014=platformids.dist.darwin_enum_labels-module.html#RTE_OSX1014"><a title="platformids.dist.darwin.RTE_OSX1014
+platformids.dist.darwin_enum_labels.RTE_OSX1014" class="py-name" href="#" onclick="return doclink('link-74', 'RTE_OSX1014', 'link-74');">RTE_OSX1014</a></tt> <tt class="py-op">=</tt> <tt id="link-75" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10
+platformids.dist.darwin_enum_labels.RTE_OSX10
+platformids.dist.rhel_enum_labels.RTE_OSX10
+platformids.dist.fedora_enum_labels.RTE_OSX10
+platformids.dist.solaris_enum_labels.RTE_OSX10
+platformids.dist.openbsd_enum_labels.RTE_OSX10
+platformids.map_enum_labels.RTE_OSX10
+platformids.dist.centos_enum_labels.RTE_OSX10
+platformids.RTE_OSX10" class="py-name" href="#" onclick="return doclink('link-75', 'RTE_OSX10', 'link-2');">RTE_OSX10</a></tt>     <tt class="py-op">+</tt>   <tt class="py-number">0x000029c0</tt>  <tt class="py-comment">#: Mojave       - OSX-10.14.0 - DARWIN-18.0.0</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt id="link-76" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX10140=platformids.dist.darwin-module.html#RTE_OSX10140,Variable platformids.dist.darwin_enum_labels.RTE_OSX10140=platformids.dist.darwin_enum_labels-module.html#RTE_OSX10140"><a title="platformids.dist.darwin.RTE_OSX10140
+platformids.dist.darwin_enum_labels.RTE_OSX10140" class="py-name" href="#" onclick="return doclink('link-76', 'RTE_OSX10140', 'link-76');">RTE_OSX10140</a></tt> <tt class="py-op">=</tt> <tt id="link-77" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1014
+platformids.dist.darwin_enum_labels.RTE_OSX1014" class="py-name" href="#" onclick="return doclink('link-77', 'RTE_OSX1014', 'link-74');">RTE_OSX1014</a></tt>  <tt class="py-op">+</tt>   <tt class="py-number">0x000029c0</tt>  <tt class="py-comment">#: Mojave       - OSX-10.14.0 - DARWIN-18.0.0</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt id="link-78" class="py-name" targets="Variable platformids.dist.darwin.RTE_OSX10141=platformids.dist.darwin-module.html#RTE_OSX10141,Variable platformids.dist.darwin_enum_labels.RTE_OSX10141=platformids.dist.darwin_enum_labels-module.html#RTE_OSX10141"><a title="platformids.dist.darwin.RTE_OSX10141
+platformids.dist.darwin_enum_labels.RTE_OSX10141" class="py-name" href="#" onclick="return doclink('link-78', 'RTE_OSX10141', 'link-78');">RTE_OSX10141</a></tt> <tt class="py-op">=</tt> <tt id="link-79" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1014
+platformids.dist.darwin_enum_labels.RTE_OSX1014" class="py-name" href="#" onclick="return doclink('link-79', 'RTE_OSX1014', 'link-74');">RTE_OSX1014</a></tt>  <tt class="py-op">+</tt>   <tt class="py-number">0x000029c1</tt>  <tt class="py-comment">#: Mojave       - OSX-10.14.1 - DARWIN-18.0.0</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-comment">#: mapping of the rte string and numeric representation to the numeric value</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt id="link-80" class="py-name"><a title="platformids.dist.opensuse.rte2num
+platformids.dist.centos.rte2num
+platformids.dist.darwin.rte2num
+platformids.dist.darwin_enum_labels.rte2num
+platformids.dist.rhel_enum_labels.rte2num
+platformids.dist.oraclelinux.rte2num
+platformids.dist.openbsd.rte2num
+platformids.dist.fedora_enum_labels.rte2num
+platformids.dist.netbsd.rte2num
+platformids.dist.windows.rte2num
+platformids.dist.rhel.rte2num
+platformids.dist.freebsd.rte2num
+platformids.dist.solaris.rte2num
+platformids.dist.gentoo.rte2num
+platformids.dist.solaris_enum_labels.rte2num
+platformids.dist.fedora.rte2num
+platformids.dist.openbsd_enum_labels.rte2num
+platformids.dist.debian.rte2num
+platformids.dist.ubuntu.rte2num
+platformids.dist.alpinelinux.rte2num
+platformids.map_enum_labels.rte2num
+platformids.dist.centos_enum_labels.rte2num
+platformids.dist.sles.rte2num
+platformids.rte2num
+platformids.dist.archlinux.rte2num" class="py-name" href="#" onclick="return doclink('link-80', 'rte2num', 'link-4');">rte2num</a></tt><tt class="py-op">.</tt><tt class="py-name">update</tt><tt class="py-op">(</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">    <tt class="py-op">{</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">        <tt class="py-string">&#x27;osx&#x27;</tt><tt class="py-op">:</tt>           <tt id="link-81" class="py-name"><a title="platformids.dist.darwin.RTE_OSX
+platformids.dist.darwin_enum_labels.RTE_OSX
+platformids.dist.rhel_enum_labels.RTE_OSX
+platformids.dist.fedora_enum_labels.RTE_OSX
+platformids.dist.solaris_enum_labels.RTE_OSX
+platformids.dist.openbsd_enum_labels.RTE_OSX
+platformids.map_enum_labels.RTE_OSX
+platformids.dist.centos_enum_labels.RTE_OSX
+platformids.RTE_OSX" class="py-name" href="#" onclick="return doclink('link-81', 'RTE_OSX', 'link-3');">RTE_OSX</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">        <tt class="py-string">&#x27;osx105&#x27;</tt><tt class="py-op">:</tt>        <tt id="link-82" class="py-name"><a title="platformids.dist.darwin.RTE_OSX105
+platformids.dist.darwin_enum_labels.RTE_OSX105" class="py-name" href="#" onclick="return doclink('link-82', 'RTE_OSX105', 'link-10');">RTE_OSX105</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">        <tt class="py-string">&#x27;osx106&#x27;</tt><tt class="py-op">:</tt>        <tt id="link-83" class="py-name"><a title="platformids.dist.darwin.RTE_OSX106
+platformids.dist.darwin_enum_labels.RTE_OSX106" class="py-name" href="#" onclick="return doclink('link-83', 'RTE_OSX106', 'link-16');">RTE_OSX106</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">        <tt class="py-string">&#x27;osx1060&#x27;</tt><tt class="py-op">:</tt>       <tt id="link-84" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1060
+platformids.dist.darwin_enum_labels.RTE_OSX1060" class="py-name" href="#" onclick="return doclink('link-84', 'RTE_OSX1060', 'link-18');">RTE_OSX1060</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">        <tt class="py-string">&#x27;osx10105&#x27;</tt><tt class="py-op">:</tt>      <tt id="link-85" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10105
+platformids.dist.darwin_enum_labels.RTE_OSX10105" class="py-name" href="#" onclick="return doclink('link-85', 'RTE_OSX10105', 'link-44');">RTE_OSX10105</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">        <tt class="py-string">&#x27;osx1068&#x27;</tt><tt class="py-op">:</tt>       <tt id="link-86" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1068
+platformids.dist.darwin_enum_labels.RTE_OSX1068" class="py-name" href="#" onclick="return doclink('link-86', 'RTE_OSX1068', 'link-20');">RTE_OSX1068</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">        <tt class="py-string">&#x27;osx107&#x27;</tt><tt class="py-op">:</tt>        <tt id="link-87" class="py-name"><a title="platformids.dist.darwin.RTE_OSX107
+platformids.dist.darwin_enum_labels.RTE_OSX107" class="py-name" href="#" onclick="return doclink('link-87', 'RTE_OSX107', 'link-22');">RTE_OSX107</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">        <tt class="py-string">&#x27;osx108&#x27;</tt><tt class="py-op">:</tt>        <tt id="link-88" class="py-name"><a title="platformids.dist.darwin.RTE_OSX108
+platformids.dist.darwin_enum_labels.RTE_OSX108" class="py-name" href="#" onclick="return doclink('link-88', 'RTE_OSX108', 'link-28');">RTE_OSX108</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">        <tt class="py-string">&#x27;osx1080&#x27;</tt><tt class="py-op">:</tt>       <tt id="link-89" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1080
+platformids.dist.darwin_enum_labels.RTE_OSX1080" class="py-name" href="#" onclick="return doclink('link-89', 'RTE_OSX1080', 'link-30');">RTE_OSX1080</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">        <tt class="py-string">&#x27;osx1085&#x27;</tt><tt class="py-op">:</tt>       <tt id="link-90" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1085
+platformids.dist.darwin_enum_labels.RTE_OSX1085" class="py-name" href="#" onclick="return doclink('link-90', 'RTE_OSX1085', 'link-32');">RTE_OSX1085</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">        <tt class="py-string">&#x27;osx109&#x27;</tt><tt class="py-op">:</tt>        <tt id="link-91" class="py-name"><a title="platformids.dist.darwin.RTE_OSX109
+platformids.dist.darwin_enum_labels.RTE_OSX109" class="py-name" href="#" onclick="return doclink('link-91', 'RTE_OSX109', 'link-34');">RTE_OSX109</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">        <tt class="py-string">&#x27;osx1010&#x27;</tt><tt class="py-op">:</tt>       <tt id="link-92" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1010
+platformids.dist.darwin_enum_labels.RTE_OSX1010" class="py-name" href="#" onclick="return doclink('link-92', 'RTE_OSX1010', 'link-40');">RTE_OSX1010</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">        <tt class="py-string">&#x27;osx1011&#x27;</tt><tt class="py-op">:</tt>       <tt id="link-93" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1011
+platformids.dist.darwin_enum_labels.RTE_OSX1011" class="py-name" href="#" onclick="return doclink('link-93', 'RTE_OSX1011', 'link-46');">RTE_OSX1011</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">        <tt class="py-string">&#x27;osx1012&#x27;</tt><tt class="py-op">:</tt>       <tt id="link-94" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1012
+platformids.dist.darwin_enum_labels.RTE_OSX1012" class="py-name" href="#" onclick="return doclink('link-94', 'RTE_OSX1012', 'link-52');">RTE_OSX1012</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">        <tt class="py-string">&#x27;osx1013&#x27;</tt><tt class="py-op">:</tt>       <tt id="link-95" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1013
+platformids.dist.darwin_enum_labels.RTE_OSX1013" class="py-name" href="#" onclick="return doclink('link-95', 'RTE_OSX1013', 'link-58');">RTE_OSX1013</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">        <tt class="py-string">&#x27;osx1014&#x27;</tt><tt class="py-op">:</tt>       <tt id="link-96" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1014
+platformids.dist.darwin_enum_labels.RTE_OSX1014" class="py-name" href="#" onclick="return doclink('link-96', 'RTE_OSX1014', 'link-74');">RTE_OSX1014</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">        <tt class="py-string">&#x27;ElCapitan&#x27;</tt><tt class="py-op">:</tt>     <tt id="link-97" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1011
+platformids.dist.darwin_enum_labels.RTE_OSX1011" class="py-name" href="#" onclick="return doclink('link-97', 'RTE_OSX1011', 'link-46');">RTE_OSX1011</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">        <tt class="py-string">&#x27;HighSierra&#x27;</tt><tt class="py-op">:</tt>    <tt id="link-98" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1013
+platformids.dist.darwin_enum_labels.RTE_OSX1013" class="py-name" href="#" onclick="return doclink('link-98', 'RTE_OSX1013', 'link-58');">RTE_OSX1013</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">        <tt class="py-string">&#x27;Leopard&#x27;</tt><tt class="py-op">:</tt>       <tt id="link-99" class="py-name"><a title="platformids.dist.darwin.RTE_OSX105
+platformids.dist.darwin_enum_labels.RTE_OSX105" class="py-name" href="#" onclick="return doclink('link-99', 'RTE_OSX105', 'link-10');">RTE_OSX105</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt class="py-string">&#x27;Lion&#x27;</tt><tt class="py-op">:</tt>          <tt id="link-100" class="py-name"><a title="platformids.dist.darwin.RTE_OSX107
+platformids.dist.darwin_enum_labels.RTE_OSX107" class="py-name" href="#" onclick="return doclink('link-100', 'RTE_OSX107', 'link-22');">RTE_OSX107</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">        <tt class="py-string">&#x27;Mavericks&#x27;</tt><tt class="py-op">:</tt>     <tt id="link-101" class="py-name"><a title="platformids.dist.darwin.RTE_OSX109
+platformids.dist.darwin_enum_labels.RTE_OSX109" class="py-name" href="#" onclick="return doclink('link-101', 'RTE_OSX109', 'link-34');">RTE_OSX109</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">        <tt class="py-string">&#x27;Mojave&#x27;</tt><tt class="py-op">:</tt>        <tt id="link-102" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1014
+platformids.dist.darwin_enum_labels.RTE_OSX1014" class="py-name" href="#" onclick="return doclink('link-102', 'RTE_OSX1014', 'link-74');">RTE_OSX1014</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">        <tt class="py-string">&#x27;MountainLion&#x27;</tt><tt class="py-op">:</tt>  <tt id="link-103" class="py-name"><a title="platformids.dist.darwin.RTE_OSX108
+platformids.dist.darwin_enum_labels.RTE_OSX108" class="py-name" href="#" onclick="return doclink('link-103', 'RTE_OSX108', 'link-28');">RTE_OSX108</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">        <tt class="py-string">&#x27;Sierra&#x27;</tt><tt class="py-op">:</tt>        <tt id="link-104" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1012
+platformids.dist.darwin_enum_labels.RTE_OSX1012" class="py-name" href="#" onclick="return doclink('link-104', 'RTE_OSX1012', 'link-52');">RTE_OSX1012</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">        <tt class="py-string">&#x27;SnowLeopard&#x27;</tt><tt class="py-op">:</tt>   <tt id="link-105" class="py-name"><a title="platformids.dist.darwin.RTE_OSX106
+platformids.dist.darwin_enum_labels.RTE_OSX106" class="py-name" href="#" onclick="return doclink('link-105', 'RTE_OSX106', 'link-16');">RTE_OSX106</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">        <tt class="py-string">&#x27;Yosemite&#x27;</tt><tt class="py-op">:</tt>      <tt id="link-106" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1010
+platformids.dist.darwin_enum_labels.RTE_OSX1010" class="py-name" href="#" onclick="return doclink('link-106', 'RTE_OSX1010', 'link-40');">RTE_OSX1010</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line"> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">        <tt id="link-107" class="py-name"><a title="platformids.dist.darwin.RTE_OSX
+platformids.dist.darwin_enum_labels.RTE_OSX
+platformids.dist.rhel_enum_labels.RTE_OSX
+platformids.dist.fedora_enum_labels.RTE_OSX
+platformids.dist.solaris_enum_labels.RTE_OSX
+platformids.dist.openbsd_enum_labels.RTE_OSX
+platformids.map_enum_labels.RTE_OSX
+platformids.dist.centos_enum_labels.RTE_OSX
+platformids.RTE_OSX" class="py-name" href="#" onclick="return doclink('link-107', 'RTE_OSX', 'link-3');">RTE_OSX</a></tt><tt class="py-op">:</tt> <tt id="link-108" class="py-name"><a title="platformids.dist.darwin.RTE_OSX
+platformids.dist.darwin_enum_labels.RTE_OSX
+platformids.dist.rhel_enum_labels.RTE_OSX
+platformids.dist.fedora_enum_labels.RTE_OSX
+platformids.dist.solaris_enum_labels.RTE_OSX
+platformids.dist.openbsd_enum_labels.RTE_OSX
+platformids.map_enum_labels.RTE_OSX
+platformids.dist.centos_enum_labels.RTE_OSX
+platformids.RTE_OSX" class="py-name" href="#" onclick="return doclink('link-108', 'RTE_OSX', 'link-3');">RTE_OSX</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">        <tt id="link-109" class="py-name"><a title="platformids.dist.darwin.RTE_OSX105
+platformids.dist.darwin_enum_labels.RTE_OSX105" class="py-name" href="#" onclick="return doclink('link-109', 'RTE_OSX105', 'link-10');">RTE_OSX105</a></tt><tt class="py-op">:</tt> <tt id="link-110" class="py-name"><a title="platformids.dist.darwin.RTE_OSX105
+platformids.dist.darwin_enum_labels.RTE_OSX105" class="py-name" href="#" onclick="return doclink('link-110', 'RTE_OSX105', 'link-10');">RTE_OSX105</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">        <tt id="link-111" class="py-name"><a title="platformids.dist.darwin.RTE_OSX106
+platformids.dist.darwin_enum_labels.RTE_OSX106" class="py-name" href="#" onclick="return doclink('link-111', 'RTE_OSX106', 'link-16');">RTE_OSX106</a></tt><tt class="py-op">:</tt> <tt id="link-112" class="py-name"><a title="platformids.dist.darwin.RTE_OSX106
+platformids.dist.darwin_enum_labels.RTE_OSX106" class="py-name" href="#" onclick="return doclink('link-112', 'RTE_OSX106', 'link-16');">RTE_OSX106</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">        <tt id="link-113" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1060
+platformids.dist.darwin_enum_labels.RTE_OSX1060" class="py-name" href="#" onclick="return doclink('link-113', 'RTE_OSX1060', 'link-18');">RTE_OSX1060</a></tt><tt class="py-op">:</tt> <tt id="link-114" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1060
+platformids.dist.darwin_enum_labels.RTE_OSX1060" class="py-name" href="#" onclick="return doclink('link-114', 'RTE_OSX1060', 'link-18');">RTE_OSX1060</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">        <tt id="link-115" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10105
+platformids.dist.darwin_enum_labels.RTE_OSX10105" class="py-name" href="#" onclick="return doclink('link-115', 'RTE_OSX10105', 'link-44');">RTE_OSX10105</a></tt><tt class="py-op">:</tt> <tt id="link-116" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10105
+platformids.dist.darwin_enum_labels.RTE_OSX10105" class="py-name" href="#" onclick="return doclink('link-116', 'RTE_OSX10105', 'link-44');">RTE_OSX10105</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">        <tt id="link-117" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1068
+platformids.dist.darwin_enum_labels.RTE_OSX1068" class="py-name" href="#" onclick="return doclink('link-117', 'RTE_OSX1068', 'link-20');">RTE_OSX1068</a></tt><tt class="py-op">:</tt> <tt id="link-118" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1068
+platformids.dist.darwin_enum_labels.RTE_OSX1068" class="py-name" href="#" onclick="return doclink('link-118', 'RTE_OSX1068', 'link-20');">RTE_OSX1068</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">        <tt id="link-119" class="py-name"><a title="platformids.dist.darwin.RTE_OSX107
+platformids.dist.darwin_enum_labels.RTE_OSX107" class="py-name" href="#" onclick="return doclink('link-119', 'RTE_OSX107', 'link-22');">RTE_OSX107</a></tt><tt class="py-op">:</tt> <tt id="link-120" class="py-name"><a title="platformids.dist.darwin.RTE_OSX107
+platformids.dist.darwin_enum_labels.RTE_OSX107" class="py-name" href="#" onclick="return doclink('link-120', 'RTE_OSX107', 'link-22');">RTE_OSX107</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">        <tt id="link-121" class="py-name"><a title="platformids.dist.darwin.RTE_OSX108
+platformids.dist.darwin_enum_labels.RTE_OSX108" class="py-name" href="#" onclick="return doclink('link-121', 'RTE_OSX108', 'link-28');">RTE_OSX108</a></tt><tt class="py-op">:</tt> <tt id="link-122" class="py-name"><a title="platformids.dist.darwin.RTE_OSX108
+platformids.dist.darwin_enum_labels.RTE_OSX108" class="py-name" href="#" onclick="return doclink('link-122', 'RTE_OSX108', 'link-28');">RTE_OSX108</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">        <tt id="link-123" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1080
+platformids.dist.darwin_enum_labels.RTE_OSX1080" class="py-name" href="#" onclick="return doclink('link-123', 'RTE_OSX1080', 'link-30');">RTE_OSX1080</a></tt><tt class="py-op">:</tt> <tt id="link-124" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1080
+platformids.dist.darwin_enum_labels.RTE_OSX1080" class="py-name" href="#" onclick="return doclink('link-124', 'RTE_OSX1080', 'link-30');">RTE_OSX1080</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">        <tt id="link-125" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1085
+platformids.dist.darwin_enum_labels.RTE_OSX1085" class="py-name" href="#" onclick="return doclink('link-125', 'RTE_OSX1085', 'link-32');">RTE_OSX1085</a></tt><tt class="py-op">:</tt> <tt id="link-126" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1085
+platformids.dist.darwin_enum_labels.RTE_OSX1085" class="py-name" href="#" onclick="return doclink('link-126', 'RTE_OSX1085', 'link-32');">RTE_OSX1085</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">        <tt id="link-127" class="py-name"><a title="platformids.dist.darwin.RTE_OSX109
+platformids.dist.darwin_enum_labels.RTE_OSX109" class="py-name" href="#" onclick="return doclink('link-127', 'RTE_OSX109', 'link-34');">RTE_OSX109</a></tt><tt class="py-op">:</tt> <tt id="link-128" class="py-name"><a title="platformids.dist.darwin.RTE_OSX109
+platformids.dist.darwin_enum_labels.RTE_OSX109" class="py-name" href="#" onclick="return doclink('link-128', 'RTE_OSX109', 'link-34');">RTE_OSX109</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">        <tt id="link-129" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1010
+platformids.dist.darwin_enum_labels.RTE_OSX1010" class="py-name" href="#" onclick="return doclink('link-129', 'RTE_OSX1010', 'link-40');">RTE_OSX1010</a></tt><tt class="py-op">:</tt> <tt id="link-130" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1010
+platformids.dist.darwin_enum_labels.RTE_OSX1010" class="py-name" href="#" onclick="return doclink('link-130', 'RTE_OSX1010', 'link-40');">RTE_OSX1010</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">        <tt id="link-131" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1011
+platformids.dist.darwin_enum_labels.RTE_OSX1011" class="py-name" href="#" onclick="return doclink('link-131', 'RTE_OSX1011', 'link-46');">RTE_OSX1011</a></tt><tt class="py-op">:</tt> <tt id="link-132" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1011
+platformids.dist.darwin_enum_labels.RTE_OSX1011" class="py-name" href="#" onclick="return doclink('link-132', 'RTE_OSX1011', 'link-46');">RTE_OSX1011</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">        <tt id="link-133" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1012
+platformids.dist.darwin_enum_labels.RTE_OSX1012" class="py-name" href="#" onclick="return doclink('link-133', 'RTE_OSX1012', 'link-52');">RTE_OSX1012</a></tt><tt class="py-op">:</tt> <tt id="link-134" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1012
+platformids.dist.darwin_enum_labels.RTE_OSX1012" class="py-name" href="#" onclick="return doclink('link-134', 'RTE_OSX1012', 'link-52');">RTE_OSX1012</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">        <tt id="link-135" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1013
+platformids.dist.darwin_enum_labels.RTE_OSX1013" class="py-name" href="#" onclick="return doclink('link-135', 'RTE_OSX1013', 'link-58');">RTE_OSX1013</a></tt><tt class="py-op">:</tt> <tt id="link-136" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1013
+platformids.dist.darwin_enum_labels.RTE_OSX1013" class="py-name" href="#" onclick="return doclink('link-136', 'RTE_OSX1013', 'link-58');">RTE_OSX1013</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">        <tt id="link-137" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1014
+platformids.dist.darwin_enum_labels.RTE_OSX1014" class="py-name" href="#" onclick="return doclink('link-137', 'RTE_OSX1014', 'link-74');">RTE_OSX1014</a></tt><tt class="py-op">:</tt> <tt id="link-138" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1014
+platformids.dist.darwin_enum_labels.RTE_OSX1014" class="py-name" href="#" onclick="return doclink('link-138', 'RTE_OSX1014', 'link-74');">RTE_OSX1014</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">        <tt id="link-139" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1011
+platformids.dist.darwin_enum_labels.RTE_OSX1011" class="py-name" href="#" onclick="return doclink('link-139', 'RTE_OSX1011', 'link-46');">RTE_OSX1011</a></tt><tt class="py-op">:</tt> <tt id="link-140" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1011
+platformids.dist.darwin_enum_labels.RTE_OSX1011" class="py-name" href="#" onclick="return doclink('link-140', 'RTE_OSX1011', 'link-46');">RTE_OSX1011</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">        <tt id="link-141" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1013
+platformids.dist.darwin_enum_labels.RTE_OSX1013" class="py-name" href="#" onclick="return doclink('link-141', 'RTE_OSX1013', 'link-58');">RTE_OSX1013</a></tt><tt class="py-op">:</tt> <tt id="link-142" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1013
+platformids.dist.darwin_enum_labels.RTE_OSX1013" class="py-name" href="#" onclick="return doclink('link-142', 'RTE_OSX1013', 'link-58');">RTE_OSX1013</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">        <tt id="link-143" class="py-name"><a title="platformids.dist.darwin.RTE_OSX105
+platformids.dist.darwin_enum_labels.RTE_OSX105" class="py-name" href="#" onclick="return doclink('link-143', 'RTE_OSX105', 'link-10');">RTE_OSX105</a></tt><tt class="py-op">:</tt> <tt id="link-144" class="py-name"><a title="platformids.dist.darwin.RTE_OSX105
+platformids.dist.darwin_enum_labels.RTE_OSX105" class="py-name" href="#" onclick="return doclink('link-144', 'RTE_OSX105', 'link-10');">RTE_OSX105</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">        <tt id="link-145" class="py-name"><a title="platformids.dist.darwin.RTE_OSX107
+platformids.dist.darwin_enum_labels.RTE_OSX107" class="py-name" href="#" onclick="return doclink('link-145', 'RTE_OSX107', 'link-22');">RTE_OSX107</a></tt><tt class="py-op">:</tt> <tt id="link-146" class="py-name"><a title="platformids.dist.darwin.RTE_OSX107
+platformids.dist.darwin_enum_labels.RTE_OSX107" class="py-name" href="#" onclick="return doclink('link-146', 'RTE_OSX107', 'link-22');">RTE_OSX107</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">        <tt id="link-147" class="py-name"><a title="platformids.dist.darwin.RTE_OSX109
+platformids.dist.darwin_enum_labels.RTE_OSX109" class="py-name" href="#" onclick="return doclink('link-147', 'RTE_OSX109', 'link-34');">RTE_OSX109</a></tt><tt class="py-op">:</tt> <tt id="link-148" class="py-name"><a title="platformids.dist.darwin.RTE_OSX109
+platformids.dist.darwin_enum_labels.RTE_OSX109" class="py-name" href="#" onclick="return doclink('link-148', 'RTE_OSX109', 'link-34');">RTE_OSX109</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">        <tt id="link-149" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1014
+platformids.dist.darwin_enum_labels.RTE_OSX1014" class="py-name" href="#" onclick="return doclink('link-149', 'RTE_OSX1014', 'link-74');">RTE_OSX1014</a></tt><tt class="py-op">:</tt> <tt id="link-150" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1014
+platformids.dist.darwin_enum_labels.RTE_OSX1014" class="py-name" href="#" onclick="return doclink('link-150', 'RTE_OSX1014', 'link-74');">RTE_OSX1014</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">        <tt id="link-151" class="py-name"><a title="platformids.dist.darwin.RTE_OSX108
+platformids.dist.darwin_enum_labels.RTE_OSX108" class="py-name" href="#" onclick="return doclink('link-151', 'RTE_OSX108', 'link-28');">RTE_OSX108</a></tt><tt class="py-op">:</tt> <tt id="link-152" class="py-name"><a title="platformids.dist.darwin.RTE_OSX108
+platformids.dist.darwin_enum_labels.RTE_OSX108" class="py-name" href="#" onclick="return doclink('link-152', 'RTE_OSX108', 'link-28');">RTE_OSX108</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">        <tt id="link-153" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1012
+platformids.dist.darwin_enum_labels.RTE_OSX1012" class="py-name" href="#" onclick="return doclink('link-153', 'RTE_OSX1012', 'link-52');">RTE_OSX1012</a></tt><tt class="py-op">:</tt> <tt id="link-154" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1012
+platformids.dist.darwin_enum_labels.RTE_OSX1012" class="py-name" href="#" onclick="return doclink('link-154', 'RTE_OSX1012', 'link-52');">RTE_OSX1012</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">        <tt id="link-155" class="py-name"><a title="platformids.dist.darwin.RTE_OSX106
+platformids.dist.darwin_enum_labels.RTE_OSX106" class="py-name" href="#" onclick="return doclink('link-155', 'RTE_OSX106', 'link-16');">RTE_OSX106</a></tt><tt class="py-op">:</tt> <tt id="link-156" class="py-name"><a title="platformids.dist.darwin.RTE_OSX106
+platformids.dist.darwin_enum_labels.RTE_OSX106" class="py-name" href="#" onclick="return doclink('link-156', 'RTE_OSX106', 'link-16');">RTE_OSX106</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">        <tt id="link-157" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1010
+platformids.dist.darwin_enum_labels.RTE_OSX1010" class="py-name" href="#" onclick="return doclink('link-157', 'RTE_OSX1010', 'link-40');">RTE_OSX1010</a></tt><tt class="py-op">:</tt> <tt id="link-158" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1010
+platformids.dist.darwin_enum_labels.RTE_OSX1010" class="py-name" href="#" onclick="return doclink('link-158', 'RTE_OSX1010', 'link-40');">RTE_OSX1010</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">         </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">    <tt class="py-op">}</tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line"><tt class="py-op">)</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line"> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line"> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line"><tt class="py-comment">#: mapping of the rte numeric representation to the string value</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line"><tt id="link-159" class="py-name"><a title="platformids.dist.opensuse.num2rte
+platformids.dist.centos.num2rte
+platformids.dist.darwin.num2rte
+platformids.dist.darwin_enum_labels.num2rte
+platformids.dist.rhel_enum_labels.num2rte
+platformids.dist.oraclelinux.num2rte
+platformids.dist.openbsd.num2rte
+platformids.dist.fedora_enum_labels.num2rte
+platformids.dist.netbsd.num2rte
+platformids.dist.windows.num2rte
+platformids.dist.rhel.num2rte
+platformids.dist.freebsd.num2rte
+platformids.dist.solaris.num2rte
+platformids.dist.gentoo.num2rte
+platformids.dist.solaris_enum_labels.num2rte
+platformids.dist.fedora.num2rte
+platformids.dist.openbsd_enum_labels.num2rte
+platformids.dist.debian.num2rte
+platformids.dist.ubuntu.num2rte
+platformids.dist.alpinelinux.num2rte
+platformids.map_enum_labels.num2rte
+platformids.dist.centos_enum_labels.num2rte
+platformids.dist.sles.num2rte
+platformids.num2rte
+platformids.dist.archlinux.num2rte" class="py-name" href="#" onclick="return doclink('link-159', 'num2rte', 'link-5');">num2rte</a></tt><tt class="py-op">.</tt><tt class="py-name">update</tt><tt class="py-op">(</tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">    <tt class="py-op">{</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line">        <tt id="link-160" class="py-name"><a title="platformids.dist.darwin.RTE_OSX
+platformids.dist.darwin_enum_labels.RTE_OSX
+platformids.dist.rhel_enum_labels.RTE_OSX
+platformids.dist.fedora_enum_labels.RTE_OSX
+platformids.dist.solaris_enum_labels.RTE_OSX
+platformids.dist.openbsd_enum_labels.RTE_OSX
+platformids.map_enum_labels.RTE_OSX
+platformids.dist.centos_enum_labels.RTE_OSX
+platformids.RTE_OSX" class="py-name" href="#" onclick="return doclink('link-160', 'RTE_OSX', 'link-3');">RTE_OSX</a></tt><tt class="py-op">:</tt>      <tt class="py-string">&#x27;osx&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">        <tt id="link-161" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1050
+platformids.dist.darwin_enum_labels.RTE_OSX1050" class="py-name" href="#" onclick="return doclink('link-161', 'RTE_OSX1050', 'link-12');">RTE_OSX1050</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;osx1050&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: Leopard      - OSX-10.5.0  - DARWIN-9.0</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line">        <tt id="link-162" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1058
+platformids.dist.darwin_enum_labels.RTE_OSX1058" class="py-name" href="#" onclick="return doclink('link-162', 'RTE_OSX1058', 'link-14');">RTE_OSX1058</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;osx1058&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: Leopard      - OSX-10.5.8  - DARWIN-9.8</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line">        <tt id="link-163" class="py-name"><a title="platformids.dist.darwin.RTE_OSX106
+platformids.dist.darwin_enum_labels.RTE_OSX106" class="py-name" href="#" onclick="return doclink('link-163', 'RTE_OSX106', 'link-16');">RTE_OSX106</a></tt><tt class="py-op">:</tt>   <tt class="py-string">&#x27;osx106&#x27;</tt><tt class="py-op">,</tt>             <tt class="py-comment">#: SnowLeopard  - OSX-10.6    - DARWIN-10</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">        <tt id="link-164" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1060
+platformids.dist.darwin_enum_labels.RTE_OSX1060" class="py-name" href="#" onclick="return doclink('link-164', 'RTE_OSX1060', 'link-18');">RTE_OSX1060</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;osx1060&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: SnowLeopard  - OSX-10.6.0  - DARWIN-10.0</tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line">        <tt id="link-165" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1068
+platformids.dist.darwin_enum_labels.RTE_OSX1068" class="py-name" href="#" onclick="return doclink('link-165', 'RTE_OSX1068', 'link-20');">RTE_OSX1068</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;osx1068&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: SnowLeopard  - OSX-10.6.8  - DARWIN-10.8</tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line">        <tt id="link-166" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1070
+platformids.dist.darwin_enum_labels.RTE_OSX1070" class="py-name" href="#" onclick="return doclink('link-166', 'RTE_OSX1070', 'link-24');">RTE_OSX1070</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;osx1070&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: Lion         - OSX-10.7.0  - DARWIN-11.0.0</tt> </tt>
+<a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line">        <tt id="link-167" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1075
+platformids.dist.darwin_enum_labels.RTE_OSX1075" class="py-name" href="#" onclick="return doclink('link-167', 'RTE_OSX1075', 'link-26');">RTE_OSX1075</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;osx1075&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: Lion         - OSX-10.7.5  - DARWIN-11.4.2</tt> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line">        <tt id="link-168" class="py-name"><a title="platformids.dist.darwin.RTE_OSX108
+platformids.dist.darwin_enum_labels.RTE_OSX108" class="py-name" href="#" onclick="return doclink('link-168', 'RTE_OSX108', 'link-28');">RTE_OSX108</a></tt><tt class="py-op">:</tt>   <tt class="py-string">&#x27;osx108&#x27;</tt><tt class="py-op">,</tt>             <tt class="py-comment">#: MountainLion - OSX-10.8    - DARWIN-12</tt> </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line">        <tt id="link-169" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1080
+platformids.dist.darwin_enum_labels.RTE_OSX1080" class="py-name" href="#" onclick="return doclink('link-169', 'RTE_OSX1080', 'link-30');">RTE_OSX1080</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;osx1080&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: MountainLion - OSX-10.8.0  - DARWIN-12.0.0</tt> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line">        <tt id="link-170" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1085
+platformids.dist.darwin_enum_labels.RTE_OSX1085" class="py-name" href="#" onclick="return doclink('link-170', 'RTE_OSX1085', 'link-32');">RTE_OSX1085</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;osx1085&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: MountainLion - OSX-10.8.5  - DARWIN-12.6.0</tt> </tt>
+<a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line">        <tt id="link-171" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1090
+platformids.dist.darwin_enum_labels.RTE_OSX1090" class="py-name" href="#" onclick="return doclink('link-171', 'RTE_OSX1090', 'link-36');">RTE_OSX1090</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;osx1090&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: Mavericks    - OSX-10.9.0  - DARWIN-13.0.0</tt> </tt>
+<a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line">        <tt id="link-172" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1095
+platformids.dist.darwin_enum_labels.RTE_OSX1095" class="py-name" href="#" onclick="return doclink('link-172', 'RTE_OSX1095', 'link-38');">RTE_OSX1095</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;osx1095&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: Mavericks    - OSX-10.9.5  - DARWIN-13.4.0</tt> </tt>
+<a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line">        <tt id="link-173" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10100
+platformids.dist.darwin_enum_labels.RTE_OSX10100" class="py-name" href="#" onclick="return doclink('link-173', 'RTE_OSX10100', 'link-42');">RTE_OSX10100</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;osx10100&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: Yosemite     - OSX-10.10.0 - DARWIN-14.0.0</tt> </tt>
+<a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line">        <tt id="link-174" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10105
+platformids.dist.darwin_enum_labels.RTE_OSX10105" class="py-name" href="#" onclick="return doclink('link-174', 'RTE_OSX10105', 'link-44');">RTE_OSX10105</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;osx10105&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: Yosemite     - OSX-10.10.5 - DARWIN-14.5.0</tt> </tt>
+<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line">        <tt id="link-175" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10110
+platformids.dist.darwin_enum_labels.RTE_OSX10110" class="py-name" href="#" onclick="return doclink('link-175', 'RTE_OSX10110', 'link-48');">RTE_OSX10110</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;osx10110&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: ElCapitan    - OSX-10.11.0 - DARWIN-15.0.0</tt> </tt>
+<a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line">        <tt id="link-176" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10116
+platformids.dist.darwin_enum_labels.RTE_OSX10116" class="py-name" href="#" onclick="return doclink('link-176', 'RTE_OSX10116', 'link-50');">RTE_OSX10116</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;osx10116&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: ElCapitan    - OSX-10.11.6 - DARWIN-15.6.0</tt> </tt>
+<a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line">        <tt id="link-177" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10124
+platformids.dist.darwin_enum_labels.RTE_OSX10124" class="py-name" href="#" onclick="return doclink('link-177', 'RTE_OSX10124', 'link-54');">RTE_OSX10124</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;osx10124&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: Sierra       - OSX-10.12.4 - DARWIN-16.5.0</tt> </tt>
+<a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line">        <tt id="link-178" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10126
+platformids.dist.darwin_enum_labels.RTE_OSX10126" class="py-name" href="#" onclick="return doclink('link-178', 'RTE_OSX10126', 'link-56');">RTE_OSX10126</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;osx10126&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: Sierra       - OSX-10.12.6 - DARWIN-16.6.0</tt> </tt>
+<a name="L186"></a><tt class="py-lineno">186</tt>  <tt class="py-line">        <tt id="link-179" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10130
+platformids.dist.darwin_enum_labels.RTE_OSX10130" class="py-name" href="#" onclick="return doclink('link-179', 'RTE_OSX10130', 'link-60');">RTE_OSX10130</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;osx10130&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: HighSierra   - OSX-10.13.0 - DARWIN-17.0.0</tt> </tt>
+<a name="L187"></a><tt class="py-lineno">187</tt>  <tt class="py-line">        <tt id="link-180" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10134
+platformids.dist.darwin_enum_labels.RTE_OSX10134" class="py-name" href="#" onclick="return doclink('link-180', 'RTE_OSX10134', 'link-68');">RTE_OSX10134</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;osx10134&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: HighSierra   - OSX-10.13.4 - DARWIN-17.5.0</tt> </tt>
+<a name="L188"></a><tt class="py-lineno">188</tt>  <tt class="py-line">        <tt id="link-181" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10135
+platformids.dist.darwin_enum_labels.RTE_OSX10135" class="py-name" href="#" onclick="return doclink('link-181', 'RTE_OSX10135', 'link-70');">RTE_OSX10135</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;osx10135&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: HighSierra   - OSX-10.13.5 - DARWIN-17.6.0</tt> </tt>
+<a name="L189"></a><tt class="py-lineno">189</tt>  <tt class="py-line">        <tt id="link-182" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10136
+platformids.dist.darwin_enum_labels.RTE_OSX10136" class="py-name" href="#" onclick="return doclink('link-182', 'RTE_OSX10136', 'link-72');">RTE_OSX10136</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;osx10136&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: HighSierra   - OSX-10.13.6 - DARWIN-17.6.0</tt> </tt>
+<a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line">        <tt id="link-183" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10140
+platformids.dist.darwin_enum_labels.RTE_OSX10140" class="py-name" href="#" onclick="return doclink('link-183', 'RTE_OSX10140', 'link-76');">RTE_OSX10140</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;osx10140&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: Mojave       - OSX-10.14.0 - DARWIN-18.0.0</tt> </tt>
+<a name="L191"></a><tt class="py-lineno">191</tt>  <tt class="py-line">        <tt id="link-184" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10140
+platformids.dist.darwin_enum_labels.RTE_OSX10140" class="py-name" href="#" onclick="return doclink('link-184', 'RTE_OSX10140', 'link-76');">RTE_OSX10140</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;osx10141&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: Mojave       - OSX-10.14.1 - DARWIN-18.0.0</tt> </tt>
+<a name="L192"></a><tt class="py-lineno">192</tt>  <tt class="py-line">    <tt class="py-op">}</tt> </tt>
+<a name="L193"></a><tt class="py-lineno">193</tt>  <tt class="py-line"><tt class="py-op">)</tt> </tt>
+<a name="L194"></a><tt class="py-lineno">194</tt>  <tt class="py-line"> </tt>
+<a name="L195"></a><tt class="py-lineno">195</tt>  <tt class="py-line"><tt class="py-comment">#: mapping of the rte numeric representation to the string value</tt> </tt>
+<a name="L196"></a><tt class="py-lineno">196</tt>  <tt class="py-line"><tt id="link-185" class="py-name"><a title="platformids.dist.opensuse.num2pretty
+platformids.dist.centos.num2pretty
+platformids.dist.darwin.num2pretty
+platformids.dist.darwin_enum_labels.num2pretty
+platformids.dist.rhel_enum_labels.num2pretty
+platformids.dist.oraclelinux.num2pretty
+platformids.dist.openbsd.num2pretty
+platformids.dist.fedora_enum_labels.num2pretty
+platformids.dist.netbsd.num2pretty
+platformids.dist.windows.num2pretty
+platformids.dist.rhel.num2pretty
+platformids.dist.freebsd.num2pretty
+platformids.dist.solaris.num2pretty
+platformids.dist.gentoo.num2pretty
+platformids.dist.solaris_enum_labels.num2pretty
+platformids.dist.fedora.num2pretty
+platformids.dist.openbsd_enum_labels.num2pretty
+platformids.dist.debian.num2pretty
+platformids.dist.ubuntu.num2pretty
+platformids.dist.alpinelinux.num2pretty
+platformids.map_enum_labels.num2pretty
+platformids.dist.centos_enum_labels.num2pretty
+platformids.dist.sles.num2pretty
+platformids.num2pretty
+platformids.dist.archlinux.num2pretty" class="py-name" href="#" onclick="return doclink('link-185', 'num2pretty', 'link-6');">num2pretty</a></tt><tt class="py-op">.</tt><tt class="py-name">update</tt><tt class="py-op">(</tt> </tt>
+<a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line">    <tt class="py-op">{</tt> </tt>
+<a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line">        <tt id="link-186" class="py-name"><a title="platformids.dist.darwin.RTE_OSX
+platformids.dist.darwin_enum_labels.RTE_OSX
+platformids.dist.rhel_enum_labels.RTE_OSX
+platformids.dist.fedora_enum_labels.RTE_OSX
+platformids.dist.solaris_enum_labels.RTE_OSX
+platformids.dist.openbsd_enum_labels.RTE_OSX
+platformids.map_enum_labels.RTE_OSX
+platformids.dist.centos_enum_labels.RTE_OSX
+platformids.RTE_OSX" class="py-name" href="#" onclick="return doclink('link-186', 'RTE_OSX', 'link-3');">RTE_OSX</a></tt><tt class="py-op">:</tt>      <tt class="py-string">&#x27;OS-X&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line">        <tt id="link-187" class="py-name"><a title="platformids.dist.darwin.RTE_OSX105
+platformids.dist.darwin_enum_labels.RTE_OSX105" class="py-name" href="#" onclick="return doclink('link-187', 'RTE_OSX105', 'link-10');">RTE_OSX105</a></tt><tt class="py-op">:</tt>   <tt class="py-string">&#x27;Leopard&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L200"></a><tt class="py-lineno">200</tt>  <tt class="py-line">        <tt id="link-188" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1058
+platformids.dist.darwin_enum_labels.RTE_OSX1058" class="py-name" href="#" onclick="return doclink('link-188', 'RTE_OSX1058', 'link-14');">RTE_OSX1058</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;Leopard&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L201"></a><tt class="py-lineno">201</tt>  <tt class="py-line">        <tt id="link-189" class="py-name"><a title="platformids.dist.darwin.RTE_OSX106
+platformids.dist.darwin_enum_labels.RTE_OSX106" class="py-name" href="#" onclick="return doclink('link-189', 'RTE_OSX106', 'link-16');">RTE_OSX106</a></tt><tt class="py-op">:</tt>   <tt class="py-string">&#x27;SnowLeopard&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L202"></a><tt class="py-lineno">202</tt>  <tt class="py-line">        <tt id="link-190" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1060
+platformids.dist.darwin_enum_labels.RTE_OSX1060" class="py-name" href="#" onclick="return doclink('link-190', 'RTE_OSX1060', 'link-18');">RTE_OSX1060</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;SnowLeopard&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L203"></a><tt class="py-lineno">203</tt>  <tt class="py-line">        <tt id="link-191" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1068
+platformids.dist.darwin_enum_labels.RTE_OSX1068" class="py-name" href="#" onclick="return doclink('link-191', 'RTE_OSX1068', 'link-20');">RTE_OSX1068</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;SnowLeopard&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L204"></a><tt class="py-lineno">204</tt>  <tt class="py-line">        <tt id="link-192" class="py-name"><a title="platformids.dist.darwin.RTE_OSX107
+platformids.dist.darwin_enum_labels.RTE_OSX107" class="py-name" href="#" onclick="return doclink('link-192', 'RTE_OSX107', 'link-22');">RTE_OSX107</a></tt><tt class="py-op">:</tt>   <tt class="py-string">&#x27;Lion&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line">        <tt id="link-193" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1070
+platformids.dist.darwin_enum_labels.RTE_OSX1070" class="py-name" href="#" onclick="return doclink('link-193', 'RTE_OSX1070', 'link-24');">RTE_OSX1070</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;Lion&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L206"></a><tt class="py-lineno">206</tt>  <tt class="py-line">        <tt id="link-194" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1075
+platformids.dist.darwin_enum_labels.RTE_OSX1075" class="py-name" href="#" onclick="return doclink('link-194', 'RTE_OSX1075', 'link-26');">RTE_OSX1075</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;Lion&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L207"></a><tt class="py-lineno">207</tt>  <tt class="py-line">        <tt id="link-195" class="py-name"><a title="platformids.dist.darwin.RTE_OSX108
+platformids.dist.darwin_enum_labels.RTE_OSX108" class="py-name" href="#" onclick="return doclink('link-195', 'RTE_OSX108', 'link-28');">RTE_OSX108</a></tt><tt class="py-op">:</tt>   <tt class="py-string">&#x27;MountainLion&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L208"></a><tt class="py-lineno">208</tt>  <tt class="py-line">        <tt id="link-196" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1080
+platformids.dist.darwin_enum_labels.RTE_OSX1080" class="py-name" href="#" onclick="return doclink('link-196', 'RTE_OSX1080', 'link-30');">RTE_OSX1080</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;MountainLion&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L209"></a><tt class="py-lineno">209</tt>  <tt class="py-line">        <tt id="link-197" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1085
+platformids.dist.darwin_enum_labels.RTE_OSX1085" class="py-name" href="#" onclick="return doclink('link-197', 'RTE_OSX1085', 'link-32');">RTE_OSX1085</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;MountainLion&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L210"></a><tt class="py-lineno">210</tt>  <tt class="py-line">        <tt id="link-198" class="py-name"><a title="platformids.dist.darwin.RTE_OSX109
+platformids.dist.darwin_enum_labels.RTE_OSX109" class="py-name" href="#" onclick="return doclink('link-198', 'RTE_OSX109', 'link-34');">RTE_OSX109</a></tt><tt class="py-op">:</tt>   <tt class="py-string">&#x27;Mavericks&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L211"></a><tt class="py-lineno">211</tt>  <tt class="py-line">        <tt id="link-199" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1090
+platformids.dist.darwin_enum_labels.RTE_OSX1090" class="py-name" href="#" onclick="return doclink('link-199', 'RTE_OSX1090', 'link-36');">RTE_OSX1090</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;Mavericks&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L212"></a><tt class="py-lineno">212</tt>  <tt class="py-line">        <tt id="link-200" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1095
+platformids.dist.darwin_enum_labels.RTE_OSX1095" class="py-name" href="#" onclick="return doclink('link-200', 'RTE_OSX1095', 'link-38');">RTE_OSX1095</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;Mavericks&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L213"></a><tt class="py-lineno">213</tt>  <tt class="py-line">        <tt id="link-201" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1010
+platformids.dist.darwin_enum_labels.RTE_OSX1010" class="py-name" href="#" onclick="return doclink('link-201', 'RTE_OSX1010', 'link-40');">RTE_OSX1010</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;Yosemite&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L214"></a><tt class="py-lineno">214</tt>  <tt class="py-line">        <tt id="link-202" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10100
+platformids.dist.darwin_enum_labels.RTE_OSX10100" class="py-name" href="#" onclick="return doclink('link-202', 'RTE_OSX10100', 'link-42');">RTE_OSX10100</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;Yosemite&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L215"></a><tt class="py-lineno">215</tt>  <tt class="py-line">        <tt id="link-203" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10105
+platformids.dist.darwin_enum_labels.RTE_OSX10105" class="py-name" href="#" onclick="return doclink('link-203', 'RTE_OSX10105', 'link-44');">RTE_OSX10105</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;Yosemite&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L216"></a><tt class="py-lineno">216</tt>  <tt class="py-line">        <tt id="link-204" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1011
+platformids.dist.darwin_enum_labels.RTE_OSX1011" class="py-name" href="#" onclick="return doclink('link-204', 'RTE_OSX1011', 'link-46');">RTE_OSX1011</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;ElCapitan&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L217"></a><tt class="py-lineno">217</tt>  <tt class="py-line">        <tt id="link-205" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10110
+platformids.dist.darwin_enum_labels.RTE_OSX10110" class="py-name" href="#" onclick="return doclink('link-205', 'RTE_OSX10110', 'link-48');">RTE_OSX10110</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;ElCapitan&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L218"></a><tt class="py-lineno">218</tt>  <tt class="py-line">        <tt id="link-206" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10116
+platformids.dist.darwin_enum_labels.RTE_OSX10116" class="py-name" href="#" onclick="return doclink('link-206', 'RTE_OSX10116', 'link-50');">RTE_OSX10116</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;ElCapitan&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L219"></a><tt class="py-lineno">219</tt>  <tt class="py-line">        <tt id="link-207" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1012
+platformids.dist.darwin_enum_labels.RTE_OSX1012" class="py-name" href="#" onclick="return doclink('link-207', 'RTE_OSX1012', 'link-52');">RTE_OSX1012</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;Sierra&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L220"></a><tt class="py-lineno">220</tt>  <tt class="py-line">        <tt id="link-208" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10124
+platformids.dist.darwin_enum_labels.RTE_OSX10124" class="py-name" href="#" onclick="return doclink('link-208', 'RTE_OSX10124', 'link-54');">RTE_OSX10124</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;Sierra&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L221"></a><tt class="py-lineno">221</tt>  <tt class="py-line">        <tt id="link-209" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10126
+platformids.dist.darwin_enum_labels.RTE_OSX10126" class="py-name" href="#" onclick="return doclink('link-209', 'RTE_OSX10126', 'link-56');">RTE_OSX10126</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;Sierra&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L222"></a><tt class="py-lineno">222</tt>  <tt class="py-line">        <tt id="link-210" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1013
+platformids.dist.darwin_enum_labels.RTE_OSX1013" class="py-name" href="#" onclick="return doclink('link-210', 'RTE_OSX1013', 'link-58');">RTE_OSX1013</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;HighSierra&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L223"></a><tt class="py-lineno">223</tt>  <tt class="py-line">        <tt id="link-211" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10130
+platformids.dist.darwin_enum_labels.RTE_OSX10130" class="py-name" href="#" onclick="return doclink('link-211', 'RTE_OSX10130', 'link-60');">RTE_OSX10130</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;HighSierra&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L224"></a><tt class="py-lineno">224</tt>  <tt class="py-line">        <tt id="link-212" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10134
+platformids.dist.darwin_enum_labels.RTE_OSX10134" class="py-name" href="#" onclick="return doclink('link-212', 'RTE_OSX10134', 'link-68');">RTE_OSX10134</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;HighSierra&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L225"></a><tt class="py-lineno">225</tt>  <tt class="py-line">        <tt id="link-213" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10136
+platformids.dist.darwin_enum_labels.RTE_OSX10136" class="py-name" href="#" onclick="return doclink('link-213', 'RTE_OSX10136', 'link-72');">RTE_OSX10136</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;HighSierra&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L226"></a><tt class="py-lineno">226</tt>  <tt class="py-line">        <tt id="link-214" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1014
+platformids.dist.darwin_enum_labels.RTE_OSX1014" class="py-name" href="#" onclick="return doclink('link-214', 'RTE_OSX1014', 'link-74');">RTE_OSX1014</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;Mojave&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L227"></a><tt class="py-lineno">227</tt>  <tt class="py-line">        <tt id="link-215" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10140
+platformids.dist.darwin_enum_labels.RTE_OSX10140" class="py-name" href="#" onclick="return doclink('link-215', 'RTE_OSX10140', 'link-76');">RTE_OSX10140</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;Mojave&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L228"></a><tt class="py-lineno">228</tt>  <tt class="py-line">    <tt class="py-op">}</tt> </tt>
+<a name="L229"></a><tt class="py-lineno">229</tt>  <tt class="py-line"><tt class="py-op">)</tt> </tt>
+<a name="L230"></a><tt class="py-lineno">230</tt>  <tt class="py-line"> </tt>
+<a name="L231"></a><tt class="py-lineno">231</tt>  <tt class="py-line"><tt class="py-comment">#: official version strings</tt> </tt>
+<a name="L232"></a><tt class="py-lineno">232</tt>  <tt class="py-line"><tt id="link-216" class="py-name" targets="Variable platformids.dist.darwin.versions=platformids.dist.darwin-module.html#versions,Variable platformids.dist.darwin_enum_labels.versions=platformids.dist.darwin_enum_labels-module.html#versions,Variable platformids.dist.windows.versions=platformids.dist.windows-module.html#versions"><a title="platformids.dist.darwin.versions
+platformids.dist.darwin_enum_labels.versions
+platformids.dist.windows.versions" class="py-name" href="#" onclick="return doclink('link-216', 'versions', 'link-216');">versions</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt> </tt>
+<a name="L233"></a><tt class="py-lineno">233</tt>  <tt class="py-line">    <tt id="link-217" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1050
+platformids.dist.darwin_enum_labels.RTE_OSX1050" class="py-name" href="#" onclick="return doclink('link-217', 'RTE_OSX1050', 'link-12');">RTE_OSX1050</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;10.5.0&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: Leopard      - OSX-10.5.0  - DARWIN-9.0</tt> </tt>
+<a name="L234"></a><tt class="py-lineno">234</tt>  <tt class="py-line">    <tt id="link-218" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1058
+platformids.dist.darwin_enum_labels.RTE_OSX1058" class="py-name" href="#" onclick="return doclink('link-218', 'RTE_OSX1058', 'link-14');">RTE_OSX1058</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;10.5.8&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: Leopard      - OSX-10.5.8  - DARWIN-9.8</tt> </tt>
+<a name="L235"></a><tt class="py-lineno">235</tt>  <tt class="py-line">    <tt id="link-219" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1060
+platformids.dist.darwin_enum_labels.RTE_OSX1060" class="py-name" href="#" onclick="return doclink('link-219', 'RTE_OSX1060', 'link-18');">RTE_OSX1060</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;10.6.0&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: SnowLeopard  - OSX-10.6.0  - DARWIN-10.0</tt> </tt>
+<a name="L236"></a><tt class="py-lineno">236</tt>  <tt class="py-line">    <tt id="link-220" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1068
+platformids.dist.darwin_enum_labels.RTE_OSX1068" class="py-name" href="#" onclick="return doclink('link-220', 'RTE_OSX1068', 'link-20');">RTE_OSX1068</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;10.6.8&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: SnowLeopard  - OSX-10.6.8  - DARWIN-10.8</tt> </tt>
+<a name="L237"></a><tt class="py-lineno">237</tt>  <tt class="py-line">    <tt id="link-221" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1070
+platformids.dist.darwin_enum_labels.RTE_OSX1070" class="py-name" href="#" onclick="return doclink('link-221', 'RTE_OSX1070', 'link-24');">RTE_OSX1070</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;10.7.0&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: Lion         - OSX-10.7.0  - DARWIN-11.0.0</tt> </tt>
+<a name="L238"></a><tt class="py-lineno">238</tt>  <tt class="py-line">    <tt id="link-222" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1075
+platformids.dist.darwin_enum_labels.RTE_OSX1075" class="py-name" href="#" onclick="return doclink('link-222', 'RTE_OSX1075', 'link-26');">RTE_OSX1075</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;10.7.5&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: Lion         - OSX-10.7.5  - DARWIN-11.4.2</tt> </tt>
+<a name="L239"></a><tt class="py-lineno">239</tt>  <tt class="py-line">    <tt id="link-223" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1080
+platformids.dist.darwin_enum_labels.RTE_OSX1080" class="py-name" href="#" onclick="return doclink('link-223', 'RTE_OSX1080', 'link-30');">RTE_OSX1080</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;10.8.0&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: MountainLion - OSX-10.8.0  - DARWIN-12.0.0</tt> </tt>
+<a name="L240"></a><tt class="py-lineno">240</tt>  <tt class="py-line">    <tt id="link-224" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1085
+platformids.dist.darwin_enum_labels.RTE_OSX1085" class="py-name" href="#" onclick="return doclink('link-224', 'RTE_OSX1085', 'link-32');">RTE_OSX1085</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;10.8.5&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: MountainLion - OSX-10.8.5  - DARWIN-12.6.0</tt> </tt>
+<a name="L241"></a><tt class="py-lineno">241</tt>  <tt class="py-line">    <tt id="link-225" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1090
+platformids.dist.darwin_enum_labels.RTE_OSX1090" class="py-name" href="#" onclick="return doclink('link-225', 'RTE_OSX1090', 'link-36');">RTE_OSX1090</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;10.9.0&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: Mavericks    - OSX-10.9.0  - DARWIN-13.0.0</tt> </tt>
+<a name="L242"></a><tt class="py-lineno">242</tt>  <tt class="py-line">    <tt id="link-226" class="py-name"><a title="platformids.dist.darwin.RTE_OSX1095
+platformids.dist.darwin_enum_labels.RTE_OSX1095" class="py-name" href="#" onclick="return doclink('link-226', 'RTE_OSX1095', 'link-38');">RTE_OSX1095</a></tt><tt class="py-op">:</tt>  <tt class="py-string">&#x27;10.9.5&#x27;</tt><tt class="py-op">,</tt>            <tt class="py-comment">#: Mavericks    - OSX-10.9.5  - DARWIN-13.4.0</tt> </tt>
+<a name="L243"></a><tt class="py-lineno">243</tt>  <tt class="py-line">    <tt id="link-227" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10100
+platformids.dist.darwin_enum_labels.RTE_OSX10100" class="py-name" href="#" onclick="return doclink('link-227', 'RTE_OSX10100', 'link-42');">RTE_OSX10100</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;10.10.0&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: Yosemite     - OSX-10.10.0 - DARWIN-14.0.0</tt> </tt>
+<a name="L244"></a><tt class="py-lineno">244</tt>  <tt class="py-line">    <tt id="link-228" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10105
+platformids.dist.darwin_enum_labels.RTE_OSX10105" class="py-name" href="#" onclick="return doclink('link-228', 'RTE_OSX10105', 'link-44');">RTE_OSX10105</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;10.10.5&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: Yosemite     - OSX-10.10.5 - DARWIN-14.5.0</tt> </tt>
+<a name="L245"></a><tt class="py-lineno">245</tt>  <tt class="py-line">    <tt id="link-229" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10110
+platformids.dist.darwin_enum_labels.RTE_OSX10110" class="py-name" href="#" onclick="return doclink('link-229', 'RTE_OSX10110', 'link-48');">RTE_OSX10110</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;10.11.0&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: ElCapitan    - OSX-10.11.0 - DARWIN-15.0.0</tt> </tt>
+<a name="L246"></a><tt class="py-lineno">246</tt>  <tt class="py-line">    <tt id="link-230" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10116
+platformids.dist.darwin_enum_labels.RTE_OSX10116" class="py-name" href="#" onclick="return doclink('link-230', 'RTE_OSX10116', 'link-50');">RTE_OSX10116</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;10.11.6&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: ElCapitan    - OSX-10.11.6 - DARWIN-15.6.0</tt> </tt>
+<a name="L247"></a><tt class="py-lineno">247</tt>  <tt class="py-line">    <tt id="link-231" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10124
+platformids.dist.darwin_enum_labels.RTE_OSX10124" class="py-name" href="#" onclick="return doclink('link-231', 'RTE_OSX10124', 'link-54');">RTE_OSX10124</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;10.12.4&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: Sierra       - OSX-10.12.4 - DARWIN-16.5.0</tt> </tt>
+<a name="L248"></a><tt class="py-lineno">248</tt>  <tt class="py-line">    <tt id="link-232" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10126
+platformids.dist.darwin_enum_labels.RTE_OSX10126" class="py-name" href="#" onclick="return doclink('link-232', 'RTE_OSX10126', 'link-56');">RTE_OSX10126</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;10.12.6&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: Sierra       - OSX-10.12.6 - DARWIN-16.6.0</tt> </tt>
+<a name="L249"></a><tt class="py-lineno">249</tt>  <tt class="py-line">    <tt id="link-233" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10130
+platformids.dist.darwin_enum_labels.RTE_OSX10130" class="py-name" href="#" onclick="return doclink('link-233', 'RTE_OSX10130', 'link-60');">RTE_OSX10130</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;10.13.0&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: HighSierra   - OSX-10.13.0 - DARWIN-17.0.0</tt> </tt>
+<a name="L250"></a><tt class="py-lineno">250</tt>  <tt class="py-line">    <tt id="link-234" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10134
+platformids.dist.darwin_enum_labels.RTE_OSX10134" class="py-name" href="#" onclick="return doclink('link-234', 'RTE_OSX10134', 'link-68');">RTE_OSX10134</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;10.13.4&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: HighSierra   - OSX-10.13.4 - DARWIN-17.5.0</tt> </tt>
+<a name="L251"></a><tt class="py-lineno">251</tt>  <tt class="py-line">    <tt id="link-235" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10135
+platformids.dist.darwin_enum_labels.RTE_OSX10135" class="py-name" href="#" onclick="return doclink('link-235', 'RTE_OSX10135', 'link-70');">RTE_OSX10135</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;10.13.5&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: HighSierra   - OSX-10.13.5 - DARWIN-17.6.0</tt> </tt>
+<a name="L252"></a><tt class="py-lineno">252</tt>  <tt class="py-line">    <tt id="link-236" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10136
+platformids.dist.darwin_enum_labels.RTE_OSX10136" class="py-name" href="#" onclick="return doclink('link-236', 'RTE_OSX10136', 'link-72');">RTE_OSX10136</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;10.13.6&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: HighSierra   - OSX-10.13.6 - DARWIN-17.6.0</tt> </tt>
+<a name="L253"></a><tt class="py-lineno">253</tt>  <tt class="py-line">    <tt id="link-237" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10140
+platformids.dist.darwin_enum_labels.RTE_OSX10140" class="py-name" href="#" onclick="return doclink('link-237', 'RTE_OSX10140', 'link-76');">RTE_OSX10140</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;10.14.0&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: Mojave       - OSX-10.14.0 - DARWIN-18.0.0</tt> </tt>
+<a name="L254"></a><tt class="py-lineno">254</tt>  <tt class="py-line">    <tt id="link-238" class="py-name"><a title="platformids.dist.darwin.RTE_OSX10140
+platformids.dist.darwin_enum_labels.RTE_OSX10140" class="py-name" href="#" onclick="return doclink('link-238', 'RTE_OSX10140', 'link-76');">RTE_OSX10140</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;10.14.1&#x27;</tt><tt class="py-op">,</tt>           <tt class="py-comment">#: Mojave       - OSX-10.14.1 - DARWIN-18.0.0</tt> </tt>
+<a name="L255"></a><tt class="py-lineno">255</tt>  <tt class="py-line"><tt class="py-op">}</tt> </tt>
+<a name="L256"></a><tt class="py-lineno">256</tt>  <tt class="py-line"> </tt>
+<a name="L257"></a><tt class="py-lineno">257</tt>  <tt class="py-line"> </tt>
+<a name="L258"></a><tt class="py-lineno">258</tt>  <tt class="py-line"> </tt>
+<a name="L259"></a><tt class="py-lineno">259</tt>  <tt class="py-line"><tt id="link-239" class="py-name" targets="Package platformids.dist=platformids.dist-module.html,Variable platformids.dist.opensuse.dist=platformids.dist.opensuse-module.html#dist,Variable platformids.dist.centos.dist=platformids.dist.centos-module.html#dist,Variable platformids.net.openwrt.dist=platformids.net.openwrt-module.html#dist,Variable platformids.embed.armbian.dist=platformids.embed.armbian-module.html#dist,Variable platformids.dist.darwin.dist=platformids.dist.darwin-module.html#dist,Variable platformids.dist.darwin_enum_labels.dist=platformids.dist.darwin_enum_labels-module.html#dist,Variable platformids.dist.rhel_enum_labels.dist=platformids.dist.rhel_enum_labels-module.html#dist,Variable platformids.dist.cygwin.dist=platformids.dist.cygwin-module.html#dist,Variable platformids.dist.oraclelinux.dist=platformids.dist.oraclelinux-module.html#dist,Variable platformids.dist.openbsd.dist=platformids.dist.openbsd-module.html#dist,Variable platformids.dist.fedora_enum_labels.dist=platformids.dist.fedora_enum_labels-module.html#dist,Variable platformids.dist.netbsd.dist=platformids.dist.netbsd-module.html#dist,Variable platformids.dist.windows.dist=platformids.dist.windows-module.html#dist,Variable platformids.dist.rhel.dist=platformids.dist.rhel-module.html#dist,Variable platformids.net.pfsense.dist=platformids.net.pfsense-module.html#dist,Variable platformids.dist.freebsd.dist=platformids.dist.freebsd-module.html#dist,Variable platformids.embed.raspbian.dist=platformids.embed.raspbian-module.html#dist,Variable platformids.dist.solaris.dist=platformids.dist.solaris-module.html#dist,Variable platformids.dist.gentoo.dist=platformids.dist.gentoo-module.html#dist,Variable platformids.dist.solaris_enum_labels.dist=platformids.dist.solaris_enum_labels-module.html#dist,Variable platformids.dist.fedora.dist=platformids.dist.fedora-module.html#dist,Variable platformids.dist.openbsd_enum_labels.dist=platformids.dist.openbsd_enum_labels-module.html#dist,Variable platformids.dist.debian.dist=platformids.dist.debian-module.html#dist,Variable platformids.dist.ubuntu.dist=platformids.dist.ubuntu-module.html#dist,Variable platformids.dist.alpinelinux.dist=platformids.dist.alpinelinux-module.html#dist,Variable platformids.dist.hpux.dist=platformids.dist.hpux-module.html#dist,Variable platformids.dist.centos_enum_labels.dist=platformids.dist.centos_enum_labels-module.html#dist,Variable platformids.net.kali.dist=platformids.net.kali-module.html#dist,Variable platformids.dist.sles.dist=platformids.dist.sles-module.html#dist,Variable platformids.dist.archlinux.dist=platformids.dist.archlinux-module.html#dist"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-239', 'dist', 'link-239');">dist</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">&#x27;&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;OS-X-&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;OS-X&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;&#x27;</tt><tt class="py-op">]</tt> </tt>
+<a name="L260"></a><tt class="py-lineno">260</tt>  <tt class="py-line"> </tt>
+<a name="L261"></a><tt class="py-lineno">261</tt>  <tt class="py-line"><tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L262"></a><tt class="py-lineno">262</tt>  <tt class="py-line">     </tt>
+<a name="L263"></a><tt class="py-lineno">263</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">platform</tt><tt class="py-op">.</tt><tt class="py-name">startswith</tt><tt class="py-op">(</tt><tt class="py-string">&#x27;darwin&#x27;</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L264"></a><tt class="py-lineno">264</tt>  <tt class="py-line">        <tt class="py-comment"># OS-X - CPython, PyPy, IPython</tt> </tt>
+<a name="L265"></a><tt class="py-lineno">265</tt>  <tt class="py-line">        <tt id="link-240" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-240', 'dist', 'link-239');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">platform</tt><tt class="py-op">.</tt><tt class="py-name">release</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L266"></a><tt class="py-lineno">266</tt>  <tt class="py-line">        <tt id="link-241" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-241', 'dist', 'link-239');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">5</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-string">&#x27;osx&#x27;</tt> </tt>
+<a name="L267"></a><tt class="py-lineno">267</tt>  <tt class="py-line">     </tt>
+<a name="L268"></a><tt class="py-lineno">268</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">exists</tt><tt class="py-op">(</tt><tt class="py-string">&#x27;/System/Library/Components/AppleScript.component&#x27;</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L269"></a><tt class="py-lineno">269</tt>  <tt class="py-line">        <tt class="py-comment"># OS-X - match on Jython</tt> </tt>
+<a name="L270"></a><tt class="py-lineno">270</tt>  <tt class="py-line">        <tt class="py-name">x</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">popen</tt><tt class="py-op">(</tt><tt class="py-string">&quot;sysctl kern.ostype kern.osrelease&quot;</tt><tt class="py-op">,</tt> <tt class="py-name">mode</tt><tt class="py-op">=</tt><tt class="py-string">&#x27;r&#x27;</tt><tt class="py-op">)</tt> </tt>
+<a name="L271"></a><tt class="py-lineno">271</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">x</tt><tt class="py-op">.</tt><tt class="py-name">readline</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">endswith</tt><tt class="py-op">(</tt><tt class="py-string">&quot;Darwin\n&quot;</tt><tt class="py-op">)</tt>       <tt class="py-op">:</tt> </tt>
+<a name="L272"></a><tt class="py-lineno">272</tt>  <tt class="py-line">            <tt id="link-242" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-242', 'dist', 'link-239');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">re</tt><tt class="py-op">.</tt><tt class="py-name">sub</tt><tt class="py-op">(</tt><tt class="py-string">r&#x27;[^=]*=([0-9.]*).*$&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">r&#x27;\1&#x27;</tt><tt class="py-op">,</tt> <tt class="py-name">x</tt><tt class="py-op">.</tt><tt class="py-name">readline</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L273"></a><tt class="py-lineno">273</tt>  <tt class="py-line">            <tt id="link-243" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-243', 'dist', 'link-239');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">5</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-string">&#x27;osx&#x27;</tt> </tt>
+<a name="L274"></a><tt class="py-lineno">274</tt>  <tt class="py-line">        <tt class="py-name">x</tt><tt class="py-op">.</tt><tt class="py-name">close</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L275"></a><tt class="py-lineno">275</tt>  <tt class="py-line">     </tt>
+<a name="L276"></a><tt class="py-lineno">276</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-244" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-244', 'dist', 'link-239');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">5</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">&#x27;osx&#x27;</tt><tt class="py-op">:</tt> </tt>
+<a name="L277"></a><tt class="py-lineno">277</tt>  <tt class="py-line">        <tt id="link-245" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-245', 'dist', 'link-239');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">4</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt id="link-246" class="py-name"><a title="platformids.decode_version_str_to_segments" class="py-name" href="#" onclick="return doclink('link-246', 'decode_version_str_to_segments', 'link-7');">decode_version_str_to_segments</a></tt><tt class="py-op">(</tt><tt id="link-247" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-247', 'dist', 'link-239');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L278"></a><tt class="py-lineno">278</tt>  <tt class="py-line">        <tt id="link-248" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-248', 'dist', 'link-239');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-string">&#x27;osx%d%d%d&#x27;</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-249" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-249', 'dist', 'link-239');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">4</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt id="link-250" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-250', 'dist', 'link-239');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">4</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt id="link-251" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-251', 'dist', 'link-239');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">4</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-number">2</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L279"></a><tt class="py-lineno">279</tt>  <tt class="py-line">        <tt id="link-252" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-252', 'dist', 'link-239');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">2</tt><tt class="py-op">]</tt> <tt class="py-op">+=</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt id="link-253" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-253', 'dist', 'link-239');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L280"></a><tt class="py-lineno">280</tt>  <tt class="py-line"> </tt>
+<a name="L281"></a><tt class="py-lineno">281</tt>  <tt class="py-line"> </tt>
+<a name="L282"></a><tt class="py-lineno">282</tt>  <tt class="py-line"><tt class="py-keyword">except</tt> <tt id="link-254" class="py-name"><a title="platformids.dist.opensuse.PlatformIDsFileCheck
+platformids.dist.centos.PlatformIDsFileCheck
+platformids.dist.darwin.PlatformIDsFileCheck
+platformids.dist.darwin_enum_labels.PlatformIDsFileCheck
+platformids.dist.rhel_enum_labels.PlatformIDsFileCheck
+platformids.dist.oraclelinux.PlatformIDsFileCheck
+platformids.dist.openbsd.PlatformIDsFileCheck
+platformids.dist.fedora_enum_labels.PlatformIDsFileCheck
+platformids.dist.netbsd.PlatformIDsFileCheck
+platformids.dist.windows.PlatformIDsFileCheck
+platformids.dist.rhel.PlatformIDsFileCheck
+platformids.dist.freebsd.PlatformIDsFileCheck
+platformids.dist.solaris.PlatformIDsFileCheck
+platformids.dist.gentoo.PlatformIDsFileCheck
+platformids.dist.solaris_enum_labels.PlatformIDsFileCheck
+platformids.dist.fedora.PlatformIDsFileCheck
+platformids.dist.openbsd_enum_labels.PlatformIDsFileCheck
+platformids.dist.debian.PlatformIDsFileCheck
+platformids.dist.ubuntu.PlatformIDsFileCheck
+platformids.dist.alpinelinux.PlatformIDsFileCheck
+platformids.map_enum_labels.PlatformIDsFileCheck
+platformids.dist.centos_enum_labels.PlatformIDsFileCheck
+platformids.dist.sles.PlatformIDsFileCheck
+platformids.PlatformIDsFileCheck
+platformids.dist.archlinux.PlatformIDsFileCheck" class="py-name" href="#" onclick="return doclink('link-254', 'PlatformIDsFileCheck', 'link-8');">PlatformIDsFileCheck</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L283"></a><tt class="py-lineno">283</tt>  <tt class="py-line">    <tt class="py-comment"># not on OS-X platform, so scan will fail</tt> </tt>
+<a name="L284"></a><tt class="py-lineno">284</tt>  <tt class="py-line">    <tt class="py-keyword">pass</tt>     </tt>
+<a name="L285"></a><tt class="py-lineno">285</tt>  <tt class="py-line"> </tt>
+<a name="L286"></a><tt class="py-lineno">286</tt>  <tt class="py-line"> </tt>
+<a name="L287"></a><tt class="py-lineno">287</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt id="link-255" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-255', 'dist', 'link-239');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">5</tt><tt class="py-op">]</tt> <tt class="py-op">!=</tt> <tt class="py-string">&#x27;osx&#x27;</tt><tt class="py-op">:</tt> </tt>
+<a name="L288"></a><tt class="py-lineno">288</tt>  <tt class="py-line">    <tt class="py-comment"># does not actually match OS-X </tt> </tt>
+<a name="L289"></a><tt class="py-lineno">289</tt>  <tt class="py-line">    <tt id="link-256" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-256', 'dist', 'link-239');">dist</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">&#x27;osx&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;0.0.0&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;OS-X-0.0.0&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;OS-X&#x27;</tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;osx&#x27;</tt><tt class="py-op">]</tt> </tt>
+<a name="L290"></a><tt class="py-lineno">290</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link - Main Document -->
+      <th>&nbsp;&nbsp;&nbsp;<a target="_top"
+        href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th>&nbsp;&nbsp;&nbsp;<a target="_top"
+        href="../index_part_apiref_scaled.html">Top</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th>
+          &nbsp;&nbsp;&nbsp;
+          <a target="_parent" href="frames.html">&larr;</a>
+          &nbsp;
+      <th>
+      <th>
+          &nbsp;
+          <a target="_parent" href="frames-right.html">&rarr;</a>
+          &nbsp;&nbsp;&nbsp;
+      </th>
+
+  <!-- Overview link - api reference-->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="platformids-module.html">Overview</a>&nbsp;&nbsp;&nbsp;</th>
+
+
+  <!-- Module -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Module</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Class -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="class-tree.html">Class</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+  <!--
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Tree</a>&nbsp;&nbsp;&nbsp;</th>
+  -->
+  
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr>
+              <th>&nbsp;&nbsp;&nbsp;<a
+                href="http://pypi.python.org/pypi/setupdocx">@www</a>&nbsp;&nbsp;&nbsp;</th>
+          </tr></table></th>
+
+  <!-- About link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="about.html">About</a>&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+</table>
+<table class="footTable" border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+        Copyright(C) 2019 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="https://arnocan.wordpress.com"
+        >https://arnocan.wordpress.com</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="lest" class="footer">
+    Generated by Epydoc 4.0.4 / Python-3.8 / fedora27 on Sun Dec  8 04:31:52 2019
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html><head><title>Epydoc Redirect Page</title>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="pragma" content="no-cache" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+<!--
+var pages = ["platformids.dist.nt.windows_subprocess_reg_exe.PlatformIDsReadRegExeError-c", "platformids.dist.nt.windows_subprocess_reg_exe.RegistryByExe-c", "platformids.dist.nt.windows_subprocess_reg_exe-m", "platformids.dist.nt.windows_kernel32dll-m", "platformids.dist.nt.windows_enum_labels-m", "platformids.dist.nt.windows_products-m", "platformids.optionparser_platformids-m", "platformids.dist.solaris_enum_labels-m", "platformids.dist.openbsd_enum_labels-m", "platformids.dist.darwin_enum_labels-m", "platformids.dist.fedora_enum_labels-m", "platformids.dist.debian_enum_labels-m", "platformids.dist.centos_enum_labels-m", "platformids.dist.rhel_enum_labels-m", "platformids.embed.circuitpython-m", "platformids.embed.micropython-m", "platformids.custom.slackware-m", "platformids.custom.blackarch-m", "platformids.custom.dragonbsd-m", "platformids.dist.oraclelinux-m", "platformids.custom.linuxmint-m", "platformids.dist.alpinelinux-m", "platformids.custom.ghostbsd-m", "platformids.custom.nomadbsd-m", "platformids.map_enum_labels-m", "platformids.embed.raspbian-m", "platformids.custom.reactos-m", "platformids.dist.archlinux-m", "platformids.dist.opensuse-m", "platformids.embed.armbian-m", "platformids.custom.minix2-m", "platformids.custom.pentoo-m", "platformids.custom.trueos-m", "platformids.custom.parrot-m", "platformids.dist.openbsd-m", "platformids.dist.windows-m", "platformids.dist.freebsd-m", "platformids.dist.solaris-m", "platformids.custom.minix-m", "platformids.dist.centos-m", "platformids.net.openwrt-m", "platformids.dist.darwin-m", "platformids.dist.cygwin-m", "platformids.dist.netbsd-m", "platformids.net.pfsense-m", "platformids.dist.gentoo-m", "platformids.dist.fedora-m", "platformids.dist.debian-m", "platformids.dist.ubuntu-m", "platformids.dist.posix-m", "platformids.dist.dummy-m", "platformids.custom.aix-m", "platformids.dist.pwemu-m", "platformids.dist.rhel-m", "platformids.platforms-m", "platformids.dist.pemu-m", "platformids.dist.hpux-m", "platformids.dist.sles-m", "platformids.__main__-m", "platformids.net.kali-m", "platformids.dist.nt-m", "platformids.custom-m", "platformids.embed-m", "platformids.dist-m", "platformids.net-m", "platformids-m"];
+var dottedName = get_anchor();
+if (dottedName) {
+    var target = redirect_url(dottedName);
+    if (target) window.location.replace(target);
+}
+// -->
+</script>
+
+<h3>Epydoc Auto-redirect page</h3>
+
+<p>When javascript is enabled, this page will redirect URLs of
+the form <tt>redirect.html#<i>dotted.name</i></tt> to the
+documentation for the object with the given fully-qualified
+dotted name.</p>
+<p><a id="message"> &nbsp; </a></p>
+
+<script type="text/javascript">
+<!--
+if (dottedName) {
+    var msg = document.getElementById("message");
+    msg.innerHTML = "No documentation found for <tt>"+
+                    dottedName+"</tt>";
+}
+// -->
+</script>
+
+</body>
+</html>

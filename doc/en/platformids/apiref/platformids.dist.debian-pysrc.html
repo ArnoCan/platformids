@@ -1,0 +1,1310 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>platformids.dist.debian</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link - Main Document -->
+      <th>&nbsp;&nbsp;&nbsp;<a target="_top"
+        href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th>&nbsp;&nbsp;&nbsp;<a target="_top"
+        href="../index_part_apiref_scaled.html">Top</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th>
+          &nbsp;&nbsp;&nbsp;
+          <a target="_parent" href="frames.html">&larr;</a>
+          &nbsp;
+      <th>
+      <th>
+          &nbsp;
+          <a target="_parent" href="frames-right.html">&rarr;</a>
+          &nbsp;&nbsp;&nbsp;
+      </th>
+
+  <!-- Overview link - api reference-->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="platformids-module.html">Overview</a>&nbsp;&nbsp;&nbsp;</th>
+
+
+  <!-- Module -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Module</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Class -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="class-tree.html">Class</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+  <!--
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Tree</a>&nbsp;&nbsp;&nbsp;</th>
+  -->
+  
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr>
+              <th>&nbsp;&nbsp;&nbsp;<a
+                href="http://pypi.python.org/pypi/setupdocx">@www</a>&nbsp;&nbsp;&nbsp;</th>
+          </tr></table></th>
+
+  <!-- About link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="about.html">About</a>&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+</table>
+<table class="subnavbar" width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td>
+      <table class="items" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center">
+                <span class="options">
+                  <a href="frames.html" target="_top">&lt;Frames(L)</a>
+                </span>
+                &nbsp;
+            </td>
+            <td align="center">
+                &#124;
+                &nbsp;
+                <span class="options">
+                    <a href="platformids.dist.debian-pysrc.html" target="_top">No&nbsp;Frames</a>
+                </span>
+                &nbsp;
+                &#124;
+            </td>
+            <td align="center">
+                &nbsp;
+                <span class="options">
+                   <a href="frames-right.html" target="_top">Frames(R)&gt;</a>
+                </span>
+            </td>
+           </tr>
+      </table>
+    </td>
+    <td>
+    </td>
+ </tr>
+ <tr>
+</table>
+      <span class="breadcrumbs">
+        <a href="platformids-module.html">Package&nbsp;platformids</a> ::
+        <a href="platformids.dist-module.html">Package&nbsp;dist</a> ::
+        Module&nbsp;debian
+      </span>
+<h1 class="epydoc">Source Code for <a href="platformids.dist.debian-module.html">Module platformids.dist.debian</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">&quot;&quot;&quot;Debian releases.</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">&quot;&quot;&quot;</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">__future__</tt> <tt class="py-keyword">import</tt> <tt class="py-name">absolute_import</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">re</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">pythonids</tt> <tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Variable platformids.dist.centos.PYV35Plus=platformids.dist.centos-module.html#PYV35Plus,Variable platformids.optionparser_platformids.PYV35Plus=platformids.optionparser_platformids-module.html#PYV35Plus,Variable platformids.dist.darwin.PYV35Plus=platformids.dist.darwin-module.html#PYV35Plus,Variable platformids.dist.darwin_enum_labels.PYV35Plus=platformids.dist.darwin_enum_labels-module.html#PYV35Plus,Variable platformids.dist.rhel_enum_labels.PYV35Plus=platformids.dist.rhel_enum_labels-module.html#PYV35Plus,Variable platformids.dist.cygwin.PYV35Plus=platformids.dist.cygwin-module.html#PYV35Plus,Variable platformids.dist.oraclelinux.PYV35Plus=platformids.dist.oraclelinux-module.html#PYV35Plus,Variable platformids.dist.openbsd.PYV35Plus=platformids.dist.openbsd-module.html#PYV35Plus,Variable platformids.dist.fedora_enum_labels.PYV35Plus=platformids.dist.fedora_enum_labels-module.html#PYV35Plus,Variable platformids.dist.netbsd.PYV35Plus=platformids.dist.netbsd-module.html#PYV35Plus,Variable platformids.dist.rhel.PYV35Plus=platformids.dist.rhel-module.html#PYV35Plus,Variable platformids.dist.freebsd.PYV35Plus=platformids.dist.freebsd-module.html#PYV35Plus,Variable platformids.dist.solaris.PYV35Plus=platformids.dist.solaris-module.html#PYV35Plus,Variable platformids.dist.gentoo.PYV35Plus=platformids.dist.gentoo-module.html#PYV35Plus,Variable platformids.dist.solaris_enum_labels.PYV35Plus=platformids.dist.solaris_enum_labels-module.html#PYV35Plus,Variable platformids.dist.fedora.PYV35Plus=platformids.dist.fedora-module.html#PYV35Plus,Variable platformids.dist.openbsd_enum_labels.PYV35Plus=platformids.dist.openbsd_enum_labels-module.html#PYV35Plus,Variable platformids.dist.debian.PYV35Plus=platformids.dist.debian-module.html#PYV35Plus,Variable platformids.dist.ubuntu.PYV35Plus=platformids.dist.ubuntu-module.html#PYV35Plus,Variable platformids.dist.alpinelinux.PYV35Plus=platformids.dist.alpinelinux-module.html#PYV35Plus,Variable platformids.map_enum_labels.PYV35Plus=platformids.map_enum_labels-module.html#PYV35Plus,Variable platformids.dist.centos_enum_labels.PYV35Plus=platformids.dist.centos_enum_labels-module.html#PYV35Plus,Variable platformids.PYV35Plus=platformids-module.html#PYV35Plus,Variable platformids.dist.archlinux.PYV35Plus=platformids.dist.archlinux-module.html#PYV35Plus"><a title="platformids.dist.centos.PYV35Plus
+platformids.optionparser_platformids.PYV35Plus
+platformids.dist.darwin.PYV35Plus
+platformids.dist.darwin_enum_labels.PYV35Plus
+platformids.dist.rhel_enum_labels.PYV35Plus
+platformids.dist.cygwin.PYV35Plus
+platformids.dist.oraclelinux.PYV35Plus
+platformids.dist.openbsd.PYV35Plus
+platformids.dist.fedora_enum_labels.PYV35Plus
+platformids.dist.netbsd.PYV35Plus
+platformids.dist.rhel.PYV35Plus
+platformids.dist.freebsd.PYV35Plus
+platformids.dist.solaris.PYV35Plus
+platformids.dist.gentoo.PYV35Plus
+platformids.dist.solaris_enum_labels.PYV35Plus
+platformids.dist.fedora.PYV35Plus
+platformids.dist.openbsd_enum_labels.PYV35Plus
+platformids.dist.debian.PYV35Plus
+platformids.dist.ubuntu.PYV35Plus
+platformids.dist.alpinelinux.PYV35Plus
+platformids.map_enum_labels.PYV35Plus
+platformids.dist.centos_enum_labels.PYV35Plus
+platformids.PYV35Plus
+platformids.dist.archlinux.PYV35Plus" class="py-name" href="#" onclick="return doclink('link-0', 'PYV35Plus', 'link-0');">PYV35Plus</a></tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-1" class="py-name" targets="Package platformids=platformids-module.html"><a title="platformids" class="py-name" href="#" onclick="return doclink('link-1', 'platformids', 'link-1');">platformids</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name" targets="Variable platformids.dist.darwin_enum_labels.RTE_DEBIAN=platformids.dist.darwin_enum_labels-module.html#RTE_DEBIAN,Variable platformids.dist.rhel_enum_labels.RTE_DEBIAN=platformids.dist.rhel_enum_labels-module.html#RTE_DEBIAN,Variable platformids.dist.fedora_enum_labels.RTE_DEBIAN=platformids.dist.fedora_enum_labels-module.html#RTE_DEBIAN,Variable platformids.dist.solaris_enum_labels.RTE_DEBIAN=platformids.dist.solaris_enum_labels-module.html#RTE_DEBIAN,Variable platformids.dist.openbsd_enum_labels.RTE_DEBIAN=platformids.dist.openbsd_enum_labels-module.html#RTE_DEBIAN,Variable platformids.dist.debian.RTE_DEBIAN=platformids.dist.debian-module.html#RTE_DEBIAN,Variable platformids.map_enum_labels.RTE_DEBIAN=platformids.map_enum_labels-module.html#RTE_DEBIAN,Variable platformids.dist.centos_enum_labels.RTE_DEBIAN=platformids.dist.centos_enum_labels-module.html#RTE_DEBIAN,Variable platformids.RTE_DEBIAN=platformids-module.html#RTE_DEBIAN"><a title="platformids.dist.darwin_enum_labels.RTE_DEBIAN
+platformids.dist.rhel_enum_labels.RTE_DEBIAN
+platformids.dist.fedora_enum_labels.RTE_DEBIAN
+platformids.dist.solaris_enum_labels.RTE_DEBIAN
+platformids.dist.openbsd_enum_labels.RTE_DEBIAN
+platformids.dist.debian.RTE_DEBIAN
+platformids.map_enum_labels.RTE_DEBIAN
+platformids.dist.centos_enum_labels.RTE_DEBIAN
+platformids.RTE_DEBIAN" class="py-name" href="#" onclick="return doclink('link-2', 'RTE_DEBIAN', 'link-2');">RTE_DEBIAN</a></tt><tt class="py-op">,</tt> <tt id="link-3" class="py-name" targets="Variable platformids.dist.opensuse.rte2num=platformids.dist.opensuse-module.html#rte2num,Variable platformids.dist.centos.rte2num=platformids.dist.centos-module.html#rte2num,Variable platformids.dist.darwin.rte2num=platformids.dist.darwin-module.html#rte2num,Variable platformids.dist.darwin_enum_labels.rte2num=platformids.dist.darwin_enum_labels-module.html#rte2num,Variable platformids.dist.rhel_enum_labels.rte2num=platformids.dist.rhel_enum_labels-module.html#rte2num,Variable platformids.dist.oraclelinux.rte2num=platformids.dist.oraclelinux-module.html#rte2num,Variable platformids.dist.openbsd.rte2num=platformids.dist.openbsd-module.html#rte2num,Variable platformids.dist.fedora_enum_labels.rte2num=platformids.dist.fedora_enum_labels-module.html#rte2num,Variable platformids.dist.netbsd.rte2num=platformids.dist.netbsd-module.html#rte2num,Variable platformids.dist.windows.rte2num=platformids.dist.windows-module.html#rte2num,Variable platformids.dist.rhel.rte2num=platformids.dist.rhel-module.html#rte2num,Variable platformids.dist.freebsd.rte2num=platformids.dist.freebsd-module.html#rte2num,Variable platformids.dist.solaris.rte2num=platformids.dist.solaris-module.html#rte2num,Variable platformids.dist.gentoo.rte2num=platformids.dist.gentoo-module.html#rte2num,Variable platformids.dist.solaris_enum_labels.rte2num=platformids.dist.solaris_enum_labels-module.html#rte2num,Variable platformids.dist.fedora.rte2num=platformids.dist.fedora-module.html#rte2num,Variable platformids.dist.openbsd_enum_labels.rte2num=platformids.dist.openbsd_enum_labels-module.html#rte2num,Variable platformids.dist.debian.rte2num=platformids.dist.debian-module.html#rte2num,Variable platformids.dist.ubuntu.rte2num=platformids.dist.ubuntu-module.html#rte2num,Variable platformids.dist.alpinelinux.rte2num=platformids.dist.alpinelinux-module.html#rte2num,Variable platformids.map_enum_labels.rte2num=platformids.map_enum_labels-module.html#rte2num,Variable platformids.dist.centos_enum_labels.rte2num=platformids.dist.centos_enum_labels-module.html#rte2num,Variable platformids.dist.sles.rte2num=platformids.dist.sles-module.html#rte2num,Variable platformids.rte2num=platformids-module.html#rte2num,Variable platformids.dist.archlinux.rte2num=platformids.dist.archlinux-module.html#rte2num"><a title="platformids.dist.opensuse.rte2num
+platformids.dist.centos.rte2num
+platformids.dist.darwin.rte2num
+platformids.dist.darwin_enum_labels.rte2num
+platformids.dist.rhel_enum_labels.rte2num
+platformids.dist.oraclelinux.rte2num
+platformids.dist.openbsd.rte2num
+platformids.dist.fedora_enum_labels.rte2num
+platformids.dist.netbsd.rte2num
+platformids.dist.windows.rte2num
+platformids.dist.rhel.rte2num
+platformids.dist.freebsd.rte2num
+platformids.dist.solaris.rte2num
+platformids.dist.gentoo.rte2num
+platformids.dist.solaris_enum_labels.rte2num
+platformids.dist.fedora.rte2num
+platformids.dist.openbsd_enum_labels.rte2num
+platformids.dist.debian.rte2num
+platformids.dist.ubuntu.rte2num
+platformids.dist.alpinelinux.rte2num
+platformids.map_enum_labels.rte2num
+platformids.dist.centos_enum_labels.rte2num
+platformids.dist.sles.rte2num
+platformids.rte2num
+platformids.dist.archlinux.rte2num" class="py-name" href="#" onclick="return doclink('link-3', 'rte2num', 'link-3');">rte2num</a></tt><tt class="py-op">,</tt> <tt id="link-4" class="py-name" targets="Variable platformids.dist.opensuse.num2rte=platformids.dist.opensuse-module.html#num2rte,Variable platformids.dist.centos.num2rte=platformids.dist.centos-module.html#num2rte,Variable platformids.dist.darwin.num2rte=platformids.dist.darwin-module.html#num2rte,Variable platformids.dist.darwin_enum_labels.num2rte=platformids.dist.darwin_enum_labels-module.html#num2rte,Variable platformids.dist.rhel_enum_labels.num2rte=platformids.dist.rhel_enum_labels-module.html#num2rte,Variable platformids.dist.oraclelinux.num2rte=platformids.dist.oraclelinux-module.html#num2rte,Variable platformids.dist.openbsd.num2rte=platformids.dist.openbsd-module.html#num2rte,Variable platformids.dist.fedora_enum_labels.num2rte=platformids.dist.fedora_enum_labels-module.html#num2rte,Variable platformids.dist.netbsd.num2rte=platformids.dist.netbsd-module.html#num2rte,Variable platformids.dist.windows.num2rte=platformids.dist.windows-module.html#num2rte,Variable platformids.dist.rhel.num2rte=platformids.dist.rhel-module.html#num2rte,Variable platformids.dist.freebsd.num2rte=platformids.dist.freebsd-module.html#num2rte,Variable platformids.dist.solaris.num2rte=platformids.dist.solaris-module.html#num2rte,Variable platformids.dist.gentoo.num2rte=platformids.dist.gentoo-module.html#num2rte,Variable platformids.dist.solaris_enum_labels.num2rte=platformids.dist.solaris_enum_labels-module.html#num2rte,Variable platformids.dist.fedora.num2rte=platformids.dist.fedora-module.html#num2rte,Variable platformids.dist.openbsd_enum_labels.num2rte=platformids.dist.openbsd_enum_labels-module.html#num2rte,Variable platformids.dist.debian.num2rte=platformids.dist.debian-module.html#num2rte,Variable platformids.dist.ubuntu.num2rte=platformids.dist.ubuntu-module.html#num2rte,Variable platformids.dist.alpinelinux.num2rte=platformids.dist.alpinelinux-module.html#num2rte,Variable platformids.map_enum_labels.num2rte=platformids.map_enum_labels-module.html#num2rte,Variable platformids.dist.centos_enum_labels.num2rte=platformids.dist.centos_enum_labels-module.html#num2rte,Variable platformids.dist.sles.num2rte=platformids.dist.sles-module.html#num2rte,Variable platformids.num2rte=platformids-module.html#num2rte,Variable platformids.dist.archlinux.num2rte=platformids.dist.archlinux-module.html#num2rte"><a title="platformids.dist.opensuse.num2rte
+platformids.dist.centos.num2rte
+platformids.dist.darwin.num2rte
+platformids.dist.darwin_enum_labels.num2rte
+platformids.dist.rhel_enum_labels.num2rte
+platformids.dist.oraclelinux.num2rte
+platformids.dist.openbsd.num2rte
+platformids.dist.fedora_enum_labels.num2rte
+platformids.dist.netbsd.num2rte
+platformids.dist.windows.num2rte
+platformids.dist.rhel.num2rte
+platformids.dist.freebsd.num2rte
+platformids.dist.solaris.num2rte
+platformids.dist.gentoo.num2rte
+platformids.dist.solaris_enum_labels.num2rte
+platformids.dist.fedora.num2rte
+platformids.dist.openbsd_enum_labels.num2rte
+platformids.dist.debian.num2rte
+platformids.dist.ubuntu.num2rte
+platformids.dist.alpinelinux.num2rte
+platformids.map_enum_labels.num2rte
+platformids.dist.centos_enum_labels.num2rte
+platformids.dist.sles.num2rte
+platformids.num2rte
+platformids.dist.archlinux.num2rte" class="py-name" href="#" onclick="return doclink('link-4', 'num2rte', 'link-4');">num2rte</a></tt><tt class="py-op">,</tt> <tt id="link-5" class="py-name" targets="Variable platformids.dist.opensuse.num2pretty=platformids.dist.opensuse-module.html#num2pretty,Variable platformids.dist.centos.num2pretty=platformids.dist.centos-module.html#num2pretty,Variable platformids.dist.darwin.num2pretty=platformids.dist.darwin-module.html#num2pretty,Variable platformids.dist.darwin_enum_labels.num2pretty=platformids.dist.darwin_enum_labels-module.html#num2pretty,Variable platformids.dist.rhel_enum_labels.num2pretty=platformids.dist.rhel_enum_labels-module.html#num2pretty,Variable platformids.dist.oraclelinux.num2pretty=platformids.dist.oraclelinux-module.html#num2pretty,Variable platformids.dist.openbsd.num2pretty=platformids.dist.openbsd-module.html#num2pretty,Variable platformids.dist.fedora_enum_labels.num2pretty=platformids.dist.fedora_enum_labels-module.html#num2pretty,Variable platformids.dist.netbsd.num2pretty=platformids.dist.netbsd-module.html#num2pretty,Variable platformids.dist.windows.num2pretty=platformids.dist.windows-module.html#num2pretty,Variable platformids.dist.rhel.num2pretty=platformids.dist.rhel-module.html#num2pretty,Variable platformids.dist.freebsd.num2pretty=platformids.dist.freebsd-module.html#num2pretty,Variable platformids.dist.solaris.num2pretty=platformids.dist.solaris-module.html#num2pretty,Variable platformids.dist.gentoo.num2pretty=platformids.dist.gentoo-module.html#num2pretty,Variable platformids.dist.solaris_enum_labels.num2pretty=platformids.dist.solaris_enum_labels-module.html#num2pretty,Variable platformids.dist.fedora.num2pretty=platformids.dist.fedora-module.html#num2pretty,Variable platformids.dist.openbsd_enum_labels.num2pretty=platformids.dist.openbsd_enum_labels-module.html#num2pretty,Variable platformids.dist.debian.num2pretty=platformids.dist.debian-module.html#num2pretty,Variable platformids.dist.ubuntu.num2pretty=platformids.dist.ubuntu-module.html#num2pretty,Variable platformids.dist.alpinelinux.num2pretty=platformids.dist.alpinelinux-module.html#num2pretty,Variable platformids.map_enum_labels.num2pretty=platformids.map_enum_labels-module.html#num2pretty,Variable platformids.dist.centos_enum_labels.num2pretty=platformids.dist.centos_enum_labels-module.html#num2pretty,Variable platformids.dist.sles.num2pretty=platformids.dist.sles-module.html#num2pretty,Variable platformids.num2pretty=platformids-module.html#num2pretty,Variable platformids.dist.archlinux.num2pretty=platformids.dist.archlinux-module.html#num2pretty"><a title="platformids.dist.opensuse.num2pretty
+platformids.dist.centos.num2pretty
+platformids.dist.darwin.num2pretty
+platformids.dist.darwin_enum_labels.num2pretty
+platformids.dist.rhel_enum_labels.num2pretty
+platformids.dist.oraclelinux.num2pretty
+platformids.dist.openbsd.num2pretty
+platformids.dist.fedora_enum_labels.num2pretty
+platformids.dist.netbsd.num2pretty
+platformids.dist.windows.num2pretty
+platformids.dist.rhel.num2pretty
+platformids.dist.freebsd.num2pretty
+platformids.dist.solaris.num2pretty
+platformids.dist.gentoo.num2pretty
+platformids.dist.solaris_enum_labels.num2pretty
+platformids.dist.fedora.num2pretty
+platformids.dist.openbsd_enum_labels.num2pretty
+platformids.dist.debian.num2pretty
+platformids.dist.ubuntu.num2pretty
+platformids.dist.alpinelinux.num2pretty
+platformids.map_enum_labels.num2pretty
+platformids.dist.centos_enum_labels.num2pretty
+platformids.dist.sles.num2pretty
+platformids.num2pretty
+platformids.dist.archlinux.num2pretty" class="py-name" href="#" onclick="return doclink('link-5', 'num2pretty', 'link-5');">num2pretty</a></tt><tt class="py-op">,</tt> <tt id="link-6" class="py-name" targets="Function platformids.decode_version_str_to_segments()=platformids-module.html#decode_version_str_to_segments"><a title="platformids.decode_version_str_to_segments" class="py-name" href="#" onclick="return doclink('link-6', 'decode_version_str_to_segments', 'link-6');">decode_version_str_to_segments</a></tt><tt class="py-op">,</tt> \ </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line">    <tt id="link-7" class="py-name" targets="Variable platformids.dist.opensuse.DSKORG_ID=platformids.dist.opensuse-module.html#DSKORG_ID,Variable platformids.dist.darwin_enum_labels.DSKORG_ID=platformids.dist.darwin_enum_labels-module.html#DSKORG_ID,Variable platformids.dist.rhel_enum_labels.DSKORG_ID=platformids.dist.rhel_enum_labels-module.html#DSKORG_ID,Variable platformids.dist.fedora_enum_labels.DSKORG_ID=platformids.dist.fedora_enum_labels-module.html#DSKORG_ID,Variable platformids.dist.solaris_enum_labels.DSKORG_ID=platformids.dist.solaris_enum_labels-module.html#DSKORG_ID,Variable platformids.dist.openbsd_enum_labels.DSKORG_ID=platformids.dist.openbsd_enum_labels-module.html#DSKORG_ID,Variable platformids.dist.debian.DSKORG_ID=platformids.dist.debian-module.html#DSKORG_ID,Variable platformids.dist.ubuntu.DSKORG_ID=platformids.dist.ubuntu-module.html#DSKORG_ID,Variable platformids.dist.alpinelinux.DSKORG_ID=platformids.dist.alpinelinux-module.html#DSKORG_ID,Variable platformids.map_enum_labels.DSKORG_ID=platformids.map_enum_labels-module.html#DSKORG_ID,Variable platformids.dist.centos_enum_labels.DSKORG_ID=platformids.dist.centos_enum_labels-module.html#DSKORG_ID,Variable platformids.dist.sles.DSKORG_ID=platformids.dist.sles-module.html#DSKORG_ID,Variable platformids.DSKORG_ID=platformids-module.html#DSKORG_ID,Variable platformids.dist.archlinux.DSKORG_ID=platformids.dist.archlinux-module.html#DSKORG_ID"><a title="platformids.dist.opensuse.DSKORG_ID
+platformids.dist.darwin_enum_labels.DSKORG_ID
+platformids.dist.rhel_enum_labels.DSKORG_ID
+platformids.dist.fedora_enum_labels.DSKORG_ID
+platformids.dist.solaris_enum_labels.DSKORG_ID
+platformids.dist.openbsd_enum_labels.DSKORG_ID
+platformids.dist.debian.DSKORG_ID
+platformids.dist.ubuntu.DSKORG_ID
+platformids.dist.alpinelinux.DSKORG_ID
+platformids.map_enum_labels.DSKORG_ID
+platformids.dist.centos_enum_labels.DSKORG_ID
+platformids.dist.sles.DSKORG_ID
+platformids.DSKORG_ID
+platformids.dist.archlinux.DSKORG_ID" class="py-name" href="#" onclick="return doclink('link-7', 'DSKORG_ID', 'link-7');">DSKORG_ID</a></tt><tt class="py-op">,</tt> <tt id="link-8" class="py-name" targets="Variable platformids.dist.opensuse.PlatformIDsFileCheck=platformids.dist.opensuse-module.html#PlatformIDsFileCheck,Variable platformids.dist.centos.PlatformIDsFileCheck=platformids.dist.centos-module.html#PlatformIDsFileCheck,Variable platformids.dist.darwin.PlatformIDsFileCheck=platformids.dist.darwin-module.html#PlatformIDsFileCheck,Variable platformids.dist.darwin_enum_labels.PlatformIDsFileCheck=platformids.dist.darwin_enum_labels-module.html#PlatformIDsFileCheck,Variable platformids.dist.rhel_enum_labels.PlatformIDsFileCheck=platformids.dist.rhel_enum_labels-module.html#PlatformIDsFileCheck,Variable platformids.dist.oraclelinux.PlatformIDsFileCheck=platformids.dist.oraclelinux-module.html#PlatformIDsFileCheck,Variable platformids.dist.openbsd.PlatformIDsFileCheck=platformids.dist.openbsd-module.html#PlatformIDsFileCheck,Variable platformids.dist.fedora_enum_labels.PlatformIDsFileCheck=platformids.dist.fedora_enum_labels-module.html#PlatformIDsFileCheck,Variable platformids.dist.netbsd.PlatformIDsFileCheck=platformids.dist.netbsd-module.html#PlatformIDsFileCheck,Variable platformids.dist.windows.PlatformIDsFileCheck=platformids.dist.windows-module.html#PlatformIDsFileCheck,Variable platformids.dist.rhel.PlatformIDsFileCheck=platformids.dist.rhel-module.html#PlatformIDsFileCheck,Variable platformids.dist.freebsd.PlatformIDsFileCheck=platformids.dist.freebsd-module.html#PlatformIDsFileCheck,Variable platformids.dist.solaris.PlatformIDsFileCheck=platformids.dist.solaris-module.html#PlatformIDsFileCheck,Variable platformids.dist.gentoo.PlatformIDsFileCheck=platformids.dist.gentoo-module.html#PlatformIDsFileCheck,Variable platformids.dist.solaris_enum_labels.PlatformIDsFileCheck=platformids.dist.solaris_enum_labels-module.html#PlatformIDsFileCheck,Variable platformids.dist.fedora.PlatformIDsFileCheck=platformids.dist.fedora-module.html#PlatformIDsFileCheck,Variable platformids.dist.openbsd_enum_labels.PlatformIDsFileCheck=platformids.dist.openbsd_enum_labels-module.html#PlatformIDsFileCheck,Variable platformids.dist.debian.PlatformIDsFileCheck=platformids.dist.debian-module.html#PlatformIDsFileCheck,Variable platformids.dist.ubuntu.PlatformIDsFileCheck=platformids.dist.ubuntu-module.html#PlatformIDsFileCheck,Variable platformids.dist.alpinelinux.PlatformIDsFileCheck=platformids.dist.alpinelinux-module.html#PlatformIDsFileCheck,Variable platformids.map_enum_labels.PlatformIDsFileCheck=platformids.map_enum_labels-module.html#PlatformIDsFileCheck,Variable platformids.dist.centos_enum_labels.PlatformIDsFileCheck=platformids.dist.centos_enum_labels-module.html#PlatformIDsFileCheck,Variable platformids.dist.sles.PlatformIDsFileCheck=platformids.dist.sles-module.html#PlatformIDsFileCheck,Variable platformids.PlatformIDsFileCheck=platformids-module.html#PlatformIDsFileCheck,Variable platformids.dist.archlinux.PlatformIDsFileCheck=platformids.dist.archlinux-module.html#PlatformIDsFileCheck"><a title="platformids.dist.opensuse.PlatformIDsFileCheck
+platformids.dist.centos.PlatformIDsFileCheck
+platformids.dist.darwin.PlatformIDsFileCheck
+platformids.dist.darwin_enum_labels.PlatformIDsFileCheck
+platformids.dist.rhel_enum_labels.PlatformIDsFileCheck
+platformids.dist.oraclelinux.PlatformIDsFileCheck
+platformids.dist.openbsd.PlatformIDsFileCheck
+platformids.dist.fedora_enum_labels.PlatformIDsFileCheck
+platformids.dist.netbsd.PlatformIDsFileCheck
+platformids.dist.windows.PlatformIDsFileCheck
+platformids.dist.rhel.PlatformIDsFileCheck
+platformids.dist.freebsd.PlatformIDsFileCheck
+platformids.dist.solaris.PlatformIDsFileCheck
+platformids.dist.gentoo.PlatformIDsFileCheck
+platformids.dist.solaris_enum_labels.PlatformIDsFileCheck
+platformids.dist.fedora.PlatformIDsFileCheck
+platformids.dist.openbsd_enum_labels.PlatformIDsFileCheck
+platformids.dist.debian.PlatformIDsFileCheck
+platformids.dist.ubuntu.PlatformIDsFileCheck
+platformids.dist.alpinelinux.PlatformIDsFileCheck
+platformids.map_enum_labels.PlatformIDsFileCheck
+platformids.dist.centos_enum_labels.PlatformIDsFileCheck
+platformids.dist.sles.PlatformIDsFileCheck
+platformids.PlatformIDsFileCheck
+platformids.dist.archlinux.PlatformIDsFileCheck" class="py-name" href="#" onclick="return doclink('link-8', 'PlatformIDsFileCheck', 'link-8');">PlatformIDsFileCheck</a></tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-name">__author__</tt> <tt class="py-op">=</tt> <tt class="py-string">&#x27;Arno-Can Uestuensoez&#x27;</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-name">__license__</tt> <tt class="py-op">=</tt> <tt class="py-string">&quot;Artistic-License-2.0 + Forced-Fairplay-Constraints&quot;</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-name">__copyright__</tt> <tt class="py-op">=</tt> <tt class="py-string">&quot;Copyright (C) 2010-2018 Arno-Can Uestuensoez&quot;</tt> \ </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line">                <tt class="py-string">&quot; @Ingenieurbuero Arno-Can Uestuensoez&quot;</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-name">__version__</tt> <tt class="py-op">=</tt> <tt class="py-string">&#x27;0.1.29&#x27;</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt id="link-9" class="py-name" targets="Variable platformids.custom.slackware.__uuid__=platformids.custom.slackware-module.html#__uuid__,Variable platformids.dist.opensuse.__uuid__=platformids.dist.opensuse-module.html#__uuid__,Variable platformids.dist.centos.__uuid__=platformids.dist.centos-module.html#__uuid__,Variable platformids.net.openwrt.__uuid__=platformids.net.openwrt-module.html#__uuid__,Variable platformids.custom.blackarch.__uuid__=platformids.custom.blackarch-module.html#__uuid__,Variable platformids.embed.armbian.__uuid__=platformids.embed.armbian-module.html#__uuid__,Variable platformids.custom.minix2.__uuid__=platformids.custom.minix2-module.html#__uuid__,Variable platformids.optionparser_platformids.__uuid__=platformids.optionparser_platformids-module.html#__uuid__,Variable platformids.dist.darwin.__uuid__=platformids.dist.darwin-module.html#__uuid__,Variable platformids.dist.nt.windows_kernel32dll.__uuid__=platformids.dist.nt.windows_kernel32dll-module.html#__uuid__,Variable platformids.dist.darwin_enum_labels.__uuid__=platformids.dist.darwin_enum_labels-module.html#__uuid__,Variable platformids.embed.micropython.__uuid__=platformids.embed.micropython-module.html#__uuid__,Variable platformids.custom.dragonbsd.__uuid__=platformids.custom.dragonbsd-module.html#__uuid__,Variable platformids.dist.rhel_enum_labels.__uuid__=platformids.dist.rhel_enum_labels-module.html#__uuid__,Variable platformids.dist.cygwin.__uuid__=platformids.dist.cygwin-module.html#__uuid__,Variable platformids.custom.ghostbsd.__uuid__=platformids.custom.ghostbsd-module.html#__uuid__,Variable platformids.dist.oraclelinux.__uuid__=platformids.dist.oraclelinux-module.html#__uuid__,Variable platformids.custom.linuxmint.__uuid__=platformids.custom.linuxmint-module.html#__uuid__,Variable platformids.dist.openbsd.__uuid__=platformids.dist.openbsd-module.html#__uuid__,Variable platformids.dist.fedora_enum_labels.__uuid__=platformids.dist.fedora_enum_labels-module.html#__uuid__,Variable platformids.dist.netbsd.__uuid__=platformids.dist.netbsd-module.html#__uuid__,Variable platformids.dist.windows.__uuid__=platformids.dist.windows-module.html#__uuid__,Variable platformids.dist.rhel.__uuid__=platformids.dist.rhel-module.html#__uuid__,Variable platformids.net.pfsense.__uuid__=platformids.net.pfsense-module.html#__uuid__,Variable platformids.custom.pentoo.__uuid__=platformids.custom.pentoo-module.html#__uuid__,Variable platformids.embed.circuitpython.__uuid__=platformids.embed.circuitpython-module.html#__uuid__,Variable platformids.dist.debian_enum_labels.__uuid__=platformids.dist.debian_enum_labels-module.html#__uuid__,Variable platformids.dist.freebsd.__uuid__=platformids.dist.freebsd-module.html#__uuid__,Variable platformids.embed.raspbian.__uuid__=platformids.embed.raspbian-module.html#__uuid__,Variable platformids.dist.posix.__uuid__=platformids.dist.posix-module.html#__uuid__,Variable platformids.custom.nomadbsd.__uuid__=platformids.custom.nomadbsd-module.html#__uuid__,Variable platformids.dist.solaris.__uuid__=platformids.dist.solaris-module.html#__uuid__,Variable platformids.dist.gentoo.__uuid__=platformids.dist.gentoo-module.html#__uuid__,Variable platformids.dist.solaris_enum_labels.__uuid__=platformids.dist.solaris_enum_labels-module.html#__uuid__,Variable platformids.custom.trueos.__uuid__=platformids.custom.trueos-module.html#__uuid__,Variable platformids.dist.nt.windows_subprocess_reg_exe.__uuid__=platformids.dist.nt.windows_subprocess_reg_exe-module.html#__uuid__,Variable platformids.custom.minix.__uuid__=platformids.custom.minix-module.html#__uuid__,Variable platformids.dist.fedora.__uuid__=platformids.dist.fedora-module.html#__uuid__,Variable platformids.dist.openbsd_enum_labels.__uuid__=platformids.dist.openbsd_enum_labels-module.html#__uuid__,Variable platformids.dist.debian.__uuid__=platformids.dist.debian-module.html#__uuid__,Variable platformids.dist.ubuntu.__uuid__=platformids.dist.ubuntu-module.html#__uuid__,Variable platformids.platforms.__uuid__=platformids.platforms-module.html#__uuid__,Variable platformids.__main__.__uuid__=platformids.__main__-module.html#__uuid__,Variable platformids.dist.alpinelinux.__uuid__=platformids.dist.alpinelinux-module.html#__uuid__,Variable platformids.custom.aix.__uuid__=platformids.custom.aix-module.html#__uuid__,Variable platformids.dist.pemu.__uuid__=platformids.dist.pemu-module.html#__uuid__,Variable platformids.dist.nt.windows_enum_labels.__uuid__=platformids.dist.nt.windows_enum_labels-module.html#__uuid__,Variable platformids.map_enum_labels.__uuid__=platformids.map_enum_labels-module.html#__uuid__,Variable platformids.dist.hpux.__uuid__=platformids.dist.hpux-module.html#__uuid__,Variable platformids.custom.parrot.__uuid__=platformids.custom.parrot-module.html#__uuid__,Variable platformids.dist.pwemu.__uuid__=platformids.dist.pwemu-module.html#__uuid__,Variable platformids.net.kali.__uuid__=platformids.net.kali-module.html#__uuid__,Variable platformids.dist.sles.__uuid__=platformids.dist.sles-module.html#__uuid__,Variable platformids.custom.reactos.__uuid__=platformids.custom.reactos-module.html#__uuid__,Variable platformids.__uuid__=platformids-module.html#__uuid__,Variable platformids.dist.archlinux.__uuid__=platformids.dist.archlinux-module.html#__uuid__"><a title="platformids.custom.slackware.__uuid__
+platformids.dist.opensuse.__uuid__
+platformids.dist.centos.__uuid__
+platformids.net.openwrt.__uuid__
+platformids.custom.blackarch.__uuid__
+platformids.embed.armbian.__uuid__
+platformids.custom.minix2.__uuid__
+platformids.optionparser_platformids.__uuid__
+platformids.dist.darwin.__uuid__
+platformids.dist.nt.windows_kernel32dll.__uuid__
+platformids.dist.darwin_enum_labels.__uuid__
+platformids.embed.micropython.__uuid__
+platformids.custom.dragonbsd.__uuid__
+platformids.dist.rhel_enum_labels.__uuid__
+platformids.dist.cygwin.__uuid__
+platformids.custom.ghostbsd.__uuid__
+platformids.dist.oraclelinux.__uuid__
+platformids.custom.linuxmint.__uuid__
+platformids.dist.openbsd.__uuid__
+platformids.dist.fedora_enum_labels.__uuid__
+platformids.dist.netbsd.__uuid__
+platformids.dist.windows.__uuid__
+platformids.dist.rhel.__uuid__
+platformids.net.pfsense.__uuid__
+platformids.custom.pentoo.__uuid__
+platformids.embed.circuitpython.__uuid__
+platformids.dist.debian_enum_labels.__uuid__
+platformids.dist.freebsd.__uuid__
+platformids.embed.raspbian.__uuid__
+platformids.dist.posix.__uuid__
+platformids.custom.nomadbsd.__uuid__
+platformids.dist.solaris.__uuid__
+platformids.dist.gentoo.__uuid__
+platformids.dist.solaris_enum_labels.__uuid__
+platformids.custom.trueos.__uuid__
+platformids.dist.nt.windows_subprocess_reg_exe.__uuid__
+platformids.custom.minix.__uuid__
+platformids.dist.fedora.__uuid__
+platformids.dist.openbsd_enum_labels.__uuid__
+platformids.dist.debian.__uuid__
+platformids.dist.ubuntu.__uuid__
+platformids.platforms.__uuid__
+platformids.__main__.__uuid__
+platformids.dist.alpinelinux.__uuid__
+platformids.custom.aix.__uuid__
+platformids.dist.pemu.__uuid__
+platformids.dist.nt.windows_enum_labels.__uuid__
+platformids.map_enum_labels.__uuid__
+platformids.dist.hpux.__uuid__
+platformids.custom.parrot.__uuid__
+platformids.dist.pwemu.__uuid__
+platformids.net.kali.__uuid__
+platformids.dist.sles.__uuid__
+platformids.custom.reactos.__uuid__
+platformids.__uuid__
+platformids.dist.archlinux.__uuid__" class="py-name" href="#" onclick="return doclink('link-9', '__uuid__', 'link-9');">__uuid__</a></tt> <tt class="py-op">=</tt> <tt class="py-string">&quot;7add5ded-c39b-4b6e-8c87-1b3a1c150ee9&quot;</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt id="link-10" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN7=platformids.dist.debian-module.html#RTE_DEBIAN7"><a title="platformids.dist.debian.RTE_DEBIAN7" class="py-name" href="#" onclick="return doclink('link-10', 'RTE_DEBIAN7', 'link-10');">RTE_DEBIAN7</a></tt> <tt class="py-op">=</tt> <tt id="link-11" class="py-name"><a title="platformids.dist.darwin_enum_labels.RTE_DEBIAN
+platformids.dist.rhel_enum_labels.RTE_DEBIAN
+platformids.dist.fedora_enum_labels.RTE_DEBIAN
+platformids.dist.solaris_enum_labels.RTE_DEBIAN
+platformids.dist.openbsd_enum_labels.RTE_DEBIAN
+platformids.dist.debian.RTE_DEBIAN
+platformids.map_enum_labels.RTE_DEBIAN
+platformids.dist.centos_enum_labels.RTE_DEBIAN
+platformids.RTE_DEBIAN" class="py-name" href="#" onclick="return doclink('link-11', 'RTE_DEBIAN', 'link-2');">RTE_DEBIAN</a></tt>      <tt class="py-op">+</tt> <tt class="py-number">0x00001c00</tt>  <tt class="py-comment">#: Debian - wheezy</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt id="link-12" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN8=platformids.dist.debian-module.html#RTE_DEBIAN8"><a title="platformids.dist.debian.RTE_DEBIAN8" class="py-name" href="#" onclick="return doclink('link-12', 'RTE_DEBIAN8', 'link-12');">RTE_DEBIAN8</a></tt> <tt class="py-op">=</tt> <tt id="link-13" class="py-name"><a title="platformids.dist.darwin_enum_labels.RTE_DEBIAN
+platformids.dist.rhel_enum_labels.RTE_DEBIAN
+platformids.dist.fedora_enum_labels.RTE_DEBIAN
+platformids.dist.solaris_enum_labels.RTE_DEBIAN
+platformids.dist.openbsd_enum_labels.RTE_DEBIAN
+platformids.dist.debian.RTE_DEBIAN
+platformids.map_enum_labels.RTE_DEBIAN
+platformids.dist.centos_enum_labels.RTE_DEBIAN
+platformids.RTE_DEBIAN" class="py-name" href="#" onclick="return doclink('link-13', 'RTE_DEBIAN', 'link-2');">RTE_DEBIAN</a></tt>      <tt class="py-op">+</tt> <tt class="py-number">0x00002000</tt>  <tt class="py-comment">#: Debian - jessy</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt id="link-14" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN80=platformids.dist.debian-module.html#RTE_DEBIAN80"><a title="platformids.dist.debian.RTE_DEBIAN80" class="py-name" href="#" onclick="return doclink('link-14', 'RTE_DEBIAN80', 'link-14');">RTE_DEBIAN80</a></tt> <tt class="py-op">=</tt> <tt id="link-15" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN8" class="py-name" href="#" onclick="return doclink('link-15', 'RTE_DEBIAN8', 'link-12');">RTE_DEBIAN8</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x00002000</tt>  <tt class="py-comment">#: Debian - jessy</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt id="link-16" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN81=platformids.dist.debian-module.html#RTE_DEBIAN81"><a title="platformids.dist.debian.RTE_DEBIAN81" class="py-name" href="#" onclick="return doclink('link-16', 'RTE_DEBIAN81', 'link-16');">RTE_DEBIAN81</a></tt> <tt class="py-op">=</tt> <tt id="link-17" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN8" class="py-name" href="#" onclick="return doclink('link-17', 'RTE_DEBIAN8', 'link-12');">RTE_DEBIAN8</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x00002020</tt>  <tt class="py-comment">#: Debian - jessy</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt id="link-18" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN82=platformids.dist.debian-module.html#RTE_DEBIAN82"><a title="platformids.dist.debian.RTE_DEBIAN82" class="py-name" href="#" onclick="return doclink('link-18', 'RTE_DEBIAN82', 'link-18');">RTE_DEBIAN82</a></tt> <tt class="py-op">=</tt> <tt id="link-19" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN8" class="py-name" href="#" onclick="return doclink('link-19', 'RTE_DEBIAN8', 'link-12');">RTE_DEBIAN8</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x00002040</tt>  <tt class="py-comment">#: Debian - jessy</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt id="link-20" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN83=platformids.dist.debian-module.html#RTE_DEBIAN83"><a title="platformids.dist.debian.RTE_DEBIAN83" class="py-name" href="#" onclick="return doclink('link-20', 'RTE_DEBIAN83', 'link-20');">RTE_DEBIAN83</a></tt> <tt class="py-op">=</tt> <tt id="link-21" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN8" class="py-name" href="#" onclick="return doclink('link-21', 'RTE_DEBIAN8', 'link-12');">RTE_DEBIAN8</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x00002060</tt>  <tt class="py-comment">#: Debian - jessy</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt id="link-22" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN84=platformids.dist.debian-module.html#RTE_DEBIAN84"><a title="platformids.dist.debian.RTE_DEBIAN84" class="py-name" href="#" onclick="return doclink('link-22', 'RTE_DEBIAN84', 'link-22');">RTE_DEBIAN84</a></tt> <tt class="py-op">=</tt> <tt id="link-23" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN8" class="py-name" href="#" onclick="return doclink('link-23', 'RTE_DEBIAN8', 'link-12');">RTE_DEBIAN8</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x00002080</tt>  <tt class="py-comment">#: Debian - jessy</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt id="link-24" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN85=platformids.dist.debian-module.html#RTE_DEBIAN85"><a title="platformids.dist.debian.RTE_DEBIAN85" class="py-name" href="#" onclick="return doclink('link-24', 'RTE_DEBIAN85', 'link-24');">RTE_DEBIAN85</a></tt> <tt class="py-op">=</tt> <tt id="link-25" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN8" class="py-name" href="#" onclick="return doclink('link-25', 'RTE_DEBIAN8', 'link-12');">RTE_DEBIAN8</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x000020a0</tt>  <tt class="py-comment">#: Debian - jessy</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt id="link-26" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN86=platformids.dist.debian-module.html#RTE_DEBIAN86"><a title="platformids.dist.debian.RTE_DEBIAN86" class="py-name" href="#" onclick="return doclink('link-26', 'RTE_DEBIAN86', 'link-26');">RTE_DEBIAN86</a></tt> <tt class="py-op">=</tt> <tt id="link-27" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN8" class="py-name" href="#" onclick="return doclink('link-27', 'RTE_DEBIAN8', 'link-12');">RTE_DEBIAN8</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x000020c0</tt>  <tt class="py-comment">#: Debian - jessy</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt id="link-28" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN87=platformids.dist.debian-module.html#RTE_DEBIAN87"><a title="platformids.dist.debian.RTE_DEBIAN87" class="py-name" href="#" onclick="return doclink('link-28', 'RTE_DEBIAN87', 'link-28');">RTE_DEBIAN87</a></tt> <tt class="py-op">=</tt> <tt id="link-29" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN8" class="py-name" href="#" onclick="return doclink('link-29', 'RTE_DEBIAN8', 'link-12');">RTE_DEBIAN8</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x000020e0</tt>  <tt class="py-comment">#: Debian - jessy</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt id="link-30" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN88=platformids.dist.debian-module.html#RTE_DEBIAN88"><a title="platformids.dist.debian.RTE_DEBIAN88" class="py-name" href="#" onclick="return doclink('link-30', 'RTE_DEBIAN88', 'link-30');">RTE_DEBIAN88</a></tt> <tt class="py-op">=</tt> <tt id="link-31" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN8" class="py-name" href="#" onclick="return doclink('link-31', 'RTE_DEBIAN8', 'link-12');">RTE_DEBIAN8</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x00002100</tt>  <tt class="py-comment">#: Debian - jessy</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt id="link-32" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN89=platformids.dist.debian-module.html#RTE_DEBIAN89"><a title="platformids.dist.debian.RTE_DEBIAN89" class="py-name" href="#" onclick="return doclink('link-32', 'RTE_DEBIAN89', 'link-32');">RTE_DEBIAN89</a></tt> <tt class="py-op">=</tt> <tt id="link-33" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN8" class="py-name" href="#" onclick="return doclink('link-33', 'RTE_DEBIAN8', 'link-12');">RTE_DEBIAN8</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x00002120</tt>  <tt class="py-comment">#: Debian - jessy</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt id="link-34" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN810=platformids.dist.debian-module.html#RTE_DEBIAN810"><a title="platformids.dist.debian.RTE_DEBIAN810" class="py-name" href="#" onclick="return doclink('link-34', 'RTE_DEBIAN810', 'link-34');">RTE_DEBIAN810</a></tt> <tt class="py-op">=</tt> <tt id="link-35" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN8" class="py-name" href="#" onclick="return doclink('link-35', 'RTE_DEBIAN8', 'link-12');">RTE_DEBIAN8</a></tt>   <tt class="py-op">+</tt> <tt class="py-number">0x00002140</tt>  <tt class="py-comment">#: Debian - jessy</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt id="link-36" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN9=platformids.dist.debian-module.html#RTE_DEBIAN9"><a title="platformids.dist.debian.RTE_DEBIAN9" class="py-name" href="#" onclick="return doclink('link-36', 'RTE_DEBIAN9', 'link-36');">RTE_DEBIAN9</a></tt> <tt class="py-op">=</tt> <tt id="link-37" class="py-name"><a title="platformids.dist.darwin_enum_labels.RTE_DEBIAN
+platformids.dist.rhel_enum_labels.RTE_DEBIAN
+platformids.dist.fedora_enum_labels.RTE_DEBIAN
+platformids.dist.solaris_enum_labels.RTE_DEBIAN
+platformids.dist.openbsd_enum_labels.RTE_DEBIAN
+platformids.dist.debian.RTE_DEBIAN
+platformids.map_enum_labels.RTE_DEBIAN
+platformids.dist.centos_enum_labels.RTE_DEBIAN
+platformids.RTE_DEBIAN" class="py-name" href="#" onclick="return doclink('link-37', 'RTE_DEBIAN', 'link-2');">RTE_DEBIAN</a></tt>      <tt class="py-op">+</tt> <tt class="py-number">0x00002400</tt>  <tt class="py-comment">#: Debian - stretch</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt id="link-38" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN90=platformids.dist.debian-module.html#RTE_DEBIAN90"><a title="platformids.dist.debian.RTE_DEBIAN90" class="py-name" href="#" onclick="return doclink('link-38', 'RTE_DEBIAN90', 'link-38');">RTE_DEBIAN90</a></tt> <tt class="py-op">=</tt> <tt id="link-39" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN9" class="py-name" href="#" onclick="return doclink('link-39', 'RTE_DEBIAN9', 'link-36');">RTE_DEBIAN9</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x00002400</tt>  <tt class="py-comment">#: Debian - stretch</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt id="link-40" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN91=platformids.dist.debian-module.html#RTE_DEBIAN91"><a title="platformids.dist.debian.RTE_DEBIAN91" class="py-name" href="#" onclick="return doclink('link-40', 'RTE_DEBIAN91', 'link-40');">RTE_DEBIAN91</a></tt> <tt class="py-op">=</tt> <tt id="link-41" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN9" class="py-name" href="#" onclick="return doclink('link-41', 'RTE_DEBIAN9', 'link-36');">RTE_DEBIAN9</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x00002420</tt>  <tt class="py-comment">#: Debian - stretch</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt id="link-42" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN92=platformids.dist.debian-module.html#RTE_DEBIAN92"><a title="platformids.dist.debian.RTE_DEBIAN92" class="py-name" href="#" onclick="return doclink('link-42', 'RTE_DEBIAN92', 'link-42');">RTE_DEBIAN92</a></tt> <tt class="py-op">=</tt> <tt id="link-43" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN9" class="py-name" href="#" onclick="return doclink('link-43', 'RTE_DEBIAN9', 'link-36');">RTE_DEBIAN9</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x00002440</tt>  <tt class="py-comment">#: Debian - stretch</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt id="link-44" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN93=platformids.dist.debian-module.html#RTE_DEBIAN93"><a title="platformids.dist.debian.RTE_DEBIAN93" class="py-name" href="#" onclick="return doclink('link-44', 'RTE_DEBIAN93', 'link-44');">RTE_DEBIAN93</a></tt> <tt class="py-op">=</tt> <tt id="link-45" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN9" class="py-name" href="#" onclick="return doclink('link-45', 'RTE_DEBIAN9', 'link-36');">RTE_DEBIAN9</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x00002460</tt>  <tt class="py-comment">#: Debian - stretch</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt id="link-46" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN94=platformids.dist.debian-module.html#RTE_DEBIAN94"><a title="platformids.dist.debian.RTE_DEBIAN94" class="py-name" href="#" onclick="return doclink('link-46', 'RTE_DEBIAN94', 'link-46');">RTE_DEBIAN94</a></tt> <tt class="py-op">=</tt> <tt id="link-47" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN9" class="py-name" href="#" onclick="return doclink('link-47', 'RTE_DEBIAN9', 'link-36');">RTE_DEBIAN9</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x00002480</tt>  <tt class="py-comment">#: Debian - stretch</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt id="link-48" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN95=platformids.dist.debian-module.html#RTE_DEBIAN95"><a title="platformids.dist.debian.RTE_DEBIAN95" class="py-name" href="#" onclick="return doclink('link-48', 'RTE_DEBIAN95', 'link-48');">RTE_DEBIAN95</a></tt> <tt class="py-op">=</tt> <tt id="link-49" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN9" class="py-name" href="#" onclick="return doclink('link-49', 'RTE_DEBIAN9', 'link-36');">RTE_DEBIAN9</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x000024a0</tt>  <tt class="py-comment">#: Debian - stretch</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt id="link-50" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN96=platformids.dist.debian-module.html#RTE_DEBIAN96"><a title="platformids.dist.debian.RTE_DEBIAN96" class="py-name" href="#" onclick="return doclink('link-50', 'RTE_DEBIAN96', 'link-50');">RTE_DEBIAN96</a></tt> <tt class="py-op">=</tt> <tt id="link-51" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN9" class="py-name" href="#" onclick="return doclink('link-51', 'RTE_DEBIAN9', 'link-36');">RTE_DEBIAN9</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x000024c0</tt>  <tt class="py-comment">#: Debian - stretch</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt id="link-52" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN97=platformids.dist.debian-module.html#RTE_DEBIAN97"><a title="platformids.dist.debian.RTE_DEBIAN97" class="py-name" href="#" onclick="return doclink('link-52', 'RTE_DEBIAN97', 'link-52');">RTE_DEBIAN97</a></tt> <tt class="py-op">=</tt> <tt id="link-53" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN9" class="py-name" href="#" onclick="return doclink('link-53', 'RTE_DEBIAN9', 'link-36');">RTE_DEBIAN9</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x000024e0</tt>  <tt class="py-comment">#: Debian - stretch</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt id="link-54" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN98=platformids.dist.debian-module.html#RTE_DEBIAN98"><a title="platformids.dist.debian.RTE_DEBIAN98" class="py-name" href="#" onclick="return doclink('link-54', 'RTE_DEBIAN98', 'link-54');">RTE_DEBIAN98</a></tt> <tt class="py-op">=</tt> <tt id="link-55" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN9" class="py-name" href="#" onclick="return doclink('link-55', 'RTE_DEBIAN9', 'link-36');">RTE_DEBIAN9</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x00002500</tt>  <tt class="py-comment">#: Debian - stretch</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"><tt id="link-56" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN99=platformids.dist.debian-module.html#RTE_DEBIAN99"><a title="platformids.dist.debian.RTE_DEBIAN99" class="py-name" href="#" onclick="return doclink('link-56', 'RTE_DEBIAN99', 'link-56');">RTE_DEBIAN99</a></tt> <tt class="py-op">=</tt> <tt id="link-57" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN9" class="py-name" href="#" onclick="return doclink('link-57', 'RTE_DEBIAN9', 'link-36');">RTE_DEBIAN9</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x00002520</tt>  <tt class="py-comment">#: Debian - stretch</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"><tt id="link-58" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN10=platformids.dist.debian-module.html#RTE_DEBIAN10"><a title="platformids.dist.debian.RTE_DEBIAN10" class="py-name" href="#" onclick="return doclink('link-58', 'RTE_DEBIAN10', 'link-58');">RTE_DEBIAN10</a></tt> <tt class="py-op">=</tt> <tt id="link-59" class="py-name"><a title="platformids.dist.darwin_enum_labels.RTE_DEBIAN
+platformids.dist.rhel_enum_labels.RTE_DEBIAN
+platformids.dist.fedora_enum_labels.RTE_DEBIAN
+platformids.dist.solaris_enum_labels.RTE_DEBIAN
+platformids.dist.openbsd_enum_labels.RTE_DEBIAN
+platformids.dist.debian.RTE_DEBIAN
+platformids.map_enum_labels.RTE_DEBIAN
+platformids.dist.centos_enum_labels.RTE_DEBIAN
+platformids.RTE_DEBIAN" class="py-name" href="#" onclick="return doclink('link-59', 'RTE_DEBIAN', 'link-2');">RTE_DEBIAN</a></tt>     <tt class="py-op">+</tt> <tt class="py-number">0x00002800</tt>  <tt class="py-comment">#: Debian - buster </tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt id="link-60" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN100=platformids.dist.debian-module.html#RTE_DEBIAN100"><a title="platformids.dist.debian.RTE_DEBIAN100" class="py-name" href="#" onclick="return doclink('link-60', 'RTE_DEBIAN100', 'link-60');">RTE_DEBIAN100</a></tt> <tt class="py-op">=</tt> <tt id="link-61" class="py-name"><a title="platformids.dist.darwin_enum_labels.RTE_DEBIAN
+platformids.dist.rhel_enum_labels.RTE_DEBIAN
+platformids.dist.fedora_enum_labels.RTE_DEBIAN
+platformids.dist.solaris_enum_labels.RTE_DEBIAN
+platformids.dist.openbsd_enum_labels.RTE_DEBIAN
+platformids.dist.debian.RTE_DEBIAN
+platformids.map_enum_labels.RTE_DEBIAN
+platformids.dist.centos_enum_labels.RTE_DEBIAN
+platformids.RTE_DEBIAN" class="py-name" href="#" onclick="return doclink('link-61', 'RTE_DEBIAN', 'link-2');">RTE_DEBIAN</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x00002800</tt>  <tt class="py-comment">#: Debian - buster </tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"><tt id="link-62" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN101=platformids.dist.debian-module.html#RTE_DEBIAN101"><a title="platformids.dist.debian.RTE_DEBIAN101" class="py-name" href="#" onclick="return doclink('link-62', 'RTE_DEBIAN101', 'link-62');">RTE_DEBIAN101</a></tt> <tt class="py-op">=</tt> <tt id="link-63" class="py-name"><a title="platformids.dist.darwin_enum_labels.RTE_DEBIAN
+platformids.dist.rhel_enum_labels.RTE_DEBIAN
+platformids.dist.fedora_enum_labels.RTE_DEBIAN
+platformids.dist.solaris_enum_labels.RTE_DEBIAN
+platformids.dist.openbsd_enum_labels.RTE_DEBIAN
+platformids.dist.debian.RTE_DEBIAN
+platformids.map_enum_labels.RTE_DEBIAN
+platformids.dist.centos_enum_labels.RTE_DEBIAN
+platformids.RTE_DEBIAN" class="py-name" href="#" onclick="return doclink('link-63', 'RTE_DEBIAN', 'link-2');">RTE_DEBIAN</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x00002820</tt>  <tt class="py-comment">#: Debian - buster </tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"><tt id="link-64" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN102=platformids.dist.debian-module.html#RTE_DEBIAN102"><a title="platformids.dist.debian.RTE_DEBIAN102" class="py-name" href="#" onclick="return doclink('link-64', 'RTE_DEBIAN102', 'link-64');">RTE_DEBIAN102</a></tt> <tt class="py-op">=</tt> <tt id="link-65" class="py-name"><a title="platformids.dist.darwin_enum_labels.RTE_DEBIAN
+platformids.dist.rhel_enum_labels.RTE_DEBIAN
+platformids.dist.fedora_enum_labels.RTE_DEBIAN
+platformids.dist.solaris_enum_labels.RTE_DEBIAN
+platformids.dist.openbsd_enum_labels.RTE_DEBIAN
+platformids.dist.debian.RTE_DEBIAN
+platformids.map_enum_labels.RTE_DEBIAN
+platformids.dist.centos_enum_labels.RTE_DEBIAN
+platformids.RTE_DEBIAN" class="py-name" href="#" onclick="return doclink('link-65', 'RTE_DEBIAN', 'link-2');">RTE_DEBIAN</a></tt>    <tt class="py-op">+</tt> <tt class="py-number">0x00002840</tt>  <tt class="py-comment">#: Debian - buster </tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt id="link-66" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN11=platformids.dist.debian-module.html#RTE_DEBIAN11"><a title="platformids.dist.debian.RTE_DEBIAN11" class="py-name" href="#" onclick="return doclink('link-66', 'RTE_DEBIAN11', 'link-66');">RTE_DEBIAN11</a></tt> <tt class="py-op">=</tt> <tt id="link-67" class="py-name"><a title="platformids.dist.darwin_enum_labels.RTE_DEBIAN
+platformids.dist.rhel_enum_labels.RTE_DEBIAN
+platformids.dist.fedora_enum_labels.RTE_DEBIAN
+platformids.dist.solaris_enum_labels.RTE_DEBIAN
+platformids.dist.openbsd_enum_labels.RTE_DEBIAN
+platformids.dist.debian.RTE_DEBIAN
+platformids.map_enum_labels.RTE_DEBIAN
+platformids.dist.centos_enum_labels.RTE_DEBIAN
+platformids.RTE_DEBIAN" class="py-name" href="#" onclick="return doclink('link-67', 'RTE_DEBIAN', 'link-2');">RTE_DEBIAN</a></tt>     <tt class="py-op">+</tt> <tt class="py-number">0x00002c80</tt>  <tt class="py-comment">#: Debian - bullseye</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt id="link-68" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN12=platformids.dist.debian-module.html#RTE_DEBIAN12"><a title="platformids.dist.debian.RTE_DEBIAN12" class="py-name" href="#" onclick="return doclink('link-68', 'RTE_DEBIAN12', 'link-68');">RTE_DEBIAN12</a></tt> <tt class="py-op">=</tt> <tt id="link-69" class="py-name"><a title="platformids.dist.darwin_enum_labels.RTE_DEBIAN
+platformids.dist.rhel_enum_labels.RTE_DEBIAN
+platformids.dist.fedora_enum_labels.RTE_DEBIAN
+platformids.dist.solaris_enum_labels.RTE_DEBIAN
+platformids.dist.openbsd_enum_labels.RTE_DEBIAN
+platformids.dist.debian.RTE_DEBIAN
+platformids.map_enum_labels.RTE_DEBIAN
+platformids.dist.centos_enum_labels.RTE_DEBIAN
+platformids.RTE_DEBIAN" class="py-name" href="#" onclick="return doclink('link-69', 'RTE_DEBIAN', 'link-2');">RTE_DEBIAN</a></tt>     <tt class="py-op">+</tt> <tt class="py-number">0x00003000</tt>  <tt class="py-comment">#: Debian - bookworm</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt id="link-70" class="py-name" targets="Variable platformids.dist.debian.RTE_DEBIAN13=platformids.dist.debian-module.html#RTE_DEBIAN13"><a title="platformids.dist.debian.RTE_DEBIAN13" class="py-name" href="#" onclick="return doclink('link-70', 'RTE_DEBIAN13', 'link-70');">RTE_DEBIAN13</a></tt> <tt class="py-op">=</tt> <tt id="link-71" class="py-name"><a title="platformids.dist.darwin_enum_labels.RTE_DEBIAN
+platformids.dist.rhel_enum_labels.RTE_DEBIAN
+platformids.dist.fedora_enum_labels.RTE_DEBIAN
+platformids.dist.solaris_enum_labels.RTE_DEBIAN
+platformids.dist.openbsd_enum_labels.RTE_DEBIAN
+platformids.dist.debian.RTE_DEBIAN
+platformids.map_enum_labels.RTE_DEBIAN
+platformids.dist.centos_enum_labels.RTE_DEBIAN
+platformids.RTE_DEBIAN" class="py-name" href="#" onclick="return doclink('link-71', 'RTE_DEBIAN', 'link-2');">RTE_DEBIAN</a></tt>     <tt class="py-op">+</tt> <tt class="py-number">0x00003400</tt>  <tt class="py-comment">#: Debian - ...</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">    </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt class="py-comment">#: mapping of the rte string and numeric representation to the numeric value</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt id="link-72" class="py-name"><a title="platformids.dist.opensuse.rte2num
+platformids.dist.centos.rte2num
+platformids.dist.darwin.rte2num
+platformids.dist.darwin_enum_labels.rte2num
+platformids.dist.rhel_enum_labels.rte2num
+platformids.dist.oraclelinux.rte2num
+platformids.dist.openbsd.rte2num
+platformids.dist.fedora_enum_labels.rte2num
+platformids.dist.netbsd.rte2num
+platformids.dist.windows.rte2num
+platformids.dist.rhel.rte2num
+platformids.dist.freebsd.rte2num
+platformids.dist.solaris.rte2num
+platformids.dist.gentoo.rte2num
+platformids.dist.solaris_enum_labels.rte2num
+platformids.dist.fedora.rte2num
+platformids.dist.openbsd_enum_labels.rte2num
+platformids.dist.debian.rte2num
+platformids.dist.ubuntu.rte2num
+platformids.dist.alpinelinux.rte2num
+platformids.map_enum_labels.rte2num
+platformids.dist.centos_enum_labels.rte2num
+platformids.dist.sles.rte2num
+platformids.rte2num
+platformids.dist.archlinux.rte2num" class="py-name" href="#" onclick="return doclink('link-72', 'rte2num', 'link-3');">rte2num</a></tt><tt class="py-op">.</tt><tt class="py-name">update</tt><tt class="py-op">(</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">    <tt class="py-op">{</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">        <tt class="py-string">&#x27;wheezy&#x27;</tt><tt class="py-op">:</tt> <tt id="link-73" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN7" class="py-name" href="#" onclick="return doclink('link-73', 'RTE_DEBIAN7', 'link-10');">RTE_DEBIAN7</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">        <tt class="py-string">&#x27;jessy&#x27;</tt><tt class="py-op">:</tt> <tt id="link-74" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN8" class="py-name" href="#" onclick="return doclink('link-74', 'RTE_DEBIAN8', 'link-12');">RTE_DEBIAN8</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-string">&#x27;stretch&#x27;</tt><tt class="py-op">:</tt> <tt id="link-75" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN9" class="py-name" href="#" onclick="return doclink('link-75', 'RTE_DEBIAN9', 'link-36');">RTE_DEBIAN9</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">        <tt class="py-string">&#x27;buster&#x27;</tt><tt class="py-op">:</tt> <tt id="link-76" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN10" class="py-name" href="#" onclick="return doclink('link-76', 'RTE_DEBIAN10', 'link-58');">RTE_DEBIAN10</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">        <tt class="py-string">&#x27;bullseye&#x27;</tt><tt class="py-op">:</tt> <tt id="link-77" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN11" class="py-name" href="#" onclick="return doclink('link-77', 'RTE_DEBIAN11', 'link-66');">RTE_DEBIAN11</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">        <tt class="py-string">&#x27;bookworm&#x27;</tt><tt class="py-op">:</tt> <tt id="link-78" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN12" class="py-name" href="#" onclick="return doclink('link-78', 'RTE_DEBIAN12', 'link-68');">RTE_DEBIAN12</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-string">&#x27;debian7&#x27;</tt><tt class="py-op">:</tt> <tt id="link-79" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN7" class="py-name" href="#" onclick="return doclink('link-79', 'RTE_DEBIAN7', 'link-10');">RTE_DEBIAN7</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt class="py-string">&#x27;debian8&#x27;</tt><tt class="py-op">:</tt> <tt id="link-80" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN8" class="py-name" href="#" onclick="return doclink('link-80', 'RTE_DEBIAN8', 'link-12');">RTE_DEBIAN8</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">        <tt class="py-string">&#x27;debian9&#x27;</tt><tt class="py-op">:</tt> <tt id="link-81" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN9" class="py-name" href="#" onclick="return doclink('link-81', 'RTE_DEBIAN9', 'link-36');">RTE_DEBIAN9</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">        <tt class="py-string">&#x27;debian10&#x27;</tt><tt class="py-op">:</tt> <tt id="link-82" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN10" class="py-name" href="#" onclick="return doclink('link-82', 'RTE_DEBIAN10', 'link-58');">RTE_DEBIAN10</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">        <tt class="py-string">&#x27;debian11&#x27;</tt><tt class="py-op">:</tt> <tt id="link-83" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN11" class="py-name" href="#" onclick="return doclink('link-83', 'RTE_DEBIAN11', 'link-66');">RTE_DEBIAN11</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">        <tt class="py-string">&#x27;debian12&#x27;</tt><tt class="py-op">:</tt> <tt id="link-84" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN12" class="py-name" href="#" onclick="return doclink('link-84', 'RTE_DEBIAN12', 'link-68');">RTE_DEBIAN12</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">        <tt id="link-85" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN7" class="py-name" href="#" onclick="return doclink('link-85', 'RTE_DEBIAN7', 'link-10');">RTE_DEBIAN7</a></tt><tt class="py-op">:</tt> <tt id="link-86" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN7" class="py-name" href="#" onclick="return doclink('link-86', 'RTE_DEBIAN7', 'link-10');">RTE_DEBIAN7</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">        <tt id="link-87" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN8" class="py-name" href="#" onclick="return doclink('link-87', 'RTE_DEBIAN8', 'link-12');">RTE_DEBIAN8</a></tt><tt class="py-op">:</tt> <tt id="link-88" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN8" class="py-name" href="#" onclick="return doclink('link-88', 'RTE_DEBIAN8', 'link-12');">RTE_DEBIAN8</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">        <tt id="link-89" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN9" class="py-name" href="#" onclick="return doclink('link-89', 'RTE_DEBIAN9', 'link-36');">RTE_DEBIAN9</a></tt><tt class="py-op">:</tt> <tt id="link-90" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN9" class="py-name" href="#" onclick="return doclink('link-90', 'RTE_DEBIAN9', 'link-36');">RTE_DEBIAN9</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt id="link-91" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN10" class="py-name" href="#" onclick="return doclink('link-91', 'RTE_DEBIAN10', 'link-58');">RTE_DEBIAN10</a></tt><tt class="py-op">:</tt> <tt id="link-92" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN10" class="py-name" href="#" onclick="return doclink('link-92', 'RTE_DEBIAN10', 'link-58');">RTE_DEBIAN10</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">        <tt id="link-93" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN11" class="py-name" href="#" onclick="return doclink('link-93', 'RTE_DEBIAN11', 'link-66');">RTE_DEBIAN11</a></tt><tt class="py-op">:</tt> <tt id="link-94" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN11" class="py-name" href="#" onclick="return doclink('link-94', 'RTE_DEBIAN11', 'link-66');">RTE_DEBIAN11</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">        <tt id="link-95" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN12" class="py-name" href="#" onclick="return doclink('link-95', 'RTE_DEBIAN12', 'link-68');">RTE_DEBIAN12</a></tt><tt class="py-op">:</tt> <tt id="link-96" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN12" class="py-name" href="#" onclick="return doclink('link-96', 'RTE_DEBIAN12', 'link-68');">RTE_DEBIAN12</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">        <tt class="py-comment">#</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-comment">#         &#x27;debian96&#x27;: RTE_DEBIAN96,</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-comment">#         RTE_DEBIAN96: RTE_DEBIAN96,</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">    <tt class="py-op">}</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"><tt class="py-op">)</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt class="py-comment">#: mapping of the rte numeric representation to the string value</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"><tt id="link-97" class="py-name"><a title="platformids.dist.opensuse.num2rte
+platformids.dist.centos.num2rte
+platformids.dist.darwin.num2rte
+platformids.dist.darwin_enum_labels.num2rte
+platformids.dist.rhel_enum_labels.num2rte
+platformids.dist.oraclelinux.num2rte
+platformids.dist.openbsd.num2rte
+platformids.dist.fedora_enum_labels.num2rte
+platformids.dist.netbsd.num2rte
+platformids.dist.windows.num2rte
+platformids.dist.rhel.num2rte
+platformids.dist.freebsd.num2rte
+platformids.dist.solaris.num2rte
+platformids.dist.gentoo.num2rte
+platformids.dist.solaris_enum_labels.num2rte
+platformids.dist.fedora.num2rte
+platformids.dist.openbsd_enum_labels.num2rte
+platformids.dist.debian.num2rte
+platformids.dist.ubuntu.num2rte
+platformids.dist.alpinelinux.num2rte
+platformids.map_enum_labels.num2rte
+platformids.dist.centos_enum_labels.num2rte
+platformids.dist.sles.num2rte
+platformids.num2rte
+platformids.dist.archlinux.num2rte" class="py-name" href="#" onclick="return doclink('link-97', 'num2rte', 'link-4');">num2rte</a></tt><tt class="py-op">.</tt><tt class="py-name">update</tt><tt class="py-op">(</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">    <tt class="py-op">{</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">        <tt id="link-98" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN7" class="py-name" href="#" onclick="return doclink('link-98', 'RTE_DEBIAN7', 'link-10');">RTE_DEBIAN7</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;debian7&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">        <tt id="link-99" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN8" class="py-name" href="#" onclick="return doclink('link-99', 'RTE_DEBIAN8', 'link-12');">RTE_DEBIAN8</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;debian8&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">        <tt id="link-100" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN9" class="py-name" href="#" onclick="return doclink('link-100', 'RTE_DEBIAN9', 'link-36');">RTE_DEBIAN9</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;debian9&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">        <tt id="link-101" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN10" class="py-name" href="#" onclick="return doclink('link-101', 'RTE_DEBIAN10', 'link-58');">RTE_DEBIAN10</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;debian10&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">        <tt id="link-102" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN11" class="py-name" href="#" onclick="return doclink('link-102', 'RTE_DEBIAN11', 'link-66');">RTE_DEBIAN11</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;debian11&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">        <tt id="link-103" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN12" class="py-name" href="#" onclick="return doclink('link-103', 'RTE_DEBIAN12', 'link-68');">RTE_DEBIAN12</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;debian12&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">        <tt class="py-comment">#</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-comment">#         RTE_DEBIAN96: &#x27;debian96&#x27;,</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">    <tt class="py-op">}</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-op">)</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"><tt id="link-104" class="py-name"><a title="platformids.dist.opensuse.num2pretty
+platformids.dist.centos.num2pretty
+platformids.dist.darwin.num2pretty
+platformids.dist.darwin_enum_labels.num2pretty
+platformids.dist.rhel_enum_labels.num2pretty
+platformids.dist.oraclelinux.num2pretty
+platformids.dist.openbsd.num2pretty
+platformids.dist.fedora_enum_labels.num2pretty
+platformids.dist.netbsd.num2pretty
+platformids.dist.windows.num2pretty
+platformids.dist.rhel.num2pretty
+platformids.dist.freebsd.num2pretty
+platformids.dist.solaris.num2pretty
+platformids.dist.gentoo.num2pretty
+platformids.dist.solaris_enum_labels.num2pretty
+platformids.dist.fedora.num2pretty
+platformids.dist.openbsd_enum_labels.num2pretty
+platformids.dist.debian.num2pretty
+platformids.dist.ubuntu.num2pretty
+platformids.dist.alpinelinux.num2pretty
+platformids.map_enum_labels.num2pretty
+platformids.dist.centos_enum_labels.num2pretty
+platformids.dist.sles.num2pretty
+platformids.num2pretty
+platformids.dist.archlinux.num2pretty" class="py-name" href="#" onclick="return doclink('link-104', 'num2pretty', 'link-5');">num2pretty</a></tt><tt class="py-op">.</tt><tt class="py-name">update</tt><tt class="py-op">(</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">    <tt class="py-op">{</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">        <tt id="link-105" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN7" class="py-name" href="#" onclick="return doclink('link-105', 'RTE_DEBIAN7', 'link-10');">RTE_DEBIAN7</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;wheezy&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">        <tt id="link-106" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN8" class="py-name" href="#" onclick="return doclink('link-106', 'RTE_DEBIAN8', 'link-12');">RTE_DEBIAN8</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;jessy&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">        <tt id="link-107" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN9" class="py-name" href="#" onclick="return doclink('link-107', 'RTE_DEBIAN9', 'link-36');">RTE_DEBIAN9</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;stretch&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">        <tt id="link-108" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN10" class="py-name" href="#" onclick="return doclink('link-108', 'RTE_DEBIAN10', 'link-58');">RTE_DEBIAN10</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;buster&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">        <tt id="link-109" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN11" class="py-name" href="#" onclick="return doclink('link-109', 'RTE_DEBIAN11', 'link-66');">RTE_DEBIAN11</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;bullseye&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">        <tt id="link-110" class="py-name"><a title="platformids.dist.debian.RTE_DEBIAN12" class="py-name" href="#" onclick="return doclink('link-110', 'RTE_DEBIAN12', 'link-68');">RTE_DEBIAN12</a></tt><tt class="py-op">:</tt> <tt class="py-string">&#x27;bookworm&#x27;</tt><tt class="py-op">,</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">    <tt class="py-op">}</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt class="py-op">)</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"><tt id="link-111" class="py-name" targets="Package platformids.dist=platformids.dist-module.html,Variable platformids.dist.opensuse.dist=platformids.dist.opensuse-module.html#dist,Variable platformids.dist.centos.dist=platformids.dist.centos-module.html#dist,Variable platformids.net.openwrt.dist=platformids.net.openwrt-module.html#dist,Variable platformids.embed.armbian.dist=platformids.embed.armbian-module.html#dist,Variable platformids.dist.darwin.dist=platformids.dist.darwin-module.html#dist,Variable platformids.dist.darwin_enum_labels.dist=platformids.dist.darwin_enum_labels-module.html#dist,Variable platformids.dist.rhel_enum_labels.dist=platformids.dist.rhel_enum_labels-module.html#dist,Variable platformids.dist.cygwin.dist=platformids.dist.cygwin-module.html#dist,Variable platformids.dist.oraclelinux.dist=platformids.dist.oraclelinux-module.html#dist,Variable platformids.dist.openbsd.dist=platformids.dist.openbsd-module.html#dist,Variable platformids.dist.fedora_enum_labels.dist=platformids.dist.fedora_enum_labels-module.html#dist,Variable platformids.dist.netbsd.dist=platformids.dist.netbsd-module.html#dist,Variable platformids.dist.windows.dist=platformids.dist.windows-module.html#dist,Variable platformids.dist.rhel.dist=platformids.dist.rhel-module.html#dist,Variable platformids.net.pfsense.dist=platformids.net.pfsense-module.html#dist,Variable platformids.dist.freebsd.dist=platformids.dist.freebsd-module.html#dist,Variable platformids.embed.raspbian.dist=platformids.embed.raspbian-module.html#dist,Variable platformids.dist.solaris.dist=platformids.dist.solaris-module.html#dist,Variable platformids.dist.gentoo.dist=platformids.dist.gentoo-module.html#dist,Variable platformids.dist.solaris_enum_labels.dist=platformids.dist.solaris_enum_labels-module.html#dist,Variable platformids.dist.fedora.dist=platformids.dist.fedora-module.html#dist,Variable platformids.dist.openbsd_enum_labels.dist=platformids.dist.openbsd_enum_labels-module.html#dist,Variable platformids.dist.debian.dist=platformids.dist.debian-module.html#dist,Variable platformids.dist.ubuntu.dist=platformids.dist.ubuntu-module.html#dist,Variable platformids.dist.alpinelinux.dist=platformids.dist.alpinelinux-module.html#dist,Variable platformids.dist.hpux.dist=platformids.dist.hpux-module.html#dist,Variable platformids.dist.centos_enum_labels.dist=platformids.dist.centos_enum_labels-module.html#dist,Variable platformids.net.kali.dist=platformids.net.kali-module.html#dist,Variable platformids.dist.sles.dist=platformids.dist.sles-module.html#dist,Variable platformids.dist.archlinux.dist=platformids.dist.archlinux-module.html#dist"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-111', 'dist', 'link-111');">dist</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">&#x27;&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;Debian-&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;Debian&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;&#x27;</tt><tt class="py-op">]</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"><tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">exists</tt><tt class="py-op">(</tt><tt class="py-string">&quot;/etc/debian_version&quot;</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt id="link-112" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-112', 'dist', 'link-111');">dist</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">&#x27;debian&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;Debian&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;&#x27;</tt><tt class="py-op">]</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">        <tt class="py-keyword">with</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-string">&quot;/etc/debian_version&quot;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;r&#x27;</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt id="link-113" class="py-name" targets="Variable platformids.dist.opensuse.f=platformids.dist.opensuse-module.html#f,Variable platformids.dist.centos.f=platformids.dist.centos-module.html#f,Variable platformids.dist.rhel_enum_labels.f=platformids.dist.rhel_enum_labels-module.html#f,Variable platformids.dist.oraclelinux.f=platformids.dist.oraclelinux-module.html#f,Variable platformids.dist.fedora_enum_labels.f=platformids.dist.fedora_enum_labels-module.html#f,Variable platformids.dist.rhel.f=platformids.dist.rhel-module.html#f,Variable platformids.dist.fedora.f=platformids.dist.fedora-module.html#f,Variable platformids.dist.debian.f=platformids.dist.debian-module.html#f,Variable platformids.dist.ubuntu.f=platformids.dist.ubuntu-module.html#f,Variable platformids.dist.alpinelinux.f=platformids.dist.alpinelinux-module.html#f,Variable platformids.dist.centos_enum_labels.f=platformids.dist.centos_enum_labels-module.html#f,Variable platformids.dist.sles.f=platformids.dist.sles-module.html#f,Variable platformids.dist.archlinux.f=platformids.dist.archlinux-module.html#f"><a title="platformids.dist.opensuse.f
+platformids.dist.centos.f
+platformids.dist.rhel_enum_labels.f
+platformids.dist.oraclelinux.f
+platformids.dist.fedora_enum_labels.f
+platformids.dist.rhel.f
+platformids.dist.fedora.f
+platformids.dist.debian.f
+platformids.dist.ubuntu.f
+platformids.dist.alpinelinux.f
+platformids.dist.centos_enum_labels.f
+platformids.dist.sles.f
+platformids.dist.archlinux.f" class="py-name" href="#" onclick="return doclink('link-113', 'f', 'link-113');">f</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt id="link-114" class="py-name" targets="Variable platformids.dist.opensuse.l=platformids.dist.opensuse-module.html#l,Variable platformids.dist.centos.l=platformids.dist.centos-module.html#l,Variable platformids.dist.rhel_enum_labels.l=platformids.dist.rhel_enum_labels-module.html#l,Variable platformids.dist.oraclelinux.l=platformids.dist.oraclelinux-module.html#l,Variable platformids.dist.fedora_enum_labels.l=platformids.dist.fedora_enum_labels-module.html#l,Variable platformids.dist.rhel.l=platformids.dist.rhel-module.html#l,Variable platformids.dist.fedora.l=platformids.dist.fedora-module.html#l,Variable platformids.dist.debian.l=platformids.dist.debian-module.html#l,Variable platformids.dist.ubuntu.l=platformids.dist.ubuntu-module.html#l,Variable platformids.dist.alpinelinux.l=platformids.dist.alpinelinux-module.html#l,Variable platformids.dist.centos_enum_labels.l=platformids.dist.centos_enum_labels-module.html#l,Variable platformids.dist.sles.l=platformids.dist.sles-module.html#l,Variable platformids.dist.archlinux.l=platformids.dist.archlinux-module.html#l"><a title="platformids.dist.opensuse.l
+platformids.dist.centos.l
+platformids.dist.rhel_enum_labels.l
+platformids.dist.oraclelinux.l
+platformids.dist.fedora_enum_labels.l
+platformids.dist.rhel.l
+platformids.dist.fedora.l
+platformids.dist.debian.l
+platformids.dist.ubuntu.l
+platformids.dist.alpinelinux.l
+platformids.dist.centos_enum_labels.l
+platformids.dist.sles.l
+platformids.dist.archlinux.l" class="py-name" href="#" onclick="return doclink('link-114', 'l', 'link-114');">l</a></tt> <tt class="py-keyword">in</tt> <tt id="link-115" class="py-name"><a title="platformids.dist.opensuse.f
+platformids.dist.centos.f
+platformids.dist.rhel_enum_labels.f
+platformids.dist.oraclelinux.f
+platformids.dist.fedora_enum_labels.f
+platformids.dist.rhel.f
+platformids.dist.fedora.f
+platformids.dist.debian.f
+platformids.dist.ubuntu.f
+platformids.dist.alpinelinux.f
+platformids.dist.centos_enum_labels.f
+platformids.dist.sles.f
+platformids.dist.archlinux.f" class="py-name" href="#" onclick="return doclink('link-115', 'f', 'link-113');">f</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">                <tt id="link-116" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-116', 'dist', 'link-111');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">re</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">r&#x27;(?s)^([0-9.]*).*$&#x27;</tt><tt class="py-op">,</tt> <tt id="link-117" class="py-name"><a title="platformids.dist.opensuse.l
+platformids.dist.centos.l
+platformids.dist.rhel_enum_labels.l
+platformids.dist.oraclelinux.l
+platformids.dist.fedora_enum_labels.l
+platformids.dist.rhel.l
+platformids.dist.fedora.l
+platformids.dist.debian.l
+platformids.dist.ubuntu.l
+platformids.dist.alpinelinux.l
+platformids.dist.centos_enum_labels.l
+platformids.dist.sles.l
+platformids.dist.archlinux.l" class="py-name" href="#" onclick="return doclink('link-117', 'l', 'link-114');">l</a></tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">                <tt id="link-118" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-118', 'dist', 'link-111');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">4</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt id="link-119" class="py-name"><a title="platformids.decode_version_str_to_segments" class="py-name" href="#" onclick="return doclink('link-119', 'decode_version_str_to_segments', 'link-6');">decode_version_str_to_segments</a></tt><tt class="py-op">(</tt><tt id="link-120" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-120', 'dist', 'link-111');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">     </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">     </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">    <tt id="link-121" class="py-name" targets="Variable platformids.dist.debian._ver=platformids.dist.debian-module.html#_ver,Variable platformids.dist.archlinux._ver=platformids.dist.archlinux-module.html#_ver"><a title="platformids.dist.debian._ver
+platformids.dist.archlinux._ver" class="py-name" href="#" onclick="return doclink('link-121', '_ver', 'link-121');">_ver</a></tt> <tt class="py-op">=</tt> <tt class="py-string">&#x27;&#x27;</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">    <tt id="link-122" class="py-name" targets="Variable platformids.dist.debian._name=platformids.dist.debian-module.html#_name"><a title="platformids.dist.debian._name" class="py-name" href="#" onclick="return doclink('link-122', '_name', 'link-122');">_name</a></tt> <tt class="py-op">=</tt> <tt class="py-string">&#x27;&#x27;</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">     </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">    <tt class="py-keyword">with</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-string">&quot;/etc/os-release&quot;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;r&#x27;</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt id="link-123" class="py-name"><a title="platformids.dist.opensuse.f
+platformids.dist.centos.f
+platformids.dist.rhel_enum_labels.f
+platformids.dist.oraclelinux.f
+platformids.dist.fedora_enum_labels.f
+platformids.dist.rhel.f
+platformids.dist.fedora.f
+platformids.dist.debian.f
+platformids.dist.ubuntu.f
+platformids.dist.alpinelinux.f
+platformids.dist.centos_enum_labels.f
+platformids.dist.sles.f
+platformids.dist.archlinux.f" class="py-name" href="#" onclick="return doclink('link-123', 'f', 'link-113');">f</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt id="link-124" class="py-name"><a title="platformids.dist.opensuse.l
+platformids.dist.centos.l
+platformids.dist.rhel_enum_labels.l
+platformids.dist.oraclelinux.l
+platformids.dist.fedora_enum_labels.l
+platformids.dist.rhel.l
+platformids.dist.fedora.l
+platformids.dist.debian.l
+platformids.dist.ubuntu.l
+platformids.dist.alpinelinux.l
+platformids.dist.centos_enum_labels.l
+platformids.dist.sles.l
+platformids.dist.archlinux.l" class="py-name" href="#" onclick="return doclink('link-124', 'l', 'link-114');">l</a></tt> <tt class="py-keyword">in</tt> <tt id="link-125" class="py-name"><a title="platformids.dist.opensuse.f
+platformids.dist.centos.f
+platformids.dist.rhel_enum_labels.f
+platformids.dist.oraclelinux.f
+platformids.dist.fedora_enum_labels.f
+platformids.dist.rhel.f
+platformids.dist.fedora.f
+platformids.dist.debian.f
+platformids.dist.ubuntu.f
+platformids.dist.alpinelinux.f
+platformids.dist.centos_enum_labels.f
+platformids.dist.sles.f
+platformids.dist.archlinux.f" class="py-name" href="#" onclick="return doclink('link-125', 'f', 'link-113');">f</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt id="link-126" class="py-name"><a title="platformids.dist.opensuse.l
+platformids.dist.centos.l
+platformids.dist.rhel_enum_labels.l
+platformids.dist.oraclelinux.l
+platformids.dist.fedora_enum_labels.l
+platformids.dist.rhel.l
+platformids.dist.fedora.l
+platformids.dist.debian.l
+platformids.dist.ubuntu.l
+platformids.dist.alpinelinux.l
+platformids.dist.centos_enum_labels.l
+platformids.dist.sles.l
+platformids.dist.archlinux.l" class="py-name" href="#" onclick="return doclink('link-126', 'l', 'link-114');">l</a></tt><tt class="py-op">.</tt><tt class="py-name">startswith</tt><tt class="py-op">(</tt><tt class="py-string">&#x27;ID=&#x27;</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">                <tt id="link-127" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-127', 'dist', 'link-111');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt id="link-128" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-128', 'dist', 'link-111');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">5</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt id="link-129" class="py-name"><a title="platformids.dist.opensuse.DSKORG_ID
+platformids.dist.darwin_enum_labels.DSKORG_ID
+platformids.dist.rhel_enum_labels.DSKORG_ID
+platformids.dist.fedora_enum_labels.DSKORG_ID
+platformids.dist.solaris_enum_labels.DSKORG_ID
+platformids.dist.openbsd_enum_labels.DSKORG_ID
+platformids.dist.debian.DSKORG_ID
+platformids.dist.ubuntu.DSKORG_ID
+platformids.dist.alpinelinux.DSKORG_ID
+platformids.map_enum_labels.DSKORG_ID
+platformids.dist.centos_enum_labels.DSKORG_ID
+platformids.dist.sles.DSKORG_ID
+platformids.DSKORG_ID
+platformids.dist.archlinux.DSKORG_ID" class="py-name" href="#" onclick="return doclink('link-129', 'DSKORG_ID', 'link-7');">DSKORG_ID</a></tt><tt class="py-op">.</tt><tt class="py-name">sub</tt><tt class="py-op">(</tt><tt class="py-string">r&#x27;\1&#x27;</tt><tt class="py-op">,</tt> <tt id="link-130" class="py-name"><a title="platformids.dist.opensuse.l
+platformids.dist.centos.l
+platformids.dist.rhel_enum_labels.l
+platformids.dist.oraclelinux.l
+platformids.dist.fedora_enum_labels.l
+platformids.dist.rhel.l
+platformids.dist.fedora.l
+platformids.dist.debian.l
+platformids.dist.ubuntu.l
+platformids.dist.alpinelinux.l
+platformids.dist.centos_enum_labels.l
+platformids.dist.sles.l
+platformids.dist.archlinux.l" class="py-name" href="#" onclick="return doclink('link-130', 'l', 'link-114');">l</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line"> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-131" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-131', 'dist', 'link-111');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">5</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">&#x27;debian&#x27;</tt><tt class="py-op">:</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">        <tt class="py-comment"># debian</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">        <tt id="link-132" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-132', 'dist', 'link-111');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">+=</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt id="link-133" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-133', 'dist', 'link-111');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">4</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt id="link-134" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-134', 'dist', 'link-111');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">4</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">        <tt id="link-135" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-135', 'dist', 'link-111');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">2</tt><tt class="py-op">]</tt> <tt class="py-op">+=</tt> <tt id="link-136" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-136', 'dist', 'link-111');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line"> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line"> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line"><tt class="py-keyword">except</tt> <tt id="link-137" class="py-name"><a title="platformids.dist.opensuse.PlatformIDsFileCheck
+platformids.dist.centos.PlatformIDsFileCheck
+platformids.dist.darwin.PlatformIDsFileCheck
+platformids.dist.darwin_enum_labels.PlatformIDsFileCheck
+platformids.dist.rhel_enum_labels.PlatformIDsFileCheck
+platformids.dist.oraclelinux.PlatformIDsFileCheck
+platformids.dist.openbsd.PlatformIDsFileCheck
+platformids.dist.fedora_enum_labels.PlatformIDsFileCheck
+platformids.dist.netbsd.PlatformIDsFileCheck
+platformids.dist.windows.PlatformIDsFileCheck
+platformids.dist.rhel.PlatformIDsFileCheck
+platformids.dist.freebsd.PlatformIDsFileCheck
+platformids.dist.solaris.PlatformIDsFileCheck
+platformids.dist.gentoo.PlatformIDsFileCheck
+platformids.dist.solaris_enum_labels.PlatformIDsFileCheck
+platformids.dist.fedora.PlatformIDsFileCheck
+platformids.dist.openbsd_enum_labels.PlatformIDsFileCheck
+platformids.dist.debian.PlatformIDsFileCheck
+platformids.dist.ubuntu.PlatformIDsFileCheck
+platformids.dist.alpinelinux.PlatformIDsFileCheck
+platformids.map_enum_labels.PlatformIDsFileCheck
+platformids.dist.centos_enum_labels.PlatformIDsFileCheck
+platformids.dist.sles.PlatformIDsFileCheck
+platformids.PlatformIDsFileCheck
+platformids.dist.archlinux.PlatformIDsFileCheck" class="py-name" href="#" onclick="return doclink('link-137', 'PlatformIDsFileCheck', 'link-8');">PlatformIDsFileCheck</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">    <tt class="py-comment"># not on Debian platform, so scan will fail</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">    <tt class="py-keyword">pass</tt>     </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line"> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line"> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt id="link-138" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-138', 'dist', 'link-111');">dist</a></tt><tt class="py-op">[</tt><tt class="py-number">5</tt><tt class="py-op">]</tt> <tt class="py-op">!=</tt> <tt class="py-string">&#x27;debian&#x27;</tt><tt class="py-op">:</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">    <tt class="py-comment"># does not actually match Debian</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">    <tt id="link-139" class="py-name"><a title="platformids.dist
+platformids.dist.opensuse.dist
+platformids.dist.centos.dist
+platformids.net.openwrt.dist
+platformids.embed.armbian.dist
+platformids.dist.darwin.dist
+platformids.dist.darwin_enum_labels.dist
+platformids.dist.rhel_enum_labels.dist
+platformids.dist.cygwin.dist
+platformids.dist.oraclelinux.dist
+platformids.dist.openbsd.dist
+platformids.dist.fedora_enum_labels.dist
+platformids.dist.netbsd.dist
+platformids.dist.windows.dist
+platformids.dist.rhel.dist
+platformids.net.pfsense.dist
+platformids.dist.freebsd.dist
+platformids.embed.raspbian.dist
+platformids.dist.solaris.dist
+platformids.dist.gentoo.dist
+platformids.dist.solaris_enum_labels.dist
+platformids.dist.fedora.dist
+platformids.dist.openbsd_enum_labels.dist
+platformids.dist.debian.dist
+platformids.dist.ubuntu.dist
+platformids.dist.alpinelinux.dist
+platformids.dist.hpux.dist
+platformids.dist.centos_enum_labels.dist
+platformids.net.kali.dist
+platformids.dist.sles.dist
+platformids.dist.archlinux.dist" class="py-name" href="#" onclick="return doclink('link-139', 'dist', 'link-111');">dist</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">&#x27;debian&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;0.0.0&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;Debian-0.0.0&#x27;</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;Debian&#x27;</tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-string">&#x27;debian&#x27;</tt><tt class="py-op">]</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link - Main Document -->
+      <th>&nbsp;&nbsp;&nbsp;<a target="_top"
+        href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th>&nbsp;&nbsp;&nbsp;<a target="_top"
+        href="../index_part_apiref_scaled.html">Top</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th>
+          &nbsp;&nbsp;&nbsp;
+          <a target="_parent" href="frames.html">&larr;</a>
+          &nbsp;
+      <th>
+      <th>
+          &nbsp;
+          <a target="_parent" href="frames-right.html">&rarr;</a>
+          &nbsp;&nbsp;&nbsp;
+      </th>
+
+  <!-- Overview link - api reference-->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="platformids-module.html">Overview</a>&nbsp;&nbsp;&nbsp;</th>
+
+
+  <!-- Module -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Module</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Class -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="class-tree.html">Class</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+  <!--
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Tree</a>&nbsp;&nbsp;&nbsp;</th>
+  -->
+  
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr>
+              <th>&nbsp;&nbsp;&nbsp;<a
+                href="http://pypi.python.org/pypi/setupdocx">@www</a>&nbsp;&nbsp;&nbsp;</th>
+          </tr></table></th>
+
+  <!-- About link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="about.html">About</a>&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+</table>
+<table class="footTable" border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+        Copyright(C) 2019 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="https://arnocan.wordpress.com"
+        >https://arnocan.wordpress.com</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="lest" class="footer">
+    Generated by Epydoc 4.0.4 / Python-3.8 / fedora27 on Sun Dec  8 04:31:50 2019
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

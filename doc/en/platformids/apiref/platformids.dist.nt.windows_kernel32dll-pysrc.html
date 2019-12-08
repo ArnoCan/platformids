@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>platformids.dist.nt.windows_kernel32dll</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link - Main Document -->
+      <th>&nbsp;&nbsp;&nbsp;<a target="_top"
+        href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th>&nbsp;&nbsp;&nbsp;<a target="_top"
+        href="../index_part_apiref_scaled.html">Top</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th>
+          &nbsp;&nbsp;&nbsp;
+          <a target="_parent" href="frames.html">&larr;</a>
+          &nbsp;
+      <th>
+      <th>
+          &nbsp;
+          <a target="_parent" href="frames-right.html">&rarr;</a>
+          &nbsp;&nbsp;&nbsp;
+      </th>
+
+  <!-- Overview link - api reference-->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="platformids-module.html">Overview</a>&nbsp;&nbsp;&nbsp;</th>
+
+
+  <!-- Module -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Module</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Class -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="class-tree.html">Class</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+  <!--
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Tree</a>&nbsp;&nbsp;&nbsp;</th>
+  -->
+  
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr>
+              <th>&nbsp;&nbsp;&nbsp;<a
+                href="http://pypi.python.org/pypi/setupdocx">@www</a>&nbsp;&nbsp;&nbsp;</th>
+          </tr></table></th>
+
+  <!-- About link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="about.html">About</a>&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+</table>
+<table class="subnavbar" width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td>
+      <table class="items" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center">
+                <span class="options">
+                  <a href="frames.html" target="_top">&lt;Frames(L)</a>
+                </span>
+                &nbsp;
+            </td>
+            <td align="center">
+                &#124;
+                &nbsp;
+                <span class="options">
+                    <a href="platformids.dist.nt.windows_kernel32dll-pysrc.html" target="_top">No&nbsp;Frames</a>
+                </span>
+                &nbsp;
+                &#124;
+            </td>
+            <td align="center">
+                &nbsp;
+                <span class="options">
+                   <a href="frames-right.html" target="_top">Frames(R)&gt;</a>
+                </span>
+            </td>
+           </tr>
+      </table>
+    </td>
+    <td>
+    </td>
+ </tr>
+ <tr>
+</table>
+      <span class="breadcrumbs">
+        Package&nbsp;platformids ::
+        Package&nbsp;dist ::
+        <a href="platformids.dist.nt-module.html">Package&nbsp;nt</a> ::
+        Module&nbsp;windows_kernel32dll
+      </span>
+<h1 class="epydoc">Source Code for <a href="platformids.dist.nt.windows_kernel32dll-module.html">Module platformids.dist.nt.windows_kernel32dll</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">&quot;&quot;&quot;MS-Windows releases for the WindowsNT family.</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">.. note::</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">   **ATTENTION**: The ostype == RTE_NT uses for *dist* and *distrel* it&#x27;s own non-default </tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring">   encoding, while the scheme follows the default record layout, see &#x27;:ref:`Windows NT &lt;enumWINNT&gt;`&#x27;.</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-docstring">&quot;&quot;&quot;</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">__future__</tt> <tt class="py-keyword">import</tt> <tt class="py-name">absolute_import</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package platformids=platformids-module.html"><a title="platformids" class="py-name" href="#" onclick="return doclink('link-0', 'platformids', 'link-0');">platformids</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Variable platformids.dist.darwin_enum_labels.RTE_NT=platformids.dist.darwin_enum_labels-module.html#RTE_NT,Variable platformids.dist.rhel_enum_labels.RTE_NT=platformids.dist.rhel_enum_labels-module.html#RTE_NT,Variable platformids.dist.fedora_enum_labels.RTE_NT=platformids.dist.fedora_enum_labels-module.html#RTE_NT,Variable platformids.dist.windows.RTE_NT=platformids.dist.windows-module.html#RTE_NT,Variable platformids.dist.solaris_enum_labels.RTE_NT=platformids.dist.solaris_enum_labels-module.html#RTE_NT,Variable platformids.dist.openbsd_enum_labels.RTE_NT=platformids.dist.openbsd_enum_labels-module.html#RTE_NT,Variable platformids.map_enum_labels.RTE_NT=platformids.map_enum_labels-module.html#RTE_NT,Variable platformids.dist.centos_enum_labels.RTE_NT=platformids.dist.centos_enum_labels-module.html#RTE_NT,Variable platformids.RTE_NT=platformids-module.html#RTE_NT"><a title="platformids.dist.darwin_enum_labels.RTE_NT
+platformids.dist.rhel_enum_labels.RTE_NT
+platformids.dist.fedora_enum_labels.RTE_NT
+platformids.dist.windows.RTE_NT
+platformids.dist.solaris_enum_labels.RTE_NT
+platformids.dist.openbsd_enum_labels.RTE_NT
+platformids.map_enum_labels.RTE_NT
+platformids.dist.centos_enum_labels.RTE_NT
+platformids.RTE_NT" class="py-name" href="#" onclick="return doclink('link-1', 'RTE_NT', 'link-1');">RTE_NT</a></tt><tt class="py-op">,</tt> <tt id="link-2" class="py-name" targets="Variable platformids.dist.darwin_enum_labels.RTE_WIN=platformids.dist.darwin_enum_labels-module.html#RTE_WIN,Variable platformids.dist.rhel_enum_labels.RTE_WIN=platformids.dist.rhel_enum_labels-module.html#RTE_WIN,Variable platformids.dist.fedora_enum_labels.RTE_WIN=platformids.dist.fedora_enum_labels-module.html#RTE_WIN,Variable platformids.dist.windows.RTE_WIN=platformids.dist.windows-module.html#RTE_WIN,Variable platformids.dist.solaris_enum_labels.RTE_WIN=platformids.dist.solaris_enum_labels-module.html#RTE_WIN,Variable platformids.dist.openbsd_enum_labels.RTE_WIN=platformids.dist.openbsd_enum_labels-module.html#RTE_WIN,Variable platformids.map_enum_labels.RTE_WIN=platformids.map_enum_labels-module.html#RTE_WIN,Variable platformids.dist.centos_enum_labels.RTE_WIN=platformids.dist.centos_enum_labels-module.html#RTE_WIN,Variable platformids.RTE_WIN=platformids-module.html#RTE_WIN"><a title="platformids.dist.darwin_enum_labels.RTE_WIN
+platformids.dist.rhel_enum_labels.RTE_WIN
+platformids.dist.fedora_enum_labels.RTE_WIN
+platformids.dist.windows.RTE_WIN
+platformids.dist.solaris_enum_labels.RTE_WIN
+platformids.dist.openbsd_enum_labels.RTE_WIN
+platformids.map_enum_labels.RTE_WIN
+platformids.dist.centos_enum_labels.RTE_WIN
+platformids.RTE_WIN" class="py-name" href="#" onclick="return doclink('link-2', 'RTE_WIN', 'link-2');">RTE_WIN</a></tt><tt class="py-op">,</tt> <tt id="link-3" class="py-name" targets="Variable platformids.dist.darwin_enum_labels.RTE_WINDOWS=platformids.dist.darwin_enum_labels-module.html#RTE_WINDOWS,Variable platformids.dist.rhel_enum_labels.RTE_WINDOWS=platformids.dist.rhel_enum_labels-module.html#RTE_WINDOWS,Variable platformids.dist.fedora_enum_labels.RTE_WINDOWS=platformids.dist.fedora_enum_labels-module.html#RTE_WINDOWS,Variable platformids.dist.windows.RTE_WINDOWS=platformids.dist.windows-module.html#RTE_WINDOWS,Variable platformids.dist.solaris_enum_labels.RTE_WINDOWS=platformids.dist.solaris_enum_labels-module.html#RTE_WINDOWS,Variable platformids.dist.openbsd_enum_labels.RTE_WINDOWS=platformids.dist.openbsd_enum_labels-module.html#RTE_WINDOWS,Variable platformids.map_enum_labels.RTE_WINDOWS=platformids.map_enum_labels-module.html#RTE_WINDOWS,Variable platformids.dist.centos_enum_labels.RTE_WINDOWS=platformids.dist.centos_enum_labels-module.html#RTE_WINDOWS,Variable platformids.RTE_WINDOWS=platformids-module.html#RTE_WINDOWS"><a title="platformids.dist.darwin_enum_labels.RTE_WINDOWS
+platformids.dist.rhel_enum_labels.RTE_WINDOWS
+platformids.dist.fedora_enum_labels.RTE_WINDOWS
+platformids.dist.windows.RTE_WINDOWS
+platformids.dist.solaris_enum_labels.RTE_WINDOWS
+platformids.dist.openbsd_enum_labels.RTE_WINDOWS
+platformids.map_enum_labels.RTE_WINDOWS
+platformids.dist.centos_enum_labels.RTE_WINDOWS
+platformids.RTE_WINDOWS" class="py-name" href="#" onclick="return doclink('link-3', 'RTE_WINDOWS', 'link-3');">RTE_WINDOWS</a></tt><tt class="py-op">,</tt> \ </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line">    <tt id="link-4" class="py-name" targets="Variable platformids.dist.opensuse.rte2num=platformids.dist.opensuse-module.html#rte2num,Variable platformids.dist.centos.rte2num=platformids.dist.centos-module.html#rte2num,Variable platformids.dist.darwin.rte2num=platformids.dist.darwin-module.html#rte2num,Variable platformids.dist.darwin_enum_labels.rte2num=platformids.dist.darwin_enum_labels-module.html#rte2num,Variable platformids.dist.rhel_enum_labels.rte2num=platformids.dist.rhel_enum_labels-module.html#rte2num,Variable platformids.dist.oraclelinux.rte2num=platformids.dist.oraclelinux-module.html#rte2num,Variable platformids.dist.openbsd.rte2num=platformids.dist.openbsd-module.html#rte2num,Variable platformids.dist.fedora_enum_labels.rte2num=platformids.dist.fedora_enum_labels-module.html#rte2num,Variable platformids.dist.netbsd.rte2num=platformids.dist.netbsd-module.html#rte2num,Variable platformids.dist.windows.rte2num=platformids.dist.windows-module.html#rte2num,Variable platformids.dist.rhel.rte2num=platformids.dist.rhel-module.html#rte2num,Variable platformids.dist.freebsd.rte2num=platformids.dist.freebsd-module.html#rte2num,Variable platformids.dist.solaris.rte2num=platformids.dist.solaris-module.html#rte2num,Variable platformids.dist.gentoo.rte2num=platformids.dist.gentoo-module.html#rte2num,Variable platformids.dist.solaris_enum_labels.rte2num=platformids.dist.solaris_enum_labels-module.html#rte2num,Variable platformids.dist.fedora.rte2num=platformids.dist.fedora-module.html#rte2num,Variable platformids.dist.openbsd_enum_labels.rte2num=platformids.dist.openbsd_enum_labels-module.html#rte2num,Variable platformids.dist.debian.rte2num=platformids.dist.debian-module.html#rte2num,Variable platformids.dist.ubuntu.rte2num=platformids.dist.ubuntu-module.html#rte2num,Variable platformids.dist.alpinelinux.rte2num=platformids.dist.alpinelinux-module.html#rte2num,Variable platformids.map_enum_labels.rte2num=platformids.map_enum_labels-module.html#rte2num,Variable platformids.dist.centos_enum_labels.rte2num=platformids.dist.centos_enum_labels-module.html#rte2num,Variable platformids.dist.sles.rte2num=platformids.dist.sles-module.html#rte2num,Variable platformids.rte2num=platformids-module.html#rte2num,Variable platformids.dist.archlinux.rte2num=platformids.dist.archlinux-module.html#rte2num"><a title="platformids.dist.opensuse.rte2num
+platformids.dist.centos.rte2num
+platformids.dist.darwin.rte2num
+platformids.dist.darwin_enum_labels.rte2num
+platformids.dist.rhel_enum_labels.rte2num
+platformids.dist.oraclelinux.rte2num
+platformids.dist.openbsd.rte2num
+platformids.dist.fedora_enum_labels.rte2num
+platformids.dist.netbsd.rte2num
+platformids.dist.windows.rte2num
+platformids.dist.rhel.rte2num
+platformids.dist.freebsd.rte2num
+platformids.dist.solaris.rte2num
+platformids.dist.gentoo.rte2num
+platformids.dist.solaris_enum_labels.rte2num
+platformids.dist.fedora.rte2num
+platformids.dist.openbsd_enum_labels.rte2num
+platformids.dist.debian.rte2num
+platformids.dist.ubuntu.rte2num
+platformids.dist.alpinelinux.rte2num
+platformids.map_enum_labels.rte2num
+platformids.dist.centos_enum_labels.rte2num
+platformids.dist.sles.rte2num
+platformids.rte2num
+platformids.dist.archlinux.rte2num" class="py-name" href="#" onclick="return doclink('link-4', 'rte2num', 'link-4');">rte2num</a></tt><tt class="py-op">,</tt> <tt id="link-5" class="py-name" targets="Variable platformids.dist.opensuse.num2rte=platformids.dist.opensuse-module.html#num2rte,Variable platformids.dist.centos.num2rte=platformids.dist.centos-module.html#num2rte,Variable platformids.dist.darwin.num2rte=platformids.dist.darwin-module.html#num2rte,Variable platformids.dist.darwin_enum_labels.num2rte=platformids.dist.darwin_enum_labels-module.html#num2rte,Variable platformids.dist.rhel_enum_labels.num2rte=platformids.dist.rhel_enum_labels-module.html#num2rte,Variable platformids.dist.oraclelinux.num2rte=platformids.dist.oraclelinux-module.html#num2rte,Variable platformids.dist.openbsd.num2rte=platformids.dist.openbsd-module.html#num2rte,Variable platformids.dist.fedora_enum_labels.num2rte=platformids.dist.fedora_enum_labels-module.html#num2rte,Variable platformids.dist.netbsd.num2rte=platformids.dist.netbsd-module.html#num2rte,Variable platformids.dist.windows.num2rte=platformids.dist.windows-module.html#num2rte,Variable platformids.dist.rhel.num2rte=platformids.dist.rhel-module.html#num2rte,Variable platformids.dist.freebsd.num2rte=platformids.dist.freebsd-module.html#num2rte,Variable platformids.dist.solaris.num2rte=platformids.dist.solaris-module.html#num2rte,Variable platformids.dist.gentoo.num2rte=platformids.dist.gentoo-module.html#num2rte,Variable platformids.dist.solaris_enum_labels.num2rte=platformids.dist.solaris_enum_labels-module.html#num2rte,Variable platformids.dist.fedora.num2rte=platformids.dist.fedora-module.html#num2rte,Variable platformids.dist.openbsd_enum_labels.num2rte=platformids.dist.openbsd_enum_labels-module.html#num2rte,Variable platformids.dist.debian.num2rte=platformids.dist.debian-module.html#num2rte,Variable platformids.dist.ubuntu.num2rte=platformids.dist.ubuntu-module.html#num2rte,Variable platformids.dist.alpinelinux.num2rte=platformids.dist.alpinelinux-module.html#num2rte,Variable platformids.map_enum_labels.num2rte=platformids.map_enum_labels-module.html#num2rte,Variable platformids.dist.centos_enum_labels.num2rte=platformids.dist.centos_enum_labels-module.html#num2rte,Variable platformids.dist.sles.num2rte=platformids.dist.sles-module.html#num2rte,Variable platformids.num2rte=platformids-module.html#num2rte,Variable platformids.dist.archlinux.num2rte=platformids.dist.archlinux-module.html#num2rte"><a title="platformids.dist.opensuse.num2rte
+platformids.dist.centos.num2rte
+platformids.dist.darwin.num2rte
+platformids.dist.darwin_enum_labels.num2rte
+platformids.dist.rhel_enum_labels.num2rte
+platformids.dist.oraclelinux.num2rte
+platformids.dist.openbsd.num2rte
+platformids.dist.fedora_enum_labels.num2rte
+platformids.dist.netbsd.num2rte
+platformids.dist.windows.num2rte
+platformids.dist.rhel.num2rte
+platformids.dist.freebsd.num2rte
+platformids.dist.solaris.num2rte
+platformids.dist.gentoo.num2rte
+platformids.dist.solaris_enum_labels.num2rte
+platformids.dist.fedora.num2rte
+platformids.dist.openbsd_enum_labels.num2rte
+platformids.dist.debian.num2rte
+platformids.dist.ubuntu.num2rte
+platformids.dist.alpinelinux.num2rte
+platformids.map_enum_labels.num2rte
+platformids.dist.centos_enum_labels.num2rte
+platformids.dist.sles.num2rte
+platformids.num2rte
+platformids.dist.archlinux.num2rte" class="py-name" href="#" onclick="return doclink('link-5', 'num2rte', 'link-5');">num2rte</a></tt><tt class="py-op">,</tt> <tt id="link-6" class="py-name" targets="Variable platformids.dist.opensuse.num2pretty=platformids.dist.opensuse-module.html#num2pretty,Variable platformids.dist.centos.num2pretty=platformids.dist.centos-module.html#num2pretty,Variable platformids.dist.darwin.num2pretty=platformids.dist.darwin-module.html#num2pretty,Variable platformids.dist.darwin_enum_labels.num2pretty=platformids.dist.darwin_enum_labels-module.html#num2pretty,Variable platformids.dist.rhel_enum_labels.num2pretty=platformids.dist.rhel_enum_labels-module.html#num2pretty,Variable platformids.dist.oraclelinux.num2pretty=platformids.dist.oraclelinux-module.html#num2pretty,Variable platformids.dist.openbsd.num2pretty=platformids.dist.openbsd-module.html#num2pretty,Variable platformids.dist.fedora_enum_labels.num2pretty=platformids.dist.fedora_enum_labels-module.html#num2pretty,Variable platformids.dist.netbsd.num2pretty=platformids.dist.netbsd-module.html#num2pretty,Variable platformids.dist.windows.num2pretty=platformids.dist.windows-module.html#num2pretty,Variable platformids.dist.rhel.num2pretty=platformids.dist.rhel-module.html#num2pretty,Variable platformids.dist.freebsd.num2pretty=platformids.dist.freebsd-module.html#num2pretty,Variable platformids.dist.solaris.num2pretty=platformids.dist.solaris-module.html#num2pretty,Variable platformids.dist.gentoo.num2pretty=platformids.dist.gentoo-module.html#num2pretty,Variable platformids.dist.solaris_enum_labels.num2pretty=platformids.dist.solaris_enum_labels-module.html#num2pretty,Variable platformids.dist.fedora.num2pretty=platformids.dist.fedora-module.html#num2pretty,Variable platformids.dist.openbsd_enum_labels.num2pretty=platformids.dist.openbsd_enum_labels-module.html#num2pretty,Variable platformids.dist.debian.num2pretty=platformids.dist.debian-module.html#num2pretty,Variable platformids.dist.ubuntu.num2pretty=platformids.dist.ubuntu-module.html#num2pretty,Variable platformids.dist.alpinelinux.num2pretty=platformids.dist.alpinelinux-module.html#num2pretty,Variable platformids.map_enum_labels.num2pretty=platformids.map_enum_labels-module.html#num2pretty,Variable platformids.dist.centos_enum_labels.num2pretty=platformids.dist.centos_enum_labels-module.html#num2pretty,Variable platformids.dist.sles.num2pretty=platformids.dist.sles-module.html#num2pretty,Variable platformids.num2pretty=platformids-module.html#num2pretty,Variable platformids.dist.archlinux.num2pretty=platformids.dist.archlinux-module.html#num2pretty"><a title="platformids.dist.opensuse.num2pretty
+platformids.dist.centos.num2pretty
+platformids.dist.darwin.num2pretty
+platformids.dist.darwin_enum_labels.num2pretty
+platformids.dist.rhel_enum_labels.num2pretty
+platformids.dist.oraclelinux.num2pretty
+platformids.dist.openbsd.num2pretty
+platformids.dist.fedora_enum_labels.num2pretty
+platformids.dist.netbsd.num2pretty
+platformids.dist.windows.num2pretty
+platformids.dist.rhel.num2pretty
+platformids.dist.freebsd.num2pretty
+platformids.dist.solaris.num2pretty
+platformids.dist.gentoo.num2pretty
+platformids.dist.solaris_enum_labels.num2pretty
+platformids.dist.fedora.num2pretty
+platformids.dist.openbsd_enum_labels.num2pretty
+platformids.dist.debian.num2pretty
+platformids.dist.ubuntu.num2pretty
+platformids.dist.alpinelinux.num2pretty
+platformids.map_enum_labels.num2pretty
+platformids.dist.centos_enum_labels.num2pretty
+platformids.dist.sles.num2pretty
+platformids.num2pretty
+platformids.dist.archlinux.num2pretty" class="py-name" href="#" onclick="return doclink('link-6', 'num2pretty', 'link-6');">num2pretty</a></tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-name">__author__</tt> <tt class="py-op">=</tt> <tt class="py-string">&#x27;Arno-Can Uestuensoez&#x27;</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-name">__license__</tt> <tt class="py-op">=</tt> <tt class="py-string">&quot;Artistic-License-2.0 + Forced-Fairplay-Constraints&quot;</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-name">__copyright__</tt> <tt class="py-op">=</tt> <tt class="py-string">&quot;Copyright (C) 2010-2018 Arno-Can Uestuensoez&quot;</tt> \ </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line">                <tt class="py-string">&quot; @Ingenieurbuero Arno-Can Uestuensoez&quot;</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-name">__version__</tt> <tt class="py-op">=</tt> <tt class="py-string">&#x27;0.1.2&#x27;</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt id="link-7" class="py-name" targets="Variable platformids.custom.slackware.__uuid__=platformids.custom.slackware-module.html#__uuid__,Variable platformids.dist.opensuse.__uuid__=platformids.dist.opensuse-module.html#__uuid__,Variable platformids.dist.centos.__uuid__=platformids.dist.centos-module.html#__uuid__,Variable platformids.net.openwrt.__uuid__=platformids.net.openwrt-module.html#__uuid__,Variable platformids.custom.blackarch.__uuid__=platformids.custom.blackarch-module.html#__uuid__,Variable platformids.embed.armbian.__uuid__=platformids.embed.armbian-module.html#__uuid__,Variable platformids.custom.minix2.__uuid__=platformids.custom.minix2-module.html#__uuid__,Variable platformids.optionparser_platformids.__uuid__=platformids.optionparser_platformids-module.html#__uuid__,Variable platformids.dist.darwin.__uuid__=platformids.dist.darwin-module.html#__uuid__,Variable platformids.dist.nt.windows_kernel32dll.__uuid__=platformids.dist.nt.windows_kernel32dll-module.html#__uuid__,Variable platformids.dist.darwin_enum_labels.__uuid__=platformids.dist.darwin_enum_labels-module.html#__uuid__,Variable platformids.embed.micropython.__uuid__=platformids.embed.micropython-module.html#__uuid__,Variable platformids.custom.dragonbsd.__uuid__=platformids.custom.dragonbsd-module.html#__uuid__,Variable platformids.dist.rhel_enum_labels.__uuid__=platformids.dist.rhel_enum_labels-module.html#__uuid__,Variable platformids.dist.cygwin.__uuid__=platformids.dist.cygwin-module.html#__uuid__,Variable platformids.custom.ghostbsd.__uuid__=platformids.custom.ghostbsd-module.html#__uuid__,Variable platformids.dist.oraclelinux.__uuid__=platformids.dist.oraclelinux-module.html#__uuid__,Variable platformids.custom.linuxmint.__uuid__=platformids.custom.linuxmint-module.html#__uuid__,Variable platformids.dist.openbsd.__uuid__=platformids.dist.openbsd-module.html#__uuid__,Variable platformids.dist.fedora_enum_labels.__uuid__=platformids.dist.fedora_enum_labels-module.html#__uuid__,Variable platformids.dist.netbsd.__uuid__=platformids.dist.netbsd-module.html#__uuid__,Variable platformids.dist.windows.__uuid__=platformids.dist.windows-module.html#__uuid__,Variable platformids.dist.rhel.__uuid__=platformids.dist.rhel-module.html#__uuid__,Variable platformids.net.pfsense.__uuid__=platformids.net.pfsense-module.html#__uuid__,Variable platformids.custom.pentoo.__uuid__=platformids.custom.pentoo-module.html#__uuid__,Variable platformids.embed.circuitpython.__uuid__=platformids.embed.circuitpython-module.html#__uuid__,Variable platformids.dist.debian_enum_labels.__uuid__=platformids.dist.debian_enum_labels-module.html#__uuid__,Variable platformids.dist.freebsd.__uuid__=platformids.dist.freebsd-module.html#__uuid__,Variable platformids.embed.raspbian.__uuid__=platformids.embed.raspbian-module.html#__uuid__,Variable platformids.dist.posix.__uuid__=platformids.dist.posix-module.html#__uuid__,Variable platformids.custom.nomadbsd.__uuid__=platformids.custom.nomadbsd-module.html#__uuid__,Variable platformids.dist.solaris.__uuid__=platformids.dist.solaris-module.html#__uuid__,Variable platformids.dist.gentoo.__uuid__=platformids.dist.gentoo-module.html#__uuid__,Variable platformids.dist.solaris_enum_labels.__uuid__=platformids.dist.solaris_enum_labels-module.html#__uuid__,Variable platformids.custom.trueos.__uuid__=platformids.custom.trueos-module.html#__uuid__,Variable platformids.dist.nt.windows_subprocess_reg_exe.__uuid__=platformids.dist.nt.windows_subprocess_reg_exe-module.html#__uuid__,Variable platformids.custom.minix.__uuid__=platformids.custom.minix-module.html#__uuid__,Variable platformids.dist.fedora.__uuid__=platformids.dist.fedora-module.html#__uuid__,Variable platformids.dist.openbsd_enum_labels.__uuid__=platformids.dist.openbsd_enum_labels-module.html#__uuid__,Variable platformids.dist.debian.__uuid__=platformids.dist.debian-module.html#__uuid__,Variable platformids.dist.ubuntu.__uuid__=platformids.dist.ubuntu-module.html#__uuid__,Variable platformids.platforms.__uuid__=platformids.platforms-module.html#__uuid__,Variable platformids.__main__.__uuid__=platformids.__main__-module.html#__uuid__,Variable platformids.dist.alpinelinux.__uuid__=platformids.dist.alpinelinux-module.html#__uuid__,Variable platformids.custom.aix.__uuid__=platformids.custom.aix-module.html#__uuid__,Variable platformids.dist.pemu.__uuid__=platformids.dist.pemu-module.html#__uuid__,Variable platformids.dist.nt.windows_enum_labels.__uuid__=platformids.dist.nt.windows_enum_labels-module.html#__uuid__,Variable platformids.map_enum_labels.__uuid__=platformids.map_enum_labels-module.html#__uuid__,Variable platformids.dist.hpux.__uuid__=platformids.dist.hpux-module.html#__uuid__,Variable platformids.custom.parrot.__uuid__=platformids.custom.parrot-module.html#__uuid__,Variable platformids.dist.pwemu.__uuid__=platformids.dist.pwemu-module.html#__uuid__,Variable platformids.net.kali.__uuid__=platformids.net.kali-module.html#__uuid__,Variable platformids.dist.sles.__uuid__=platformids.dist.sles-module.html#__uuid__,Variable platformids.custom.reactos.__uuid__=platformids.custom.reactos-module.html#__uuid__,Variable platformids.__uuid__=platformids-module.html#__uuid__,Variable platformids.dist.archlinux.__uuid__=platformids.dist.archlinux-module.html#__uuid__"><a title="platformids.custom.slackware.__uuid__
+platformids.dist.opensuse.__uuid__
+platformids.dist.centos.__uuid__
+platformids.net.openwrt.__uuid__
+platformids.custom.blackarch.__uuid__
+platformids.embed.armbian.__uuid__
+platformids.custom.minix2.__uuid__
+platformids.optionparser_platformids.__uuid__
+platformids.dist.darwin.__uuid__
+platformids.dist.nt.windows_kernel32dll.__uuid__
+platformids.dist.darwin_enum_labels.__uuid__
+platformids.embed.micropython.__uuid__
+platformids.custom.dragonbsd.__uuid__
+platformids.dist.rhel_enum_labels.__uuid__
+platformids.dist.cygwin.__uuid__
+platformids.custom.ghostbsd.__uuid__
+platformids.dist.oraclelinux.__uuid__
+platformids.custom.linuxmint.__uuid__
+platformids.dist.openbsd.__uuid__
+platformids.dist.fedora_enum_labels.__uuid__
+platformids.dist.netbsd.__uuid__
+platformids.dist.windows.__uuid__
+platformids.dist.rhel.__uuid__
+platformids.net.pfsense.__uuid__
+platformids.custom.pentoo.__uuid__
+platformids.embed.circuitpython.__uuid__
+platformids.dist.debian_enum_labels.__uuid__
+platformids.dist.freebsd.__uuid__
+platformids.embed.raspbian.__uuid__
+platformids.dist.posix.__uuid__
+platformids.custom.nomadbsd.__uuid__
+platformids.dist.solaris.__uuid__
+platformids.dist.gentoo.__uuid__
+platformids.dist.solaris_enum_labels.__uuid__
+platformids.custom.trueos.__uuid__
+platformids.dist.nt.windows_subprocess_reg_exe.__uuid__
+platformids.custom.minix.__uuid__
+platformids.dist.fedora.__uuid__
+platformids.dist.openbsd_enum_labels.__uuid__
+platformids.dist.debian.__uuid__
+platformids.dist.ubuntu.__uuid__
+platformids.platforms.__uuid__
+platformids.__main__.__uuid__
+platformids.dist.alpinelinux.__uuid__
+platformids.custom.aix.__uuid__
+platformids.dist.pemu.__uuid__
+platformids.dist.nt.windows_enum_labels.__uuid__
+platformids.map_enum_labels.__uuid__
+platformids.dist.hpux.__uuid__
+platformids.custom.parrot.__uuid__
+platformids.dist.pwemu.__uuid__
+platformids.net.kali.__uuid__
+platformids.dist.sles.__uuid__
+platformids.custom.reactos.__uuid__
+platformids.__uuid__
+platformids.dist.archlinux.__uuid__" class="py-name" href="#" onclick="return doclink('link-7', '__uuid__', 'link-7');">__uuid__</a></tt> <tt class="py-op">=</tt> <tt class="py-string">&quot;7add5ded-c39b-4b6e-8c87-1b3a1c150ee9&quot;</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-name">__docformat__</tt> <tt class="py-op">=</tt> <tt class="py-string">&quot;restructuredtext en&quot;</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-comment"># Microsoft: OSVERSIONINFOEXA.wProductType</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt id="link-8" class="py-name" targets="Variable platformids.dist.nt.windows_kernel32dll.VER_NT_WORKSTATION=platformids.dist.nt.windows_kernel32dll-module.html#VER_NT_WORKSTATION,Variable platformids.dist.windows.VER_NT_WORKSTATION=platformids.dist.windows-module.html#VER_NT_WORKSTATION"><a title="platformids.dist.nt.windows_kernel32dll.VER_NT_WORKSTATION
+platformids.dist.windows.VER_NT_WORKSTATION" class="py-name" href="#" onclick="return doclink('link-8', 'VER_NT_WORKSTATION', 'link-8');">VER_NT_WORKSTATION</a></tt>       <tt class="py-op">=</tt> <tt class="py-number">0x0000001</tt>  <tt class="py-comment">#: see wProductType</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt id="link-9" class="py-name" targets="Variable platformids.dist.nt.windows_kernel32dll.VER_NT_DOMAIN_CONTROLLER=platformids.dist.nt.windows_kernel32dll-module.html#VER_NT_DOMAIN_CONTROLLER,Variable platformids.dist.windows.VER_NT_DOMAIN_CONTROLLER=platformids.dist.windows-module.html#VER_NT_DOMAIN_CONTROLLER"><a title="platformids.dist.nt.windows_kernel32dll.VER_NT_DOMAIN_CONTROLLER
+platformids.dist.windows.VER_NT_DOMAIN_CONTROLLER" class="py-name" href="#" onclick="return doclink('link-9', 'VER_NT_DOMAIN_CONTROLLER', 'link-9');">VER_NT_DOMAIN_CONTROLLER</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0x0000002</tt>  <tt class="py-comment">#: see wProductType</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt id="link-10" class="py-name" targets="Variable platformids.dist.nt.windows_kernel32dll.VER_NT_SERVER=platformids.dist.nt.windows_kernel32dll-module.html#VER_NT_SERVER,Variable platformids.dist.windows.VER_NT_SERVER=platformids.dist.windows-module.html#VER_NT_SERVER"><a title="platformids.dist.nt.windows_kernel32dll.VER_NT_SERVER
+platformids.dist.windows.VER_NT_SERVER" class="py-name" href="#" onclick="return doclink('link-10', 'VER_NT_SERVER', 'link-10');">VER_NT_SERVER</a></tt>            <tt class="py-op">=</tt> <tt class="py-number">0x0000003</tt>  <tt class="py-comment">#: see wProductType</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt id="link-11" class="py-name" targets="Variable platformids.dist.nt.windows_kernel32dll.VER_NT_IOT=platformids.dist.nt.windows_kernel32dll-module.html#VER_NT_IOT,Variable platformids.dist.windows.VER_NT_IOT=platformids.dist.windows-module.html#VER_NT_IOT"><a title="platformids.dist.nt.windows_kernel32dll.VER_NT_IOT
+platformids.dist.windows.VER_NT_IOT" class="py-name" href="#" onclick="return doclink('link-11', 'VER_NT_IOT', 'link-11');">VER_NT_IOT</a></tt>               <tt class="py-op">=</tt> <tt class="py-number">0x0000004</tt>  <tt class="py-comment">#: non standard enum</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-comment"># platform specific adapters: win/nt and cygwin</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">platform</tt> <tt class="py-keyword">in</tt> <tt class="py-op">(</tt><tt class="py-string">&#x27;win32&#x27;</tt><tt class="py-op">,</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">    <tt class="py-keyword">import</tt> <tt class="py-name">ctypes</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">    <tt id="link-12" class="py-name" targets="Variable platformids.dist.nt.windows_kernel32dll.kernel32=platformids.dist.nt.windows_kernel32dll-module.html#kernel32"><a title="platformids.dist.nt.windows_kernel32dll.kernel32" class="py-name" href="#" onclick="return doclink('link-12', 'kernel32', 'link-12');">kernel32</a></tt> <tt class="py-op">=</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">windll</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name"><a title="platformids.dist.nt.windows_kernel32dll.kernel32" class="py-name" href="#" onclick="return doclink('link-13', 'kernel32', 'link-12');">kernel32</a></tt>  <tt class="py-comment"># @UndefinedVariable</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt class="py-keyword">elif</tt> <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">platform</tt> <tt class="py-keyword">in</tt> <tt class="py-op">(</tt><tt class="py-string">&#x27;cygwin&#x27;</tt><tt class="py-op">,</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">    <tt class="py-keyword">import</tt> <tt class="py-name">ctypes</tt>  <tt class="py-comment"># @Reimport</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">    <tt id="link-14" class="py-name"><a title="platformids.dist.nt.windows_kernel32dll.kernel32" class="py-name" href="#" onclick="return doclink('link-14', 'kernel32', 'link-12');">kernel32</a></tt> <tt class="py-op">=</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">CDLL</tt><tt class="py-op">(</tt><tt class="py-string">&#x27;kernel32.dll&#x27;</tt><tt class="py-op">)</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"> </tt>
+<a name="get_win32_OSVersionInfo"></a><div id="get_win32_OSVersionInfo-def"><a name="L47"></a><tt class="py-lineno"> 47</tt> <a class="py-toggle" href="#" id="get_win32_OSVersionInfo-toggle" onclick="return toggle('get_win32_OSVersionInfo');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="platformids.dist.nt.windows_kernel32dll-module.html#get_win32_OSVersionInfo">get_win32_OSVersionInfo</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt>    </tt>
+</div><a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">    <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-keyword">class</tt> <tt class="py-def-name">OSVersionInfo</tt><tt class="py-op">(</tt><tt class="py-base-class">ctypes</tt><tt class="py-op">.</tt><tt class="py-base-class">Structure</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">            <tt class="py-name">_fields_</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;dwOSVersionInfoSize&quot;</tt> <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>        <tt class="py-comment"># DWORD</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;dwMajorVersion&quot;</tt>      <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>        <tt class="py-comment"># DWORD</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;dwMinorVersion&quot;</tt>      <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>        <tt class="py-comment"># DWORD</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;dwBuildNumber&quot;</tt>       <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>        <tt class="py-comment"># DWORD</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;dwPlatformId&quot;</tt>        <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>        <tt class="py-comment"># DWORD</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;szCSDVersion&quot;</tt>        <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_char</tt> <tt class="py-op">*</tt> <tt class="py-number">128</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-comment"># CHAR</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">            <tt class="py-op">]</tt> </tt>
+</div><a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">     </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">        <tt class="py-name">_GetVersionEx</tt> <tt class="py-op">=</tt> <tt class="py-name">getattr</tt><tt class="py-op">(</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">windll</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name"><a title="platformids.dist.nt.windows_kernel32dll.kernel32" class="py-name" href="#" onclick="return doclink('link-15', 'kernel32', 'link-12');">kernel32</a></tt> <tt class="py-op">,</tt> <tt class="py-string">&quot;GetVersionExA&quot;</tt><tt class="py-op">)</tt>  <tt class="py-comment"># @UndefinedVariable</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">        <tt class="py-name">version</tt>  <tt class="py-op">=</tt> <tt class="py-name">OSVersionInfo</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">        <tt class="py-name">version</tt><tt class="py-op">.</tt><tt class="py-name">dwOSVersionInfoSize</tt> <tt class="py-op">=</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">sizeof</tt><tt class="py-op">(</tt><tt class="py-name">OSVersionInfo</tt><tt class="py-op">)</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-name">_GetVersionEx</tt><tt class="py-op">(</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">byref</tt><tt class="py-op">(</tt><tt class="py-name">version</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt>     </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">version</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">    <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div><a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">     </tt>
+<a name="get_win32_OSVersionInfoExa"></a><div id="get_win32_OSVersionInfoExa-def"><a name="L68"></a><tt class="py-lineno"> 68</tt> <a class="py-toggle" href="#" id="get_win32_OSVersionInfoExa-toggle" onclick="return toggle('get_win32_OSVersionInfoExa');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="platformids.dist.nt.windows_kernel32dll-module.html#get_win32_OSVersionInfoExa">get_win32_OSVersionInfoExa</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_win32_OSVersionInfoExa-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="get_win32_OSVersionInfoExa-expanded"><a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">    <tt class="py-docstring">&quot;&quot;&quot;Retuns a structure OSVERSIONINFOEXA, which contains the value</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-docstring">    for wProductType.</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt class="py-docstring">    &quot;&quot;&quot;</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">    <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">        <tt class="py-keyword">class</tt> <tt class="py-def-name">OSVersionInfoExa</tt><tt class="py-op">(</tt><tt class="py-base-class">ctypes</tt><tt class="py-op">.</tt><tt class="py-base-class">Structure</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">            <tt class="py-name">_fields_</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;dwOSVersionInfoSize&quot;</tt> <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>        <tt class="py-comment"># DWORD</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;dwMajorVersion&quot;</tt>      <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>        <tt class="py-comment"># DWORD</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;dwMinorVersion&quot;</tt>      <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>        <tt class="py-comment"># DWORD</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;dwBuildNumber&quot;</tt>       <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>        <tt class="py-comment"># DWORD</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;dwPlatformId&quot;</tt>        <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>        <tt class="py-comment"># DWORD</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;szCSDVersion&quot;</tt>        <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_char</tt> <tt class="py-op">*</tt> <tt class="py-number">128</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-comment"># CHAR</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;wServicePackMajor&quot;</tt>   <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int16</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>      <tt class="py-comment"># WORD</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;wServicePackMinor&quot;</tt>   <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int16</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>      <tt class="py-comment"># WORD</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;wSuiteMask&quot;</tt>          <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int16</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>      <tt class="py-comment"># WORD</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;wProductType&quot;</tt>        <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int8</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>       <tt class="py-comment"># BYTE</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">                    <tt class="py-comment"># wProductType - one of:</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">                    <tt class="py-comment"># - VER_NT_DOMAIN_CONTROLLER</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">                    <tt class="py-comment"># - VER_NT_SERVER</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">                    <tt class="py-comment"># - VER_NT_WORKSTATION</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">                    <tt class="py-comment">#</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;wReserved&quot;</tt>           <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int8</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>       <tt class="py-comment"># BYTE</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">                <tt class="py-op">]</tt><tt class="py-op">;</tt> </tt>
+</div><a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">        <tt class="py-name">_GetVersionExa</tt> <tt class="py-op">=</tt> <tt class="py-name">getattr</tt><tt class="py-op">(</tt> <tt id="link-16" class="py-name"><a title="platformids.dist.nt.windows_kernel32dll.kernel32" class="py-name" href="#" onclick="return doclink('link-16', 'kernel32', 'link-12');">kernel32</a></tt> <tt class="py-op">,</tt> <tt class="py-string">&quot;GetVersionExA&quot;</tt><tt class="py-op">)</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">        <tt class="py-name">version</tt>  <tt class="py-op">=</tt> <tt class="py-name">OSVersionInfoExa</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">        <tt class="py-name">version</tt><tt class="py-op">.</tt><tt class="py-name">dwOSVersionInfoSize</tt> <tt class="py-op">=</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">sizeof</tt><tt class="py-op">(</tt><tt class="py-name">OSVersionInfoExa</tt><tt class="py-op">)</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">        <tt class="py-name">_GetVersionExa</tt><tt class="py-op">(</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">byref</tt><tt class="py-op">(</tt><tt class="py-name">version</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">version</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">    <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div><a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"> </tt>
+<a name="get_win32_OSProductInfo"></a><div id="get_win32_OSProductInfo-def"><a name="L104"></a><tt class="py-lineno">104</tt> <a class="py-toggle" href="#" id="get_win32_OSProductInfo-toggle" onclick="return toggle('get_win32_OSProductInfo');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="platformids.dist.nt.windows_kernel32dll-module.html#get_win32_OSProductInfo">get_win32_OSProductInfo</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt>    </tt>
+</div><a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">        <tt class="py-comment"># BOOL WINAPI GetProductInfo(</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">        <tt class="py-comment">#   _In_  DWORD  dwOSMajorVersion,</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">        <tt class="py-comment">#   _In_  DWORD  dwOSMinorVersion,</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">        <tt class="py-comment">#   _In_  DWORD  dwSpMajorVersion,</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">        <tt class="py-comment">#   _In_  DWORD  dwSpMinorVersion,</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">        <tt class="py-comment">#   _Out_ PDWORD pdwReturnedProductType</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">        <tt class="py-comment"># );</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">    <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">        <tt class="py-keyword">class</tt> <tt class="py-def-name">OSProdInfo</tt><tt class="py-op">(</tt><tt class="py-base-class">ctypes</tt><tt class="py-op">.</tt><tt class="py-base-class">Structure</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">            <tt class="py-name">_fields_</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;pdwReturnedProductType&quot;</tt> <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>        <tt class="py-comment"># PDWORD</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">                <tt class="py-op">]</tt><tt class="py-op">;</tt> </tt>
+</div><a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">        <tt class="py-name">_GetProductInfo</tt> <tt class="py-op">=</tt> <tt class="py-name">getattr</tt><tt class="py-op">(</tt> <tt id="link-17" class="py-name"><a title="platformids.dist.nt.windows_kernel32dll.kernel32" class="py-name" href="#" onclick="return doclink('link-17', 'kernel32', 'link-12');">kernel32</a></tt> <tt class="py-op">,</tt> <tt class="py-string">&quot;GetProductInfo&quot;</tt><tt class="py-op">)</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">        <tt class="py-name">ptype</tt>  <tt class="py-op">=</tt> <tt class="py-name">OSProdInfo</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">        <tt class="py-name">ptype</tt><tt class="py-op">.</tt><tt class="py-name">dwOSVersionInfoSize</tt> <tt class="py-op">=</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">sizeof</tt><tt class="py-op">(</tt><tt class="py-name">OSProdInfo</tt><tt class="py-op">)</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">        <tt class="py-name">osver</tt> <tt class="py-op">=</tt> <tt id="link-18" class="py-name" targets="Function platformids.dist.nt.windows_kernel32dll.get_win32_OSVersionInfoExa()=platformids.dist.nt.windows_kernel32dll-module.html#get_win32_OSVersionInfoExa"><a title="platformids.dist.nt.windows_kernel32dll.get_win32_OSVersionInfoExa" class="py-name" href="#" onclick="return doclink('link-18', 'get_win32_OSVersionInfoExa', 'link-18');">get_win32_OSVersionInfoExa</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">        <tt class="py-name">_GetProductInfo</tt><tt class="py-op">(</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">            <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int</tt><tt class="py-op">(</tt><tt class="py-name">osver</tt><tt class="py-op">.</tt><tt class="py-name">dwMajorVersion</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">            <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int</tt><tt class="py-op">(</tt><tt class="py-name">osver</tt><tt class="py-op">.</tt><tt class="py-name">dwMinorVersion</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">            <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int</tt><tt class="py-op">(</tt><tt class="py-name">osver</tt><tt class="py-op">.</tt><tt class="py-name">wServicePackMajor</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">            <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int</tt><tt class="py-op">(</tt><tt class="py-name">osver</tt><tt class="py-op">.</tt><tt class="py-name">wServicePackMinor</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">            <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">byref</tt><tt class="py-op">(</tt><tt class="py-name">ptype</tt><tt class="py-op">)</tt>  </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">            <tt class="py-op">)</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">ptype</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">    <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div><a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"> </tt>
+<a name="print_versinfo"></a><div id="print_versinfo-def"><a name="L137"></a><tt class="py-lineno">137</tt> <a class="py-toggle" href="#" id="print_versinfo-toggle" onclick="return toggle('print_versinfo');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="platformids.dist.nt.windows_kernel32dll-module.html#print_versinfo">print_versinfo</a><tt class="py-op">(</tt><tt class="py-param">vinfo</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="print_versinfo-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="print_versinfo-expanded"><a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">    <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">        <tt class="py-name">print</tt><tt class="py-op">(</tt><tt class="py-string">&quot;dwOSVersionInfoSize  = &quot;</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">vinfo</tt><tt class="py-op">.</tt><tt class="py-name">dwOSVersionInfoSize</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">        <tt class="py-name">print</tt><tt class="py-op">(</tt><tt class="py-string">&quot;dwMajorVersion       = &quot;</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">vinfo</tt><tt class="py-op">.</tt><tt class="py-name">dwMajorVersion</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">        <tt class="py-name">print</tt><tt class="py-op">(</tt><tt class="py-string">&quot;dwMinorVersion       = &quot;</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">vinfo</tt><tt class="py-op">.</tt><tt class="py-name">dwMinorVersion</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">        <tt class="py-name">print</tt><tt class="py-op">(</tt><tt class="py-string">&quot;dwBuildNumber        = &quot;</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">vinfo</tt><tt class="py-op">.</tt><tt class="py-name">dwBuildNumber</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">        <tt class="py-name">print</tt><tt class="py-op">(</tt><tt class="py-string">&quot;dwPlatformId         = &quot;</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">vinfo</tt><tt class="py-op">.</tt><tt class="py-name">dwPlatformId</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">        <tt class="py-name">print</tt><tt class="py-op">(</tt><tt class="py-string">&quot;szCSDVersion         = &quot;</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">vinfo</tt><tt class="py-op">.</tt><tt class="py-name">szCSDVersion</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line"> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">        <tt class="py-name">print</tt><tt class="py-op">(</tt><tt class="py-string">&quot;wServicePackMajor    = &quot;</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">vinfo</tt><tt class="py-op">.</tt><tt class="py-name">wServicePackMajor</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">        <tt class="py-name">print</tt><tt class="py-op">(</tt><tt class="py-string">&quot;wServicePackMinor    = &quot;</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">vinfo</tt><tt class="py-op">.</tt><tt class="py-name">wServicePackMinor</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">        <tt class="py-name">print</tt><tt class="py-op">(</tt><tt class="py-string">&quot;wSuiteMask           = &quot;</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">vinfo</tt><tt class="py-op">.</tt><tt class="py-name">wSuiteMask</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">        <tt class="py-name">print</tt><tt class="py-op">(</tt><tt class="py-string">&quot;wProductType         = &quot;</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">vinfo</tt><tt class="py-op">.</tt><tt class="py-name">wProductType</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">        <tt class="py-name">print</tt><tt class="py-op">(</tt><tt class="py-string">&quot;wReserved            = &quot;</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">vinfo</tt><tt class="py-op">.</tt><tt class="py-name">wReserved</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line"> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">    <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div><a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line"> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line"> </tt>
+<a name="get_win32_IsWindowsXPSP1OrGreater"></a><div id="get_win32_IsWindowsXPSP1OrGreater-def"><a name="L156"></a><tt class="py-lineno">156</tt> <a class="py-toggle" href="#" id="get_win32_IsWindowsXPSP1OrGreater-toggle" onclick="return toggle('get_win32_IsWindowsXPSP1OrGreater');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="platformids.dist.nt.windows_kernel32dll-module.html#get_win32_IsWindowsXPSP1OrGreater">get_win32_IsWindowsXPSP1OrGreater</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt>    </tt>
+</div><a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line"> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">    <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">        <tt class="py-comment"># BOOL WINAPI  IsWindowsXPSP1OrGreater(</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">        <tt class="py-comment"># );</tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line"> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">        <tt class="py-keyword">class</tt> <tt class="py-def-name">OSProdInfo</tt><tt class="py-op">(</tt><tt class="py-base-class">ctypes</tt><tt class="py-op">.</tt><tt class="py-base-class">Structure</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">            <tt class="py-name">_fields_</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">&quot;pdwReturnedProductType&quot;</tt> <tt class="py-op">,</tt> <tt class="py-name">ctypes</tt><tt class="py-op">.</tt><tt class="py-name">c_int</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>        <tt class="py-comment"># PDWORD</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">                <tt class="py-op">]</tt><tt class="py-op">;</tt> </tt>
+</div><a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line"> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line">        <tt class="py-name">_IsWindowsXPSP1OrGreater</tt> <tt class="py-op">=</tt> <tt class="py-name">getattr</tt><tt class="py-op">(</tt> <tt id="link-19" class="py-name"><a title="platformids.dist.nt.windows_kernel32dll.kernel32" class="py-name" href="#" onclick="return doclink('link-19', 'kernel32', 'link-12');">kernel32</a></tt> <tt class="py-op">,</tt> <tt class="py-string">&quot;IsWindowsXPSP1OrGreater&quot;</tt><tt class="py-op">)</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">_IsWindowsXPSP1OrGreater</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line"> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line">    <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div><a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link - Main Document -->
+      <th>&nbsp;&nbsp;&nbsp;<a target="_top"
+        href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th>&nbsp;&nbsp;&nbsp;<a target="_top"
+        href="../index_part_apiref_scaled.html">Top</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th>
+          &nbsp;&nbsp;&nbsp;
+          <a target="_parent" href="frames.html">&larr;</a>
+          &nbsp;
+      <th>
+      <th>
+          &nbsp;
+          <a target="_parent" href="frames-right.html">&rarr;</a>
+          &nbsp;&nbsp;&nbsp;
+      </th>
+
+  <!-- Overview link - api reference-->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="platformids-module.html">Overview</a>&nbsp;&nbsp;&nbsp;</th>
+
+
+  <!-- Module -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Module</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Class -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="class-tree.html">Class</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+  <!--
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Tree</a>&nbsp;&nbsp;&nbsp;</th>
+  -->
+  
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr>
+              <th>&nbsp;&nbsp;&nbsp;<a
+                href="http://pypi.python.org/pypi/setupdocx">@www</a>&nbsp;&nbsp;&nbsp;</th>
+          </tr></table></th>
+
+  <!-- About link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="about.html">About</a>&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+</table>
+<table class="footTable" border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+        Copyright(C) 2019 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="https://arnocan.wordpress.com"
+        >https://arnocan.wordpress.com</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="lest" class="footer">
+    Generated by Epydoc 4.0.4 / Python-3.8 / fedora27 on Sun Dec  8 04:31:52 2019
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
