@@ -223,9 +223,6 @@ class OptActionEnvironDetails(ActionExt):
 
     def call(self, parser, namespace, values, option_string=None):
 
-        _osu = platform.uname()
-        _dist, _distver, _x = platform.dist()
-
         print("")
         print("app:                   " + str(_appname))
         print("")
@@ -412,27 +409,27 @@ class OptActionLoad(ActionExt):
             namespace.load.append(values)
 
 
-class OptActionOsRelId(ActionExt):
+class OptActionOstypeId(ActionExt):
     """Display the ID of the OS release."""
 
     def __init__(self, option_strings, dest, nargs=None, **kwargs):
-        super(OptActionOsRelId, self).__init__(
+        super(OptActionOstypeId, self).__init__(
             option_strings, dest, nargs, **kwargs)
 
     def call(self, parser, namespace, values, option_string=None):
-        namespace.osrel_id = True
+        namespace.ostype_id = True
         namespace.selected = True
 
 
-class OptActionOsRelVers(ActionExt):
+class OptActionOstypeVers(ActionExt):
     """Display the version array the OS release."""
 
     def __init__(self, option_strings, dest, nargs=None, **kwargs):
-        super(OptActionOsRelVers, self).__init__(
+        super(OptActionOstypeVers, self).__init__(
             option_strings, dest, nargs, **kwargs)
 
     def call(self, parser, namespace, values, option_string=None):
-        namespace.osrel_version = True
+        namespace.ostype_version = True
         namespace.selected = True
 
 
@@ -457,6 +454,17 @@ class OptActionQuiet(ActionExt):
 
     def call(self, parser, namespace, values, option_string=None):
         namespace.quiet = True
+
+
+class OptActionRaw(ActionExt):
+    """Prints the values as raw type, else symbolic names where suitable."""
+
+    def __init__(self, option_strings, dest, nargs=None, **kwargs):
+        super(OptActionRaw, self).__init__(
+            option_strings, dest, nargs, **kwargs)
+
+    def call(self, parser, namespace, values, option_string=None):
+        namespace.raw = True
 
 
 class OptActionTerse(ActionExt):
@@ -665,20 +673,20 @@ dialogue access to the library modules of 'platformids'.
             help="@R:" + OptActionDistRelHexversion.__doc__
         )
         group_options.add_argument(
-            '--osrel-id',
-            '-osrel-id',
+            '--ostype-id',
+            '-ostype-id',
             nargs=0,
             default=False,
-            action=OptActionOsRelId,
-            help="@R:" + OptActionOsRelId.__doc__
+            action=OptActionOstypeId,
+            help="@R:" + OptActionOstypeId.__doc__
         )
         group_options.add_argument(
-            '--osrel-version',
-            '-osrel-version',
+            '--ostype-version',
+            '-ostype-version',
             nargs=0,
             default=False,
-            action=OptActionOsRelVers,
-            help="@R:" + OptActionOsRelVers.__doc__
+            action=OptActionOstypeVers,
+            help="@R:" + OptActionOstypeVers.__doc__
         )
         group_options.add_argument(
             '--platform',
@@ -687,6 +695,14 @@ dialogue access to the library modules of 'platformids'.
             default=False,
             action=OptActionPlatform,
             help="@R:" + OptActionPlatform.__doc__
+        )
+        group_options.add_argument(
+            '--raw',
+            '-raw',
+            nargs=0,
+            default=False,
+            action=OptActionRaw,
+            help="@R:" + OptActionRaw.__doc__
         )
 
         group_options = self.parser.add_argument_group(
@@ -914,14 +930,16 @@ dialogue access to the library modules of 'platformids'.
                   'distrel': '',
                   'distrel_key': '',
                   'distrel_name': '',
-                  'distrel-hexversion': '',
-                  'osrel_hexversion': '',
+                  'distrel_hexversion': '',
+                  'ostype_hexversion': '',
                   'ostype': ''
                },
               'selected': '',
               'load': ''
               'enumerate': ''
               'platform': ''
+              'raw': ''
+
               'debug': '',
               'debug_options': '',
               'outform': {
@@ -943,13 +961,14 @@ dialogue access to the library modules of 'platformids'.
         j['params']['distrel_hexversion'] =  self.opts.distrel_hexversion
         j['params']['distrel_key'] =  self.opts.distrel_key
         j['params']['distrel_name'] =  self.opts.distrel_name
-        j['params']['osrel_version'] =  self.opts.osrel_version
+        j['params']['ostype_version'] =  self.opts.ostype_version
         j['params']['ostype'] =  self.opts.ostype
         j['selected'] =  self.opts.selected
 
         j['load'] =  self.opts.load
         j['enumerate'] =  self.opts.enumerate
         j['platform'] =  self.opts.platform
+        j['raw'] =  self.opts.platform
 
         j['debug'] =  self.opts.debug
         j['debug_options'] =  self.opts.debug_options
@@ -974,13 +993,14 @@ dialogue access to the library modules of 'platformids'.
             ('distrel_key', ''),
             ('distrel_name', ''),
             ('hexversion', ''),
-            ('osrel_version', ''),
+            ('ostype_version', ''),
             ('ostype', ''),
             ('selected', ''),
 
             ('load', ''),
             ('enumerate', ''),
             ('platform', ''),
+            ('raw', ''),
 
             ('debug', ''),
             ('debug_options', ''),
@@ -998,13 +1018,14 @@ dialogue access to the library modules of 'platformids'.
             ('distrel_key',  self.opts.distrel_key),
             ('distrel_name',  self.opts.distrel_name),
             ('hexversion',  self.opts.hexversion),
-            ('osrel_version',  self.opts.osrel_version),
+            ('ostype_version',  self.opts.ostype_version),
             ('ostype',  self.opts.ostype),
             ('selected',  self.opts.selected),
 
             ('load',  self.opts.load),
             ('enumerate',  self.opts.enumerate),
             ('platform',  self.opts.platform),
+            ('raw',  self.opts.raw),
 
             ('debug', self.opts.debug),
             ('debug_options', self.opts.debug_options),

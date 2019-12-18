@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8.2. platformids.platforms &mdash; platformids  documentation</title>
+  <title>5.2. platformids.platforms &mdash; platformids  documentation</title>
   
 
   
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="8.3. platformids.dist.alpinelinux" href="dist/alpinelinux.html" />
-    <link rel="prev" title="8.1. platformids.__init__" href="platformids.html" /> 
+    <link rel="next" title="5.3. platformids.dist.alpinelinux" href="dist/alpinelinux.html" />
+    <link rel="prev" title="5.1. platformids.__init__" href="platformids.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,105 +95,104 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="index.html">PlatformIDs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index_part_cockpit.html">apidoc</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_apiref_scaled.html">apiref</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index_part_abstract.html">1. Abstract</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index_part_platform_support.html">2. Platform Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index_part_blueprint.html">3. Blueprint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rtplatformids_cli.html">4. Command Line Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="os_categorization.html">5. OS Categorization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="distributions.html">6. Distributions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_documents.html">7. Documents</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index_modules.html">8. Modules</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="platformids.html">8.1. platformids.__init__</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">8.2. platformids.platforms</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#module">8.2.1. Module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#platformparameters">8.2.2. PlatformParameters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#attributes">8.2.2.1. Attributes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#init">8.2.2.2. __init__</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#and">8.2.2.3. __and__</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#eq">8.2.2.4. __eq__</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#getitem">8.2.2.5. __getitem__</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#iand">8.2.2.6. __iand__</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#int">8.2.2.7. __int__</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ior">8.2.2.8. __ior__</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#iter">8.2.2.9. __iter__</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#len">8.2.2.10. __len__</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ne">8.2.2.11. __ne__</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#or">8.2.2.12. __or__</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#rand">8.2.2.13. __rand__</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#repr">8.2.2.14. __repr__</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ror">8.2.2.15. __ror__</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#setitem">8.2.2.16. __setitem__</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#str">8.2.2.17. __str__</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#get-hexversion">8.2.2.18. get_hexversion</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#get-oshexversion">8.2.2.19. get_oshexversion</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#get-json">8.2.2.20. get_json</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#items">8.2.2.21. items</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#keys">8.2.2.22. keys</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pretty-format">8.2.2.23. pretty_format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#scan">8.2.2.24. scan</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#values">8.2.2.25. values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rtplatformids_cli.html">1. Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="os_categorization.html">2. OS Categorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distributions.html">3. Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_documents.html">4. Documents</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index_modules.html">5. Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="platformids.html">5.1. platformids.__init__</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.2. platformids.platforms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module">5.2.1. Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#platformparameters">5.2.2. PlatformParameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">5.2.2.1. Attributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#init">5.2.2.2. __init__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#and">5.2.2.3. __and__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eq">5.2.2.4. __eq__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#getitem">5.2.2.5. __getitem__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iand">5.2.2.6. __iand__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#int">5.2.2.7. __int__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ior">5.2.2.8. __ior__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iter">5.2.2.9. __iter__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#len">5.2.2.10. __len__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ne">5.2.2.11. __ne__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#or">5.2.2.12. __or__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rand">5.2.2.13. __rand__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#repr">5.2.2.14. __repr__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ror">5.2.2.15. __ror__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setitem">5.2.2.16. __setitem__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#str">5.2.2.17. __str__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-hexversion">5.2.2.18. get_hexversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-oshexversion">5.2.2.19. get_oshexversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-json">5.2.2.20. get_json</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#items">5.2.2.21. items</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#keys">5.2.2.22. keys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pretty-format">5.2.2.23. pretty_format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scan">5.2.2.24. scan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#values">5.2.2.25. values</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#exceptions">8.2.3. Exceptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exceptions">5.2.3. Exceptions</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="dist/alpinelinux.html">8.3. platformids.dist.alpinelinux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/archlinux.html">8.4. platformids.dist.archlinux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/centos.html">8.5. platformids.dist.centos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/cygwin.html">8.6. platformids.dist.cygwin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/darwin.html">8.7. platformids.dist.darwin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/debian.html">8.8. platformids.dist.debian</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/fedora.html">8.9. platformids.dist.fedora</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/freebsd.html">8.10. platformids.dist.freebsd</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/gentoo.html">8.11. platformids.dist.gentoo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/hpux.html">8.12. platformids.dist.hpux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/netbsd.html">8.13. platformids.dist.netbsd</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/openbsd.html">8.14. platformids.dist.openbsd</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/opensuse.html">8.15. platformids.dist.opensuse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/oraclelinux.html">8.16. platformids.dist.oraclelinux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/posix.html">8.17. platformids.dist.posix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/rhel.html">8.18. platformids.dist.rhel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/sles.html">8.19. platformids.dist.sles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/solaris.html">8.20. platformids.dist.solaris</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/ubuntu.html">8.21. platformids.dist.ubuntu</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/windows.html">8.22. platformids.dist.windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="net/kali.html">8.23. platformids.net.kali</a></li>
-<li class="toctree-l2"><a class="reference internal" href="net/openwrt.html">8.24. platformids.net.openwrt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="net/pfsense.html">8.25. platformids.net.pfsense</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom/aix.html">8.26. pythonids.dist.aix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom/blackarch.html">8.27. pythonids.dist.blackarch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom/dragonbsd.html">8.28. platformids.custom.dragonbsd</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom/ghostbsd.html">8.29. platformids.custom.ghostbsd</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom/linuxmint.html">8.30. platformids.custom.linuxmint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom/minix.html">8.31. platformids.custom.minix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom/minix2.html">8.32. platformids.custom.minix2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom/nomadbsd.html">8.33. platformids.custom.nomadbsd</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom/parrot.html">8.34. platformids.custom.parrot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom/pentoo.html">8.35. platformids.custom.pentoo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom/reactos.html">8.36. platformids.custom.reactos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom/slackware.html">8.37. platformids.custom.slackware</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom/trueos.html">8.38. platformids.custom.trueos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="embed/armbian.html">8.39. platformids.embed.armbian</a></li>
-<li class="toctree-l2"><a class="reference internal" href="embed/circuitpython.html">8.40. platformids.embed.circuitpython</a></li>
-<li class="toctree-l2"><a class="reference internal" href="embed/micropython.html">8.41. platformids.embed.micropython</a></li>
-<li class="toctree-l2"><a class="reference internal" href="embed/raspbian.html">8.42. platformids.embed.raspbian</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/nt/windows_kernel32_dll.html">8.43. windows_kernel32_dll</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/nt/windows_products.html">8.44. windows_products</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dist/nt/windows_subprocess_reg_exe.html">8.45. windows_subprocess_reg_exe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jy/dist/nt/Advapi32GetCurrentVersion.html">8.46. Advapi32GetCurrentVersion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jy/dist/nt/Kernel32GetProductInfo.html">8.47. Kernel32GetProductInfo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jy/dist/nt/ReadCurrentVersionWinPrefs.html">8.48. ReadCurrentVersionWinPrefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/alpinelinux.html">5.3. platformids.dist.alpinelinux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/archlinux.html">5.4. platformids.dist.archlinux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/centos.html">5.5. platformids.dist.centos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/cygwin.html">5.6. platformids.dist.cygwin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/darwin.html">5.7. platformids.dist.darwin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/debian.html">5.8. platformids.dist.debian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/fedora.html">5.9. platformids.dist.fedora</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/freebsd.html">5.10. platformids.dist.freebsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/gentoo.html">5.11. platformids.dist.gentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/hpux.html">5.12. platformids.dist.hpux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/netbsd.html">5.13. platformids.dist.netbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/openbsd.html">5.14. platformids.dist.openbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/opensuse.html">5.15. platformids.dist.opensuse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/oraclelinux.html">5.16. platformids.dist.oraclelinux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/posix.html">5.17. platformids.dist.posix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/rhel.html">5.18. platformids.dist.rhel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/sles.html">5.19. platformids.dist.sles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/solaris.html">5.20. platformids.dist.solaris</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/ubuntu.html">5.21. platformids.dist.ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/windows.html">5.22. platformids.dist.windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="net/kali.html">5.23. platformids.net.kali</a></li>
+<li class="toctree-l2"><a class="reference internal" href="net/openwrt.html">5.24. platformids.net.openwrt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="net/pfsense.html">5.25. platformids.net.pfsense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/aix.html">5.26. pythonids.dist.aix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/blackarch.html">5.27. pythonids.dist.blackarch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/dragonbsd.html">5.28. platformids.custom.dragonbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/ghostbsd.html">5.29. platformids.custom.ghostbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/linuxmint.html">5.30. platformids.custom.linuxmint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/minix.html">5.31. platformids.custom.minix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/minix2.html">5.32. platformids.custom.minix2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/nomadbsd.html">5.33. platformids.custom.nomadbsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/parrot.html">5.34. platformids.custom.parrot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/pentoo.html">5.35. platformids.custom.pentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/reactos.html">5.36. platformids.custom.reactos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/slackware.html">5.37. platformids.custom.slackware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/trueos.html">5.38. platformids.custom.trueos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="embed/armbian.html">5.39. platformids.embed.armbian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="embed/circuitpython.html">5.40. platformids.embed.circuitpython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="embed/micropython.html">5.41. platformids.embed.micropython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="embed/raspbian.html">5.42. platformids.embed.raspbian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/nt/windows_kernel32_dll.html">5.43. windows_kernel32_dll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/nt/windows_products.html">5.44. windows_products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dist/nt/windows_subprocess_reg_exe.html">5.45. windows_subprocess_reg_exe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jy/dist/nt/Advapi32GetCurrentVersion.html">5.46. Advapi32GetCurrentVersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jy/dist/nt/Kernel32GetProductInfo.html">5.47. Kernel32GetProductInfo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jy/dist/nt/ReadCurrentVersionWinPrefs.html">5.48. ReadCurrentVersionWinPrefs</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_indices.html">9. Indices and tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_resources.html">10. Resources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">11. Install</a></li>
-<li class="toctree-l1"><a class="reference internal" href="references.html">12. External References</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_license.html">13. Licenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_indices.html">6. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_resources.html">7. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">8. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">9. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_license.html">10. Licenses</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Application</span></p>
 <ul>
@@ -244,9 +243,9 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index_modules.html">8. Modules</a> &raquo;</li>
+          <li><a href="index_modules.html">5. Modules</a> &raquo;</li>
         
-      <li>8.2. platformids.platforms</li>
+      <li>5.2. platformids.platforms</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -266,7 +265,7 @@
            <div itemprop="articleBody">
             
   <div class="shortcuttab"><div class="section" id="platformids-platforms">
-<h1>8.2. platformids.platforms<a class="headerlink" href="#platformids-platforms" title="Permalink to this headline">¶</a></h1>
+<h1>5.2. platformids.platforms<a class="headerlink" href="#platformids-platforms" title="Permalink to this headline">¶</a></h1>
 <p>The <em>platforms</em> module provides the identifiers for the runtime platform as defined by
 the OS and distribution.
 The values are either scanned from the current platform by:</p>
@@ -370,7 +369,7 @@ wSuiteMask       = 256           # see <a class="reference internal" href="refer
 </li>
 </ul>
 <div class="section" id="module">
-<h2>8.2.1. Module<a class="headerlink" href="#module" title="Permalink to this headline">¶</a></h2>
+<h2>5.2.1. Module<a class="headerlink" href="#module" title="Permalink to this headline">¶</a></h2>
 <p>The doc-strings of the document are spared in order to support in any case a slim memory-print
 and fast load time.</p>
 <span class="target" id="module-platformids.platforms"></span><p>The module ‘platforms’ provides the class for the representation of platform parameters.
@@ -379,7 +378,7 @@ labels for the fast processing of repetitive comparisons.</p>
 <p>The supported implementations are: CPython, IPython, IronPython, Jython, and PyPy.</p>
 </div>
 <div class="section" id="platformparameters">
-<h2>8.2.2. PlatformParameters<a class="headerlink" href="#platformparameters" title="Permalink to this headline">¶</a></h2>
+<h2>5.2.2. PlatformParameters<a class="headerlink" href="#platformparameters" title="Permalink to this headline">¶</a></h2>
 <p>The class provides the representation of the current and/or a user provided platform.
 The automatic scan of the current runtime environment has to be triggered explicitly
 by the method <a class="reference external" href="#scan">platformids.PlatformParameters.scan()</a>.
@@ -390,7 +389,7 @@ The call replaces all attribute values of the current instance by the detected v
 <dd></dd></dl>
 
 <div class="section" id="attributes">
-<h3>8.2.2.1. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.1. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
 <p>The following public attributes are provided for the
 <a class="reference internal" href="os_categorization.html#ostypeanddistcategories"><span class="std std-ref">hierachical platform categorization</span></a>:</p>
 <span id="index-0"></span><ul id="attr-category">
@@ -514,8 +513,8 @@ attributes within one 32-bit integer. See
 </div></blockquote>
 </li>
 </ul>
-<span id="index-6"></span><ul id="attr-os-version">
-<li><p><strong>os_version</strong></p>
+<span id="index-6"></span><ul id="attr-ostype-version">
+<li><p><strong>ostype_version</strong></p>
 <blockquote>
 <div><p>3-valued integer version of the OS kernel</p>
 </div></blockquote>
@@ -523,7 +522,7 @@ attributes within one 32-bit integer. See
 </ul>
 </div>
 <div class="section" id="init">
-<h3>8.2.2.2. __init__<a class="headerlink" href="#init" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.2. __init__<a class="headerlink" href="#init" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.__init__">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__init__" title="Permalink to this definition">¶</a></dt>
@@ -578,7 +577,7 @@ parameters.</p>
 
 </div>
 <div class="section" id="and">
-<h3>8.2.2.3. __and__<a class="headerlink" href="#and" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.3. __and__<a class="headerlink" href="#and" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.__and__">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__and__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__and__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__and__" title="Permalink to this definition">¶</a></dt>
@@ -610,7 +609,7 @@ parameters.</p>
 
 </div>
 <div class="section" id="eq">
-<h3>8.2.2.4. __eq__<a class="headerlink" href="#eq" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.4. __eq__<a class="headerlink" href="#eq" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.__eq__">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__eq__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__eq__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__eq__" title="Permalink to this definition">¶</a></dt>
@@ -632,7 +631,7 @@ key are compared.</p>
 <p>The following items are handled specially:</p>
 <blockquote>
 <div><dl>
-<dt>distrel_version, osrel_version:</dt><dd><blockquote>
+<dt>distrel_version, ostype_version:</dt><dd><blockquote>
 <div><p>The present values are compared only, e.g.
 the following is considered as <em>True</em></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">distrel_version</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -706,7 +705,7 @@ False: else</p>
 
 </div>
 <div class="section" id="getitem">
-<h3>8.2.2.5. __getitem__<a class="headerlink" href="#getitem" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.5. __getitem__<a class="headerlink" href="#getitem" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.__getitem__">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__getitem__</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__getitem__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__getitem__" title="Permalink to this definition">¶</a></dt>
@@ -715,7 +714,7 @@ False: else</p>
 
 </div>
 <div class="section" id="iand">
-<h3>8.2.2.6. __iand__<a class="headerlink" href="#iand" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.6. __iand__<a class="headerlink" href="#iand" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.__iand__">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__iand__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__iand__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__iand__" title="Permalink to this definition">¶</a></dt>
@@ -742,7 +741,7 @@ False: else</p>
 
 </div>
 <div class="section" id="int">
-<h3>8.2.2.7. __int__<a class="headerlink" href="#int" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.7. __int__<a class="headerlink" href="#int" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.__int__">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__int__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__int__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__int__" title="Permalink to this definition">¶</a></dt>
@@ -765,7 +764,7 @@ False: else</p>
 
 </div>
 <div class="section" id="ior">
-<h3>8.2.2.8. __ior__<a class="headerlink" href="#ior" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.8. __ior__<a class="headerlink" href="#ior" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.__ior__">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__ior__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__ior__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__ior__" title="Permalink to this definition">¶</a></dt>
@@ -792,7 +791,7 @@ False: else</p>
 
 </div>
 <div class="section" id="iter">
-<h3>8.2.2.9. __iter__<a class="headerlink" href="#iter" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.9. __iter__<a class="headerlink" href="#iter" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.__iter__">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__iter__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__iter__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__iter__" title="Permalink to this definition">¶</a></dt>
@@ -801,7 +800,7 @@ False: else</p>
 
 </div>
 <div class="section" id="len">
-<h3>8.2.2.10. __len__<a class="headerlink" href="#len" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.10. __len__<a class="headerlink" href="#len" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.__len__">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__len__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__len__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__len__" title="Permalink to this definition">¶</a></dt>
@@ -810,7 +809,7 @@ False: else</p>
 
 </div>
 <div class="section" id="ne">
-<h3>8.2.2.11. __ne__<a class="headerlink" href="#ne" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.11. __ne__<a class="headerlink" href="#ne" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.__ne__">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__ne__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__ne__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__ne__" title="Permalink to this definition">¶</a></dt>
@@ -820,7 +819,7 @@ False: else</p>
 
 </div>
 <div class="section" id="or">
-<h3>8.2.2.12. __or__<a class="headerlink" href="#or" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.12. __or__<a class="headerlink" href="#or" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.__or__">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__or__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__or__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__or__" title="Permalink to this definition">¶</a></dt>
@@ -847,7 +846,7 @@ False: else</p>
 
 </div>
 <div class="section" id="rand">
-<h3>8.2.2.13. __rand__<a class="headerlink" href="#rand" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.13. __rand__<a class="headerlink" href="#rand" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.__rand__">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__rand__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__rand__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__rand__" title="Permalink to this definition">¶</a></dt>
@@ -874,7 +873,7 @@ False: else</p>
 
 </div>
 <div class="section" id="repr">
-<h3>8.2.2.14. __repr__<a class="headerlink" href="#repr" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.14. __repr__<a class="headerlink" href="#repr" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.__repr__">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__repr__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__repr__" title="Permalink to this definition">¶</a></dt>
@@ -883,7 +882,7 @@ False: else</p>
 
 </div>
 <div class="section" id="ror">
-<h3>8.2.2.15. __ror__<a class="headerlink" href="#ror" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.15. __ror__<a class="headerlink" href="#ror" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.__ror__">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__ror__</code><span class="sig-paren">(</span><em class="sig-param">other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__ror__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__ror__" title="Permalink to this definition">¶</a></dt>
@@ -910,7 +909,7 @@ False: else</p>
 
 </div>
 <div class="section" id="setitem">
-<h3>8.2.2.16. __setitem__<a class="headerlink" href="#setitem" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.16. __setitem__<a class="headerlink" href="#setitem" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.__setitem__">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__setitem__</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">val</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__setitem__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__setitem__" title="Permalink to this definition">¶</a></dt>
@@ -919,7 +918,7 @@ False: else</p>
 
 </div>
 <div class="section" id="str">
-<h3>8.2.2.17. __str__<a class="headerlink" href="#str" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.17. __str__<a class="headerlink" href="#str" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.__str__">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.__str__" title="Permalink to this definition">¶</a></dt>
@@ -928,7 +927,7 @@ False: else</p>
 
 </div>
 <div class="section" id="get-hexversion">
-<h3>8.2.2.18. get_hexversion<a class="headerlink" href="#get-hexversion" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.18. get_hexversion<a class="headerlink" href="#get-hexversion" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.get_hexversion">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">get_hexversion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.get_hexversion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.get_hexversion" title="Permalink to this definition">¶</a></dt>
@@ -939,7 +938,7 @@ parameters. The conversion is based on the table
 
 </div>
 <div class="section" id="get-oshexversion">
-<h3>8.2.2.19. get_oshexversion<a class="headerlink" href="#get-oshexversion" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.19. get_oshexversion<a class="headerlink" href="#get-oshexversion" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.get_oshexversion">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">get_oshexversion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.get_oshexversion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.get_oshexversion" title="Permalink to this definition">¶</a></dt>
@@ -948,7 +947,7 @@ parameters. The conversion is based on the table
 
 </div>
 <div class="section" id="get-json">
-<h3>8.2.2.20. get_json<a class="headerlink" href="#get-json" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.20. get_json<a class="headerlink" href="#get-json" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.get_json">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">get_json</code><span class="sig-paren">(</span><em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.get_json"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.get_json" title="Permalink to this definition">¶</a></dt>
@@ -974,7 +973,7 @@ as JSON data.</p>
 
 </div>
 <div class="section" id="items">
-<h3>8.2.2.21. items<a class="headerlink" href="#items" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.21. items<a class="headerlink" href="#items" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.items">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">items</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.items"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.items" title="Permalink to this definition">¶</a></dt>
@@ -983,7 +982,7 @@ as JSON data.</p>
 
 </div>
 <div class="section" id="keys">
-<h3>8.2.2.22. keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.22. keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.keys">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.keys" title="Permalink to this definition">¶</a></dt>
@@ -992,14 +991,25 @@ as JSON data.</p>
 
 </div>
 <div class="section" id="pretty-format">
-<h3>8.2.2.23. pretty_format<a class="headerlink" href="#pretty-format" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.23. pretty_format<a class="headerlink" href="#pretty-format" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.pretty_format">
-<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">pretty_format</code><span class="sig-paren">(</span><em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.pretty_format"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.pretty_format" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">pretty_format</code><span class="sig-paren">(</span><em class="sig-param">raw=False</em>, <em class="sig-param">**kargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.pretty_format"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.pretty_format" title="Permalink to this definition">¶</a></dt>
 <dd><p>Formats and returns a string of attributes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>kargs</strong> – <dl>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raw</strong> – <p>Controls the use of the value types:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">raw</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span>
+      <span class="kc">True</span>   <span class="c1"># prints the internal types</span>
+    <span class="o">|</span> <span class="kc">False</span>  <span class="c1"># prints the symbolic names where applicable</span>
+<span class="p">)</span>
+
+<span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</p></li>
+<li><p><strong>kargs</strong> – <dl>
 <dt>quiet:</dt><dd><p>Supress standard display contents.</p>
 <p>default := False</p>
 </dd>
@@ -1019,7 +1029,8 @@ as JSON data.</p>
 <p>default := str</p>
 </dd>
 </dl>
-</p>
+</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Formatted string of attributes.</p>
@@ -1035,7 +1046,7 @@ as JSON data.</p>
 
 </div>
 <div class="section" id="scan">
-<h3>8.2.2.24. scan<a class="headerlink" href="#scan" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.24. scan<a class="headerlink" href="#scan" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.scan">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">scan</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.scan"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.scan" title="Permalink to this definition">¶</a></dt>
@@ -1045,14 +1056,14 @@ consistent across all supported <em>Python</em> implementations
 including <em>Jython</em>.
 Internally calls <em>platformids.platformids.fetch_platform_distribution()</em>.</p>
 <ul class="simple">
-<li><p>distrel_version</p></li>
-<li><p>distrel_id</p></li>
 <li><p>dist</p></li>
 <li><p>distrel</p></li>
-<li><p>ostype</p></li>
-<li><p>osrel_id</p></li>
-<li><p>osrel_version</p></li>
 <li><p>distrel_hexversion</p></li>
+<li><p>distrel_id</p></li>
+<li><p>distrel_version</p></li>
+<li><p>ostype</p></li>
+<li><p>ostype_id</p></li>
+<li><p>ostype_version</p></li>
 </ul>
 <p>Sets the member attributes:</p>
 <ul>
@@ -1114,14 +1125,14 @@ For example:</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt><em>osrel_id</em>:</dt><dd><p>Same as ‘<em>ostype</em>’.</p>
+<dt><em>ostype_id</em>:</dt><dd><p>Same as ‘<em>ostype</em>’.</p>
 </dd>
 </dl>
 </li>
 <li><dl>
-<dt><em>osrel_version</em>:</dt><dd><p>The numeric tuple of the os release:</p>
+<dt><em>ostype_version</em>:</dt><dd><p>The numeric tuple of the os release:</p>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">os_version</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span><span class="o">&lt;</span><span class="c1">#major&gt;, &lt;#minor&gt;, &lt;#micro&gt;)</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ostype_version</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span><span class="o">&lt;</span><span class="c1">#major&gt;, &lt;#minor&gt;, &lt;#micro&gt;)</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -1138,7 +1149,7 @@ For example:</p>
 
 </div>
 <div class="section" id="values">
-<h3>8.2.2.25. values<a class="headerlink" href="#values" title="Permalink to this headline">¶</a></h3>
+<h3>5.2.2.25. values<a class="headerlink" href="#values" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="platformids.platforms.PlatformParameters.values">
 <code class="sig-prename descclassname">PlatformParameters.</code><code class="sig-name descname">values</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParameters.values"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParameters.values" title="Permalink to this definition">¶</a></dt>
@@ -1148,7 +1159,7 @@ For example:</p>
 </div>
 </div>
 <div class="section" id="exceptions">
-<h2>8.2.3. Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<h2>5.2.3. Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
 <dl class="exception">
 <dt id="platformids.platforms.PlatformParametersError">
 <em class="property">exception </em><code class="sig-prename descclassname">platformids.platforms.</code><code class="sig-name descname">PlatformParametersError</code><a class="reference internal" href="_modules/platformids/platforms.html#PlatformParametersError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#platformids.platforms.PlatformParametersError" title="Permalink to this definition">¶</a></dt>
@@ -1165,10 +1176,10 @@ For example:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="dist/alpinelinux.html" class="btn btn-neutral float-right" title="8.3. platformids.dist.alpinelinux" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="dist/alpinelinux.html" class="btn btn-neutral float-right" title="5.3. platformids.dist.alpinelinux" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="platformids.html" class="btn btn-neutral float-left" title="8.1. platformids.__init__" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="platformids.html" class="btn btn-neutral float-left" title="5.1. platformids.__init__" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1179,7 +1190,7 @@ For example:</p>
     <p>
         &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
       <span class="lastupdated">
-        Last updated on Dec 08, 2019.
+        Last updated on Dec 18, 2019.
       </span>
 
     </p>

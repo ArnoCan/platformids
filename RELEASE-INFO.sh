@@ -1,5 +1,5 @@
 # current release of the project
-RELEASE=00.01.036
+RELEASE=00.01.039
 
 # name of the project
 PROJECTNAME=pyplatformids

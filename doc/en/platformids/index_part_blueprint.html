@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. rtplatformids - Command line interface" href="rtplatformids_cli.html" />
+    <link rel="next" title="1. rtplatformids - Command line interface" href="rtplatformids_cli.html" />
     <link rel="prev" title="2. Platform Support" href="index_part_platform_support.html" /> 
 </head>
 
@@ -95,7 +95,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="index.html">PlatformIDs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index_part_cockpit.html">apidoc</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_apiref_scaled.html">apiref</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Documentation</span></p>
 <ul class="current">
@@ -107,16 +106,16 @@
 <li class="toctree-l2"><a class="reference internal" href="#custom-types">3.3. Custom Types</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="rtplatformids_cli.html">4. Command Line Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="os_categorization.html">5. OS Categorization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="distributions.html">6. Distributions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_documents.html">7. Documents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_modules.html">8. Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_indices.html">9. Indices and tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_resources.html">10. Resources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">11. Install</a></li>
-<li class="toctree-l1"><a class="reference internal" href="references.html">12. External References</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_license.html">13. Licenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rtplatformids_cli.html">1. Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="os_categorization.html">2. OS Categorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distributions.html">3. Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_documents.html">4. Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_modules.html">5. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_indices.html">6. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_resources.html">7. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">8. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">9. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_license.html">10. Licenses</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Application</span></p>
 <ul>
@@ -187,7 +186,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="blueprint">
-<h1>3. Blueprint<a class="headerlink" href="#blueprint" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>3. Blueprint<a class="headerlink" href="#blueprint" title="Permalink to this headline">¶</a></h1>
 <p id="reference-architecture">The modern landscapes of information infrastructures are commonly designed
 and organized as stacks of runtime environments and provided as all-inclusive services
 for the execution of application processes based on common frameworks.
@@ -199,14 +198,135 @@ frequently requiring adaptation and mediation components for specific platforms.
 <p>The <em>platformids</em> provides hereby the automated technical detection and the enumeration
 based on ‘<a class="reference external" href="python_bitmasks.html#">Hirarchical Bit Masks for Numeric Vectors</a>’,
 which are applied as <a class="reference internal" href="os_categorization.html#bitmasksosdist"><span class="std std-ref">Bit Masks for OS and Distro Releases</span></a>.</p>
-<div class="figure align-center" id="id9" style="width: 450px">
+<div class="figure align-center" id="id10" style="width: 450px">
 <span id="figure-architecture"></span><a class="reference external image-reference" href="_static/systems-ids-sublayers.png"><img alt="_images/systems-ids-sublayers.png" src="_images/systems-ids-sublayers.png" /></a>
-<p class="caption"><span class="caption-text">Figure: Service Sub-Layers <a class="reference external" href="_static/systems-ids-sublayers.png"><img alt="zoom" src="_images/zoom1.png" style="width: 16px;" /></a> <a class="reference internal" href="#reference-details"><span class="std std-ref">more…</span></a></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Figure: Service Sub-Layers <a class="reference external" href="_static/systems-ids-sublayers.png"><img alt="zoom" src="_images/zoom1.png" style="width: 16px;" /></a> <a class="reference internal" href="#reference-details"><span class="std std-ref">more…</span></a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
-<p>The  provided the <a class="reference external" href="os_categorization.html#">OS and Distribution layer</a> by the <em>platformids</em>
-provides pre-defined values for the most common standard OS and distributions.
-<em>Arbitrary custom identifiers are planned to be available soon.</em></p>
-<p>The provided hierarchical bitmask representation supports hereby for fast comparison access which outperforms the
+<p>The entries of the <em>platformids</em> represent the cumulated hierarchical information on the
+distribution.
+This includes the OS and the specific variant of the installation package.
+The underlying schemes vary hereby widely and provide some technically disjunct release numbering
+schemes.
+Thus require some basic understanding from the beginning on.</p>
+<ul>
+<li><p><em>category</em>:</p>
+<blockquote>
+<div><p>The <em>category</em> enumerates the basic families of operating systems:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POSIX</span><span class="p">,</span> <span class="n">WINDOWS</span><span class="p">,</span> <span class="n">EMBEDDED</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><p><em>ostype</em></p>
+<blockquote>
+<div><p>The <em>ostype</em> enumerates the basic operating systems:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LINUX</span><span class="p">,</span> <span class="n">BSD</span><span class="p">,</span> <span class="n">DARWIN</span><span class="p">,</span> <span class="n">Minix</span><span class="p">,</span> <span class="n">NT</span><span class="p">,</span> <span class="n">REACTOS</span><span class="p">,</span> <span class="n">UNIX</span><span class="o">-</span><span class="n">SVR4</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The embedded OS serves in this enumeration scheme as an OS too:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MicroPython</span><span class="p">,</span> <span class="n">Zephyr</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><em>REMARK</em>: The name <em>ostype</em> is choosen, because “<em>os</em>” is a basically a
+reserved <em>Python</em> keyword due to the core platform library named as “<em>os</em>”.
+Thus <em>ostype</em>, in order to avoid naming conflicts.</p>
+</div></blockquote>
+</li>
+<li><p><em>dist</em></p>
+<blockquote>
+<div><p>The <em>dist</em> enumerates the packaged distributions of the operating systems.
+This is the concrete packaging of the OS core itself and the orchestration
+of additional components as provided by the supplier. It may optionally
+comprise modifications of the core OS, e.g. back-ports:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CentOS</span> <span class="n">Debian</span> <span class="n">Fedora</span> <span class="n">FreeBSD</span> <span class="n">KaliLinux</span> <span class="n">RHEL</span> <span class="n">NT10_0</span> <span class="n">OpenSUSE</span>
+<span class="n">OpenWRT</span> <span class="n">OSX</span><span class="o">-</span><span class="mi">1</span> <span class="n">REACTOS5_2</span> <span class="n">Solaris</span> <span class="n">Ubuntu</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Some provide multiple names for the same distribution:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Solaris</span><span class="p">,</span> <span class="n">SUNOS5</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>In case of the special OS <em>MicroPython</em> the OS itself is applicable as the distribution
+as well as a derived variant with adaptations:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MicroPython</span> <span class="n">CircuitPython</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><p><em>distrel</em></p>
+<blockquote>
+<div><p>The <em>distrel</em> enumerates specific releases of the packaged distributions.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CentOS8</span> <span class="n">Debian10</span> <span class="n">Fedora31</span> <span class="n">FreeBSD</span><span class="o">-</span><span class="mf">12.0</span> <span class="n">OpenSUSE</span> <span class="n">OpenWRT</span> <span class="n">OSX</span><span class="o">-</span><span class="mf">10.6</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">REACTOS</span><span class="o">-</span><span class="mf">0.4</span><span class="o">.</span><span class="mi">9</span> <span class="mi">5_2</span> <span class="n">RHEL8</span> <span class="n">W2019</span> <span class="n">W10</span> <span class="n">W2012R2</span> <span class="n">W2012</span>
+<span class="n">Solaris</span> <span class="n">SUNOS5</span> <span class="n">Ubuntu</span><span class="o">-</span><span class="mf">19.04</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>A typical case of marketing driven frequent renaming is here also the <em>OSX</em>.
+The distribution ‘OSX’ is actually a stable abstraction of the frequently
+changed names and versioning schemes.
+Current numbering scheme is a 3-number standard scheme, but actually
+has 2 significant  numbers as the distribution is actually defined
+by “osx-10” or literally “OS-X-10”.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">OSX</span><span class="o">-</span><span class="mf">10.6</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Same for the <em>NT</em> based OS. These have even exceptions in the
+underlying incrementation and assignment of the OS numbering.
+A typical case is here <em>Windows-2012</em> with it’s service pack,
+which are formally and actually different distributions.
+The underlying OS have different release numbers and contain
+different releases of service packs:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">W2012</span><span class="p">,</span> <span class="n">W2012R2</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Some operating systems changed their numbering scheme, e.g. from
+traditional 3-digits representation to continuos release and deployment
+schemes as rolling release schemes.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ArchLinux</span><span class="o">-</span><span class="mf">2018.12</span><span class="o">.</span><span class="mi">01</span> <span class="n">KaliLinux</span><span class="o">-</span><span class="mf">2019.1</span> <span class="n">NT</span><span class="o">-</span><span class="mf">10.0</span><span class="o">.</span><span class="mi">1809</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The rolling release schemes partially define multiple numbering schemes
+in order to provide a “more longtime” scheme and a “intermediate short term”
+build, like daily and weekly builds.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">KaliLinux</span><span class="o">-</span><span class="mi">2019</span><span class="o">-</span><span class="n">W11</span> <span class="n">KaliLinux</span><span class="o">-</span><span class="mf">2019.1</span> <span class="n">KaliLinux</span><span class="o">-</span><span class="mf">2.0</span>
+<span class="n">NT</span><span class="o">-</span><span class="mf">10.0</span><span class="o">.</span><span class="mf">17763.136</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>In other cases the release number is basically not completely significant:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CentOS</span><span class="o">-</span><span class="mf">7.6</span><span class="o">-</span><span class="mi">1810</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ul>
+<p>The  provided <a class="reference external" href="os_categorization.html#">OS and Distribution layer</a> by the <em>platformids</em>
+provides pre-defined values for the most common standard OS and distributions,
+and enables optional arbitrary custom identifiers.</p>
+<p>The provided hierarchical bitmask representation supports hereby fast access for comparison which outperforms the
 common fractured and diverse formats by reducing the access time for single and in particular for repetitive access.
 The <em>platformids</em> reduces comparison operations on pure OS names, but in particular combined OS and distribution
 information including release versions to a remaining little percentage to operations on single integer values.</p>
@@ -220,7 +340,7 @@ but also Embedded and IoT deployments based on Linux and BSD distributions with 
 <p>The package ‘<em>platformids</em>’ is part of the set of packages of enumerations for efficient and fast operations of
 code variants for software and infrastructure stacks.
 For tested standard OS and distributions see help on <a class="reference external" href="install.html">installation</a> / <a class="reference internal" href="install.html#tested-os-python"><span class="std std-ref">Tested OS and Python Implementations</span></a>.
-For other stack layers refer to <a class="reference internal" href="references.html#machineids" id="id1"><span>[machineids]</span></a>, <a class="reference internal" href="references.html#pythonids" id="id2"><span>[pythonids]</span></a>, <a class="reference internal" href="references.html#resourceids" id="id3"><span>[resourceids]</span></a>, and <a class="reference internal" href="references.html#extensionids" id="id4"><span>[extensionids]</span></a>.</p>
+For other stack layers refer to <a class="reference internal" href="references.html#machineids" id="id2"><span>[machineids]</span></a>, <a class="reference internal" href="references.html#pythonids" id="id3"><span>[pythonids]</span></a>, <a class="reference internal" href="references.html#resourceids" id="id4"><span>[resourceids]</span></a>, and <a class="reference internal" href="references.html#extensionids" id="id5"><span>[extensionids]</span></a>.</p>
 <div class="section" id="bitmask-enumeration-for-performance">
 <h2>3.1. Bitmask Enumeration for Performance<a class="headerlink" href="#bitmask-enumeration-for-performance" title="Permalink to this headline">¶</a></h2>
 <p>The ‘<em>platformids</em>’ package provides in particular the
@@ -249,9 +369,9 @@ Even less compared to the repetitive comparison with array members.</p>
 batch mode access to the canonical release information and the data provided by the standard Python library,
 enabling simplified platform dependent batch processing, continous integration and deployment.</p>
 <p id="reference-details">The following figure depicts a subset of the current supported platform variants.</p>
-<div class="figure align-center" id="id10" style="width: 100%">
+<div class="figure align-center" id="id11" style="width: 100%">
 <span id="figure-supported-platforms"></span><a class="reference external image-reference" href="_static/platformids-blueprint.png"><img alt="_images/platformids-blueprint.png" src="_images/platformids-blueprint.png" /></a>
-<p class="caption"><span class="caption-text">Figure: “The Big Picture” of Supported Platforms <a class="reference external" href="_static/platformids-blueprint.png"><img alt="zoom" src="_images/zoom1.png" style="width: 16px;" /></a> <a class="reference internal" href="install.html#tested-os-python"><span class="std std-ref">more…</span></a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Figure: “The Big Picture” of Supported Platforms <a class="reference external" href="_static/platformids-blueprint.png"><img alt="zoom" src="_images/zoom1.png" style="width: 16px;" /></a> <a class="reference internal" href="install.html#tested-os-python"><span class="std std-ref">more…</span></a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
 <p>The provided platforms comprise hereby a wide spectrum of version numbering schemes and associeated
 lifetime cycles with various build and update philosophies.
@@ -267,7 +387,7 @@ a larger number due to the long-time of life-cycles.
 Other distributions switched their versioning scheme from classic milestone based waterfall numbering schems
 to ‘<em>versionless</em>’ continuous deployment schemes.</p>
 <p>The bit array for the platform ids is designed as a 32bit array due to the number of possible
-items, e.g. about 1000 Linux distributions <a class="reference internal" href="references.html#linuxpopular" id="id5"><span>[LinuxPopular]</span></a>, <a class="reference internal" href="references.html#linuxdist" id="id6"><span>[LinuxDist]</span></a> and <a class="reference internal" href="references.html#linuxdistcomp" id="id7"><span>[LinuxDistComp]</span></a>.
+items, e.g. about 1000 Linux distributions <a class="reference internal" href="references.html#linuxpopular" id="id6"><span>[LinuxPopular]</span></a>, <a class="reference internal" href="references.html#linuxdist" id="id7"><span>[LinuxDist]</span></a> and <a class="reference internal" href="references.html#linuxdistcomp" id="id8"><span>[LinuxDistComp]</span></a>.
 This provides enough space for the future extension and custom enumeration ranges.
 The specific numbering scheme is hereby embedded logical into a hierarchical tree structure
 of version numbering schemes.
@@ -367,7 +487,7 @@ these cannot be used persistent, thus have to be supported via variables.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="rtplatformids_cli.html" class="btn btn-neutral float-right" title="4. rtplatformids - Command line interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="rtplatformids_cli.html" class="btn btn-neutral float-right" title="1. rtplatformids - Command line interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index_part_platform_support.html" class="btn btn-neutral float-left" title="2. Platform Support" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -381,7 +501,7 @@ these cannot be used persistent, thus have to be supported via variables.</p>
     <p>
         &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
       <span class="lastupdated">
-        Last updated on Dec 08, 2019.
+        Last updated on Dec 18, 2019.
       </span>
 
     </p>

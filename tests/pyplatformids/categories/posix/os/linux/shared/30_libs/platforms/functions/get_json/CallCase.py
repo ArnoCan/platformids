@@ -37,7 +37,7 @@ class CallUnits(unittest.TestCase):
         pform = PlatformParameters()
         pform.scan()
         
-        resx = {'category': 'posix', 'osrel_id': 'linux', 'ostype': 'linux'}
+        resx = {'category': 'posix', 'ostype_id': 'linux', 'ostype': 'linux'}
         res = pform.get_json()
         
         for k,v in resx.items():

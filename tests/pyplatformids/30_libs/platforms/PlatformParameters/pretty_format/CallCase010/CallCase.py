@@ -39,12 +39,12 @@ cpudata                   = %s
 dist                      = %s
 distrel                   = %s
 distrel_hexversion        = %s
-distribution_key          = %s
-distribution_name         = %s
-distribution_version      = %s
-os_id                     = %s
-os_version                = %s
-ostype                    = %s""" % (
+distrel_key               = %s
+distrel_name              = %s
+distrel_version           = %s
+ostype                    = %s
+ostype_id                 = %s
+ostype_version            = %s""" % (
             str(pform.category),
             str(pform.cpu),
             str(pform.cpudata),
@@ -54,9 +54,9 @@ ostype                    = %s""" % (
             str(pform.distribution_key),
             str(pform.distribution_name),
             str(pform.distribution_version),
-            str(pform.os_id),
-            str(pform.os_version),
             str(pform.ostype),
+            str(pform.ostype_id),
+            str(pform.ostype_version),
         )
         
         res = pform.pretty_format()

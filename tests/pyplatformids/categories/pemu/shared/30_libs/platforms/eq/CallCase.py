@@ -45,7 +45,7 @@ class CallUnits(unittest.TestCase):
         resx = {'category': 'posix', 'dist': 'debian', 'distrel': 'debian-9.4.0', 
                 'distrel_hexversion': 17039877, 'distrel_key': 'debian9', 
                 'distrel_name': 'stretch', 'distrel_version': (9, 4, 0), 
-                'osrel_id': 'linux', 'osrel_version': [4, 16, 15], 'ostype': 'linux'}
+                'ostype_id': 'linux', 'ostype_version': [4, 16, 15], 'ostype': 'linux'}
         res = pform.get_json()
         
         assert sorted(res) == sorted(resx)

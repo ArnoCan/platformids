@@ -19,7 +19,7 @@ library modules.
    
       :ref:`--category <category>`        :ref:`--ostype <ostype>`               :ref:`--dist <dist>`
       :ref:`--distrel <distrel>`         :ref:`--distrel-name <distrel-name>`         :ref:`--distrel-key <distrel-key>`
-      :ref:`--dist-vers <dist-vers>`       :ref:`--osrel-id <osrel-id>`             :ref:`--osrel-version <osrel-version>`
+      :ref:`--dist-vers <dist-vers>`       :ref:`--ostype-id <ostype-id>`             :ref:`--ostype-version <ostype-version>`
 
    Support options.
 
@@ -324,23 +324,23 @@ e.g. in case of *platformids.dist.solaris_enum_labels* is:
    
    
 .. index::
-   pair: options; --osrel-id
-   pair: rtplatformids; --osrel-id
+   pair: options; --ostype-id
+   pair: rtplatformids; --ostype-id
 
-.. _osrel-id:
+.. _ostype-id:
 
--\-osrel-id
-"""""""""""
+-\-ostype-id
+""""""""""""
 Display the ID of the OS release.
 
 .. index::
-   pair: options; --osrel-version
-   pair: rtplatformids; --osrel-version
+   pair: options; --ostype-version
+   pair: rtplatformids; --ostype-version
 
-.. _osrel-version:
+.. _ostype-version:
 
--\-osrel-version
-""""""""""""""""
+-\-ostype-version
+"""""""""""""""""
 Display the version array the OS release.
 
 .. index::

@@ -24,6 +24,7 @@ This requires commonly the integration by wrappers and add-on coding  for variou
 specific distribution releases.
 The *platformids* provides the automated technical detection and enumeration
 of a comprehensive list of standard OS and distribution, e.g. 'Linux', 'BSD', 'Unix', 'OS-X', and 'Windows'. 
+For first details refer to the :ref:`Blueprint <BLUEPRINT>`.
 
 The provided components comprise:
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5. OS Categorization &mdash; platformids  documentation</title>
+  <title>2. OS Categorization &mdash; platformids  documentation</title>
   
 
   
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="6. Distributions" href="distributions.html" />
-    <link rel="prev" title="4. rtplatformids - Command line interface" href="rtplatformids_cli.html" /> 
+    <link rel="next" title="3. Distributions" href="distributions.html" />
+    <link rel="prev" title="1. rtplatformids - Command line interface" href="rtplatformids_cli.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,196 +95,195 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="index.html">PlatformIDs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index_part_cockpit.html">apidoc</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_apiref_scaled.html">apiref</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index_part_abstract.html">1. Abstract</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index_part_platform_support.html">2. Platform Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index_part_blueprint.html">3. Blueprint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rtplatformids_cli.html">4. Command Line Interface</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. OS Categorization</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#os-type-and-distribution-categorization">5.1. OS Type and Distribution Categorization</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#standards-compliance-and-deviation">5.1.1. Standards Compliance and Deviation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#hierarchy-of-platform-and-infrastructure-stacks">5.1.2. Hierarchy of Platform and Infrastructure Stacks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#hierarchy-of-os-distributions">5.1.3. Hierarchy of OS Distributions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#posix">5.1.3.1. POSIX</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#win">5.1.3.2. WIN</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#dos">5.1.3.3. DOS</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pwemu">5.1.3.4. PWEMU</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pemu">5.1.3.5. PEMU</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rtplatformids_cli.html">1. Command Line Interface</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. OS Categorization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#os-type-and-distribution-categorization">2.1. OS Type and Distribution Categorization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#standards-compliance-and-deviation">2.1.1. Standards Compliance and Deviation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hierarchy-of-platform-and-infrastructure-stacks">2.1.2. Hierarchy of Platform and Infrastructure Stacks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hierarchy-of-os-distributions">2.1.3. Hierarchy of OS Distributions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#posix">2.1.3.1. POSIX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#win">2.1.3.2. WIN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dos">2.1.3.3. DOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pwemu">2.1.3.4. PWEMU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pemu">2.1.3.5. PEMU</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#bit-masks-for-distribution-releases">5.2. Bit Masks for Distribution Releases</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#distribution-numbering-schemes">5.2.1. Distribution  Numbering Schemes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#single-version-number">5.2.1.1. Single Version Number</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#major-and-minor-version-number">5.2.1.2. Major and Minor Version Number</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#three-value-version-number">5.2.1.3. Three-Value Version Number</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#rolling-version">5.2.1.4. Rolling Version</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#state-driven-versions">5.2.1.5. State Driven Versions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bit-masks-for-distribution-releases">2.2. Bit Masks for Distribution Releases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#distribution-numbering-schemes">2.2.1. Distribution  Numbering Schemes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#single-version-number">2.2.1.1. Single Version Number</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#major-and-minor-version-number">2.2.1.2. Major and Minor Version Number</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#three-value-version-number">2.2.1.3. Three-Value Version Number</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rolling-version">2.2.1.4. Rolling Version</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#state-driven-versions">2.2.1.5. State Driven Versions</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#bit-mask-layouts">5.2.2. Bit Mask Layouts</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#standard-numbering-scheme">5.2.2.1. Standard Numbering Scheme</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#windows-nt-scheme">5.2.2.2. Windows NT Scheme</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#custom-numbering-scheme">5.2.2.3. Custom Numbering Scheme</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id56">5.2.2.4. Rolling Version</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pattern-statedrivenversion">5.2.2.5. State Driven Versions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bit-mask-layouts">2.2.2. Bit Mask Layouts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#standard-numbering-scheme">2.2.2.1. Standard Numbering Scheme</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#windows-nt-scheme">2.2.2.2. Windows NT Scheme</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-numbering-scheme">2.2.2.3. Custom Numbering Scheme</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id56">2.2.2.4. Rolling Version</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pattern-statedrivenversion">2.2.2.5. State Driven Versions</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#performance-of-comparison-operations">5.2.3. Performance of Comparison Operations</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#logic-operations-performance">5.2.3.1. Logic Operations Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#performance-of-comparison-operations">2.2.3. Performance of Comparison Operations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#logic-operations-performance">2.2.3.1. Logic Operations Performance</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#bitmask-implementations">5.2.4. Bitmask Implementations</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#number-default">5.2.4.1. 3-number-default</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#number-date">5.2.4.2. 3-number-date</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#number-minor-ext">5.2.4.3. 3-number-minor-ext</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#custom-distrel">5.2.4.4. custom-distrel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bitmask-implementations">2.2.4. Bitmask Implementations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#number-default">2.2.4.1. 3-number-default</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#number-date">2.2.4.2. 3-number-date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#number-minor-ext">2.2.4.3. 3-number-minor-ext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-distrel">2.2.4.4. custom-distrel</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#os-numbering-schemes">5.2.5. OS Numbering Schemes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#os-numbering-schemes">2.2.5. OS Numbering Schemes</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#global-variables">5.3. Global Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#special-dependencies-of-python">5.4. Special Dependencies of Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#supported-standard-os-and-dists">5.5. Supported Standard OS and Dists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#linux">5.6. Linux</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#alpine-linux">5.6.1. Alpine Linux</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#arch-linux">5.6.2. Arch Linux</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enumcentos">5.6.3. CentOS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enumcygwin">5.6.4. Cygwin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enumdebian">5.6.5. Debian</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enumfedora">5.6.6. Fedora</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enumgentoo">5.6.7. Gentoo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enumopensuse">5.6.8. OpenSUSE</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#oracle-enterprise-linux">5.6.9. Oracle Enterprise Linux</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enumrhel">5.6.10. RHEL</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sles">5.6.11. SLES</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enumubuntu">5.6.12. Ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#global-variables">2.3. Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#special-dependencies-of-python">2.4. Special Dependencies of Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#supported-standard-os-and-dists">2.5. Supported Standard OS and Dists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linux">2.6. Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#alpine-linux">2.6.1. Alpine Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arch-linux">2.6.2. Arch Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enumcentos">2.6.3. CentOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enumcygwin">2.6.4. Cygwin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enumdebian">2.6.5. Debian</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enumfedora">2.6.6. Fedora</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enumgentoo">2.6.7. Gentoo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enumopensuse">2.6.8. OpenSUSE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#oracle-enterprise-linux">2.6.9. Oracle Enterprise Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enumrhel">2.6.10. RHEL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sles">2.6.11. SLES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enumubuntu">2.6.12. Ubuntu</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#bsd">5.7. BSD</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#enumfreebsd">5.7.1. FreeBSD</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enumnetbsd">5.7.2. NetBSD</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enumopenbsd">5.7.3. OpenBSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bsd">2.7. BSD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#enumfreebsd">2.7.1. FreeBSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enumnetbsd">2.7.2. NetBSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enumopenbsd">2.7.3. OpenBSD</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#os-x-darwin">5.8. OS-X / Darwin</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#os-x">5.8.1. OS-X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#os-x-darwin">2.8. OS-X / Darwin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#os-x">2.8.1. OS-X</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#unix">5.9. Unix</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#enumsolaris">5.9.1. Solaris</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#solaris10">5.9.1.1. Solaris10</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#solaris11">5.9.1.2. Solaris11</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#windows-nt">5.10. Windows NT</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#nt-version-numbering-concepts">5.10.1. NT Version Numbering Concepts</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#new-version-paradigm">5.10.1.1. New Version Paradigm</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#implemented-version-scheme-and-processing">5.10.1.2. Implemented Version Scheme and processing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#build-identifiers">5.10.1.3. Build Identifiers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#implementation">5.10.1.4. Implementation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#windows-nt-registry">5.10.1.5. Windows NT Registry</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#windows-nt-api">5.10.1.6. Windows NT API</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#nt-product-types">5.10.2. NT Product Types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#nt-releases">5.10.3. NT-Releases</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#nt-10-0">5.10.3.1. NT-10.0</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#nt-6-3">5.10.3.2. NT-6.3</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#nt-6-1">5.10.3.3. NT-6.1</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#nt-5-1">5.10.3.4. NT-5.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unix">2.9. Unix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#enumsolaris">2.9.1. Solaris</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#solaris10">2.9.1.1. Solaris10</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#solaris11">2.9.1.2. Solaris11</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#security-and-network-systems">5.11. Security and Network Systems</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#security-tools">5.11.1. Security Tools</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#kalilinux">5.11.1.1. KaliLinux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows-nt">2.10. Windows NT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nt-version-numbering-concepts">2.10.1. NT Version Numbering Concepts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#new-version-paradigm">2.10.1.1. New Version Paradigm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#implemented-version-scheme-and-processing">2.10.1.2. Implemented Version Scheme and processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#build-identifiers">2.10.1.3. Build Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#implementation">2.10.1.4. Implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#windows-nt-registry">2.10.1.5. Windows NT Registry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#windows-nt-api">2.10.1.6. Windows NT API</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#network-nodes">5.11.2. Network Nodes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#secnetopenbsd">5.11.2.1. OpenBSD</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#openwrt">5.11.2.2. OpenWRT</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pfsense">5.11.2.3. pfSense</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#embedded-systems-and-iot">5.12. Embedded Systems and IoT</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#embedded-posix-os">5.12.1. Embedded POSIX-OS</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#alpine-linux-on-arm">5.12.1.1. Alpine Linux on ARM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arch-linux-arm">5.12.1.2. Arch Linux ARM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#armbian">5.12.1.3. Armbian</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#centos-altarch">5.12.1.4. CentOS AltArch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#embeddeddebian">5.12.1.5. Debian</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#raspbian">5.12.1.6. Raspbian</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#freebsd-arm">5.12.1.7. FreeBSD/ARM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#netbsd-arm">5.12.1.8. NetBSD/ARM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#openbsd-arm64">5.12.1.9. OpenBSD Arm64</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#slackware-arm">5.12.1.10. Slackware/ARM</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#embedded-windows">5.12.2. Embedded Windows</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#windows-10-iot-on-raspberrypi">5.12.2.1. Windows-10-IoT on RaspberryPI</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#native-interpreter-shell">5.12.3. Native Interpreter Shell</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#micropython">5.12.3.1. MicroPython</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#circuitpython">5.12.3.2. CircuitPython</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nt-product-types">2.10.2. NT Product Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nt-releases">2.10.3. NT-Releases</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nt-10-0">2.10.3.1. NT-10.0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nt-6-3">2.10.3.2. NT-6.3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nt-6-1">2.10.3.3. NT-6.1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nt-5-1">2.10.3.4. NT-5.1</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#custom-numbering-schemes">5.13. Custom Numbering Schemes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#concept">5.13.1. Concept</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#custom-api">5.13.2. Custom API</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#global-data">5.13.2.1. Global Data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#functions">5.13.2.2. Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#custom-callbacks-and-data">5.13.2.3. Custom Callbacks and Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#security-and-network-systems">2.11. Security and Network Systems</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#security-tools">2.11.1. Security Tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#kalilinux">2.11.1.1. KaliLinux</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#network-nodes">2.11.2. Network Nodes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#secnetopenbsd">2.11.2.1. OpenBSD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#openwrt">2.11.2.2. OpenWRT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pfsense">2.11.2.3. pfSense</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#customized-examples">5.14. Customized Examples</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#custom-os-type">5.14.1. Custom OS-Type</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#minix-minix3">5.14.1.1. Minix.Minix3</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#reactos-reactos5-2">5.14.1.2. ReactOS.ReactOS5_2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#embedded-systems-and-iot">2.12. Embedded Systems and IoT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#embedded-posix-os">2.12.1. Embedded POSIX-OS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#alpine-linux-on-arm">2.12.1.1. Alpine Linux on ARM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#arch-linux-arm">2.12.1.2. Arch Linux ARM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#armbian">2.12.1.3. Armbian</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#centos-altarch">2.12.1.4. CentOS AltArch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#embeddeddebian">2.12.1.5. Debian</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#raspbian">2.12.1.6. Raspbian</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#freebsd-arm">2.12.1.7. FreeBSD/ARM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netbsd-arm">2.12.1.8. NetBSD/ARM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#openbsd-arm64">2.12.1.9. OpenBSD Arm64</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#slackware-arm">2.12.1.10. Slackware/ARM</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#custom-distribution">5.14.2. Custom Distribution</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#aix-on-x86-in-a-virtual-machine">5.14.2.1. AIX on x86 in a Virtual Machine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#enumblackarch">5.14.2.2. BlackArch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#dragonflybsd">5.14.2.3. DragonFlyBSD</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#enumghostbsd">5.14.2.4. GhostBSD</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#enumlinuxmint">5.14.2.5. LinuxMint</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#enumminix2">5.14.2.6. Minix2</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#enumnomadbsd">5.14.2.7. NomadBSD</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#parrot-linux">5.14.2.8. Parrot Linux</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pentoo-linux">5.14.2.9. Pentoo Linux</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#enumslackware">5.14.2.10. Slackware</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#enumtrueos">5.14.2.11. TrueOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#embedded-windows">2.12.2. Embedded Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#windows-10-iot-on-raspberrypi">2.12.2.1. Windows-10-IoT on RaspberryPI</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#native-interpreter-shell">2.12.3. Native Interpreter Shell</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#micropython">2.12.3.1. MicroPython</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#circuitpython">2.12.3.2. CircuitPython</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#resources">5.15. Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-numbering-schemes">2.13. Custom Numbering Schemes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#concept">2.13.1. Concept</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-api">2.13.2. Custom API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#global-data">2.13.2.1. Global Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#functions">2.13.2.2. Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-callbacks-and-data">2.13.2.3. Custom Callbacks and Data</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="distributions.html">6. Distributions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_documents.html">7. Documents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_modules.html">8. Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_indices.html">9. Indices and tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_resources.html">10. Resources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">11. Install</a></li>
-<li class="toctree-l1"><a class="reference internal" href="references.html">12. External References</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_license.html">13. Licenses</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#customized-examples">2.14. Customized Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#custom-os-type">2.14.1. Custom OS-Type</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#minix-minix3">2.14.1.1. Minix.Minix3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reactos-reactos5-2">2.14.1.2. ReactOS.ReactOS5_2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-distribution">2.14.2. Custom Distribution</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#aix-on-x86-in-a-virtual-machine">2.14.2.1. AIX on x86 in a Virtual Machine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enumblackarch">2.14.2.2. BlackArch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dragonflybsd">2.14.2.3. DragonFlyBSD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enumghostbsd">2.14.2.4. GhostBSD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enumlinuxmint">2.14.2.5. LinuxMint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enumminix2">2.14.2.6. Minix2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enumnomadbsd">2.14.2.7. NomadBSD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parrot-linux">2.14.2.8. Parrot Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pentoo-linux">2.14.2.9. Pentoo Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enumslackware">2.14.2.10. Slackware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enumtrueos">2.14.2.11. TrueOS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">2.15. Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="distributions.html">3. Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_documents.html">4. Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_modules.html">5. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_indices.html">6. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_resources.html">7. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">8. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">9. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_license.html">10. Licenses</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Application</span></p>
 <ul>
@@ -335,7 +334,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>5. OS Categorization</li>
+      <li>2. OS Categorization</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -355,9 +354,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="os-categorization">
-<h1>5. OS Categorization<a class="headerlink" href="#os-categorization" title="Permalink to this headline">¶</a></h1>
+<h1>2. OS Categorization<a class="headerlink" href="#os-categorization" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="os-type-and-distribution-categorization">
-<span id="ostypeanddistcategories"></span><h2>5.1. OS Type and Distribution Categorization<a class="headerlink" href="#os-type-and-distribution-categorization" title="Permalink to this headline">¶</a></h2>
+<span id="ostypeanddistcategories"></span><h2>2.1. OS Type and Distribution Categorization<a class="headerlink" href="#os-type-and-distribution-categorization" title="Permalink to this headline">¶</a></h2>
 <p>The type of the operating system and the packaged distribution comprise identifiers and information
 which are in a hierachical dependecy.
 It is essential to understand the logical hierarch of the naming and versioning schemes of OSs and it’s distributions
@@ -406,7 +405,7 @@ The basic priciple of encoding multiple values into a hierarchical bitmask follo
 the same principles, see also <a class="reference external" href="python_bitmasks.html#">Bit Masks for Numeric Vectors</a>,
 and <em>Python Categorization</em> <a class="reference internal" href="references.html#pythonids" id="id1"><span>[pythonids]</span></a>.</p>
 <div class="section" id="standards-compliance-and-deviation">
-<span id="standardsrefs"></span><h3>5.1.1. Standards Compliance and Deviation<a class="headerlink" href="#standards-compliance-and-deviation" title="Permalink to this headline">¶</a></h3>
+<span id="standardsrefs"></span><h3>2.1.1. Standards Compliance and Deviation<a class="headerlink" href="#standards-compliance-and-deviation" title="Permalink to this headline">¶</a></h3>
 <p>The identification of the platforms within the operating systems layer is commonly provided by the used OS.
 This implies the specific definition of value sets and value formats, even for releases of distributions.
 The diversity is resulting in a large variety of data representation.
@@ -476,7 +475,7 @@ integer operation for all supported platforms.</p>
 <p>For the detailed concepts and design see the following sections.</p>
 </div>
 <div class="section" id="hierarchy-of-platform-and-infrastructure-stacks">
-<h3>5.1.2. Hierarchy of Platform and Infrastructure Stacks<a class="headerlink" href="#hierarchy-of-platform-and-infrastructure-stacks" title="Permalink to this headline">¶</a></h3>
+<h3>2.1.2. Hierarchy of Platform and Infrastructure Stacks<a class="headerlink" href="#hierarchy-of-platform-and-infrastructure-stacks" title="Permalink to this headline">¶</a></h3>
 <p>The modern landscapes of information infrastructures are commonly designed
 and organized as stacks of runtime environments and provided as all-inclusive services
 for the excution of application processes based on common frameworks.
@@ -490,7 +489,7 @@ and the application middleware including abstract system services.</p>
 </div></blockquote>
 </div>
 <div class="section" id="hierarchy-of-os-distributions">
-<span id="hierarchoscategories"></span><h3>5.1.3. Hierarchy of OS Distributions<a class="headerlink" href="#hierarchy-of-os-distributions" title="Permalink to this headline">¶</a></h3>
+<span id="hierarchoscategories"></span><h3>2.1.3. Hierarchy of OS Distributions<a class="headerlink" href="#hierarchy-of-os-distributions" title="Permalink to this headline">¶</a></h3>
 <p>The bit mask encoding for the operating system and the bundled distribution is
 slightly different than the encoding of the version.
 This is in particular due to the variations of the covered platforms and
@@ -517,7 +516,7 @@ and continuous micro-deployment <a class="reference internal" href="references.h
 an emulation layer for mixed APIs like <em>Cygwin</em> and the subsystems of <em>Windows</em>,
 e.g. <em>Windows.WSL</em>.</p>
 <div class="section" id="posix">
-<h4>5.1.3.1. POSIX<a class="headerlink" href="#posix" title="Permalink to this headline">¶</a></h4>
+<h4>2.1.3.1. POSIX<a class="headerlink" href="#posix" title="Permalink to this headline">¶</a></h4>
 <p>The POSIX based systems are commonly designed and distributed as <em>Unix style</em> systems,
 which regularly contain all services required for the application as a server and as a
 workstation.
@@ -560,7 +559,7 @@ numbers as actually used by the OS.</p>
 for the underlying architecture see <a class="reference internal" href="references.html#machineids" id="id28"><span>[machineids]</span></a>.</p>
 </div>
 <div class="section" id="win">
-<h4>5.1.3.2. WIN<a class="headerlink" href="#win" title="Permalink to this headline">¶</a></h4>
+<h4>2.1.3.2. WIN<a class="headerlink" href="#win" title="Permalink to this headline">¶</a></h4>
 <p>The Windows stack is designed slightly different than the POSIX stack.
 The never windows stack cosists mainly of distribution variants of the <em>ostype</em> <em>NT</em>.
 The <em>dist</em> value represents versions of <em>NT</em>, where a 2-number of version numbers is applied.
@@ -652,7 +651,7 @@ the actual product variations <a class="reference internal" href="references.htm
 for the underlying architecture see <a class="reference internal" href="references.html#machineids" id="id33"><span>[machineids]</span></a>.</p>
 </div>
 <div class="section" id="dos">
-<h4>5.1.3.3. DOS<a class="headerlink" href="#dos" title="Permalink to this headline">¶</a></h4>
+<h4>2.1.3.3. DOS<a class="headerlink" href="#dos" title="Permalink to this headline">¶</a></h4>
 <p>The former pure command line base system <a class="reference internal" href="references.html#dos" id="id34"><span>[DOS]</span></a> also called as DOS has actually numerous variants <a class="reference internal" href="references.html#doslist" id="id35"><span>[DOSLIST]</span></a>.
 Represenation only of legacy examples are:</p>
 <ul class="simple">
@@ -668,7 +667,7 @@ A typical former late-time application was to install BIOS updates.
 The recommended nowadays release for <em>x86</em> based systems e.g. for BIOS updates is <em>FreeDOS</em>.</p>
 </div>
 <div class="section" id="pwemu">
-<h4>5.1.3.4. PWEMU<a class="headerlink" href="#pwemu" title="Permalink to this headline">¶</a></h4>
+<h4>2.1.3.4. PWEMU<a class="headerlink" href="#pwemu" title="Permalink to this headline">¶</a></h4>
 <p>The combined Posix and Windows emulation layer.
 This is provided by various components within Windows-NT and
 the User-Lands of POSIX OSs.
@@ -689,20 +688,20 @@ The provided parameters for <em>Cygwin</em></p>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">category</span>               <span class="o">=</span> <span class="n">posix</span>
 <span class="n">dist</span>                   <span class="o">=</span> <span class="n">cygwin</span>
-<span class="n">distrel_hexversion</span>     <span class="o">=</span> <span class="mi">268435456</span>
-<span class="n">distrel_name</span>           <span class="o">=</span> <span class="n">Cygwin</span><span class="o">-</span><span class="mf">2.10</span><span class="o">.</span><span class="mi">0</span>
-<span class="n">osrel_version</span>          <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 <span class="n">distrel</span>                <span class="o">=</span> <span class="n">cygwin</span>
-<span class="n">ostype</span>                 <span class="o">=</span> <span class="n">cygwin</span>
-<span class="n">distrel_version</span>        <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">distrel_hexversion</span>     <span class="o">=</span> <span class="mi">268435456</span>
 <span class="n">distrel_key</span>            <span class="o">=</span> <span class="n">cygwin210</span>
+<span class="n">distrel_name</span>           <span class="o">=</span> <span class="n">Cygwin</span><span class="o">-</span><span class="mf">2.10</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">distrel_version</span>        <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">ostype</span>                 <span class="o">=</span> <span class="n">cygwin</span>
+<span class="n">ostype_version</span>         <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div></blockquote>
 </div></blockquote>
 </div>
 <div class="section" id="pemu">
-<h4>5.1.3.5. PEMU<a class="headerlink" href="#pemu" title="Permalink to this headline">¶</a></h4>
+<h4>2.1.3.5. PEMU<a class="headerlink" href="#pemu" title="Permalink to this headline">¶</a></h4>
 <p><strong>Windows.WSL</strong></p>
 <blockquote>
 <div><p>The combined Posix emulation layer as represented from <em>NT10_0</em> on by the sub system  linux <em>Windows.WSL</em>.
@@ -713,7 +712,7 @@ The same architecture is basically founding the <em>bash</em> integration into <
 </div>
 </div>
 <div class="section" id="bit-masks-for-distribution-releases">
-<span id="bitmasksosdist"></span><h2>5.2. Bit Masks for Distribution Releases<a class="headerlink" href="#bit-masks-for-distribution-releases" title="Permalink to this headline">¶</a></h2>
+<span id="bitmasksosdist"></span><h2>2.2. Bit Masks for Distribution Releases<a class="headerlink" href="#bit-masks-for-distribution-releases" title="Permalink to this headline">¶</a></h2>
 <p>The logical data hierarchy as depicted by the following figure is encoded into a bit mask scalar
 for single-operation or a few-operation steps of comparison operations.
 The encoding of the bitmask follows hereby various schemes, which depends on the concrete distribution.
@@ -728,10 +727,10 @@ The internal bitmask representaion therefore varies, while the API unifies these
 bit mask encoding comprising the OS type, the packaged distribution with the version.
 See the <a class="reference internal" href="#standardosdist"><span class="std std-ref">supported OS</span></a>, and an overview of ‘existing’ operating systems <a class="reference internal" href="references.html#oslist" id="id38"><span>[OSList]</span></a>.</p>
 <div class="section" id="distribution-numbering-schemes">
-<h3>5.2.1. Distribution  Numbering Schemes<a class="headerlink" href="#distribution-numbering-schemes" title="Permalink to this headline">¶</a></h3>
+<h3>2.2.1. Distribution  Numbering Schemes<a class="headerlink" href="#distribution-numbering-schemes" title="Permalink to this headline">¶</a></h3>
 <p>The OS distributions use a variety of release version numbering schemes.</p>
 <div class="section" id="single-version-number">
-<h4>5.2.1.1. Single Version Number<a class="headerlink" href="#single-version-number" title="Permalink to this headline">¶</a></h4>
+<h4>2.2.1.1. Single Version Number<a class="headerlink" href="#single-version-number" title="Permalink to this headline">¶</a></h4>
 <p>The case for a single version number represents the scheme for version numbering literally consisting of one integer value only.
 A prominent example is <a class="reference internal" href="#enumfedora"><span class="std std-ref">Fedora</span></a> Linux.</p>
 <blockquote>
@@ -742,7 +741,7 @@ A prominent example is <a class="reference internal" href="#enumfedora"><span cl
 <p>The consequence here is the required wider range of possible values.</p>
 </div>
 <div class="section" id="major-and-minor-version-number">
-<span id="majorminorversionnumber"></span><h4>5.2.1.2. Major and Minor Version Number<a class="headerlink" href="#major-and-minor-version-number" title="Permalink to this headline">¶</a></h4>
+<span id="majorminorversionnumber"></span><h4>2.2.1.2. Major and Minor Version Number<a class="headerlink" href="#major-and-minor-version-number" title="Permalink to this headline">¶</a></h4>
 <p>The case of the Major-Minor version number represents the scheme for example for
 <a class="reference internal" href="#enumcentos"><span class="std std-ref">CentOS</span></a> /
 <a class="reference internal" href="#enumrhel"><span class="std std-ref">RHEL</span></a>,
@@ -775,7 +774,7 @@ by larger release periods.</p>
 <p>This requires some special extra handling due to the range.</p>
 </div>
 <div class="section" id="three-value-version-number">
-<span id="treevalueversionnumber"></span><h4>5.2.1.3. Three-Value Version Number<a class="headerlink" href="#three-value-version-number" title="Permalink to this headline">¶</a></h4>
+<span id="treevalueversionnumber"></span><h4>2.2.1.3. Three-Value Version Number<a class="headerlink" href="#three-value-version-number" title="Permalink to this headline">¶</a></h4>
 <p>The case for the three-value major release version numbering represents the scheme for example for <em>OS-X</em> <a class="reference internal" href="references.html#osxvers" id="id39"><span>[OSXVERS]</span></a>
 and <em>Windows.NT</em> <a class="reference internal" href="references.html#winversions" id="id40"><span>[WINVERSIONS]</span></a>.
 The Linux variant <em>OpenWRT</em> is numbered by a 3-value scheme too.
@@ -854,7 +853,7 @@ In case of <em>NT</em> it even switched the semantics from incremental build num
 Another variant is the independent hint to the release date of the code as a build base, so in case of <em>CentOS</em>.</p>
 </div>
 <div class="section" id="rolling-version">
-<span id="conceptrollingversion"></span><h4>5.2.1.4. Rolling Version<a class="headerlink" href="#rolling-version" title="Permalink to this headline">¶</a></h4>
+<span id="conceptrollingversion"></span><h4>2.2.1.4. Rolling Version<a class="headerlink" href="#rolling-version" title="Permalink to this headline">¶</a></h4>
 <p>Rolling release versioning avoids fixed milestones of releases for packaged features, instaed tries to frequently
 deploy smaller updates, for further details see <a class="reference internal" href="references.html#rollingdist" id="id47"><span>[RollingDist]</span></a>.
 The application of rolling release workflow does not contradict the application of version schemes.
@@ -952,7 +951,7 @@ and <a class="reference internal" href="#enumgentoo"><span class="std std-ref">G
 </dl>
 </div>
 <div class="section" id="state-driven-versions">
-<h4>5.2.1.5. State Driven Versions<a class="headerlink" href="#state-driven-versions" title="Permalink to this headline">¶</a></h4>
+<h4>2.2.1.5. State Driven Versions<a class="headerlink" href="#state-driven-versions" title="Permalink to this headline">¶</a></h4>
 <p>The state driven versioning defines milestones when specific states of the software are reached.
 This of course is the happiest type of version numbering <a class="reference internal" href="_images/smiling-face-with-sunglasses-32x321.png"><img alt=":-)" src="_images/smiling-face-with-sunglasses-32x321.png" style="width: 16px;" /></a>.</p>
 <p>A typical example is here <em>Slackware</em> <a class="reference internal" href="references.html#slackware" id="id53"><span>[SLACKWARE]</span></a> with varying release dates.
@@ -977,7 +976,7 @@ and no runtime performance degredation will be accepted.</p>
 </div>
 </div>
 <div class="section" id="bit-mask-layouts">
-<span id="bitmaskslayout"></span><h3>5.2.2. Bit Mask Layouts<a class="headerlink" href="#bit-mask-layouts" title="Permalink to this headline">¶</a></h3>
+<span id="bitmaskslayout"></span><h3>2.2.2. Bit Mask Layouts<a class="headerlink" href="#bit-mask-layouts" title="Permalink to this headline">¶</a></h3>
 <p>The numeric representation is designed as a bitmask record containing logical sub-masks as fields,
 which model a hierarchical order.
 The supported distributions provide a variety of numbering schemes for the release versions which has to fit
@@ -992,7 +991,7 @@ and
 ‘<a class="reference internal" href="#emdeddedandiot"><span class="std std-ref">Embedded Systems and IoT</span></a>’
 .</p>
 <div class="section" id="standard-numbering-scheme">
-<span id="pattern-defaultschemeversion"></span><h4>5.2.2.1. Standard Numbering Scheme<a class="headerlink" href="#standard-numbering-scheme" title="Permalink to this headline">¶</a></h4>
+<span id="pattern-defaultschemeversion"></span><h4>2.2.2.1. Standard Numbering Scheme<a class="headerlink" href="#standard-numbering-scheme" title="Permalink to this headline">¶</a></h4>
 <p>The following bit-mask encoding layout represents the standard layout applicable to almost all supported distribution
 following a standard numbering scheme with version numbers up to 3 values.
 The sizes of the bit groups are designed to be sufficient for all most supported OS and distributions, which represent
@@ -1061,7 +1060,7 @@ and
 <a class="reference internal" href="#enumsolaris11"><span class="std std-ref">Solaris11</span></a>.</p>
 </div>
 <div class="section" id="windows-nt-scheme">
-<span id="pattern-ntschemeversion"></span><h4>5.2.2.2. Windows NT Scheme<a class="headerlink" href="#windows-nt-scheme" title="Permalink to this headline">¶</a></h4>
+<span id="pattern-ntschemeversion"></span><h4>2.2.2.2. Windows NT Scheme<a class="headerlink" href="#windows-nt-scheme" title="Permalink to this headline">¶</a></h4>
 <p>The Microsoft Windows versioning scheme follows a slightly different philosophy, where the
 <em>ostype</em> for <em>Windows-NT</em> defines also the distribution as an incremental <em>ostype</em> version.
 The naming scheme of the released ditributions is independet and
@@ -1136,11 +1135,11 @@ this has to be evaluated specifically.</p>
 <p>For the specific implementation see <a class="reference internal" href="#enumwinnt"><span class="std std-ref">windows-nt</span></a>.</p>
 </div>
 <div class="section" id="custom-numbering-scheme">
-<h4>5.2.2.3. Custom Numbering Scheme<a class="headerlink" href="#custom-numbering-scheme" title="Permalink to this headline">¶</a></h4>
+<h4>2.2.2.3. Custom Numbering Scheme<a class="headerlink" href="#custom-numbering-scheme" title="Permalink to this headline">¶</a></h4>
 <p>coming soon</p>
 </div>
 <div class="section" id="id56">
-<h4>5.2.2.4. Rolling Version<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h4>
+<h4>2.2.2.4. Rolling Version<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h4>
 <p>Rolling release versioning avoids fixed milestones of releases for packaged features, instaed tries to frequently
 deploy smaller updates, for further details see <a class="reference internal" href="references.html#rollingdist" id="id57"><span>[RollingDist]</span></a>.
 The main aspect to be handeled by <em>platformids</em> is the unified representation
@@ -1189,7 +1188,7 @@ The provided default value for technical reasons is the release version value of
 </dl>
 </div>
 <div class="section" id="pattern-statedrivenversion">
-<span id="id59"></span><h4>5.2.2.5. State Driven Versions<a class="headerlink" href="#pattern-statedrivenversion" title="Permalink to this headline">¶</a></h4>
+<span id="id59"></span><h4>2.2.2.5. State Driven Versions<a class="headerlink" href="#pattern-statedrivenversion" title="Permalink to this headline">¶</a></h4>
 <p>The state driven versioning defines milestones when specific states of the software are reached.
 This of course is the happiest type of version numbering <a class="reference internal" href="_images/smiling-face-with-sunglasses-32x321.png"><img alt=":-)" src="_images/smiling-face-with-sunglasses-32x321.png" style="width: 16px;" /></a>.</p>
 <p>A typical example is here <em>Slackware</em> <a class="reference internal" href="references.html#slackware" id="id60"><span>[SLACKWARE]</span></a> with varying release dates.
@@ -1204,7 +1203,7 @@ and no runtime performance degredation will be accepted.</p>
 </div>
 </div>
 <div class="section" id="performance-of-comparison-operations">
-<span id="operationsperformance"></span><h3>5.2.3. Performance of Comparison Operations<a class="headerlink" href="#performance-of-comparison-operations" title="Permalink to this headline">¶</a></h3>
+<span id="operationsperformance"></span><h3>2.2.3. Performance of Comparison Operations<a class="headerlink" href="#performance-of-comparison-operations" title="Permalink to this headline">¶</a></h3>
 <p>The provided standard information on OS and ditribution releases is fragmented across several interfaces.
 The data is presented by various parts with different data types. Some libraries provide a more condensed
 ste of data, but not comprising.
@@ -1220,7 +1219,7 @@ values.</p>
 which is directly applied to the standard string values.
 The gain is here more than 60% compared on all supported platforms.</p>
 <div class="section" id="logic-operations-performance">
-<span id="logicperformance"></span><h4>5.2.3.1. Logic Operations Performance<a class="headerlink" href="#logic-operations-performance" title="Permalink to this headline">¶</a></h4>
+<span id="logicperformance"></span><h4>2.2.3.1. Logic Operations Performance<a class="headerlink" href="#logic-operations-performance" title="Permalink to this headline">¶</a></h4>
 <p>The required treatment of multiple variants of bitmask layouts of version numbers requires
 some conditional code segments.
 In order to reduce the performance loss two choices these groups of cases are combined by specific value ranges.
@@ -1262,7 +1261,7 @@ The comparison operator requires e.g. <em>0.0261 usec</em></p>
 </div>
 </div>
 <div class="section" id="bitmask-implementations">
-<span id="id61"></span><h3>5.2.4. Bitmask Implementations<a class="headerlink" href="#bitmask-implementations" title="Permalink to this headline">¶</a></h3>
+<span id="id61"></span><h3>2.2.4. Bitmask Implementations<a class="headerlink" href="#bitmask-implementations" title="Permalink to this headline">¶</a></h3>
 <p>The standard schemes and layouts are implemented and tested for all supported platforms,
 and should work on all standards based.
 The aquisition of the OS and distribution data may in some cases rely on non-standard
@@ -1270,7 +1269,7 @@ sources or number ranges, thus in these cases the application has to implement a
 An example is here <a class="reference internal" href="#enumarmbian"><span class="std std-ref">Armbian</span></a>, which dominantly increments version numbers by the
 minor version number.</p>
 <div class="section" id="number-default">
-<span id="version-threenumberdefault"></span><h4>5.2.4.1. 3-number-default<a class="headerlink" href="#number-default" title="Permalink to this headline">¶</a></h4>
+<span id="version-threenumberdefault"></span><h4>2.2.4.1. 3-number-default<a class="headerlink" href="#number-default" title="Permalink to this headline">¶</a></h4>
 <p>The 3-number default scheme provides the common default release numbering scheme for the vast majority
 of the distributions for all OS types.
 For distributions where the ranges fit, but which use less numbers, the remaining are filled with zero.
@@ -1287,7 +1286,7 @@ The following figure depicts the logical standard subfield allocation within the
 </div></blockquote>
 </div>
 <div class="section" id="number-date">
-<span id="version-threenumberdate"></span><h4>5.2.4.2. 3-number-date<a class="headerlink" href="#number-date" title="Permalink to this headline">¶</a></h4>
+<span id="version-threenumberdate"></span><h4>2.2.4.2. 3-number-date<a class="headerlink" href="#number-date" title="Permalink to this headline">¶</a></h4>
 <p>The 3-number date scheme provides the version numbering based on date entries.
 This is in particular the case for rolling releases.
 The bit layout is based on the epoch time or also known as unixtime <a class="reference internal" href="references.html#unixtime" id="id62"><span>[UNIXTIME]</span></a>.
@@ -1331,7 +1330,7 @@ and
 <a class="reference internal" href="#secnetkalilinux"><span class="std std-ref">KaliLinux</span></a>.</p>
 </div>
 <div class="section" id="number-minor-ext">
-<span id="version-threenumberminorext"></span><h4>5.2.4.3. 3-number-minor-ext<a class="headerlink" href="#number-minor-ext" title="Permalink to this headline">¶</a></h4>
+<span id="version-threenumberminorext"></span><h4>2.2.4.3. 3-number-minor-ext<a class="headerlink" href="#number-minor-ext" title="Permalink to this headline">¶</a></h4>
 <p>The 3-number-minor-ext scheme provides the release numbering scheme where the increment priority is laid on the
 minor version number.
 This is e.g. the case for <a class="reference internal" href="#enumarmbian"><span class="std std-ref">Armbian</span></a> with the current version ‘<em>Armbian-5.50</em>’.
@@ -1347,7 +1346,7 @@ The following figure depicts the logical standard subfield allocation within the
 </div></blockquote>
 </div>
 <div class="section" id="custom-distrel">
-<span id="version-threenumbercustom"></span><h4>5.2.4.4. custom-distrel<a class="headerlink" href="#custom-distrel" title="Permalink to this headline">¶</a></h4>
+<span id="version-threenumbercustom"></span><h4>2.2.4.4. custom-distrel<a class="headerlink" href="#custom-distrel" title="Permalink to this headline">¶</a></h4>
 <p>The <em>dist</em> field of the <em>ostype</em> context <em>RTE_LINUX</em> is subdvided by the significance of bit <em>22</em> into two
 equal ranges of 63 distributions.
 The <em>platformids</em> reserves some values for the standard distributions in both ranges, for the
@@ -1388,12 +1387,12 @@ and
 </div>
 </div>
 <div class="section" id="os-numbering-schemes">
-<h3>5.2.5. OS Numbering Schemes<a class="headerlink" href="#os-numbering-schemes" title="Permalink to this headline">¶</a></h3>
+<h3>2.2.5. OS Numbering Schemes<a class="headerlink" href="#os-numbering-schemes" title="Permalink to this headline">¶</a></h3>
 <p>Will be available soon.</p>
 </div>
 </div>
 <div class="section" id="global-variables">
-<h2>5.3. Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">¶</a></h2>
+<h2>2.3. Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">¶</a></h2>
 <p>The provided global variable <em>platformids.RTE</em> is initialized during the load of <em>platformids</em> by the
 automated scan of the current platform
 <a class="reference external" href="platforms.html#platformids.platforms.PlatformParameters.scan">platformids.platforms.PlatformParameters.scan()</a>
@@ -1408,7 +1407,7 @@ for example the <em>dist</em> and <em>distrel</em> fields as for example for the
 of <a class="reference internal" href="#osxcategories"><span class="std std-ref">posix.darwin.osx</span></a>, where <em>OSX</em> uses a <a class="reference internal" href="#treevalueversionnumber"><span class="std std-ref">3-number version scheme</span></a>.</p>
 </div>
 <div class="section" id="special-dependencies-of-python">
-<h2>5.4. Special Dependencies of Python<a class="headerlink" href="#special-dependencies-of-python" title="Permalink to this headline">¶</a></h2>
+<h2>2.4. Special Dependencies of Python<a class="headerlink" href="#special-dependencies-of-python" title="Permalink to this headline">¶</a></h2>
 <p>The standard distribution and the closely designed Python implementations share more or less a common view and semantics within
 their interfaces including the provided standard libraries.
 This is different to some degree when it comes to cross-platform Python implementations such as <em>Jython</em>.
@@ -1422,7 +1421,7 @@ in order to identify the actually required common information about the native p
 See also <a class="reference internal" href="references.html#pythonids" id="id64"><span>[pythonids]</span></a>.</p>
 </div>
 <div class="section" id="supported-standard-os-and-dists">
-<span id="standardosdist"></span><h2>5.5. Supported Standard OS and Dists<a class="headerlink" href="#supported-standard-os-and-dists" title="Permalink to this headline">¶</a></h2>
+<span id="standardosdist"></span><h2>2.5. Supported Standard OS and Dists<a class="headerlink" href="#supported-standard-os-and-dists" title="Permalink to this headline">¶</a></h2>
 <p id="os-supported">The current actively supported and tested OS and distributions are listed in the following table.
 More distributions are supported generically, but not explicitly tested by the author.
 For an graphical overview of in general supported platforms refer to
@@ -2045,9 +2044,9 @@ which normally were assigned the incremented <em>NT</em> release of the followin
 </div></div></blockquote>
 </div>
 <div class="section" id="linux">
-<h2>5.6. Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
+<h2>2.6. Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="alpine-linux">
-<span id="enumalpinelin"></span><h3>5.6.1. Alpine Linux<a class="headerlink" href="#alpine-linux" title="Permalink to this headline">¶</a></h3>
+<span id="enumalpinelin"></span><h3>2.6.1. Alpine Linux<a class="headerlink" href="#alpine-linux" title="Permalink to this headline">¶</a></h3>
 <p>For the module description refer to <a class="reference internal" href="dist/alpinelinux.html#dist-module-alpine"><span class="std std-ref">platformids.dist.alpinelinux</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -2153,7 +2152,7 @@ The <em>AlpineLinux</em> distribution uses the <a class="reference internal" hre
 <p>See also <a class="reference external" href="dist/alpinelinux.html#">alpinelinux.py</a></p>
 </div>
 <div class="section" id="arch-linux">
-<span id="enumarchlin"></span><h3>5.6.2. Arch Linux<a class="headerlink" href="#arch-linux" title="Permalink to this headline">¶</a></h3>
+<span id="enumarchlin"></span><h3>2.6.2. Arch Linux<a class="headerlink" href="#arch-linux" title="Permalink to this headline">¶</a></h3>
 <p>For the module description refer to <a class="reference internal" href="dist/archlinux.html#dist-module-archlin"><span class="std std-ref">platformids.dist.archlinux</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -2288,7 +2287,7 @@ Optionally any file system path could be provided to a local custom file with th
 <p>See <a class="reference external" href="dist/archlinux.html#">Arch Linux.py</a></p>
 </div>
 <div class="section" id="enumcentos">
-<span id="id97"></span><h3>5.6.3. CentOS<a class="headerlink" href="#enumcentos" title="Permalink to this headline">¶</a></h3>
+<span id="id97"></span><h3>2.6.3. CentOS<a class="headerlink" href="#enumcentos" title="Permalink to this headline">¶</a></h3>
 <p>For the module description refer to <a class="reference internal" href="dist/centos.html#dist-module-centos"><span class="std std-ref">platformids.dist.centos</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -2480,7 +2479,7 @@ While the versions and releases are still ordered for threshold and range operat
 <p>See <a class="reference external" href="dist/centos.html#">centos.py</a></p>
 </div>
 <div class="section" id="enumcygwin">
-<span id="id103"></span><h3>5.6.4. Cygwin<a class="headerlink" href="#enumcygwin" title="Permalink to this headline">¶</a></h3>
+<span id="id103"></span><h3>2.6.4. Cygwin<a class="headerlink" href="#enumcygwin" title="Permalink to this headline">¶</a></h3>
 <p>For the module description refer to <a class="reference internal" href="dist/cygwin.html#dist-module-cygwin"><span class="std std-ref">platformids.dist.cygwin</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -2547,7 +2546,7 @@ where the numbers change moderately, the current used version is <em>2.9.0</em>.
 <p>See <a class="reference external" href="dist/cygwin.html#">cygwin.py</a></p>
 </div>
 <div class="section" id="enumdebian">
-<span id="id108"></span><h3>5.6.5. Debian<a class="headerlink" href="#enumdebian" title="Permalink to this headline">¶</a></h3>
+<span id="id108"></span><h3>2.6.5. Debian<a class="headerlink" href="#enumdebian" title="Permalink to this headline">¶</a></h3>
 <p>For the module description refer to <a class="reference internal" href="dist/debian.html#dist-module-debian"><span class="std std-ref">platformids.dist.debian</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -2616,7 +2615,7 @@ Examples are:</p>
 <p>See <a class="reference external" href="dist/debian.html#">debian.py</a></p>
 </div>
 <div class="section" id="enumfedora">
-<span id="id113"></span><h3>5.6.6. Fedora<a class="headerlink" href="#enumfedora" title="Permalink to this headline">¶</a></h3>
+<span id="id113"></span><h3>2.6.6. Fedora<a class="headerlink" href="#enumfedora" title="Permalink to this headline">¶</a></h3>
 <p>For the module description refer to <a class="reference internal" href="dist/fedora.html#dist-module-fedora"><span class="std std-ref">platformids.dist.fedora</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -2722,11 +2721,11 @@ For the naming scheme of former releases see <a class="reference internal" href=
 <p>See <a class="reference external" href="dist/fedora.html#">fedora.py</a>.</p>
 </div>
 <div class="section" id="enumgentoo">
-<span id="id119"></span><h3>5.6.7. Gentoo<a class="headerlink" href="#enumgentoo" title="Permalink to this headline">¶</a></h3>
+<span id="id119"></span><h3>2.6.7. Gentoo<a class="headerlink" href="#enumgentoo" title="Permalink to this headline">¶</a></h3>
 <p>See <a class="reference external" href="dist/gentoo.html#">gentoo.py</a>, <a class="reference internal" href="references.html#gentooversions" id="id120"><span>[GENTOOVERSIONS]</span></a>.</p>
 </div>
 <div class="section" id="enumopensuse">
-<span id="id121"></span><h3>5.6.8. OpenSUSE<a class="headerlink" href="#enumopensuse" title="Permalink to this headline">¶</a></h3>
+<span id="id121"></span><h3>2.6.8. OpenSUSE<a class="headerlink" href="#enumopensuse" title="Permalink to this headline">¶</a></h3>
 <p>For the module description refer to <a class="reference internal" href="dist/opensuse.html#dist-module-opensuse"><span class="std std-ref">platformids.dist.opensuse</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -2791,7 +2790,7 @@ For the naming scheme of former releases see <a class="reference internal" href=
 <p>See <a class="reference external" href="dist/opensuse.html#">opensuse.py</a>, <a class="reference internal" href="references.html#opensuse" id="id125"><span>[OPENSUSE]</span></a>, and for legacy <a class="reference internal" href="references.html#suse" id="id126"><span>[SUSE]</span></a>.</p>
 </div>
 <div class="section" id="oracle-enterprise-linux">
-<span id="enumoel"></span><h3>5.6.9. Oracle Enterprise Linux<a class="headerlink" href="#oracle-enterprise-linux" title="Permalink to this headline">¶</a></h3>
+<span id="enumoel"></span><h3>2.6.9. Oracle Enterprise Linux<a class="headerlink" href="#oracle-enterprise-linux" title="Permalink to this headline">¶</a></h3>
 <p>For the module description refer to <a class="reference internal" href="dist/oraclelinux.html#dist-module-oraclelin"><span class="std std-ref">platformids.dist.oraclelinux</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -2858,7 +2857,7 @@ marker by a <em>u</em> instead of a dot.</p>
 <p>See <a class="reference external" href="dist/oraclelinux.html#">oraclelinux.py</a></p>
 </div>
 <div class="section" id="enumrhel">
-<span id="id130"></span><h3>5.6.10. RHEL<a class="headerlink" href="#enumrhel" title="Permalink to this headline">¶</a></h3>
+<span id="id130"></span><h3>2.6.10. RHEL<a class="headerlink" href="#enumrhel" title="Permalink to this headline">¶</a></h3>
 <p>For the module description refer to <a class="reference internal" href="dist/rhel.html#dist-module-rhel"><span class="std std-ref">platformids.dist.rhel</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -2926,7 +2925,7 @@ Examples are:</p>
 <p>See <a class="reference external" href="dist/rhel.html#">rhel.py</a></p>
 </div>
 <div class="section" id="sles">
-<span id="enumsles"></span><h3>5.6.11. SLES<a class="headerlink" href="#sles" title="Permalink to this headline">¶</a></h3>
+<span id="enumsles"></span><h3>2.6.11. SLES<a class="headerlink" href="#sles" title="Permalink to this headline">¶</a></h3>
 <p>For the module description refer to <a class="reference internal" href="dist/sles.html#dist-module-sles"><span class="std std-ref">platformids.dist.sles</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -2991,7 +2990,7 @@ Examples are:</p>
 <p>See <a class="reference external" href="dist/sles.html#">sles.py</a></p>
 </div>
 <div class="section" id="enumubuntu">
-<span id="id137"></span><h3>5.6.12. Ubuntu<a class="headerlink" href="#enumubuntu" title="Permalink to this headline">¶</a></h3>
+<span id="id137"></span><h3>2.6.12. Ubuntu<a class="headerlink" href="#enumubuntu" title="Permalink to this headline">¶</a></h3>
 <p>For the module description refer to <a class="reference internal" href="dist/ubuntu.html#dist-module-ubuntu"><span class="std std-ref">platformids.dist.ubuntu</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -3058,9 +3057,9 @@ Examples are:</p>
 </div>
 </div>
 <div class="section" id="bsd">
-<h2>5.7. BSD<a class="headerlink" href="#bsd" title="Permalink to this headline">¶</a></h2>
+<h2>2.7. BSD<a class="headerlink" href="#bsd" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="enumfreebsd">
-<span id="id141"></span><h3>5.7.1. FreeBSD<a class="headerlink" href="#enumfreebsd" title="Permalink to this headline">¶</a></h3>
+<span id="id141"></span><h3>2.7.1. FreeBSD<a class="headerlink" href="#enumfreebsd" title="Permalink to this headline">¶</a></h3>
 <p>For the module description refer to <a class="reference internal" href="dist/freebsd.html#dist-module-freebsd"><span class="std std-ref">platformids.dist.freebsd</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -3160,7 +3159,7 @@ Examples for the provided value ranges are <em>&lt;major&gt;&lt;minor&gt;&lt;bui
 <p>See <a class="reference external" href="dist/freebsd.html#">freebsd.py</a></p>
 </div>
 <div class="section" id="enumnetbsd">
-<span id="id146"></span><h3>5.7.2. NetBSD<a class="headerlink" href="#enumnetbsd" title="Permalink to this headline">¶</a></h3>
+<span id="id146"></span><h3>2.7.2. NetBSD<a class="headerlink" href="#enumnetbsd" title="Permalink to this headline">¶</a></h3>
 <p>For the module description refer to <a class="reference internal" href="dist/netbsd.html#dist-module-netbsd"><span class="std std-ref">platformids.dist.netbsd</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -3213,7 +3212,7 @@ Examples for the provided value ranges are <em>&lt;major&gt;&lt;minor&gt;&lt;bui
 <p>See <a class="reference external" href="dist/netbsd.html#">netbsd.py</a></p>
 </div>
 <div class="section" id="enumopenbsd">
-<span id="id150"></span><h3>5.7.3. OpenBSD<a class="headerlink" href="#enumopenbsd" title="Permalink to this headline">¶</a></h3>
+<span id="id150"></span><h3>2.7.3. OpenBSD<a class="headerlink" href="#enumopenbsd" title="Permalink to this headline">¶</a></h3>
 <p>For the module description refer to <a class="reference internal" href="dist/openbsd.html#dist-module-openbsd"><span class="std std-ref">platformids.dist.openbsd</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -3280,9 +3279,9 @@ Examples for the provided value ranges are <em>&lt;major&gt;&lt;minor&gt;&lt;bui
 </div>
 </div>
 <div class="section" id="os-x-darwin">
-<h2>5.8. OS-X / Darwin<a class="headerlink" href="#os-x-darwin" title="Permalink to this headline">¶</a></h2>
+<h2>2.8. OS-X / Darwin<a class="headerlink" href="#os-x-darwin" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="os-x">
-<span id="enumosx"></span><span id="osxcategories"></span><h3>5.8.1. OS-X<a class="headerlink" href="#os-x" title="Permalink to this headline">¶</a></h3>
+<span id="enumosx"></span><span id="osxcategories"></span><h3>2.8.1. OS-X<a class="headerlink" href="#os-x" title="Permalink to this headline">¶</a></h3>
 <p>The name including the versioning scheme of <em>OS-X</em> or now <em>macOS X</em>, changed frequently.
 The base message is here, that the distribution of the Apple OS is commonly an <em>&lt;current-name&gt; X</em>
 with <em>X</em> as latin for <em>release 10</em> named OS distribution.</p>
@@ -3410,15 +3409,15 @@ Therefore the <em>OS-X</em> versions freed from redundancy actually represent a 
 </div>
 </div>
 <div class="section" id="unix">
-<h2>5.9. Unix<a class="headerlink" href="#unix" title="Permalink to this headline">¶</a></h2>
+<h2>2.9. Unix<a class="headerlink" href="#unix" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="enumsolaris">
-<span id="id163"></span><h3>5.9.1. Solaris<a class="headerlink" href="#enumsolaris" title="Permalink to this headline">¶</a></h3>
+<span id="id163"></span><h3>2.9.1. Solaris<a class="headerlink" href="#enumsolaris" title="Permalink to this headline">¶</a></h3>
 <p>The distribution <em>Solaris</em> of the <em>ostype</em>  <em>SunOS</em> applies various numbering schemes.
 The <em>platformids</em> supports the versions <em>Solaris10</em> / <em>SunOS5.10</em> and <em>Solaris11</em> / <em>SunOS5.11</em> only.
 These apply two different numbering schemes.</p>
 <p>For the module description refer to <a class="reference internal" href="dist/solaris.html#dist-module-solaris"><span class="std std-ref">platformids.dist.solaris</span></a>.</p>
 <div class="section" id="solaris10">
-<span id="enumsolaris10"></span><h4>5.9.1.1. Solaris10<a class="headerlink" href="#solaris10" title="Permalink to this headline">¶</a></h4>
+<span id="enumsolaris10"></span><h4>2.9.1.1. Solaris10<a class="headerlink" href="#solaris10" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><div class="shortcuttab">
 <div class="nonbreakheadtab">
@@ -3480,7 +3479,7 @@ as the version <em>10</em>.</p>
 <p>See <a class="reference external" href="dist/solaris.html#">solaris.py</a></p>
 </div>
 <div class="section" id="solaris11">
-<span id="enumsolaris11"></span><h4>5.9.1.2. Solaris11<a class="headerlink" href="#solaris11" title="Permalink to this headline">¶</a></h4>
+<span id="enumsolaris11"></span><h4>2.9.1.2. Solaris11<a class="headerlink" href="#solaris11" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><div class="shortcuttab">
 <div class="nonbreakheadtab">
@@ -3547,13 +3546,13 @@ Examples are:</p>
 </div>
 </div>
 <div class="section" id="windows-nt">
-<span id="enumwinnt"></span><h2>5.10. Windows NT<a class="headerlink" href="#windows-nt" title="Permalink to this headline">¶</a></h2>
+<span id="enumwinnt"></span><h2>2.10. Windows NT<a class="headerlink" href="#windows-nt" title="Permalink to this headline">¶</a></h2>
 <p>The Windows OS products are almost completely based on the <em>NT</em> technology.
 Therefore all supported Windows distributions of <em>category== RTE_WINDOWS</em> are of the <em>ostype== RTE_NT</em> with
 an incremental release version numbering scheme <a class="reference internal" href="references.html#winversions" id="id171"><span>[WINVERSIONS]</span></a>.</p>
 <p>For the module description refer to <a class="reference internal" href="dist/windows.html#dist-module-windows"><span class="std std-ref">platformids.dist.windows</span></a>.</p>
 <div class="section" id="nt-version-numbering-concepts">
-<h3>5.10.1. NT Version Numbering Concepts<a class="headerlink" href="#nt-version-numbering-concepts" title="Permalink to this headline">¶</a></h3>
+<h3>2.10.1. NT Version Numbering Concepts<a class="headerlink" href="#nt-version-numbering-concepts" title="Permalink to this headline">¶</a></h3>
 <p>The scheme has changed since <em>Windows NT-10.0</em> from a waterfall based distribution paradigm <a class="reference internal" href="references.html#winversions" id="id172"><span>[WINVERSIONS]</span></a>
 of major packaged releases and updates into a continuous deployment paradigm documented by
 the updated ‘<em>Windows lifecycle fact sheet</em>’ <a class="reference internal" href="references.html#win10lifecycle" id="id173"><span>[WIN10LIFECYCLE]</span></a> / ‘<em>Modern Lifecycle Policy FAQ</em>’ <a class="reference internal" href="references.html#win10lifecyclefaq" id="id174"><span>[WIN10LIFECYCLEFAQ]</span></a>.
@@ -3808,7 +3807,7 @@ by the mapping of the resulting values:</p>
 </li>
 </ul>
 <div class="section" id="new-version-paradigm">
-<span id="conceptwinnt100"></span><h4>5.10.1.1. New Version Paradigm<a class="headerlink" href="#new-version-paradigm" title="Permalink to this headline">¶</a></h4>
+<span id="conceptwinnt100"></span><h4>2.10.1.1. New Version Paradigm<a class="headerlink" href="#new-version-paradigm" title="Permalink to this headline">¶</a></h4>
 <p>The <em>Windows10</em> release is announced by Microsoft to be the last Windows version,
 which is from than on an <em>OS as a service</em>.
 The consequence is a versionless paradigm of continuous short-term updates - but implemented pragmatically with
@@ -4021,7 +4020,7 @@ For the complete list of the following extract refer to <em>Wikipedia</em>  <a c
 </div></blockquote>
 </div>
 <div class="section" id="implemented-version-scheme-and-processing">
-<h4>5.10.1.2. Implemented Version Scheme and processing<a class="headerlink" href="#implemented-version-scheme-and-processing" title="Permalink to this headline">¶</a></h4>
+<h4>2.10.1.2. Implemented Version Scheme and processing<a class="headerlink" href="#implemented-version-scheme-and-processing" title="Permalink to this headline">¶</a></h4>
 <p>The new version scheme, which has to be provided as a seamless  integrated scheme with the old schemes,
 opens some challenges for the bitmask representation by a 32bit value.
 This in particular is not possible by direct copy of the partial values because each componen itself is
@@ -4039,13 +4038,13 @@ The <em>platformids</em> handles this by introducing optional custom callbacks f
 The additional handling degrades the processing for these non-standard-custom version schemes, thus should be cached in case of large loops.</p>
 </div>
 <div class="section" id="build-identifiers">
-<h4>5.10.1.3. Build Identifiers<a class="headerlink" href="#build-identifiers" title="Permalink to this headline">¶</a></h4>
+<h4>2.10.1.3. Build Identifiers<a class="headerlink" href="#build-identifiers" title="Permalink to this headline">¶</a></h4>
 <p>The appropriate runtime identifier for the new build enumeration starting with <em>NT.10.0</em>
 extended by the build id.</p>
 <p>will be available soon</p>
 </div>
 <div class="section" id="implementation">
-<h4>5.10.1.4. Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h4>
+<h4>2.10.1.4. Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h4>
 <p>The actual core implementation for the <em>Windows NT</em> platform is naturally based on the <em>Windows-Registry</em>,
 which is supported by the standard libraries <em>winreg</em> <a class="reference internal" href="references.html#winreg3" id="id187"><span>[WINREG3]</span></a>  and <em>_winreg</em> <a class="reference internal" href="references.html#winreg2" id="id188"><span>[WINREG2]</span></a> .
 Due to the lack of availability on the standard platforms in two cases some special solutions are required.</p>
@@ -4057,7 +4056,7 @@ Due to the lack of availability on the standard platforms in two cases some spec
 <p>For details refer to the <em>Windows</em> module <a class="reference internal" href="dist/windows.html#dist-module-windows"><span class="std std-ref">platformids.dist.windows</span></a>.</p>
 </div>
 <div class="section" id="windows-nt-registry">
-<h4>5.10.1.5. Windows NT Registry<a class="headerlink" href="#windows-nt-registry" title="Permalink to this headline">¶</a></h4>
+<h4>2.10.1.5. Windows NT Registry<a class="headerlink" href="#windows-nt-registry" title="Permalink to this headline">¶</a></h4>
 <p>The main source for the acquisition of the information is
 is finally chosesn as the registry.
 This is not as trivial as it sounds because this includes the complete range of the <em>Python</em>
@@ -4660,7 +4659,7 @@ The macros focus on the legacy NT versions, but include for those the SP informa
 </dl>
 </div>
 <div class="section" id="windows-nt-api">
-<h4>5.10.1.6. Windows NT API<a class="headerlink" href="#windows-nt-api" title="Permalink to this headline">¶</a></h4>
+<h4>2.10.1.6. Windows NT API<a class="headerlink" href="#windows-nt-api" title="Permalink to this headline">¶</a></h4>
 <p>The system information data of the <em>NT</em> platform is acquired by calling the
 system libraries interfaces mainly provided by <em>kernel32.dll</em>.
 The calls are implemented as <em>ctypes</em> in the module
@@ -4671,7 +4670,7 @@ and
 </div>
 </div>
 <div class="section" id="nt-product-types">
-<h3>5.10.2. NT Product Types<a class="headerlink" href="#nt-product-types" title="Permalink to this headline">¶</a></h3>
+<h3>2.10.2. NT Product Types<a class="headerlink" href="#nt-product-types" title="Permalink to this headline">¶</a></h3>
 <p>The version numbering scheme is the same for all relevant Windows versions.
 The identical versions are assigned to a specific evolution step of all products, thus require additional
 product information in order to detemine a specific runtime environment.
@@ -4760,7 +4759,7 @@ by <em>platformids.dist.windows</em> are applied.</p>
 </ul>
 </div>
 <div class="section" id="nt-releases">
-<h3>5.10.3. NT-Releases<a class="headerlink" href="#nt-releases" title="Permalink to this headline">¶</a></h3>
+<h3>2.10.3. NT-Releases<a class="headerlink" href="#nt-releases" title="Permalink to this headline">¶</a></h3>
 <p>For predefined values refer to <a class="reference external" href="dist/windows.html#">windows.py</a>.
 Some examples are</p>
 <blockquote>
@@ -4844,7 +4843,7 @@ Some examples are</p>
 </div>
 </div></div></blockquote>
 <div class="section" id="nt-10-0">
-<span id="enumwinnt100"></span><h4>5.10.3.1. NT-10.0<a class="headerlink" href="#nt-10-0" title="Permalink to this headline">¶</a></h4>
+<span id="enumwinnt100"></span><h4>2.10.3.1. NT-10.0<a class="headerlink" href="#nt-10-0" title="Permalink to this headline">¶</a></h4>
 <p>The encoding for <em>NT-10.0</em> releases consists of the base value <em>RTE_NT100</em> and the numeric release version
 as the 4digit value of the ‘<em>&lt;year-month&gt;</em>’.
 The following figure details the calculation for the version <em>1809</em>, which represents the first release of
@@ -4906,7 +4905,7 @@ For product types refer to <a class="reference external" href="dist/windows_prod
 </div></div></blockquote>
 </div>
 <div class="section" id="nt-6-3">
-<span id="enumwinnt63"></span><h4>5.10.3.2. NT-6.3<a class="headerlink" href="#nt-6-3" title="Permalink to this headline">¶</a></h4>
+<span id="enumwinnt63"></span><h4>2.10.3.2. NT-6.3<a class="headerlink" href="#nt-6-3" title="Permalink to this headline">¶</a></h4>
 <p>The version of the product contains here the actual build number, which is an arbitrary incremented value.
 The value therefore has the double semantics as beeing the build counter at the time of the product release,
 and as the micro version number for the products lifetime.
@@ -4966,7 +4965,7 @@ The same is true for all previous versions of <em>NT</em>.</p>
 </div></div></blockquote>
 </div>
 <div class="section" id="nt-6-1">
-<span id="enumwinnt61"></span><h4>5.10.3.3. NT-6.1<a class="headerlink" href="#nt-6-1" title="Permalink to this headline">¶</a></h4>
+<span id="enumwinnt61"></span><h4>2.10.3.3. NT-6.1<a class="headerlink" href="#nt-6-1" title="Permalink to this headline">¶</a></h4>
 <div class="figure align-default" id="id359" style="width: 700px">
 <span id="figure-winnt61"></span><a class="reference external image-reference" href="_static/bitarray-rte-distrel-nt61w7u.png"><img alt="_images/bitarray-rte-distrel-nt61w7u.png" src="_images/bitarray-rte-distrel-nt61w7u.png" /></a>
 <p class="caption"><span class="caption-text">Figure: Windows NT-6.1 Enconding <a class="reference external" href="_static/bitarray-rte-distrel-nt61w7u.png"><img alt="zoom" src="_images/zoom1.png" style="width: 16px;" /></a></span><a class="headerlink" href="#id359" title="Permalink to this image">¶</a></p>
@@ -5022,7 +5021,7 @@ The same is true for all previous versions of <em>NT</em>.</p>
 </div></div></blockquote>
 </div>
 <div class="section" id="nt-5-1">
-<span id="enumwinnt51"></span><h4>5.10.3.4. NT-5.1<a class="headerlink" href="#nt-5-1" title="Permalink to this headline">¶</a></h4>
+<span id="enumwinnt51"></span><h4>2.10.3.4. NT-5.1<a class="headerlink" href="#nt-5-1" title="Permalink to this headline">¶</a></h4>
 <div class="figure align-default" id="id360" style="width: 700px">
 <span id="figure-winnt51"></span><a class="reference external image-reference" href="_static/bitarray-rte-distrel-nt51xp.png"><img alt="_images/bitarray-rte-distrel-nt51xp.png" src="_images/bitarray-rte-distrel-nt51xp.png" /></a>
 <p class="caption"><span class="caption-text">Figure: Windows NT-5.1 Enconding <a class="reference external" href="_static/bitarray-rte-distrel-nt51xp.png"><img alt="zoom" src="_images/zoom1.png" style="width: 16px;" /></a></span><a class="headerlink" href="#id360" title="Permalink to this image">¶</a></p>
@@ -5080,7 +5079,7 @@ The same is true for all previous versions of <em>NT</em>.</p>
 </div>
 </div>
 <div class="section" id="security-and-network-systems">
-<span id="securityandnetwork"></span><h2>5.11. Security and Network Systems<a class="headerlink" href="#security-and-network-systems" title="Permalink to this headline">¶</a></h2>
+<span id="securityandnetwork"></span><h2>2.11. Security and Network Systems<a class="headerlink" href="#security-and-network-systems" title="Permalink to this headline">¶</a></h2>
 <p id="os-security-network-supported">The current actively supported and tested embedded and alternate architectures of OS and distributions
 are listed in the following table,
 where the tests are by default based on <em>CPython</em> or <em>MicroPython</em> only.
@@ -5353,9 +5352,9 @@ Where available the complete set of supported Python implementations as defined 
 </div>
 </div></div></blockquote>
 <div class="section" id="security-tools">
-<h3>5.11.1. Security Tools<a class="headerlink" href="#security-tools" title="Permalink to this headline">¶</a></h3>
+<h3>2.11.1. Security Tools<a class="headerlink" href="#security-tools" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="kalilinux">
-<span id="secnetkalilinux"></span><h4>5.11.1.1. KaliLinux<a class="headerlink" href="#kalilinux" title="Permalink to this headline">¶</a></h4>
+<span id="secnetkalilinux"></span><h4>2.11.1.1. KaliLinux<a class="headerlink" href="#kalilinux" title="Permalink to this headline">¶</a></h4>
 <p><em>Kali Linux</em> is derived from <em>BackTrack Linux</em>.
 <em>Kali Linux</em> has changed it’s distribution versioning scheme to rolling releases <a class="reference internal" href="references.html#rollingdist" id="id202"><span>[RollingDist]</span></a>,
 and finally a build-cycle period of 1 week.</p>
@@ -5480,9 +5479,9 @@ and processed to a date by the <em>platformids</em>.</p>
 </div>
 </div>
 <div class="section" id="network-nodes">
-<h3>5.11.2. Network Nodes<a class="headerlink" href="#network-nodes" title="Permalink to this headline">¶</a></h3>
+<h3>2.11.2. Network Nodes<a class="headerlink" href="#network-nodes" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="secnetopenbsd">
-<span id="id206"></span><h4>5.11.2.1. OpenBSD<a class="headerlink" href="#secnetopenbsd" title="Permalink to this headline">¶</a></h4>
+<span id="id206"></span><h4>2.11.2.1. OpenBSD<a class="headerlink" href="#secnetopenbsd" title="Permalink to this headline">¶</a></h4>
 <p>For the module description refer to <a class="reference internal" href="dist/openbsd.html#dist-module-openbsd"><span class="std std-ref">OpenBSD</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -5546,7 +5545,7 @@ and processed to a date by the <em>platformids</em>.</p>
 <p>See <a class="reference external" href="dist/openbsd.html#">openbsd.py</a></p>
 </div>
 <div class="section" id="openwrt">
-<span id="secnetopenwrt"></span><h4>5.11.2.2. OpenWRT<a class="headerlink" href="#openwrt" title="Permalink to this headline">¶</a></h4>
+<span id="secnetopenwrt"></span><h4>2.11.2.2. OpenWRT<a class="headerlink" href="#openwrt" title="Permalink to this headline">¶</a></h4>
 <p>For the module description refer to <a class="reference internal" href="net/openwrt.html#net-module-openwrt"><span class="std std-ref">platformids.net.openwrt</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -5637,7 +5636,7 @@ and processed to a date by the <em>platformids</em>.</p>
 <p>See <a class="reference external" href="net/openwrt.html#">openwrt.py</a></p>
 </div>
 <div class="section" id="pfsense">
-<span id="secnetpfsense"></span><h4>5.11.2.3. pfSense<a class="headerlink" href="#pfsense" title="Permalink to this headline">¶</a></h4>
+<span id="secnetpfsense"></span><h4>2.11.2.3. pfSense<a class="headerlink" href="#pfsense" title="Permalink to this headline">¶</a></h4>
 <p>For the module description refer to <a class="reference internal" href="net/pfsense.html#net-module-pfsense"><span class="std std-ref">pfSense</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -5691,7 +5690,7 @@ and processed to a date by the <em>platformids</em>.</p>
 </div>
 </div>
 <div class="section" id="embedded-systems-and-iot">
-<span id="emdeddedandiot"></span><h2>5.12. Embedded Systems and IoT<a class="headerlink" href="#embedded-systems-and-iot" title="Permalink to this headline">¶</a></h2>
+<span id="emdeddedandiot"></span><h2>2.12. Embedded Systems and IoT<a class="headerlink" href="#embedded-systems-and-iot" title="Permalink to this headline">¶</a></h2>
 <p>The main design target of the <em>platformids</em> is to support information about runtime environments
 including cross platform information for other targets within heterogeneous IT landscapes of clouds.
 The primary targeted resources are physical and virtual general purpose servers and workstations.</p>
@@ -5991,7 +5990,7 @@ Where available the complete set of supported Python implementations as defined 
 </div></div></blockquote>
 <p>The <em>platformids</em> supports the cases as described by the following sections.</p>
 <div class="section" id="embedded-posix-os">
-<span id="embededdosdist"></span><h3>5.12.1. Embedded POSIX-OS<a class="headerlink" href="#embedded-posix-os" title="Permalink to this headline">¶</a></h3>
+<span id="embededdosdist"></span><h3>2.12.1. Embedded POSIX-OS<a class="headerlink" href="#embedded-posix-os" title="Permalink to this headline">¶</a></h3>
 <p>The large scale embedded systems even available for the consumer market like the <em>RaspberryPI</em> represents a
 class of embedded systems which provide basically a full scale general purpose
 PC and even server platform including memory management.
@@ -6004,7 +6003,7 @@ This is also the case for the various alternate platforms such as ARM builds e.g
 server OS <a class="reference internal" href="#enumcentos"><span class="std std-ref">CentOS-altarch</span></a>, which is basically ‘<em>literally</em>’* ported.</p>
 <p>This is supported by <em>platformids</em> from the box.</p>
 <div class="section" id="alpine-linux-on-arm">
-<span id="embeddedalpinelin"></span><h4>5.12.1.1. Alpine Linux on ARM<a class="headerlink" href="#alpine-linux-on-arm" title="Permalink to this headline">¶</a></h4>
+<span id="embeddedalpinelin"></span><h4>2.12.1.1. Alpine Linux on ARM<a class="headerlink" href="#alpine-linux-on-arm" title="Permalink to this headline">¶</a></h4>
 <p>For the module description refer to <a class="reference internal" href="dist/alpinelinux.html#dist-module-alpine"><span class="std std-ref">platformids.dist.alpinelinux</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -6060,7 +6059,7 @@ For the numbering scheme refer to <a class="reference internal" href="#enumalpin
 See also <a class="reference external" href="dist/alpinelinux.html#">alpinelinux.py</a></p>
 </div>
 <div class="section" id="arch-linux-arm">
-<span id="embeddedarchlinarm"></span><h4>5.12.1.2. Arch Linux ARM<a class="headerlink" href="#arch-linux-arm" title="Permalink to this headline">¶</a></h4>
+<span id="embeddedarchlinarm"></span><h4>2.12.1.2. Arch Linux ARM<a class="headerlink" href="#arch-linux-arm" title="Permalink to this headline">¶</a></h4>
 <p>For the module description refer to <a class="reference internal" href="dist/archlinux.html#dist-module-archlin"><span class="std std-ref">platformids.dist.archlinux</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -6116,7 +6115,7 @@ For the numbering scheme refer to the standard distribution <a class="reference 
 See also <a class="reference external" href="dist/archlinux.html#">Arch Linux.py</a></p>
 </div>
 <div class="section" id="armbian">
-<span id="embeddedarmbian"></span><span id="enumarmbian"></span><h4>5.12.1.3. Armbian<a class="headerlink" href="#armbian" title="Permalink to this headline">¶</a></h4>
+<span id="embeddedarmbian"></span><span id="enumarmbian"></span><h4>2.12.1.3. Armbian<a class="headerlink" href="#armbian" title="Permalink to this headline">¶</a></h4>
 <p>For the module description refer to <a class="reference internal" href="embed/armbian.html#embed-module-armbian"><span class="std std-ref">platformids.embed.armbian</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -6231,7 +6230,7 @@ version numbers.</p>
 <p>See <a class="reference external" href="embed/armbian.html#">armbian.py</a></p>
 </div>
 <div class="section" id="centos-altarch">
-<span id="embeddedcentos"></span><h4>5.12.1.4. CentOS AltArch<a class="headerlink" href="#centos-altarch" title="Permalink to this headline">¶</a></h4>
+<span id="embeddedcentos"></span><h4>2.12.1.4. CentOS AltArch<a class="headerlink" href="#centos-altarch" title="Permalink to this headline">¶</a></h4>
 <p>For the module description refer to <a class="reference internal" href="dist/centos.html#dist-module-centos"><span class="std std-ref">platformids.dist.centos</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -6287,11 +6286,11 @@ For the numbering scheme refer to the standard distribution <a class="reference 
 See <a class="reference external" href="dist/centos.html#">centos.py</a></p>
 </div>
 <div class="section" id="embeddeddebian">
-<span id="id239"></span><h4>5.12.1.5. Debian<a class="headerlink" href="#embeddeddebian" title="Permalink to this headline">¶</a></h4>
+<span id="id239"></span><h4>2.12.1.5. Debian<a class="headerlink" href="#embeddeddebian" title="Permalink to this headline">¶</a></h4>
 <p>For now  <a class="reference internal" href="#embeddedraspbian"><span class="std std-ref">Raspbian</span></a>. only.</p>
 </div>
 <div class="section" id="raspbian">
-<span id="embeddedraspbian"></span><h4>5.12.1.6. Raspbian<a class="headerlink" href="#raspbian" title="Permalink to this headline">¶</a></h4>
+<span id="embeddedraspbian"></span><h4>2.12.1.6. Raspbian<a class="headerlink" href="#raspbian" title="Permalink to this headline">¶</a></h4>
 <p>For the module description refer to <a class="reference internal" href="embed/raspbian.html#embed-module-raspbian"><span class="std std-ref">platformids.embed.raspbian</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -6358,7 +6357,7 @@ Examples are:</p>
 <p>See <a class="reference external" href="embed/raspbian.html#">raspbian.py</a></p>
 </div>
 <div class="section" id="freebsd-arm">
-<span id="embeddedfreebsd"></span><h4>5.12.1.7. FreeBSD/ARM<a class="headerlink" href="#freebsd-arm" title="Permalink to this headline">¶</a></h4>
+<span id="embeddedfreebsd"></span><h4>2.12.1.7. FreeBSD/ARM<a class="headerlink" href="#freebsd-arm" title="Permalink to this headline">¶</a></h4>
 <p>For the module description refer to <a class="reference internal" href="dist/freebsd.html#dist-module-freebsd"><span class="std std-ref">platformids.dist.freebsd</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -6413,7 +6412,7 @@ For the numbering scheme refer to the standard distribution <a class="reference 
 See also <a class="reference external" href="dist/freebsd.html#">freebsd.py</a></p>
 </div>
 <div class="section" id="netbsd-arm">
-<span id="embeddednetbsd"></span><h4>5.12.1.8. NetBSD/ARM<a class="headerlink" href="#netbsd-arm" title="Permalink to this headline">¶</a></h4>
+<span id="embeddednetbsd"></span><h4>2.12.1.8. NetBSD/ARM<a class="headerlink" href="#netbsd-arm" title="Permalink to this headline">¶</a></h4>
 <p>For the module description refer to <a class="reference internal" href="dist/netbsd.html#dist-module-netbsd"><span class="std std-ref">platformids.dist.netbsd</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -6467,7 +6466,7 @@ See also <a class="reference external" href="dist/freebsd.html#">freebsd.py</a><
 See also <a class="reference external" href="dist/netbsd.html#">netbsd.py</a>.</p>
 </div>
 <div class="section" id="openbsd-arm64">
-<span id="embeddedopenbsd"></span><h4>5.12.1.9. OpenBSD Arm64<a class="headerlink" href="#openbsd-arm64" title="Permalink to this headline">¶</a></h4>
+<span id="embeddedopenbsd"></span><h4>2.12.1.9. OpenBSD Arm64<a class="headerlink" href="#openbsd-arm64" title="Permalink to this headline">¶</a></h4>
 <p>For the module description refer to <a class="reference internal" href="dist/openbsd.html#dist-module-openbsd"><span class="std std-ref">platformids.dist.openbsd</span></a>.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -6521,7 +6520,7 @@ See also <a class="reference external" href="dist/netbsd.html#">netbsd.py</a>.</
 See also <a class="reference external" href="dist/openbsd.html#">openbsd.py</a></p>
 </div>
 <div class="section" id="slackware-arm">
-<span id="embeddedslack"></span><h4>5.12.1.10. Slackware/ARM<a class="headerlink" href="#slackware-arm" title="Permalink to this headline">¶</a></h4>
+<span id="embeddedslack"></span><h4>2.12.1.10. Slackware/ARM<a class="headerlink" href="#slackware-arm" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><div class="shortcuttab">
 <div class="nonbreakheadtab">
@@ -6577,10 +6576,10 @@ See also <a class="reference external" href="dist/slack.html#">slack.py</a></p>
 </div>
 </div>
 <div class="section" id="embedded-windows">
-<span id="winiotraspi"></span><h3>5.12.2. Embedded Windows<a class="headerlink" href="#embedded-windows" title="Permalink to this headline">¶</a></h3>
+<span id="winiotraspi"></span><h3>2.12.2. Embedded Windows<a class="headerlink" href="#embedded-windows" title="Permalink to this headline">¶</a></h3>
 <p>The things are slightly different for the actually embedded variant of <em>Windows NT</em> or <em>NT</em></p>
 <div class="section" id="windows-10-iot-on-raspberrypi">
-<h4>5.12.2.1. Windows-10-IoT on RaspberryPI<a class="headerlink" href="#windows-10-iot-on-raspberrypi" title="Permalink to this headline">¶</a></h4>
+<h4>2.12.2.1. Windows-10-IoT on RaspberryPI<a class="headerlink" href="#windows-10-iot-on-raspberrypi" title="Permalink to this headline">¶</a></h4>
 <p>The IoT runtime environment of <em>WindowsNT</em>, which is from the parallel release
 of <em>Windows NT-10.0</em> on named as <em>Windows 10 IoT</em>.
 The IoT OS offers the look and feel similar to the full scale OS on PC based platforms.
@@ -6670,7 +6669,7 @@ on all platforms.</p>
 </div>
 </div>
 <div class="section" id="native-interpreter-shell">
-<h3>5.12.3. Native Interpreter Shell<a class="headerlink" href="#native-interpreter-shell" title="Permalink to this headline">¶</a></h3>
+<h3>2.12.3. Native Interpreter Shell<a class="headerlink" href="#native-interpreter-shell" title="Permalink to this headline">¶</a></h3>
 <p>The implementation <em>MicroPython</em> and the derived variant <em>CircuitPython</em> provide a native <em>Python</em>
 interpreter executed as a virtual OS.
 The interactive command line user interface of the <em>Python</em> interpreter is hereby similar to a common <em>shell</em> <a class="reference internal" href="references.html#shell" id="id259"><span>[SHELL]</span></a>
@@ -6685,7 +6684,7 @@ the lower OS platform as described by <em>platformids</em>,  <em>platformids</em
 basically a Firmware <a class="reference internal" href="references.html#firmware" id="id261"><span>[FIRMWARE]</span></a> stack including the compelete high-level execution frame.
 The targeted devices are small SOC.</p>
 <div class="section" id="micropython">
-<span id="embeddedmicropy"></span><h4>5.12.3.1. MicroPython<a class="headerlink" href="#micropython" title="Permalink to this headline">¶</a></h4>
+<span id="embeddedmicropy"></span><h4>2.12.3.1. MicroPython<a class="headerlink" href="#micropython" title="Permalink to this headline">¶</a></h4>
 <p>The Python variant <em>MicroPython</em> <a class="reference internal" href="references.html#micropython" id="id262"><span>[MicroPython]</span></a> is targeting small devices with limited resources of
 in particular small CPUs and memory and storage limited to some kB.</p>
 <p>For the module description refer to <a class="reference internal" href="embed/micropython.html#embed-module-micropy"><span class="std std-ref">platformids.embed.micropython</span></a>.</p>
@@ -6707,7 +6706,7 @@ The <em>platformids</em> provides custom plugins with standard interfaces for th
 <p><em>available soon</em></p>
 </div>
 <div class="section" id="circuitpython">
-<span id="embeddedcircuitpy"></span><h4>5.12.3.2. CircuitPython<a class="headerlink" href="#circuitpython" title="Permalink to this headline">¶</a></h4>
+<span id="embeddedcircuitpy"></span><h4>2.12.3.2. CircuitPython<a class="headerlink" href="#circuitpython" title="Permalink to this headline">¶</a></h4>
 <p>The Python variant <em>CircuitPython</em> <a class="reference internal" href="references.html#circuitpython" id="id264"><span>[CircuitPython]</span></a> is a specialized variant provided by the
 company Adafruit Industries Inc. <a class="reference internal" href="references.html#adafruit" id="id265"><span>[ADAFRUIT]</span></a> customized for it’s small devices.</p>
 <p>For the module description refer to <a class="reference internal" href="embed/circuitpython.html#embed-module-circuitpy"><span class="std std-ref">platformids.embed.circuitpython</span></a>.</p>
@@ -6721,9 +6720,9 @@ company Adafruit Industries Inc. <a class="reference internal" href="references.
 </div>
 </div>
 <div class="section" id="custom-numbering-schemes">
-<span id="id267"></span><h2>5.13. Custom Numbering Schemes<a class="headerlink" href="#custom-numbering-schemes" title="Permalink to this headline">¶</a></h2>
+<span id="id267"></span><h2>2.13. Custom Numbering Schemes<a class="headerlink" href="#custom-numbering-schemes" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="concept">
-<h3>5.13.1. Concept<a class="headerlink" href="#concept" title="Permalink to this headline">¶</a></h3>
+<h3>2.13.1. Concept<a class="headerlink" href="#concept" title="Permalink to this headline">¶</a></h3>
 <p>The actual enumeration of the underlying runtime platform of the OS and it’s distribution
 is two-fold.
 The supported standard distributions could be easily detected by using the standard libraries,
@@ -6737,11 +6736,11 @@ These could easily add the required few data entries and if required custom call
 Which allow for specific dynamic adaptation to different version numbering layouts and schemes.</p>
 </div>
 <div class="section" id="custom-api">
-<h3>5.13.2. Custom API<a class="headerlink" href="#custom-api" title="Permalink to this headline">¶</a></h3>
+<h3>2.13.2. Custom API<a class="headerlink" href="#custom-api" title="Permalink to this headline">¶</a></h3>
 <p>The module <em>platformids.__init__</em> defines the global basic interfaces for the acquisition and the
 conversion of the platform information.</p>
 <div class="section" id="global-data">
-<h4>5.13.2.1. Global Data<a class="headerlink" href="#global-data" title="Permalink to this headline">¶</a></h4>
+<h4>2.13.2.1. Global Data<a class="headerlink" href="#global-data" title="Permalink to this headline">¶</a></h4>
 <p>The main interface is provided by the global variables for the dynamic assignment and mapping of custom enum values.</p>
 <p>These provide for</p>
 <p>This comprises the function interfaces as well as the definition of the global data structures holding the machine
@@ -6819,7 +6818,7 @@ which supports the management of custom interger ranges.
 The free range of custom values is managed by the map object <em>num2rte</em>.</p>
 </div>
 <div class="section" id="functions">
-<h4>5.13.2.2. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h4>
+<h4>2.13.2.2. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h4>
 <p>The module <em>platformids.__init__</em> defines the global basic interfaces for the acquisition and the
 conversion of the platform information.
 This comprises the function interfaces as well as the definition of the global data structures holding the machine
@@ -6897,7 +6896,7 @@ which supports the management of custom interger ranges.
 The free range of custom values is managed by the map object <em>num2rte</em>.</p>
 </div>
 <div class="section" id="custom-callbacks-and-data">
-<h4>5.13.2.3. Custom Callbacks and Data<a class="headerlink" href="#custom-callbacks-and-data" title="Permalink to this headline">¶</a></h4>
+<h4>2.13.2.3. Custom Callbacks and Data<a class="headerlink" href="#custom-callbacks-and-data" title="Permalink to this headline">¶</a></h4>
 <p>The required entries are listed in the following table.
 Not all items are mandatory, thus when missing either defaults are used, or the specific
 feature is ignored.</p>
@@ -7037,7 +7036,7 @@ The applied scheme is defined individually by the selected distribution.</p>
 </div>
 </div>
 <div class="section" id="customized-examples">
-<span id="custom-examples"></span><h2>5.14. Customized Examples<a class="headerlink" href="#customized-examples" title="Permalink to this headline">¶</a></h2>
+<span id="custom-examples"></span><h2>2.14. Customized Examples<a class="headerlink" href="#customized-examples" title="Permalink to this headline">¶</a></h2>
 <p>The following sections describe the defintion of custom identifiers.
 The values are foreseen to be defined dynamically in order to assure the mix of multiple modules
 with independently defined enums.
@@ -7215,9 +7214,9 @@ and not by their explicit numeric representation.</p>
 </div>
 </div>
 </div><div class="section" id="custom-os-type">
-<h3>5.14.1. Custom OS-Type<a class="headerlink" href="#custom-os-type" title="Permalink to this headline">¶</a></h3>
+<h3>2.14.1. Custom OS-Type<a class="headerlink" href="#custom-os-type" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="minix-minix3">
-<span id="enumminix3"></span><span id="enumminix"></span><h4>5.14.1.1. Minix.Minix3<a class="headerlink" href="#minix-minix3" title="Permalink to this headline">¶</a></h4>
+<span id="enumminix3"></span><span id="enumminix"></span><h4>2.14.1.1. Minix.Minix3<a class="headerlink" href="#minix-minix3" title="Permalink to this headline">¶</a></h4>
 <p>The <em>Minix</em> OS is defined on demand as a custom OS within the <em>RTE_POSIX</em> domain.
 The default distribution included is <em>Minix3</em>, which is dewfined by the project as
 a new distribution, thus a new type of <em>dist</em>.</p>
@@ -7292,7 +7291,7 @@ Requires the previous creation and initialization of the <em>ostype</em> <em>Min
 <p>See <a class="reference external" href="custom/minix.html#">dist.custom.minix</a></p>
 </div>
 <div class="section" id="reactos-reactos5-2">
-<span id="enumreactos"></span><h4>5.14.1.2. ReactOS.ReactOS5_2<a class="headerlink" href="#reactos-reactos5-2" title="Permalink to this headline">¶</a></h4>
+<span id="enumreactos"></span><h4>2.14.1.2. ReactOS.ReactOS5_2<a class="headerlink" href="#reactos-reactos5-2" title="Permalink to this headline">¶</a></h4>
 <p>The <em>ReactOS</em> OS is defined on demand as a custom OS within the <em>RTE_WINDOWS</em> domain.
 The default distribution included is <em>ReactOS5_2</em>, which is defined by the project as
 compatible to the <em>NT5_2</em> distribution of the fromer product <em>Windows 2003 Server</em>.
@@ -7371,9 +7370,9 @@ Requires the previous creation and initialization of the <em>ostype</em> <em>REA
 </div>
 </div>
 <div class="section" id="custom-distribution">
-<h3>5.14.2. Custom Distribution<a class="headerlink" href="#custom-distribution" title="Permalink to this headline">¶</a></h3>
+<h3>2.14.2. Custom Distribution<a class="headerlink" href="#custom-distribution" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="aix-on-x86-in-a-virtual-machine">
-<span id="enumaix"></span><h4>5.14.2.1. AIX on x86 in a Virtual Machine<a class="headerlink" href="#aix-on-x86-in-a-virtual-machine" title="Permalink to this headline">¶</a></h4>
+<span id="enumaix"></span><h4>2.14.2.1. AIX on x86 in a Virtual Machine<a class="headerlink" href="#aix-on-x86-in-a-virtual-machine" title="Permalink to this headline">¶</a></h4>
 <p>The <em>AIX</em> OS is available for the PowerPC platform only - but there is an ancient release for the x86 platform too.
 The <a class="reference internal" href="custom/aix.html#docaixx86"><span class="std std-ref">AIX-1.3 / PS/2</span></a> release is a bit outdated of course,</p>
 <pre class="literal-block"><strong>IBM Sales Manual (US) - Document 5765-160</strong>
@@ -7429,7 +7428,7 @@ a <em>VM</em> without an CPU-Emulator of a PowerPC, e.g. within <em>VirtualBox</
 <p>See <a class="reference internal" href="custom/aix.html#docaixx86"><span class="std std-ref">dist.custom.aix</span></a>.</p>
 </div>
 <div class="section" id="enumblackarch">
-<span id="id290"></span><h4>5.14.2.2. BlackArch<a class="headerlink" href="#enumblackarch" title="Permalink to this headline">¶</a></h4>
+<span id="id290"></span><h4>2.14.2.2. BlackArch<a class="headerlink" href="#enumblackarch" title="Permalink to this headline">¶</a></h4>
 <p>The <em>BlackArch</em> distribution is based on <a class="reference internal" href="#enumarchlin"><span class="std std-ref">ArchLinux</span></a>, thus supports the same release versioning scheme.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -7489,7 +7488,7 @@ a <em>VM</em> without an CPU-Emulator of a PowerPC, e.g. within <em>VirtualBox</
 <p>See <a class="reference external" href="custom/dragonbsd.html#">DragonFlyBSD.py</a></p>
 </div>
 <div class="section" id="dragonflybsd">
-<span id="enumdragonflybsd"></span><h4>5.14.2.3. DragonFlyBSD<a class="headerlink" href="#dragonflybsd" title="Permalink to this headline">¶</a></h4>
+<span id="enumdragonflybsd"></span><h4>2.14.2.3. DragonFlyBSD<a class="headerlink" href="#dragonflybsd" title="Permalink to this headline">¶</a></h4>
 <p>The <em>DragonFlyBSD</em> distribution supports as major releases a 2-number scheme, while intermediate
 releases until 4.0.x have 3-number release versions.</p>
 <blockquote>
@@ -7550,7 +7549,7 @@ releases until 4.0.x have 3-number release versions.</p>
 <p>See <a class="reference external" href="custom/dragonbsd.html#">DragonFlyBSD.py</a></p>
 </div>
 <div class="section" id="enumghostbsd">
-<span id="id295"></span><h4>5.14.2.4. GhostBSD<a class="headerlink" href="#enumghostbsd" title="Permalink to this headline">¶</a></h4>
+<span id="id295"></span><h4>2.14.2.4. GhostBSD<a class="headerlink" href="#enumghostbsd" title="Permalink to this headline">¶</a></h4>
 <p>The <em>GhostBSD</em> distribution supports as major releases a 2-number scheme.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -7610,7 +7609,7 @@ releases until 4.0.x have 3-number release versions.</p>
 <p>See <a class="reference external" href="custom/ghostbsd.html#">GhostBSD.py</a></p>
 </div>
 <div class="section" id="enumlinuxmint">
-<span id="id298"></span><h4>5.14.2.5. LinuxMint<a class="headerlink" href="#enumlinuxmint" title="Permalink to this headline">¶</a></h4>
+<span id="id298"></span><h4>2.14.2.5. LinuxMint<a class="headerlink" href="#enumlinuxmint" title="Permalink to this headline">¶</a></h4>
 <p>Adds the <em>LinuxMint</em> distribution to the <em>ostype</em> <em>Linux</em>.</p>
 <p>The new custom entries are.</p>
 <blockquote>
@@ -7653,7 +7652,7 @@ releases until 4.0.x have 3-number release versions.</p>
 <p>See <a class="reference external" href="custom/linuxmint.html#">custom.linuxmint</a>.</p>
 </div>
 <div class="section" id="enumminix2">
-<span id="id300"></span><h4>5.14.2.6. Minix2<a class="headerlink" href="#enumminix2" title="Permalink to this headline">¶</a></h4>
+<span id="id300"></span><h4>2.14.2.6. Minix2<a class="headerlink" href="#enumminix2" title="Permalink to this headline">¶</a></h4>
 <p>The <em>Minix2</em> type of distribution is used here to introduce a new <em>distel</em>.
 Requires the previous creation and initialization of the <em>ostype</em> <em>Minix</em>.</p>
 <p>The new custom entries are.</p>
@@ -7699,7 +7698,7 @@ Requires the previous creation and initialization of the <em>ostype</em> <em>Min
 <p>see <a class="reference external" href="custom/minix2.html#">dist.custom.minix2</a></p>
 </div>
 <div class="section" id="enumnomadbsd">
-<span id="id303"></span><h4>5.14.2.7. NomadBSD<a class="headerlink" href="#enumnomadbsd" title="Permalink to this headline">¶</a></h4>
+<span id="id303"></span><h4>2.14.2.7. NomadBSD<a class="headerlink" href="#enumnomadbsd" title="Permalink to this headline">¶</a></h4>
 <p>The <em>NomadBSD</em> distribution supports as major releases a 2-number scheme.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -7759,7 +7758,7 @@ Requires the previous creation and initialization of the <em>ostype</em> <em>Min
 <p>See <a class="reference external" href="custom/nomadbsd.html#">NomadBSD.py</a></p>
 </div>
 <div class="section" id="parrot-linux">
-<span id="enumparrotos"></span><h4>5.14.2.8. Parrot Linux<a class="headerlink" href="#parrot-linux" title="Permalink to this headline">¶</a></h4>
+<span id="enumparrotos"></span><h4>2.14.2.8. Parrot Linux<a class="headerlink" href="#parrot-linux" title="Permalink to this headline">¶</a></h4>
 <p>Adds the <em>Parrot Linux</em> distribution to the <em>ostype</em> <em>Linux</em>.</p>
 <p>The new custom entries are.</p>
 <blockquote>
@@ -7806,7 +7805,7 @@ Requires the previous creation and initialization of the <em>ostype</em> <em>Min
 <p>See <a class="reference external" href="custom/parrot.html#">dist.custom.parrot</a>.</p>
 </div>
 <div class="section" id="pentoo-linux">
-<span id="enumpentoo"></span><h4>5.14.2.9. Pentoo Linux<a class="headerlink" href="#pentoo-linux" title="Permalink to this headline">¶</a></h4>
+<span id="enumpentoo"></span><h4>2.14.2.9. Pentoo Linux<a class="headerlink" href="#pentoo-linux" title="Permalink to this headline">¶</a></h4>
 <p>Adds the <em>Pentoo Linux</em> distribution to the <em>ostype</em> <em>Linux</em>.</p>
 <p>The new custom entries are.</p>
 <blockquote>
@@ -7853,7 +7852,7 @@ Requires the previous creation and initialization of the <em>ostype</em> <em>Min
 <p>See <a class="reference external" href="custom/pentoo.html#">dist.custom.pentoo</a>.</p>
 </div>
 <div class="section" id="enumslackware">
-<span id="id308"></span><h4>5.14.2.10. Slackware<a class="headerlink" href="#enumslackware" title="Permalink to this headline">¶</a></h4>
+<span id="id308"></span><h4>2.14.2.10. Slackware<a class="headerlink" href="#enumslackware" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><div class="shortcuttab">
 <div class="nonbreakheadtab">
@@ -7919,7 +7918,7 @@ while the actual release schedule is state-driven <a class="reference internal" 
 <p>See <a class="reference external" href="custom/slackware.html#">slackware.py</a></p>
 </div>
 <div class="section" id="enumtrueos">
-<span id="id314"></span><h4>5.14.2.11. TrueOS<a class="headerlink" href="#enumtrueos" title="Permalink to this headline">¶</a></h4>
+<span id="id314"></span><h4>2.14.2.11. TrueOS<a class="headerlink" href="#enumtrueos" title="Permalink to this headline">¶</a></h4>
 <p>The <em>TrueOS</em> distribution supports as major releases a 2-number scheme.</p>
 <blockquote>
 <div><div class="shortcuttab">
@@ -7981,7 +7980,7 @@ while the actual release schedule is state-driven <a class="reference internal" 
 </div>
 </div>
 <div class="section" id="resources">
-<h2>5.15. Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<h2>2.15. Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Comparison of BSD operating systems <a class="reference internal" href="references.html#oscompbsd" id="id317"><span>[OSCompBSD]</span></a></p></li>
 <li><p>Comparison of Linux distributions <a class="reference internal" href="references.html#oscomplinux" id="id318"><span>[OSCompLinux]</span></a></p></li>
@@ -8033,10 +8032,10 @@ while the actual release schedule is state-driven <a class="reference internal" 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="distributions.html" class="btn btn-neutral float-right" title="6. Distributions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="distributions.html" class="btn btn-neutral float-right" title="3. Distributions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="rtplatformids_cli.html" class="btn btn-neutral float-left" title="4. rtplatformids - Command line interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="rtplatformids_cli.html" class="btn btn-neutral float-left" title="1. rtplatformids - Command line interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -8047,7 +8046,7 @@ while the actual release schedule is state-driven <a class="reference internal" 
     <p>
         &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
       <span class="lastupdated">
-        Last updated on Dec 08, 2019.
+        Last updated on Dec 18, 2019.
       </span>
 
     </p>

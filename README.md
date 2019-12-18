@@ -1,6 +1,8 @@
 platformids
 ===========
 
+**REMARK**: This is a nighlty build with some minor issues, the final is following within a these days.
+
 The ‘platformids‘ package provides the categorization and enumeration of OS platforms and
 distributions.
 
@@ -86,7 +88,7 @@ Project Data
 
 * VERSION: 00.01
 
-* RELEASE: 00.01.036
+* RELEASE: 00.01.039
 
 * STATUS: beta
 

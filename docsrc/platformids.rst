@@ -227,7 +227,7 @@ The following additional definitions are introduced.
    
       category             = posix
       ostype               = linux
-      osrel-id             = linux
+      ostype-id             = linux
       osrel-vers           = [4, 16, 15]
       dist                 = fedora
       distrel              = fedora-27.0.0

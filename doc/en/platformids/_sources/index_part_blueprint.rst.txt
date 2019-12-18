@@ -1,3 +1,4 @@
+.. _BLUEPRINT:
 
 *********
 Blueprint
@@ -32,11 +33,124 @@ which are applied as :ref:`Bit Masks for OS and Distro Releases <BITMASKSOSDIST>
    :target: _static/systems-ids-sublayers.png
    :width: 16
 
-The  provided the `OS and Distribution layer <os_categorization.html#>`_ by the *platformids*
-provides pre-defined values for the most common standard OS and distributions.
-*Arbitrary custom identifiers are planned to be available soon.*
+The entries of the *platformids* represent the cumulated hierarchical information on the
+distribution.
+This includes the OS and the specific variant of the installation package.
+The underlying schemes vary hereby widely and provide some technically disjunct release numbering
+schemes.
+Thus require some basic understanding from the beginning on.
 
-The provided hierarchical bitmask representation supports hereby for fast comparison access which outperforms the
+* *category*:
+
+   The *category* enumerates the basic families of operating systems:
+   
+      .. parsed-literal::
+   
+         POSIX, WINDOWS, EMBEDDED
+
+* *ostype*
+
+   The *ostype* enumerates the basic operating systems:
+   
+      .. parsed-literal::
+   
+         LINUX, BSD, DARWIN, Minix, NT, REACTOS, UNIX-SVR4
+
+   The embedded OS serves in this enumeration scheme as an OS too:
+   
+      .. parsed-literal::
+   
+         MicroPython, Zephyr
+
+   *REMARK*: The name *ostype* is choosen, because "*os*" is a basically a
+   reserved *Python* keyword due to the core platform library named as "*os*".
+   Thus *ostype*, in order to avoid naming conflicts. 
+
+* *dist*
+
+   The *dist* enumerates the packaged distributions of the operating systems.
+   This is the concrete packaging of the OS core itself and the orchestration
+   of additional components as provided by the supplier. It may optionally
+   comprise modifications of the core OS, e.g. back-ports:
+   
+      .. parsed-literal::
+   
+         CentOS Debian Fedora FreeBSD KaliLinux RHEL NT10_0 OpenSUSE 
+         OpenWRT OSX-1 REACTOS5_2 Solaris Ubuntu  
+         
+   Some provide multiple names for the same distribution:
+   
+      .. parsed-literal::
+   
+         Solaris, SUNOS5
+
+   In case of the special OS *MicroPython* the OS itself is applicable as the distribution
+   as well as a derived variant with adaptations:
+   
+      .. parsed-literal::
+   
+         MicroPython CircuitPython
+
+* *distrel*
+
+   The *distrel* enumerates specific releases of the packaged distributions.
+   
+      .. parsed-literal::
+   
+         CentOS8 Debian10 Fedora31 FreeBSD-12.0 OpenSUSE OpenWRT OSX-10.6.0
+         REACTOS-0.4.9 5_2 RHEL8 W2019 W10 W2012R2 W2012 
+         Solaris SUNOS5 Ubuntu-19.04
+
+   A typical case of marketing driven frequent renaming is here also the *OSX*.
+   The distribution 'OSX' is actually a stable abstraction of the frequently
+   changed names and versioning schemes.
+   Current numbering scheme is a 3-number standard scheme, but actually
+   has 2 significant  numbers as the distribution is actually defined 
+   by "osx-10" or literally "OS-X-10".
+
+      .. parsed-literal::
+   
+         OSX-10.6.0
+
+   Same for the *NT* based OS. These have even exceptions in the
+   underlying incrementation and assignment of the OS numbering.
+   A typical case is here *Windows-2012* with it's service pack,
+   which are formally and actually different distributions.
+   The underlying OS have different release numbers and contain
+   different releases of service packs:
+
+      .. parsed-literal::
+   
+         W2012, W2012R2
+
+   Some operating systems changed their numbering scheme, e.g. from
+   traditional 3-digits representation to continuos release and deployment
+   schemes as rolling release schemes.
+   
+      .. parsed-literal::
+   
+         ArchLinux-2018.12.01 KaliLinux-2019.1 NT-10.0.1809
+
+   The rolling release schemes partially define multiple numbering schemes
+   in order to provide a "more longtime" scheme and a "intermediate short term"
+   build, like daily and weekly builds.  
+
+      .. parsed-literal::
+   
+         KaliLinux-2019-W11 KaliLinux-2019.1 KaliLinux-2.0 
+         NT-10.0.17763.136
+
+   In other cases the release number is basically not completely significant:
+   
+      .. parsed-literal::
+   
+         CentOS-7.6-1810
+
+The  provided `OS and Distribution layer <os_categorization.html#>`_ by the *platformids*
+provides pre-defined values for the most common standard OS and distributions,
+and enables optional arbitrary custom identifiers.
+
+The provided hierarchical bitmask representation supports hereby fast access for comparison which outperforms the
 common fractured and diverse formats by reducing the access time for single and in particular for repetitive access.
 The *platformids* reduces comparison operations on pure OS names, but in particular combined OS and distribution
 information including release versions to a remaining little percentage to operations on single integer values. 

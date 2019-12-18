@@ -1,12 +1,19 @@
-#documentation
+# README
+include README.md
+
+# License
+include LICENSE.txt
+include ArtisticLicense20.html
+include licenses-amendments.txt
+
+# setup
+include setup.py
+include setup.cfg
+
+
+# documentation
 recursive-include doc/en/html/man3/platformids *
 
-#Misc
-include .gitignore
-include ArtisticLicense20.html
-include README.md
-include callDocSphinx.sh
-include licenses-amendments.txt
-include setup.cfg
-include setup.py
-include dosrc/platformids-64x64.png
+# test cases and data
+include tests/*
+include testdata/*

@@ -256,11 +256,11 @@ The following public attributes are provided for the
    3-valued integer version of the distribution 
 
 .. index::
-   triple: PlatformParameters; attributes; os_version
+   triple: PlatformParameters; attributes; ostype_version
 
-.. _attr_os_version:
+.. _attr_ostype_version:
 
-* **os_version**
+* **ostype_version**
 
    3-valued integer version of the OS kernel
 
@@ -408,15 +408,15 @@ scan
 
             'nt', 'linux', ...
 
-   * *osrel_id*:
+   * *ostype_id*:
       Same as '*ostype*'.
 
-   * *osrel_version*:
+   * *ostype_version*:
       The numeric tuple of the os release:
 
          .. parsed-literal::
 
-            os_version := (<#major>, <#minor>, <#micro>)
+            ostype_version := (<#major>, <#minor>, <#micro>)
 
    * *distrel_hexversion*
       The calculated hexadcimal identifier ot the distribution.

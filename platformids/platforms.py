@@ -39,16 +39,15 @@ __docformat__ = "restructuredtext en"
 # : The corresponding *bash* environment names for print out.
 bash_map = {
     'category': "CATEGORY",
-    'ostype': "OSTYPE",
     'dist': "DIST",
     'distrel': "DISTREL",
     'distrel_hexversion': "distrel_hexversion",
-
     'distrel_key': "DISTRIBUTION_KEY",
     'distrel_name': "DISTRIBUTION_NAME",
     'distrel_version': "DISTRIBUTION_VERSION",
-    'os_id': "OS_ID",
-    'osrel_version': "OS_VERSION",
+    'ostype': "OSTYPE",
+    'ostype_id': "OS_ID",
+    'ostype_version': "OS_VERSION",
 
     'cpu': "CPU",
     'cpudata': "CPUDATA",
@@ -57,17 +56,15 @@ bash_map = {
 # : The mapping of attributes to values for pretty print.
 attribute_map = {
     'category': "category",
-    'ostype': "ostype",
     'dist': "dist",
     'distrel': "distrel",
     'distrel_hexversion': "distrel_hexversion",
-
-#FIXME:    'distribution_key': "distribution_key",
     'distrel_key': "distribution_key",
     'distrel_name': "distribution_name",
     'distrel_version': "distribution_version",
-    'os_id': "os_id",
-    'osrel_version': "os_version",
+    'ostype': "ostype",
+    'ostype_id': "ostype_id",
+    'ostype_version': "ostype_version",
 
     'cpu': "cpu",
     'cpudata': "cpudata",
@@ -147,8 +144,8 @@ class PlatformParameters(object):
         self.category = self.ostype = self.distrel_hexversion = self.wProductType = self.wSuiteMask = 0
         self.dist = self.distrel = 0
         self.distrel_name = self.distrel_key = ''
-        self.os_id = self.osrel_id = ''
-        self.distrel_version = self.osrel_version = []
+        self.ostype_id = self.ostype_id = ''
+        self.distrel_version = self.ostype_version = []
 
         #
         # first check positional arguments
@@ -239,7 +236,7 @@ class PlatformParameters(object):
                 
                   The following items are handled specially:
                 
-                    distrel_version, osrel_version:
+                    distrel_version, ostype_version:
                         The present values are compared only, e.g. 
                         the following is considered as *True* ::
                 
@@ -324,7 +321,7 @@ class PlatformParameters(object):
                             res &= self.__dict__[k] == v
                         else:
                             res = False 
-                    elif k in ("distrel_version", "osrel_version",):
+                    elif k in ("distrel_version", "ostype_version",):
                         res &= self.__dict__['distrel_version'][:len(v)] == v
                     elif k == "distrel":
                         res &= self.__dict__['distrel'] == v
@@ -408,7 +405,7 @@ class PlatformParameters(object):
         res = (
             '{"category": "%s", "ostype": "%s", "dist": "%s", "distrel": "%s", '
             '"distrel_name": "%s", "distrel_key": "%s", '
-            '"distrel_version": %s, "osrel_version": %s, "distrel_hexversion": %s, "os_id": %s, "osrel_id": %s}') % (
+            '"distrel_version": %s, "ostype_version": %s, "distrel_hexversion": %s, "ostype_id": %s, "ostype_id": %s}') % (
                 str(self.category),
                 str(self.ostype),
                 str(self.dist),
@@ -416,10 +413,10 @@ class PlatformParameters(object):
                 str(self.distrel_name),
                 str(self.distrel_key),
                 str(self.distrel_version),
-                str(self.osrel_version),
+                str(self.ostype_version),
                 str(self.distrel_hexversion),
-                str(self.os_id),
-                str(self.osrel_id)
+                str(self.ostype_id),
+                str(self.ostype_id)
             )
 
         if self.ostype in ('nt', 'cygwin'):
@@ -433,10 +430,20 @@ class PlatformParameters(object):
     def __str__(self):
         return self.pretty_format(type='str')
  
-    def pretty_format(self, **kargs):
+    def pretty_format(self, raw=False, **kargs):
         """   Formats and returns a string of attributes.
    
         Args:
+            raw:
+                Controls the use of the value types::
+
+                    raw := (
+                          True   # prints the internal types
+                        | False  # prints the symbolic names where applicable
+                    )
+                    
+                    default := False
+
             kargs:
                 quiet:
                     Supress standard display contents.
@@ -479,17 +486,25 @@ class PlatformParameters(object):
         )
 
         res = ""
+        
+        def _get_value_str(v):
+            if raw:
+                return str(self.__getattribute__(k))
+            else:
+                return str(self.__getattribute__(attribute_map.get(k)))
+                
+        print("4TEST:a")
         if _type in ('str',):
             try:
                 for k in sorted(_select):
                     if _terse and _quiet:
-                        res += "\n%s" % (str(self.__getattribute__(attribute_map.get(k))))
+                        res += "\n%s" % (_get_value_str(k))
         
                     elif _terse:
-                        res += "\n%s=%s" % (str(k), str(self.__getattribute__(attribute_map.get(k))))
+                        res += "\n%s=%s" % (str(k), _get_value_str(k))
         
                     else:
-                        res += "\n%-25s = %s" % (str(k), str(self.__getattribute__(attribute_map.get(k))))
+                        res += "\n%-25s = %s" % (str(k), _get_value_str(k))
 
             except TypeError as e:
                 exinfo = sys.exc_info()
@@ -501,10 +516,10 @@ class PlatformParameters(object):
             try:
                 for k in _select:
                     if _terse and _quiet:
-                        res += "\n%s" % (str(self.__getattribute__(attribute_map.get(k))))
+                        res += "\n%s" % (_get_value_str(k))
         
                     else:
-                        res += "\n%s=%s" % (str(k), str(self.__getattribute__(attribute_map.get(k))))
+                        res += "\n%s=%s" % (str(k), _get_value_str(k))
 
             except TypeError as e:
                 exinfo = sys.exc_info()
@@ -524,7 +539,7 @@ class PlatformParameters(object):
                     _k = '%s' % str(k)
                 
                 try:
-                    v = self.__getattribute__(attribute_map.get(k))
+                    v = _get_value_str(k)
                 except TypeError as e:
                     exinfo = sys.exc_info()
                     exinfo[1].args += (
@@ -569,17 +584,17 @@ class PlatformParameters(object):
 
         elif _type in ('bashvars',):
             for k in _select:
-                v = self.__getattribute__(attribute_map.get(k))
+                v = _get_value_str(k)
                 if type(v) in ISSTR:
                     res += "\n%s='%s'" % (
                         str(bash_map.get(k)),
-                        str(self.__getattribute__(attribute_map.get(k)))
+                        _get_value_str(k)
                     )
                 elif type(v) in (list, tuple):
                     res += "\ntypeset -a %s" % (str(bash_map.get(k)))
                     res += "\n%s=%s" % (
                         str(bash_map.get(k)),
-                        str(tuple(self.__getattribute__(attribute_map.get(k))))
+                        str(tuple(_get_value_str(k)))
                     )
                 elif type(v) is dict:
                     res += "\ntypeset -A %s" % (str(bash_map.get(k)))
@@ -588,14 +603,17 @@ class PlatformParameters(object):
                         res += '"\n  %s[%s]="%a' % (
                             str(bash_map.get(k)),
                             str(bash_map.get(k0)),
-                            str(tuple(self.__getattribute__(attribute_map.get(k))))
+                            str(tuple(_get_value_str(k)))
                         )
                     res += "\n)"
                 else:
                     res += "\n%s=%s" % (
                         str(bash_map.get(k)),
-                        str(self.__getattribute__(attribute_map.get(k)))
+                        _get_value_str(k)
                     )
+
+        print("4TEST:b:<" + str(res) + ">")
+        print("4TEST:c:")
 
         return res
 
@@ -806,14 +824,14 @@ class PlatformParameters(object):
         including *Jython*. 
         Internally calls *platformids.platformids.fetch_platform_distribution()*.
         
-        * distrel_version
-        * distrel_id
         * dist
         * distrel
-        * ostype
-        * osrel_id
-        * osrel_version
         * distrel_hexversion
+        * distrel_id
+        * distrel_version
+        * ostype
+        * ostype_id
+        * ostype_version
 
         """
          
@@ -831,7 +849,7 @@ class PlatformParameters(object):
         # native platform string representation
         #
         # platform info - OS release
-        self.os_id, self.os_version, self.os_version_num, self.osrel_id, = platformids.fetch_platform_os()
+        self.ostype_key, self.ostype_version, self.ostype_version_num, self.ostype_id, = platformids.fetch_platform_os()
   
         # platform info - distribution release
         self.distribution = platformids.fetch_platform_distribution()

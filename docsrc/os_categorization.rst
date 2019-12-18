@@ -365,13 +365,13 @@ The attempt by Microsoft Inc. itself is provided by the *POSIX-Subsytem*, former
       
          category               = posix
          dist                   = cygwin
-         distrel_hexversion     = 268435456
-         distrel_name           = Cygwin-2.10.0
-         osrel_version          = [2, 10, 0]
          distrel                = cygwin
-         ostype                 = cygwin
-         distrel_version        = [2, 10, 0]
+         distrel_hexversion     = 268435456
          distrel_key            = cygwin210
+         distrel_name           = Cygwin-2.10.0
+         distrel_version        = [2, 10, 0]
+         ostype                 = cygwin
+         ostype_version         = [2, 10, 0]
 
 
 PEMU
