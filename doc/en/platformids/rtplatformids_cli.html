@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. rtplatformids - Command line interface &mdash; platformids  documentation</title>
+  <title>4. rtplatformids - Command line interface &mdash; platformids  documentation</title>
   
 
   
@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2. OS Categorization" href="os_categorization.html" />
+    <link rel="next" title="5. OS Categorization" href="os_categorization.html" />
     <link rel="prev" title="3. Blueprint" href="index_part_blueprint.html" /> 
 </head>
 
@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                0.1.36
+                0.1.37
               </div>
             
           
@@ -101,50 +101,50 @@
 <li class="toctree-l1"><a class="reference internal" href="index_part_abstract.html">1. Abstract</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index_part_platform_support.html">2. Platform Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index_part_blueprint.html">3. Blueprint</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Command Line Interface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#synopsis">1.1. SYNOPSIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#options">1.2. OPTIONS</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#category">1.2.1. –category</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#debug">1.2.2. –debug</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#debug-options">1.2.3. –debug-options</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#dist">1.2.4. –dist</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#distrel">1.2.5. –distrel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#distrel-hexversion">1.2.6. –distrel-hexversion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#distrel-key">1.2.7. –distrel-key</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#distrel-name">1.2.8. –distrel-name</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#dist-vers">1.2.9. –dist-vers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enumerate">1.2.10. –enumerate</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#environ">1.2.11. –environ</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fromfile">1.2.12. –fromfile</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#help">1.2.13. –help</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#load">1.2.14. –load</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ostype-id">1.2.15. –ostype-id</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ostype-version">1.2.16. –ostype-version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ostype">1.2.17. –ostype</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#out-format">1.2.18. –out-format</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#platform">1.2.19. –platform</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#quiet">1.2.20. –quiet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#version">1.2.21. –Version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#verbose">1.2.22. –verbose</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#versionl">1.2.23. –version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#terse">1.2.24. –terse</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Command Line Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#synopsis">4.1. SYNOPSIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options">4.2. OPTIONS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#category">4.2.1. –category</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#debug">4.2.2. –debug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#debug-options">4.2.3. –debug-options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dist">4.2.4. –dist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#distrel">4.2.5. –distrel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#distrel-hexversion">4.2.6. –distrel-hexversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#distrel-key">4.2.7. –distrel-key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#distrel-name">4.2.8. –distrel-name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dist-vers">4.2.9. –dist-vers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enumerate">4.2.10. –enumerate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#environ">4.2.11. –environ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fromfile">4.2.12. –fromfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#help">4.2.13. –help</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#load">4.2.14. –load</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ostype-id">4.2.15. –ostype-id</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ostype-version">4.2.16. –ostype-version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ostype">4.2.17. –ostype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#out-format">4.2.18. –out-format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#platform">4.2.19. –platform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quiet">4.2.20. –quiet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version">4.2.21. –Version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verbose">4.2.22. –verbose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#versionl">4.2.23. –version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#terse">4.2.24. –terse</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#description">1.3. DESCRIPTION</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#examples">1.4. EXAMPLES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#see-also">1.5. SEE ALSO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#copyright">1.6. COPYRIGHT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">4.3. DESCRIPTION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">4.4. EXAMPLES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#see-also">4.5. SEE ALSO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#copyright">4.6. COPYRIGHT</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="os_categorization.html">2. OS Categorization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="distributions.html">3. Distributions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_documents.html">4. Documents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_modules.html">5. Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_indices.html">6. Indices and tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_resources.html">7. Resources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">8. Install</a></li>
-<li class="toctree-l1"><a class="reference internal" href="references.html">9. External References</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index_part_license.html">10. Licenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="os_categorization.html">5. OS Categorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distributions.html">6. Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_documents.html">7. Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_modules.html">8. Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_indices.html">9. Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_resources.html">10. Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">11. Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">12. External References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_part_license.html">13. Licenses</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Application</span></p>
 <ul>
@@ -195,7 +195,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>1. rtplatformids - Command line interface</li>
+      <li>4. rtplatformids - Command line interface</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -215,7 +215,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="rtplatformids-command-line-interface">
-<span id="rtplatformids-cli"></span><h1>1. rtplatformids - Command line interface<a class="headerlink" href="#rtplatformids-command-line-interface" title="Permalink to this headline">¶</a></h1>
+<span id="rtplatformids-cli"></span><h1>4. rtplatformids - Command line interface<a class="headerlink" href="#rtplatformids-command-line-interface" title="Permalink to this headline">¶</a></h1>
 <p>The <em>rtplatformids</em> executable provides the command line interface to the
 library modules.</p>
 <ul>
@@ -243,17 +243,17 @@ The option <a class="reference internal" href="#terse"><span class="std std-ref"
 </li>
 </ul>
 <div class="section" id="synopsis">
-<span id="platformidsclisynopsis"></span><h2>1.1. SYNOPSIS<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<span id="platformidsclisynopsis"></span><h2>4.1. SYNOPSIS<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
 <pre class="literal-block">rtplatformids    <span class="xref std std-ref">[OPTIONS]</span></pre>
 </div>
 <div class="section" id="options">
-<span id="platformidsclioptions"></span><h2>1.2. OPTIONS<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<span id="platformidsclioptions"></span><h2>4.2. OPTIONS<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="category">
-<span id="index-0"></span><span id="id1"></span><h3>1.2.1. –category<a class="headerlink" href="#category" title="Permalink to this headline">¶</a></h3>
+<span id="index-0"></span><span id="id1"></span><h3>4.2.1. –category<a class="headerlink" href="#category" title="Permalink to this headline">¶</a></h3>
 <p>Display category.</p>
 </div>
 <div class="section" id="debug">
-<span id="index-1"></span><span id="id2"></span><h3>1.2.2. –debug<a class="headerlink" href="#debug" title="Permalink to this headline">¶</a></h3>
+<span id="index-1"></span><span id="id2"></span><h3>4.2.2. –debug<a class="headerlink" href="#debug" title="Permalink to this headline">¶</a></h3>
 <p>Activates debug output including stacktrace,
 multiple raise the debug level.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">d</span> <span class="o">--</span><span class="n">debug</span><span class="p">[</span><span class="o">=</span><span class="c1">#level]</span>
@@ -266,7 +266,7 @@ multiple raise the debug level.</p>
 </div>
 </div>
 <div class="section" id="debug-options">
-<span id="index-2"></span><span id="id3"></span><h3>1.2.3. –debug-options<a class="headerlink" href="#debug-options" title="Permalink to this headline">¶</a></h3>
+<span id="index-2"></span><span id="id3"></span><h3>4.2.3. –debug-options<a class="headerlink" href="#debug-options" title="Permalink to this headline">¶</a></h3>
 <p>Displays the internal commandline options data
 with optional output format.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">debug</span><span class="o">-</span><span class="n">options</span><span class="p">[</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;json&#39;</span> <span class="o">|</span> <span class="s1">&#39;repr&#39;</span> <span class="o">|</span> <span class="s1">&#39;str&#39;</span><span class="p">)[</span> <span class="n">cont</span><span class="p">]]</span>
@@ -277,32 +277,32 @@ with optional output format.</p>
 <p>For export streams refer to <a class="reference internal" href="#outformat"><span class="std std-ref">–out-format</span></a>.</p>
 </div>
 <div class="section" id="dist">
-<span id="index-3"></span><span id="id4"></span><h3>1.2.4. –dist<a class="headerlink" href="#dist" title="Permalink to this headline">¶</a></h3>
+<span id="index-3"></span><span id="id4"></span><h3>4.2.4. –dist<a class="headerlink" href="#dist" title="Permalink to this headline">¶</a></h3>
 <p>Display distribution.</p>
 </div>
 <div class="section" id="distrel">
-<span id="index-4"></span><span id="id5"></span><h3>1.2.5. –distrel<a class="headerlink" href="#distrel" title="Permalink to this headline">¶</a></h3>
+<span id="index-4"></span><span id="id5"></span><h3>4.2.5. –distrel<a class="headerlink" href="#distrel" title="Permalink to this headline">¶</a></h3>
 <p>Display release of the distribution.</p>
 </div>
 <div class="section" id="distrel-hexversion">
-<span id="index-5"></span><span id="id6"></span><h3>1.2.6. –distrel-hexversion<a class="headerlink" href="#distrel-hexversion" title="Permalink to this headline">¶</a></h3>
+<span id="index-5"></span><span id="id6"></span><h3>4.2.6. –distrel-hexversion<a class="headerlink" href="#distrel-hexversion" title="Permalink to this headline">¶</a></h3>
 <p>Display the release of the distribution including the canonical version as hex-bit-array.</p>
 </div>
 <div class="section" id="distrel-key">
-<span id="index-6"></span><span id="id7"></span><h3>1.2.7. –distrel-key<a class="headerlink" href="#distrel-key" title="Permalink to this headline">¶</a></h3>
+<span id="index-6"></span><span id="id7"></span><h3>4.2.7. –distrel-key<a class="headerlink" href="#distrel-key" title="Permalink to this headline">¶</a></h3>
 <p>Display name of the selection key of the distribution release.
 Used for internal mapping-tables to be used as debugging support.</p>
 </div>
 <div class="section" id="distrel-name">
-<span id="index-7"></span><span id="id8"></span><h3>1.2.8. –distrel-name<a class="headerlink" href="#distrel-name" title="Permalink to this headline">¶</a></h3>
+<span id="index-7"></span><span id="id8"></span><h3>4.2.8. –distrel-name<a class="headerlink" href="#distrel-name" title="Permalink to this headline">¶</a></h3>
 <p>Display name of the distribution release.</p>
 </div>
 <div class="section" id="dist-vers">
-<span id="index-8"></span><span id="id9"></span><h3>1.2.9. –dist-vers<a class="headerlink" href="#dist-vers" title="Permalink to this headline">¶</a></h3>
+<span id="index-8"></span><span id="id9"></span><h3>4.2.9. –dist-vers<a class="headerlink" href="#dist-vers" title="Permalink to this headline">¶</a></h3>
 <p>Display the version array the distribution release.</p>
 </div>
 <div class="section" id="enumerate">
-<span id="index-9"></span><span id="id10"></span><h3>1.2.10. –enumerate<a class="headerlink" href="#enumerate" title="Permalink to this headline">¶</a></h3>
+<span id="index-9"></span><span id="id10"></span><h3>4.2.10. –enumerate<a class="headerlink" href="#enumerate" title="Permalink to this headline">¶</a></h3>
 <p>Enumerates the known platform entries.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nb">enumerate</span> <span class="p">[</span><span class="o">&lt;</span><span class="nb">type</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">[</span><span class="n">num</span><span class="o">=&lt;</span><span class="n">num</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">[</span><span class="n">scope</span><span class="o">=&lt;</span><span class="n">scope</span><span class="o">&gt;</span><span class="p">]</span>
 
@@ -345,17 +345,17 @@ Used for internal mapping-tables to be used as debugging support.</p>
 </div>
 </div>
 <div class="section" id="environ">
-<span id="index-10"></span><span id="id11"></span><h3>1.2.11. –environ<a class="headerlink" href="#environ" title="Permalink to this headline">¶</a></h3>
+<span id="index-10"></span><span id="id11"></span><h3>4.2.11. –environ<a class="headerlink" href="#environ" title="Permalink to this headline">¶</a></h3>
 <p>Print environ.</p>
 </div>
 <div class="section" id="fromfile">
-<span id="index-11"></span><span id="id12"></span><h3>1.2.12. –fromfile<a class="headerlink" href="#fromfile" title="Permalink to this headline">¶</a></h3>
+<span id="index-11"></span><span id="id12"></span><h3>4.2.12. –fromfile<a class="headerlink" href="#fromfile" title="Permalink to this headline">¶</a></h3>
 <p>Enables the read of options from an options file.
 For details refer to <em>argparse.ArgumentParse</em>
 constructor option  <em>fromfile_prefix_chars</em>.</p>
 </div>
 <div class="section" id="help">
-<span id="index-12"></span><span id="id13"></span><h3>1.2.13. –help<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h3>
+<span id="index-12"></span><span id="id13"></span><h3>4.2.13. –help<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h3>
 <p>This help.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">help</span>
 <span class="o">-</span><span class="n">h</span>
@@ -363,7 +363,7 @@ constructor option  <em>fromfile_prefix_chars</em>.</p>
 </div>
 </div>
 <div class="section" id="load">
-<span id="index-13"></span><span id="id14"></span><h3>1.2.14. –load<a class="headerlink" href="#load" title="Permalink to this headline">¶</a></h3>
+<span id="index-13"></span><span id="id14"></span><h3>4.2.14. –load<a class="headerlink" href="#load" title="Permalink to this headline">¶</a></h3>
 <p>Loads additional modules:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">load</span> <span class="o">&lt;</span><span class="n">filepathname</span><span class="o">&gt;</span>
 
@@ -467,19 +467,19 @@ e.g. in case of <em>platformids.dist.solaris_enum_labels</em> is:</p>
 </td></tr></table></div>
 </div>
 <div class="section" id="ostype-id">
-<span id="index-14"></span><span id="id15"></span><h3>1.2.15. –ostype-id<a class="headerlink" href="#ostype-id" title="Permalink to this headline">¶</a></h3>
+<span id="index-14"></span><span id="id15"></span><h3>4.2.15. –ostype-id<a class="headerlink" href="#ostype-id" title="Permalink to this headline">¶</a></h3>
 <p>Display the ID of the OS release.</p>
 </div>
 <div class="section" id="ostype-version">
-<span id="index-15"></span><span id="id16"></span><h3>1.2.16. –ostype-version<a class="headerlink" href="#ostype-version" title="Permalink to this headline">¶</a></h3>
+<span id="index-15"></span><span id="id16"></span><h3>4.2.16. –ostype-version<a class="headerlink" href="#ostype-version" title="Permalink to this headline">¶</a></h3>
 <p>Display the version array the OS release.</p>
 </div>
 <div class="section" id="ostype">
-<span id="index-16"></span><span id="id17"></span><h3>1.2.17. –ostype<a class="headerlink" href="#ostype" title="Permalink to this headline">¶</a></h3>
+<span id="index-16"></span><span id="id17"></span><h3>4.2.17. –ostype<a class="headerlink" href="#ostype" title="Permalink to this headline">¶</a></h3>
 <p>Display ostype.</p>
 </div>
 <div class="section" id="out-format">
-<span id="outformat"></span><span id="index-17"></span><h3>1.2.18. –out-format<a class="headerlink" href="#out-format" title="Permalink to this headline">¶</a></h3>
+<span id="outformat"></span><span id="index-17"></span><h3>4.2.18. –out-format<a class="headerlink" href="#out-format" title="Permalink to this headline">¶</a></h3>
 <p>Defines the processed output format.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">out</span><span class="o">-</span><span class="nb">format</span><span class="o">=&lt;</span><span class="nb">format</span><span class="o">&gt;</span>
 
@@ -494,7 +494,7 @@ e.g. in case of <em>platformids.dist.solaris_enum_labels</em> is:</p>
 <p>Supports normal data display, not the ‘–platform’ and ‘–enumerate’ options.</p>
 </div>
 <div class="section" id="platform">
-<span id="index-18"></span><span id="id18"></span><h3>1.2.19. –platform<a class="headerlink" href="#platform" title="Permalink to this headline">¶</a></h3>
+<span id="index-18"></span><span id="id18"></span><h3>4.2.19. –platform<a class="headerlink" href="#platform" title="Permalink to this headline">¶</a></h3>
 <p>Display selected parameters from standard libraries:</p>
 <ul class="simple">
 <li><p><em>os</em></p></li>
@@ -503,11 +503,11 @@ e.g. in case of <em>platformids.dist.solaris_enum_labels</em> is:</p>
 </ul>
 </div>
 <div class="section" id="quiet">
-<span id="index-19"></span><span id="id19"></span><h3>1.2.20. –quiet<a class="headerlink" href="#quiet" title="Permalink to this headline">¶</a></h3>
+<span id="index-19"></span><span id="id19"></span><h3>4.2.20. –quiet<a class="headerlink" href="#quiet" title="Permalink to this headline">¶</a></h3>
 <p>Suppress output.</p>
 </div>
 <div class="section" id="version">
-<span id="index-20"></span><span id="id20"></span><h3>1.2.21. –Version<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h3>
+<span id="index-20"></span><span id="id20"></span><h3>4.2.21. –Version<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h3>
 <p>Current version - detailed.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">Version</span>
 <span class="o">-</span><span class="n">Version</span>
@@ -515,7 +515,7 @@ e.g. in case of <em>platformids.dist.solaris_enum_labels</em> is:</p>
 </div>
 </div>
 <div class="section" id="verbose">
-<span id="index-21"></span><span id="id21"></span><h3>1.2.22. –verbose<a class="headerlink" href="#verbose" title="Permalink to this headline">¶</a></h3>
+<span id="index-21"></span><span id="id21"></span><h3>4.2.22. –verbose<a class="headerlink" href="#verbose" title="Permalink to this headline">¶</a></h3>
 <p>Verbose, some relevant states for basic analysis.
 When ‘–selftest’ is set, repetition raises the display
 level.</p>
@@ -525,7 +525,7 @@ level.</p>
 </div>
 </div>
 <div class="section" id="versionl">
-<span id="index-22"></span><span id="id22"></span><h3>1.2.23. –version<a class="headerlink" href="#versionl" title="Permalink to this headline">¶</a></h3>
+<span id="index-22"></span><span id="id22"></span><h3>4.2.23. –version<a class="headerlink" href="#versionl" title="Permalink to this headline">¶</a></h3>
 <p>Current version - terse.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">version</span>
 <span class="o">-</span><span class="n">version</span>
@@ -533,17 +533,17 @@ level.</p>
 </div>
 </div>
 <div class="section" id="terse">
-<span id="index-23"></span><span id="id23"></span><h3>1.2.24. –terse<a class="headerlink" href="#terse" title="Permalink to this headline">¶</a></h3>
+<span id="index-23"></span><span id="id23"></span><h3>4.2.24. –terse<a class="headerlink" href="#terse" title="Permalink to this headline">¶</a></h3>
 <p>Print short - terse.</p>
 </div>
 </div>
 <div class="section" id="description">
-<h2>1.3. DESCRIPTION<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<h2>4.3. DESCRIPTION<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>The call interface ‘rtplatformids’ provides the commandline interface for
 the platform scanner.</p>
 </div>
 <div class="section" id="examples">
-<span id="platformidsexamples"></span><h2>1.4. EXAMPLES<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<span id="platformidsexamples"></span><h2>4.4. EXAMPLES<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p id="id24">Some simple call examples are:</p>
 <pre class="literal-block">platformids  <a class="reference internal" href="#help"><span class="std std-ref">–help</span></a>
 
@@ -556,11 +556,11 @@ rtplatformids  <a class="reference internal" href="#outformat"><span class="std 
    <a class="reference internal" href="#load"><span class="std std-ref">–load platformids/dist/windows_enum_labels.py</span></a></pre>
 </div>
 <div class="section" id="see-also">
-<h2>1.5. SEE ALSO<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
+<h2>4.5. SEE ALSO<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference internal" href="references.html#machineids" id="id25"><span>[machineids]</span></a>, <a class="reference internal" href="references.html#platformids" id="id26"><span>[platformids]</span></a>, <a class="reference internal" href="references.html#pythonids" id="id27"><span>[pythonids]</span></a>, <a class="reference internal" href="references.html#resourceids" id="id28"><span>[resourceids]</span></a>, <a class="reference internal" href="references.html#extensionids" id="id29"><span>[extensionids]</span></a></p>
 </div>
 <div class="section" id="copyright">
-<h2>1.6. COPYRIGHT<a class="headerlink" href="#copyright" title="Permalink to this headline">¶</a></h2>
+<h2>4.6. COPYRIGHT<a class="headerlink" href="#copyright" title="Permalink to this headline">¶</a></h2>
 <p>Copyright (C)2008-2018 Arno-Can Uestuensoez &#64;Ingenieurbuero Arno-Can Uestuensoez</p>
 </div>
 </div>
@@ -573,7 +573,7 @@ rtplatformids  <a class="reference internal" href="#outformat"><span class="std 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="os_categorization.html" class="btn btn-neutral float-right" title="2. OS Categorization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="os_categorization.html" class="btn btn-neutral float-right" title="5. OS Categorization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index_part_blueprint.html" class="btn btn-neutral float-left" title="3. Blueprint" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
